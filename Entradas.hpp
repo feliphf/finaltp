@@ -4,12 +4,14 @@
 
 class Produto{
   private:
-  entradas list <Produto *>;
-    
+  
+  std::list <Produto*> entradas;
+  
   public:
-  list get_entrada ();
-  consultarAdcionar (int codigo){
+  
+  void adicionaProduto(Produto* p);
+  std::list getEntrada(); 
+  std::string consultarAdicionados (int codigo);
     
-  };
 };
 #endif;
