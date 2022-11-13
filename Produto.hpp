@@ -32,6 +32,10 @@ class Produto{
    */
   int codigo;
   /**
+   * @brief quantidade de um produto.
+   */
+  int quantidade;
+  /**
    * @brief Preço unitário do produto.
    */
   float preco;
@@ -51,19 +55,14 @@ class Produto{
   public:
   
   /**
-   * @brief Adiciona o nome de um produto
-   */
-  void set_nome ();
-  
-  /**
    * @brief Adiciona o código único de um produto
    */
   void set_codigo ();
   
   /**
-   * @brief Adiciona o fabricante de um produto
+   * @brief Adiciona o código único de um produto
    */
-  void set_fabricante ();
+  void set_quantidade ();
   
   /**
    * @brief Adiciona o preço de um produto
@@ -71,9 +70,21 @@ class Produto{
   void set_preco ();
   
   /**
+   * @brief Adiciona o nome de um produto
+   */
+  void set_nome ();
+  
+  /**
    * @brief Adiciona a categoria de um produto
    */
-  void set_categoria ();
+  void set_categoria ();  
+
+  /**
+   * @brief Adiciona o fabricante de um produto
+   */
+  void set_fabricante ();
+
+  
   
   /**
   * @brief Retorna o código do produto
@@ -83,10 +94,17 @@ class Produto{
   int get_codigo ();
   
   /**
-  * @brief Retorna o preço do produto
-  *
-  * @return Retorna o preço do produto
-  */
+   * @brief Retorna a quantidade do produto
+   *
+   * @return Retorna a quantidade do produto
+   */
+  int get_quantidade ();
+  
+  /**
+   * @brief Retorna o preço do produto
+   *
+   * @return Retorna o preço do produto
+   */
   float get_preco ();
   
   /**
