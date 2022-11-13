@@ -22,8 +22,8 @@
  *
  * @details A classe saídas está responsável por retirar produtos de acordo com as  
  * vendas feitas na empresa, retirando-as, pela classe de cátologo produto, desta  
- * forma, irá retirar cada produto, ela também retorna a consulta de determinado 
- * produto, para ser conferido se realmente foi retirado.
+ * forma, irá retirar cada produto. Ela também retornará o último produto adicionado, 
+ * desta forma, o gerente poderá conferir se realmente foi adicionado, oque ele gostaria.
  */
 
 class Saidas {
@@ -38,8 +38,8 @@ public:
  * @brief Função responsável por retirar um produto da lista de saídas. 
  *
  * @details A partir da venda de um produto do estoque da empresa, o funcionário 
- * irá retirar cada produto usando este método, a lista criá-da irá retirar um 
- * produto, de acordo com o seu código, só poderá retirar, se já tiver sido 
+ * irá retirar cada produto usando este método, a lista cria-da irá retirar um 
+ * produto, de acordo com o seu atributos, só poderá retirar, se já tiver sido 
  * adicionado ao estoque, além de tratar os erros, que podem ser cometidos.
  *
  * @param código int do produto, de um produto existente no estoque da empresa.
@@ -48,15 +48,11 @@ public:
     
 /**
  * @brief Possibilita a consulta do funcionário, para conferir se retirou 
- * corretamente o produto que gostaria de retirar, conferindo-o, pelo 
- * código do produto.
+ * corretamente o produto que gostaria de retirar.
  *
- * @details Além de possibilitar a consulta, e a conferência, ele também 
- * trata os erros, que podem ser cometidos.
- *
- * @param código int, o código do produto, ao qual foi retirado nas saídas.
+ * @details a função irá apresentar o último produto adicionado, para poder ser conferido.
  */
-  std::string consultarRetirados (int codigo);
+  void consultarRetirado();
   
 };
 #endif
