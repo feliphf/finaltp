@@ -3,11 +3,11 @@
 #include <iostream>
 #include <list>
 
-void Entradas::adicionaProduto(Produto* p){
+void Entradas::adiciona_produto(Produto* p){
   entradas.push_back(p);
 }
 
-void Entradas::consultarAdicionado (){
+void Entradas::consultar_adicionado (){
   cout << "Último produto adicionado: "<< entradas.back()<<endl;
 }
    
