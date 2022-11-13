@@ -4,8 +4,8 @@
  * @brief Classe para armazenamento de entradas dos produtos.
  * @version 1.0
  * @date 2022-11-13
- * @details A classe entradas está responsável por armazenar 
- * produtos, que serão administados pela classe estoque.
+ * @details A classe entradas está responsável por armazenar produtos, 
+ * na classe produtos, ao qual serão administados pela classe estoque.
  * @copyright GNU General Public License v2.0
  */
 
@@ -21,9 +21,9 @@
  * @brief Armazena produto em uma lista de entradas.
  *
  * details A classe entradas está responsável por armazenar as compras 
- * feitas pelo gerente, incluindo-as, pela classe de cátologo produto, 
- * desta forma, irá armazenar cada produto, ela também retorna a consulta
- * de determinado produto, para ser conferido se realmente foi adicionado.
+ * feitas pelo gerente, incluindo-as, pela classe de cátologo. ela também
+ * retornará o último produto adicionado, desta forma, o gerente poderá 
+ * conferir se realmente foi adicionado.
  */
 class Entradas{
   private:
@@ -47,15 +47,12 @@ class Entradas{
   
 /**
 * @brief Possibilita a consulta do gerente, para conferir se adiocionou 
-* corretamente o produto que gostaria de adiocionar, conferindo-o, pelo 
-* código do produto.
+* corretamente o produto que gostaria de adiocionar.
 *
-* @details Além de possibilitar a consulta, e a conferência, ele 
-* também trata os erros, que podem ser cometidos.
-
-* @param código int, o código do produto, ao qual foi armazenado nas entradas.
+* @details esta função irá apresentar a tela, qual foi o último produto
+* adicinado pelo gerente.
 */
-  std::list consultarAdicionado (int codigo);
+  void consultarAdicionado ();
     
 };
 #endif;
