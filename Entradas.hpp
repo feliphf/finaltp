@@ -1,6 +1,6 @@
 /**
  * @file Entradas.hpp
- * @author Ana Carolina e Guilherme Paschoal
+ * @author Ana Carolina e Guilherme Pascoal
  * @brief Classe para armazenamento de entradas dos produtos.
  * @version 1.0
  * @date 2022-11-13
