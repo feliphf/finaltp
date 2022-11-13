@@ -11,7 +11,9 @@
 
 #ifndef ENTRADAS.HPP
 #define ENTRADAS.HPP
+
 #include "Produto.hpp"
+
 #include <iostream>
 #include <list>
 
@@ -23,7 +25,7 @@
  * ela também retorna a consulta de determinado produto, 
  * para ser conferido se realmente foi adicionado.
  */
-class Produto{
+class Entradas{
   private:
   
 ///@brief lista de entradas, para armazenar cada produto, em uma posição da lista.
