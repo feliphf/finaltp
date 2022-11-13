@@ -1,6 +1,5 @@
 #ifndef PRODUTO.HPP
 #define PRODUTO.HPP
-#include "Produto.hpp"
 #include <iostream>
 
 /**
