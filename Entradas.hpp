@@ -1,9 +1,7 @@
-# ifndef ENTRADAS.HPP
-# define ENTRADAS.HPP
-
-# include <iostream>
-
-# include "produtos.hpp"
+#ifndef ENTRADAS.HPP
+#define ENTRADAS.HPP
+#include "Produto.hpp"
+#include <iostream>
 
 class Produto{
   private:
