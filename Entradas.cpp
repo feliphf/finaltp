@@ -7,7 +7,7 @@ void Entradas::adiciona_produto(Produto* p){
   entradas.push_back(p);
 }
 
-void Entradas::consultar_adicionado (){
+void Entradas::consultar_adicionado(){
   std::cout << "Último produto adicionado: "<< entradas.back()<<endl;
 }
    
