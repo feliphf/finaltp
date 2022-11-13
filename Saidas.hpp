@@ -4,8 +4,8 @@
  * @brief Classe para retirar produtos armazenados na classe produto.
  * @version 1.0
  * @date 2022-11-13
- * @details A classe saídas está responsável por retirar produtos da classe produto, 
- * ao qual serão administados pela classe estoque.
+ * @details A classe saídas está responsável por retirar produtos da 
+ * classe produto, ao qual serão administados pela classe estoque.
  * @copyright GNU General Public License v2.0
  */
 
@@ -39,19 +39,20 @@ public:
  *
  * @details A partir da venda de um produto do estoque da empresa, o funcionário 
  * irá retirar cada produto usando este método, a lista criá-da irá retirar um 
- * produto, de acordo com o seu código, só poderá retirar, se já tiver sido adicionado 
- * ao estoque, além de tratar os erros, que podem ser cometidos.
+ * produto, de acordo com o seu código, só poderá retirar, se já tiver sido 
+ * adicionado ao estoque, além de tratar os erros, que podem ser cometidos.
  *
  * @param código int do produto, de um produto existente no estoque da empresa.
  */  
   void retiraProduto(int código);
     
 /**
- * @brief Possibilita a consulta do funcionário, para conferir se retirou corretamente
- * o produto que gostaria de retirar, conferindo-o, pelo código do produto.
+ * @brief Possibilita a consulta do funcionário, para conferir se retirou 
+ * corretamente o produto que gostaria de retirar, conferindo-o, pelo 
+ * código do produto.
  *
- * @details Além de possibilitar a consulta, e a conferência, ele também trata os 
- * erros, que podem ser cometidos.
+ * @details Além de possibilitar a consulta, e a conferência, ele também 
+ * trata os erros, que podem ser cometidos.
  *
  * @param código int, o código do produto, ao qual foi retirado nas saídas.
  */
