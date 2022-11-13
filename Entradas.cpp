@@ -4,7 +4,10 @@
 #include <list>
 
 void Entradas::adicionaProduto(Produto* p){
-  }
-std::list Entradas::consultarAdicionado (int codigo){
-  }
+  entradas.push_back(p);
+}
+
+void Entradas::consultarAdicionado (){
+  cout << "Último produto adicionado: "<< entradas.back()<<endl;
+}
    
