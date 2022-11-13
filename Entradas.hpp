@@ -43,7 +43,7 @@ class Entradas{
  *
  * @param Produto p, produto com os atributos da classe produto.
  */  
-  void adicionaProduto(Produto* p);
+  void adiciona_produto(Produto* p);
   
 /**
 * @brief Possibilita a consulta do gerente, para conferir se adiocionou 
@@ -52,7 +52,7 @@ class Entradas{
 * @details esta função irá apresentar a tela, qual foi o último produto
 * adicinado pelo gerente.
 */
-  void consultarAdicionado();
+  void consultar_adicionado();
     
 };
 #endif;
