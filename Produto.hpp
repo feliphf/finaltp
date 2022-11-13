@@ -9,27 +9,15 @@
 
 class Produto{
   
+  /**
+   * @brief Atributos do produto
+   */
   private:
   
-  /**
-   * @brief Código do produto
-   */
   int codigo;
-  /**
-   * @brief Preço do produto
-   */
   float preco;
-  /**
-   * @brief Nome do produto
-   */
   std::string nome;
-  /**
-   * @brief Categoria do produto
-   */
   std::string categoria;
-  /**
-   * @brief Fabricante do produto
-   */
   std::string fabricante;
   
   public:
