@@ -8,6 +8,6 @@ void Entradas::adiciona_produto(Produto* p){
 }
 
 void Entradas::consultar_adicionado (){
-  cout << "Último produto adicionado: "<< entradas.back()<<endl;
+  std::cout << "Último produto adicionado: "<< entradas.back()<<endl;
 }
    
