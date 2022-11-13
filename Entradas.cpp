@@ -7,6 +7,4 @@ void Entradas::adicionaProduto(Produto* p){
   }
 std::list Entradas::consultarAdicionado (int codigo){
   }
-    
-}
-
+   
