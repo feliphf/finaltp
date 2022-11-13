@@ -34,6 +34,9 @@ class Produto{
    * @brief Categoria do produto.
    */
   std::string categoria;
+  /**
+   * @brief Fabricante do produto.
+   */
   std::string fabricante;
   
   public:
@@ -46,31 +49,31 @@ class Produto{
   /**
   * @brief Retorna o código do produto
   *
-  * @return int código do produto
+  * @return Retorna o código do produto
   */
   int get_codigo ();
   /**
   * @brief Retorna o preço do produto
   *
-  * @return float preço do produto
+  * @return Retorna o preço do produto
   */
   float get_preco ();
   /**
   * @brief Retorna o nome do produto
   *
-  * @return string nome do produto
+  * @return Retorna o nome do produto
   */
   std::string get_nome ();
   /**
   * @brief Retorna a categoria do produto
   *
-  * @return string categoria do produto
+  * @return Retorna a categoria do produto
   */
   std::string get_categoria ();
   /**
-  * @brief Retorna o fabricante do produto
+  * @brief Retorna o fabricante do produto.
   *
-  * @return string fabricante do produto
+  * @return Retorna o fabricante do produto.
   */
   std::string get_fabricante ();
   
