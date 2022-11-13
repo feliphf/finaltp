@@ -4,7 +4,7 @@
 #include <iostream>
 #include <list>
 
-#include "produto.hpp"
+#include "Produto.hpp"
 
 class Saidas {
 private:
