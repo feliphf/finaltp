@@ -26,11 +26,20 @@
 class Produto{
   private:
   
-///@brief lista de entradas, para armazenar cada produto, em uma posição da lista
+///@brief lista de entradas, para armazenar cada produto, em uma posição da lista.
   std::list <Produto*> entradas;
   
   public:
   
+/**
+* @brief Função responsável por adiocionar um produto a lista de entradas
+*
+* @details A partir da compra de um produto para o estoque da empresa,
+* o gerente irá adiocionar cada produto usando este método, a lista criá-da irá armazenar um produto,
+* com todas as especificações do catálogo dos produtos.
+*
+* @param Produto p, produto com os atributos da classe produto.
+*/  
   void adicionaProduto(Produto* p);
   
 /**
@@ -40,7 +49,7 @@ class Produto{
 * @details Além de possibilitar a consulta, e a conferência, ele também trata os erros,
 * que podem ser cometidos.
 
-* @param código int, o código do produto armazenado nas entradas.
+* @param código int, o código do produto, ao qual foi armazenado nas entradas.
 */
   std::list consultarAdicionado (int codigo);
     
