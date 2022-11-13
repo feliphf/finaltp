@@ -8,5 +8,5 @@ void Saidas::retira_produto(Produto* p){
 }
  
 void Saidas::consultar_retirado(){
-  cout << "Último produto retirado: "<< saidas.back()<<endl;
+  std::cout << "Último produto retirado: "<< saidas.back()<<endl;
 }
