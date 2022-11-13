@@ -23,7 +23,7 @@
  * @details A classe saídas está responsável por retirar produtos de acordo com as  
  * vendas feitas na empresa, retirando-as, pela classe de cátologo produto, desta  
  * forma, irá retirar cada produto. Ela também retornará o último produto adicionado, 
- * desta forma, o gerente poderá conferir se realmente foi adicionado, oque ele gostaria.
+ * desta forma, o funcionário poderá conferir se realmente foi retirado, oque ele gostaria.
  */
 
 class Saidas {
@@ -39,12 +39,11 @@ public:
  *
  * @details A partir da venda de um produto do estoque da empresa, o funcionário 
  * irá retirar cada produto usando este método, a lista cria-da irá retirar um 
- * produto, de acordo com o seu atributos, só poderá retirar, se já tiver sido 
- * adicionado ao estoque, além de tratar os erros, que podem ser cometidos.
+ * produto, de acordo com o seus atributos, na classe estoque.
  *
- * @param código int do produto, de um produto existente no estoque da empresa.
+ * @param Produto p, produto com os atributos da classe produto.
  */  
-  void retiraProduto(int código);
+  void retiraProduto(Produto* p);
     
 /**
  * @brief Possibilita a consulta do funcionário, para conferir se retirou 
