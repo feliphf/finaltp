@@ -43,7 +43,7 @@ public:
  *
  * @param Produto p, produto com os atributos da classe produto.
  */  
-  void retiraProduto(Produto* p);
+  void retira_produto(Produto* p);
     
 /**
  * @brief Possibilita a consulta do funcionário, para conferir se retirou 
@@ -51,7 +51,7 @@ public:
  *
  * @details a função irá apresentar o último produto adicionado, para poder ser conferido.
  */
-  void consultarRetirado();
+  void consultar_retirado();
   
 };
 #endif
