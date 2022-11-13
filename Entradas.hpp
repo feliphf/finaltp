@@ -1,6 +1,9 @@
 # ifndef ENTRADAS.HPP
 # define ENTRADAS.HPP
+
 # include <iostream>
+
+# include "produtos.hpp"
 
 class Produto{
   private:
