@@ -1,53 +1,53 @@
 #include <iostream>
 #include "Produto.hpp"
   
-  void Produto::set_nome (){
-    nome = _nome;
-  }
 
-  void Produto::set_codigo (){
-    codigo = _codigo;
-  }
 
-  void Produto::set_fabricante (){
-    frabricante = _fabricante;
-  }
+void Produto::set_codigo (int _codigo){
+  codigo = _codigo;
+}
 
-  void Produto::set_categoria (){
-    preco = _preco;
-  }
+void Produto::set_quantidade (int _quantidade){
+  quantidade = _quantidade;
+}
 
-  void Produto::set_nome (){
-    categoria = _categoria;
-  }
+void Produto::set_preco (){
+  preco = _preco;
+}
 
-  void Produto::set_quantidade (){
-    quantidade = _quantidade;
-  }
+void Produto::set_nome (std::string _nome){
+  nome = _nome;
+}
 
-  int Produto::get_codigo (){
-    return codigo;
-  }
+void Produto::set_categoria (std::string _categoria){
+  categoria = _categoria;
+}
 
-  int Produto::get_quantidade (){
-    return quantidade;
-  }
+void Produto::set_fabricante (std::string _fabricante){
+  fabricante = _fabricante;
+}
 
-  float Produto::get_preco (){
-    return preco;
-  }
 
-  std::string Produto::get_nome (){
-    return nome;
-  }
+int Produto::get_codigo (){
+  return codigo;
+}
 
-  sdt::string Produto::get_categoria (){
-    return categoria;
-  }
+int Produto::get_quantidade (){
+  return quantidade;
+}
 
-  std::string Produto::get_fabricante (){
-    return fabricante;
-  }
-  
-  
+float Produto::get_preco (){
+  return preco;
+}
+
+std::string Produto::get_nome (){
+  return nome;
+}
+
+sdt::string Produto::get_categoria (){
+  return categoria;
+}
+
+std::string Produto::get_fabricante (){
+  return fabricante;
 }
