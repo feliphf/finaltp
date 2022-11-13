@@ -1,15 +1,10 @@
-#ifndef SAIDAS.HPP
-#define SAIDAS.HPP
+#include "Produto.hpp"
+#include "Saidas.hpp"
 #include <iostream>
-
-class Produto{
-  private:
-  list saidas <Produto *>;
-    
-  public:
-  list get_saidas ();
-  consultarRetirar (int codigo){
+#include <list>
   
-  };
-};
-#endif;
+void Saidas::retiraProduto(int código){
+}
+ 
+std::string Saidas::consultarRetirados (int codigo){
+}
