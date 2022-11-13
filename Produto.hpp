@@ -20,7 +20,7 @@
    * necessários para os produtos, servindo como uma espécie de catálogo  
    * onde o funcionário poderá consultar a disponibilidade de um produto e 
    * efetuar a retirada do mesmo. Já o gerente também poderá consultar e
-   *  retirar, mas somente ele conseguirá adcionar um novo produto.
+   * retirar, mas somente ele conseguirá adcionar um novo produto.
    */
 
 class Produto{
