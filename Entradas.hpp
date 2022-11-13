@@ -52,7 +52,7 @@ class Entradas{
 * @details esta função irá apresentar a tela, qual foi o último produto
 * adicinado pelo gerente.
 */
-  void consultarAdicionado ();
+  void consultarAdicionado();
     
 };
 #endif;
