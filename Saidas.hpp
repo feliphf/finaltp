@@ -6,7 +6,6 @@
 
 #include "produto.hpp"
 
-
 class Saidas {
 private:
     
@@ -17,7 +16,6 @@ public:
   void retiraProduto(Produto* p);
   std::list getSaida();  
   std::string consultarRetirados (int codigo);
-    
   
 };
 #endif
