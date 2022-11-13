@@ -4,7 +4,7 @@
 
 class Produto{
   private:
-  saidas list <Produto *>;
+  list saidas <Produto *>;
     
   public:
   list get_saidas ();
