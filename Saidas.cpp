@@ -7,6 +7,6 @@ void Saidas::retiraProduto(Produto* p){
   saidas.push_back(p);
 }
  
-void Saidas::consultarRetirados (){
+void Saidas::consultarRetirado(){
   cout << "Último produto retirado: "<< saidas.back()<<endl;
 }
