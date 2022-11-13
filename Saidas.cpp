@@ -3,10 +3,10 @@
 #include <iostream>
 #include <list>
   
-void Saidas::retiraProduto(Produto* p){
+void Saidas::retira_produto(Produto* p){
   saidas.push_back(p);
 }
  
-void Saidas::consultarRetirado(){
+void Saidas::consultar_retirado(){
   cout << "Último produto retirado: "<< saidas.back()<<endl;
 }
