@@ -4,8 +4,8 @@
    * @brief Classe para armazenamento dos produtos
    * @version 1.0
    * @date 2022-11-13
-   * @details A classe produto funcionará como um catálogo onde o gerente e os funcionarios poderão
-   * fazer consultas e alterações.
+   * @details A classe produto funcionará como um catálogo onde o  
+   * gerente e os funcionarios poderão fazer consultas e alterações.
    * @copyright GNU General Public License v2.0
    */
 
@@ -15,10 +15,12 @@
 
   /**
    * @brief Armazena produto em uma lista de entradas.
-   * @details A classe produto está responsável por armazenar os atributos necessários para os produtos, 
-   * servindo como uma espécie de catálogo onde o funcionário ou gerente poderá consultar a disponibilidade
-   * de um produto e adcionar/retirar um item do catálogo. 
-   * para ser conferido se realmente foi adicionado.
+   *
+   * @details A classe produto é responsável por armazenar os atributos 
+   * necessários para os produtos, servindo como uma espécie de catálogo  
+   * onde o funcionário poderá consultar a disponibilidade de um produto e 
+   * efetuar a retirada do mesmo. Já o gerente também poderá consultar e
+   *  retirar, mas somente ele conseguirá adcionar um novo produto.
    */
 
 class Produto{
