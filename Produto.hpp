@@ -20,7 +20,7 @@ class Produto{
   void set_codigo ();
   void set_fabricante ();
   void set_preco ();
-  void get_categoria ();
+  void set_categoria ();
 };
 #endif;
   
