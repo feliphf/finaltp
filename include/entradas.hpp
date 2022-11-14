@@ -1,5 +1,5 @@
 /**
- * @file Entradas.hpp
+ * @file entradas.hpp
  * @author Ana Carolina e Guilherme Pascoal
  * @brief Classe para armazenamento de entradas dos produtos.
  * @version 1.0
@@ -9,10 +9,10 @@
  * @copyright GNU General Public License v2.0
  */
 
-#ifndef ENTRADAS.HPP
-#define ENTRADAS.HPP
+#ifndef ENTRADAS_H
+#define ENTRADAS_H
 
-#include "Produto.hpp"
+#include "produto.hpp"
 
 #include <iostream>
 #include <list>

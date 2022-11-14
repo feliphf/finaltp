@@ -1,5 +1,5 @@
 /**
- * @file Entradas.hpp
+ * @file saidas.hpp
  * @author Ana Carolina e Guilherme Pascoal
  * @brief Classe para retirar produtos armazenados na classe produto.
  * @version 1.0
@@ -9,13 +9,13 @@
  * @copyright GNU General Public License v2.0
  */
 
-#ifndef SAIDA_HPP
-#define SAIDA_HPP
+#ifndef SAIDAS_H
+#define SAIDAS_H
 
 #include <iostream>
 #include <list>
 
-#include "Produto.hpp"
+#include "produto.hpp"
 
 /**
  * @brief Retirada de um produto em uma lista de saídas.
