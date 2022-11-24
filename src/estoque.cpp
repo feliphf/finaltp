@@ -1,4 +1,4 @@
-#include "estoque.hpp"
+#include "estoque.hpp" //olaaaaa
 #include "produto.hpp"
 #include <iostream>
 #include <fstream>
@@ -103,8 +103,3 @@ void Estoque::alterarPrecoProduto(string pesquisa, float preco){//fazer uma pra 
       }else
         cout << "Produto não cadastrado" << endl;
 }
-
-void entradasDeProdutos(string codig, string nome, string categ, float preço, int quant){
-}
-        void saidasDeProdutos(string codig, int quant){
-        }
