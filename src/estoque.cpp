@@ -107,12 +107,8 @@ void Estoque::alterarPrecoProduto(string pesquisa, float preco){//fazer uma pra 
 void Estoque::cadastroDeProdutos(string codig, string nome, string categ, float preco, int quant){
      if (_estoque.count(codig) == 0)
       {
-        _estoque.insert( std::pair<string,Produto>(codig, Produto));
-        (_estoque->second).setCodigo(codig);
-        (_estoque->second).setNome(nome);
-        (_estoque->second).setCateg(categ);
-        (_estoque->second).setPreco(preco);
-        (_estoque->second).setQuant(quant);
+        Produto produto(codig, nome, categ, preco, quant);
+        _estoque.insert( std::pair<string,Produto>(codig, produto));
         cout<<"O produto "<<(_estoque->second).getNome()<<" foi adicionado com sucesso "<<endl;
       }else
         cout << "Produto já cadastrado, Por favor adicionar quantidade no campo de entradas" << endl;
