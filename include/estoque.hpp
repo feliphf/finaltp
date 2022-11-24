@@ -1,6 +1,6 @@
 /**
  * @file estoque.hpp
- * @author Felipe Henrique Ferraz e Yan Figueiras
+ * @author Felipe Henrique Ferraz, Yan Figueira e Ana Carolina
  * @brief Classe responsavel por armazenar produtos
  * @version 1.0
  * @date 2022-11-14
@@ -32,6 +32,8 @@ class Estoque{
         void alterarFabricanteProduto(string pesquisa,string fabric);
         void alterarCategoriaProduto(string pesquisa,string categ);
         void alterarPrecoProduto(string pesquisa, float preco);
+        void entradasDeProdutos(string codig, string nome, string categ, float preço, int quant);
+        void saidasDeProdutos(string codig, int quant);
 
         //possiveis outras funçoes de pesquisa se der tempo
 
