@@ -12,8 +12,17 @@ produto:
 estoque:
 	$(CC) $(CFLAGS) -c src/estoque.cpp -o build/estoque.o
 
-main: produto estoque
-	$(CC) $(CFLAGS) build/produto.o build/estoque.o src/main.cpp -o $(TARGET)
+loginpessoa:
+	$(CC) $(CFLAGS) -c src/loginpessoa.cpp -o build/loginpessoa.o
+
+funcionario:
+	$(CC) $(CFLAGS) -c src/funcionario.cpp -o build/funcionario.o
+
+gerente:
+	$(CC) $(CFLAGS) -c src/gerente.cpp -o build/gerente.o
+
+main: produto estoque loginpessoa funcionario gerente
+	$(CC) $(CFLAGS) build/produto.o build/estoque.o build/gerente.o build/funcionario.o build/loginpessoa.o src/main.cpp -o $(TARGET)
 
 clean:
 	$(RM) -r $(BUILDDIR)/* $(TARGET)
