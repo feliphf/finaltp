@@ -1,6 +1,6 @@
 #include "loginpessoa.hpp"
 
-bool LoginPessoa::esta_Logado_Gerente()
+bool Loginpessoa::esta_Logado_Gerente()
 {
     if (_senha == 11)
     {
@@ -14,7 +14,7 @@ bool LoginPessoa::esta_Logado_Gerente()
     }
 }
 
-bool LoginPessoa::esta_Logado_Funcionario()
+bool Loginpessoa::esta_Logado_Funcionario()
 {
     if (_senha == 10)
     {
