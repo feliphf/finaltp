@@ -118,3 +118,21 @@ void Estoque::cadastroDeProdutos(string codig, string nome, string categ, float 
         cout << "Produto já cadastrado, Por favor adicionar quantidade no campo de entradas" << endl;
     
 }
+void Estoque::saidasDeProdutos(string codig, int quant){
+    if (_estoque.count(pesquisa) == 1)
+      {
+        map<string, Produto>::iterator it = _estoque.find(pesquisa);
+            if(quant=0)
+            {
+                cout<<"Produto não retirado, quantidade pedida 0"<<endl;
+            else if((it->second).getQuant()<quant)
+            {
+                cout<<"Tentativa de retirada abaixo da quantidade disponível em estoque"<<endl;
+            else
+            (it->second).getQuant=quantidade;
+            quantidade-=quant;
+            (it->second).setQuant(quant);
+            cout<<"Foram retirados com sucesso "<<(it->second).getQuant()<<" quantidade do produto "<<(_estoque->second).getNome()<<endl;
+      }else
+        cout << "Produto não cadastrado, não poderá ser retirado" << endl;
+            }
