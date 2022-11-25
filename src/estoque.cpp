@@ -161,9 +161,9 @@ void Estoque::entradasDeProdutos(string codig, int quant){
             {
                 cout<<"Produto não adiocionado, quantidade pedida 0"<<endl;
             else
-            (it->second).getQuant=quantidade;
+            (it->second).getQuantidade=quantidade;
             quantidade+=quant;
-            (it->second).setQuant(quantidade);
+            (it->second).setQuantidade(quantidade);
             cout<<"Foram adionados com sucesso "<<quant<<" quantidade do produto "<<(_estoque->second).getNome()<<endl;
       }else
             {cout << "Produto não cadastrado, não poderá ser adicionado" << endl;
@@ -176,14 +176,14 @@ void Estoque::saidasDeProdutos(string codig, int quant){
             if(quant=0)
             {
                 cout<<"Produto não retirado, quantidade pedida 0"<<endl;
-            else if((it->second).getQuant()<quant)
+            else if((it->second).getQuantidade()<quant)
             {
                 cout<<"Tentativa de retirada abaixo da quantidade disponível em estoque"<<endl;
             }
             else
-            {(it->second).getQuant=quantidade;
+            {(it->second).getQuantidade=quantidade;
             quantidade-=quant;
-            (it->second).setQuant(quantidade);
+            (it->second).setQuantidade(quantidade);
             cout<<"Foram retirados com sucesso "<<quant<<" quantidade do produto "<<(_estoque->second).getNome()<<endl;
             }
       }else
