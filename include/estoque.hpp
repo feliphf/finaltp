@@ -32,7 +32,7 @@ class Estoque{
         void alterarFabricanteProduto(string pesquisa,string fabric);
         void alterarCategoriaProduto(string pesquisa,string categ);
         void alterarPrecoProduto(string pesquisa, float preco);
-        void cadastroDeProdutos(string codig, string nome, string categ, float preco, int quant);
+        void cadastroDeProdutos(string codig, string nome, string fabri, string categ, float preco, int quant);
         void entradasDeProdutos(string codig, int quant);
         void saidasDeProdutos(string codig, int quant);
 
