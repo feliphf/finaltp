@@ -149,7 +149,8 @@ void Estoque::cadastroDeProdutos(string codig, string nome, string fabri, string
             cout<<"O produto "<<nome()<<" foi adicionado com sucesso "<<endl;
         }
       }else
-        cout << "Produto já cadastrado, Por favor adicionar quantidade no campo de entradas" << endl;
+        {cout << "Produto já cadastrado, Por favor adicionar quantidade no campo de entradas" << endl;
+    }
 }
 
 void Estoque::entradasDeProdutos(string codig, int quant){
@@ -165,7 +166,8 @@ void Estoque::entradasDeProdutos(string codig, int quant){
             (it->second).setQuant(quantidade);
             cout<<"Foram adionados com sucesso "<<quant<<" quantidade do produto "<<(_estoque->second).getNome()<<endl;
       }else
-        cout << "Produto não cadastrado, não poderá ser adicionado" << endl;
+            {cout << "Produto não cadastrado, não poderá ser adicionado" << endl;
+    }
 }
 void Estoque::saidasDeProdutos(string codig, int quant){
     if (_estoque.count(codig) == 1)
@@ -177,11 +179,14 @@ void Estoque::saidasDeProdutos(string codig, int quant){
             else if((it->second).getQuant()<quant)
             {
                 cout<<"Tentativa de retirada abaixo da quantidade disponível em estoque"<<endl;
+            }
             else
-            (it->second).getQuant=quantidade;
+            {(it->second).getQuant=quantidade;
             quantidade-=quant;
             (it->second).setQuant(quantidade);
             cout<<"Foram retirados com sucesso "<<quant<<" quantidade do produto "<<(_estoque->second).getNome()<<endl;
-      }else
-        cout << "Produto não cadastrado, não poderá ser retirado" << endl;
             }
+      }else
+            {cout << "Produto não cadastrado, não poderá ser retirado" << endl;
+            }
+       }
