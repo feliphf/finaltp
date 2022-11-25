@@ -127,7 +127,7 @@ void Estoque::alterarPrecoProduto(string pesquisa, float preco){//fazer uma pra 
         cout << "Produto não cadastrado" << endl;
 }
 
-void Estoque::cadastroDeProdutos(string codig, string nome, string fabric, string categ, float preco, int quant){
+void Estoque::cadastroDeProdutos(string codig, string nome, string fabri, string categ, float preco, int quant){
      if (_estoque.count(codig) == 0)
       {
         if (nome.size() >= 20)
@@ -144,7 +144,7 @@ void Estoque::cadastroDeProdutos(string codig, string nome, string fabric, strin
             throw ExcecaoPrecoNegativoCad;
         }else
         {
-            Produto produto(nome, fabric, categ, codig, nome, preco, quant);
+            Produto produto(nome, fabri, categ, codig, nome, preco, quant);
             _estoque.insert(pair<string,Produto>(codig, produto));
             cout<<"O produto "<<nome()<<" foi adicionado com sucesso "<<endl;
         }
