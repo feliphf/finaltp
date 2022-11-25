@@ -146,7 +146,7 @@ void Estoque::cadastroDeProdutos(string codig, string nome, string fabri, string
         {
             Produto produto(nome, fabri, categ, codig, nome, preco, quant);
             _estoque.insert(pair<string,Produto>(codig, produto));
-            cout<<"O produto "<<nome()<<" foi adicionado com sucesso "<<endl;
+            cout<<"O produto "<<nome<<" foi adicionado com sucesso "<<endl;
         }
       }else
         {cout << "Produto já cadastrado, Por favor adicionar quantidade no campo de entradas" << endl;
@@ -156,12 +156,13 @@ void Estoque::cadastroDeProdutos(string codig, string nome, string fabri, string
 void Estoque::entradasDeProdutos(string codig, int quant){
     if (_estoque.count(codig) == 1)
       {
-        map<string, Produto>::iterator it = _estoque.find(codig);
             if(quant=0)
             {
                 cout<<"Produto não adiocionado, quantidade pedida 0"<<endl;
             }else
-            {(it->second).getQuantidade=quantidade;
+            {map<string, Produto>::iterator it = _estoque.find(codig);
+            int quantidade;
+            (it->second).getQuantidade()=quantidade;
             quantidade+=quant;
             (it->second).setQuantidade(quantidade);
             cout<<"Foram adionados com sucesso "<<quant<<" quantidade do produto "<<(_estoque->second).getNome()<<endl;
@@ -174,7 +175,6 @@ void Estoque::entradasDeProdutos(string codig, int quant){
 void Estoque::saidasDeProdutos(string codig, int quant){
     if (_estoque.count(codig) == 1)
       {
-        map<string, Produto>::iterator it = _estoque.find(codig);
             if(quant=0)
             {
                 cout<<"Produto não retirado, quantidade pedida 0"<<endl;
@@ -183,7 +183,9 @@ void Estoque::saidasDeProdutos(string codig, int quant){
                 cout<<"Tentativa de retirada abaixo da quantidade disponível em estoque"<<endl;
             }
             else
-            {(it->second).getQuantidade=quantidade;
+            {map<string, Produto>::iterator it = _estoque.find(codig);
+            int quantidade;
+            (it->second).getQuantidade()=quantidade;
             quantidade-=quant;
             (it->second).setQuantidade(quantidade);
             cout<<"Foram retirados com sucesso "<<quant<<" quantidade do produto "<<(_estoque->second).getNome()<<endl;
