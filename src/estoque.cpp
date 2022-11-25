@@ -1,4 +1,4 @@
-#include "estoque.hpp" //olaaaaa
+#include "estoque.hpp" 
 #include "produto.hpp"
 #include <iostream>
 #include <fstream>
@@ -66,20 +66,31 @@ void Estoque::pesquisarProduto(string pesquisa){
 
 void Estoque::alterarNomeProduto(string pesquisa, string nome){//fazer uma pra cada atributo exceto codigo e quantidade, que se da pelas entradas e saidas, junto com registrar nas entradas
       if (_estoque.count(pesquisa) == 1)
-      {
-        map<string, Produto>::iterator it = _estoque.find(pesquisa);
-        cout<<"O nome foi alterado de "<<(it->second).getNome()<<" para "<<nome<<endl;
-        (it->second).setNome(nome);
-      }else
+      { 
+        if (nome.size() >= 20)
+        {
+            throw ExcecaoTamanhoNomeAlt;
+        }else
+        {
+            map<string, Produto>::iterator it = _estoque.find(pesquisa);
+            cout<<"O nome foi alterado de "<<(it->second).getNome()<<" para "<<nome<<endl;
+            (it->second).setNome(nome);
+        }
+    }else
         cout << "Produto não cadastrado" << endl;
-}
 
 void Estoque::alterarFabricanteProduto(string pesquisa, string fabric){//fazer uma pra cada atributo exceto codigo e quantidade, que se da pelas entradas e saidas, junto com registrar nas entradas
       if (_estoque.count(pesquisa) == 1)
       {
-        map<string, Produto>::iterator it = _estoque.find(pesquisa);
-        cout<<"O fabricante foi alterado de "<<(it->second).getFabricante()<<" para "<<fabric<<endl;
-        (it->second).setFabricante(fabric);
+        if (fabric.size() >= 20)
+        {
+            throw ExcecaoTamanhoFabricAlt;
+        }else
+        {
+            map<string, Produto>::iterator it = _estoque.find(pesquisa);
+            cout<<"O fabricante foi alterado de "<<(it->second).getFabricante()<<" para "<<fabric<<endl;
+            (it->second).setFabricante(fabric);
+        }
       }else
         cout << "Produto não cadastrado" << endl;
 }
@@ -87,9 +98,15 @@ void Estoque::alterarFabricanteProduto(string pesquisa, string fabric){//fazer u
 void Estoque::alterarCategoriaProduto(string pesquisa, string categ){//fazer uma pra cada atributo exceto codigo e quantidade, que se da pelas entradas e saidas, junto com registrar nas entradas
       if (_estoque.count(pesquisa) == 1)
       {
-        map<string, Produto>::iterator it = _estoque.find(pesquisa);
-        cout<<"A categoria foi alterada de "<<(it->second).getCategoria()<<" para "<<categ<<endl;
-        (it->second).setCategoria(categ);
+        if (categ.size() >= 20)
+        {
+            throw ExcecaoTamanhoCategAlt;
+        }else
+        {
+            map<string, Produto>::iterator it = _estoque.find(pesquisa);
+            cout<<"A categoria foi alterada de "<<(it->second).getCategoria()<<" para "<<categ<<endl;
+            (it->second).setCategoria(categ);
+        }
       }else
         cout << "Produto não cadastrado" << endl;
 }
@@ -97,19 +114,40 @@ void Estoque::alterarCategoriaProduto(string pesquisa, string categ){//fazer uma
 void Estoque::alterarPrecoProduto(string pesquisa, float preco){//fazer uma pra cada atributo exceto codigo e quantidade, que se da pelas entradas e saidas, junto com registrar nas entradas
       if (_estoque.count(pesquisa) == 1)
       {
-        map<string, Produto>::iterator it = _estoque.find(pesquisa);
-        cout<<setprecision(2)<<"O preço foi alterado de "<<(it->second).getPreco()<<" para "<<preco<<endl;
-        (it->second).setPreco(preco);
+        if (preco < 0)
+        {
+            throw ExcecaoPrecoNegativoAlt;
+        }else
+        {
+            map<string, Produto>::iterator it = _estoque.find(pesquisa);
+            cout<<setprecision(2)<<"O preço foi alterado de "<<(it->second).getPreco()<<" para "<<preco<<endl;
+            (it->second).setPreco(preco);
+        }
       }else
         cout << "Produto não cadastrado" << endl;
 }
 
-void Estoque::cadastroDeProdutos(string codig, string nome, string fabri, string categ, float preco, int quant){
+void Estoque::cadastroDeProdutos(string codig, string nome, string fabric, string categ, float preco, int quant){
      if (_estoque.count(codig) == 0)
       {
-        Produto produto(nome, fabri, categ, codig, nome, preco, quant);
-        _estoque.insert(pair<string,Produto>(codig, produto));
-        cout<<"O produto "<<nome()<<" foi adicionado com sucesso "<<endl;
+        if (nome.size() >= 20)
+        {
+            throw ExcecaoTamanhoNomeCad;
+        }else if (fabri.size() >= 20)
+        {
+            throw ExcecaoTamanhoFabriCad;
+        }else if (categ.size() >= 20)
+        {
+            throw ExcecaoTamanhoCategCad;
+        }else if (preco < 0)
+        {
+            throw ExcecaoPrecoNegativoCad;
+        }else
+        {
+            Produto produto(nome, fabric, categ, codig, nome, preco, quant);
+            _estoque.insert(pair<string,Produto>(codig, produto));
+            cout<<"O produto "<<nome()<<" foi adicionado com sucesso "<<endl;
+        }
       }else
         cout << "Produto já cadastrado, Por favor adicionar quantidade no campo de entradas" << endl;
 }
