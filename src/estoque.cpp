@@ -69,7 +69,7 @@ void Estoque::alterarNomeProduto(string pesquisa, string nome){//fazer uma pra c
       { 
         if (nome.size() >= 20)
         {
-            throw ExcecaoTamanhoNomeAlt;
+            //throw ExcecaoTamanhoNomeAlt;
         }else
         {
             map<string, Produto>::iterator it = _estoque.find(pesquisa);
@@ -78,13 +78,13 @@ void Estoque::alterarNomeProduto(string pesquisa, string nome){//fazer uma pra c
         }
     }else
         cout << "Produto não cadastrado" << endl;
-
+}
 void Estoque::alterarFabricanteProduto(string pesquisa, string fabric){//fazer uma pra cada atributo exceto codigo e quantidade, que se da pelas entradas e saidas, junto com registrar nas entradas
       if (_estoque.count(pesquisa) == 1)
       {
         if (fabric.size() >= 20)
         {
-            throw ExcecaoTamanhoFabricAlt;
+            //throw ExcecaoTamanhoFabricAlt;
         }else
         {
             map<string, Produto>::iterator it = _estoque.find(pesquisa);
@@ -100,7 +100,7 @@ void Estoque::alterarCategoriaProduto(string pesquisa, string categ){//fazer uma
       {
         if (categ.size() >= 20)
         {
-            throw ExcecaoTamanhoCategAlt;
+            //throw ExcecaoTamanhoCategAlt;
         }else
         {
             map<string, Produto>::iterator it = _estoque.find(pesquisa);
@@ -112,69 +112,68 @@ void Estoque::alterarCategoriaProduto(string pesquisa, string categ){//fazer uma
 }
 
 void Estoque::alterarPrecoProduto(string pesquisa, float preco){//fazer uma pra cada atributo exceto codigo e quantidade, que se da pelas entradas e saidas, junto com registrar nas entradas
-      if (_estoque.count(pesquisa) == 1)
-      {
+    if (_estoque.count(pesquisa) == 1)
+    {
         if (preco < 0)
         {
-            throw ExcecaoPrecoNegativoAlt;
+            //throw ExcecaoPrecoNegativoAlt;
         }else
         {
             map<string, Produto>::iterator it = _estoque.find(pesquisa);
             cout<<setprecision(2)<<"O preço foi alterado de "<<(it->second).getPreco()<<" para "<<preco<<endl;
             (it->second).setPreco(preco);
         }
-      }else
+    }else
         cout << "Produto não cadastrado" << endl;
 }
 
 void Estoque::cadastroDeProdutos(string codig, string nome, string fabri, string categ, float preco, int quant){
-     if (_estoque.count(codig) == 0)
-      {
+    if (_estoque.count(codig) == 0)
+    {
         if (nome.size() >= 20)
         {
-            throw ExcecaoTamanhoNomeCad;
+            //throw ExcecaoTamanhoNomeCad;
         }else if (fabri.size() >= 20)
         {
-            throw ExcecaoTamanhoFabriCad;
+           // throw ExcecaoTamanhoFabriCad;
         }else if (categ.size() >= 20)
         {
-            throw ExcecaoTamanhoCategCad;
+          //  throw ExcecaoTamanhoCategCad;
         }else if (preco < 0)
         {
-            throw ExcecaoPrecoNegativoCad;
+           // throw ExcecaoPrecoNegativoCad;
         }else
         {
             Produto produto(nome, fabri, categ, codig, preco, quant);
             _estoque.insert(pair<string,Produto>(codig, produto));
             cout<<"O produto "<<nome<<" foi adicionado com sucesso "<<endl;
         }
-      }else
-        {cout << "Produto já cadastrado, Por favor adicionar quantidade no campo de entradas" << endl;
-    }
+    }else
+        cout << "Produto já cadastrado, Por favor adicionar quantidade no campo de entradas" << endl;
 }
 
 void Estoque::entradasDeProdutos(string codig, int quant){
     if (_estoque.count(codig) == 1)
-      {
-            if(quant=0)
-            {
-                cout<<"Produto não adiocionado, quantidade pedida 0"<<endl;
-            }else
-            {map<string, Produto>::iterator it = _estoque.find(codig);
+    {
+        if(quant=0)
+        {
+            cout<<"Produto não adiocionado, quantidade pedida 0"<<endl;
+        }else
+        {
+            map<string, Produto>::iterator it = _estoque.find(codig);
             int quantidade;
             (it->second).getQuantidade()=quantidade;
             quantidade+=quant;
             (it->second).setQuantidade(quantidade);
             cout<<"Foram adionados com sucesso "<<quant<<" quantidade do produto "<<(_estoque->second).getNome()<<endl;
-            }
-      }else
-            {cout << "Produto não cadastrado, não poderá ser adicionado" << endl;
-    }
+        }
+    }else
+        cout << "Produto não cadastrado, não poderá ser adicionado" << endl;
 }
     
 void Estoque::saidasDeProdutos(string codig, int quant){
     if (_estoque.count(codig) == 1)
-      {
+        {
             if(quant=0)
             {
                 cout<<"Produto não retirado, quantidade pedida 0"<<endl;
@@ -190,7 +189,6 @@ void Estoque::saidasDeProdutos(string codig, int quant){
             (it->second).setQuantidade(quantidade);
             cout<<"Foram retirados com sucesso "<<quant<<" quantidade do produto "<<(_estoque->second).getNome()<<endl;
             }
-      }else
-            {cout << "Produto não cadastrado, não poderá ser retirado" << endl;
-            }
+        }else
+            cout << "Produto não cadastrado, não poderá ser retirado" << endl;
 }
