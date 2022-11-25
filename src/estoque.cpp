@@ -144,7 +144,7 @@ void Estoque::cadastroDeProdutos(string codig, string nome, string fabri, string
             throw ExcecaoPrecoNegativoCad;
         }else
         {
-            Produto produto(nome, fabri, categ, codig, nome, preco, quant);
+            Produto produto(nome, fabri, categ, codig, preco, quant);
             _estoque.insert(pair<string,Produto>(codig, produto));
             cout<<"O produto "<<nome<<" foi adicionado com sucesso "<<endl;
         }
