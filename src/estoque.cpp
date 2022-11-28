@@ -162,10 +162,10 @@ void Estoque::entradasDeProdutos(string codig, int quant){
         {
             map<string, Produto>::iterator it = _estoque.find(codig);
             int quantidade;
-            (it->second).getQuantidade()=quantidade;
+            quantidade=(it->second).getQuantidade();
             quantidade+=quant;
             (it->second).setQuantidade(quantidade);
-            cout<<"Foram adionados com sucesso "<<quant<<" quantidade do produto "<<(_estoque->second).getNome()<<endl;
+            cout<<"Foram adionados com sucesso "<<quant<<" quantidade do produto "<<(it->second).getNome()<<endl;
         }
     }else
         cout << "Produto não cadastrado, não poderá ser adicionado" << endl;
@@ -174,6 +174,7 @@ void Estoque::entradasDeProdutos(string codig, int quant){
 void Estoque::saidasDeProdutos(string codig, int quant){
     if (_estoque.count(codig) == 1)
         {
+            map<string, Produto>::iterator it = _estoque.find(codig);
             if(quant=0)
             {
                 cout<<"Produto não retirado, quantidade pedida 0"<<endl;
@@ -182,12 +183,11 @@ void Estoque::saidasDeProdutos(string codig, int quant){
                 cout<<"Tentativa de retirada abaixo da quantidade disponível em estoque"<<endl;
             }
             else
-            {map<string, Produto>::iterator it = _estoque.find(codig);
-            int quantidade;
-            (it->second).getQuantidade()=quantidade;
-            quantidade-=quant;
+            {int quantidade;
+            quantidade=(it->second).getQuantidade();
+            quantidade=quant;
             (it->second).setQuantidade(quantidade);
-            cout<<"Foram retirados com sucesso "<<quant<<" quantidade do produto "<<(_estoque->second).getNome()<<endl;
+            cout<<"Foram retirados com sucesso "<<quant<<" quantidade do produto "<<(it->second).getNome()<<endl;
             }
         }else
             cout << "Produto não cadastrado, não poderá ser retirado" << endl;
