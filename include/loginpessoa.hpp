@@ -3,14 +3,13 @@
 
 #include <iostream>
 
-class Loginpessoa
+class LoginPessoa
 {
 
 public:
-    Loginpessoa()=default;
-    bool esta_Logado_Gerente();
-    bool esta_Logado_Funcionario();
-    int _senha;
+    int Logar();
+    std::string _senha, _senha_Gerente = "123456", _senha_Funcionario = "654321";
+    int _chave_acesso = Logar();
 };
 
 #endif
