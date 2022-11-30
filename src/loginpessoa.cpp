@@ -1,29 +1,71 @@
 #include "loginpessoa.hpp"
 
-bool Loginpessoa::esta_Logado_Gerente()
+int LoginPessoa::Logar()
 {
-    if (_senha == 11)
-    {
-        std::cout << "Voce logou como Gerente!\n";
-        return true;
+    int stop = -1;
+    do
+        {
+        std::cout << "Escolha uma das opcoes de login:(G) para logar como Gerente ou (F) para logar como Funcionario!\n";
+        std::string opcao;
+        std::cin >> opcao;
+        if (opcao == "G" || opcao == "g")
+        {
+            std::cout << "Digite a senha do Gerente: ";
+            std::cin >> _senha;
+            if (_senha == _senha_Gerente)
+            {
+            std::cout << "Voce logou como Gerente!\n";
+            stop = 1;
+            }
+            else
+            {
+                while (_senha != _senha_Gerente || stop != 0)
+                {
+                std::cout << "Senha invalida!\n";
+                std::cout << "Digite a senha novamente ou aperte (Q) para escolher outra opcao!\n";
+                std::cin >> _senha;
+                if (_senha == "q" || _senha == "Q")
+                stop = 0;
+                }
+                if (_senha == _senha_Gerente)
+                {
+                std::cout << "Voce logou como Gerente!\n";
+                stop = 1;
+                }
+            }
+        }
+        else if (opcao == "F" || opcao == "f")
+        {
+            std::cout << "Digite a senha do Funcionario: ";
+            std::cin >> _senha;
+            if (_senha == _senha_Funcionario)
+            {
+            std::cout << "Voce logou como Funcionario!\n";
+            stop = 2;
+            }
+            else
+            {
+                while (_senha != _senha_Funcionario || stop != 0)
+                {
+                std::cout << "Senha invalida!\n";
+                std::cout << "Digite a senha novamente ou aperte (Q) para escolher outra opcao!\n";
+                std::cin >> _senha;
+                if (_senha == "q" || _senha == "Q")
+                stop = 0;
+                }
+                if (_senha == _senha_Funcionario)
+                {
+                std::cout << "Voce logou como Funcionario!\n";
+                stop = 2;
+                }
+            }
+        }
+        else
+        {
+            std::cout << "Opcao escolhida invalida!\n";
+        }
     }
-    else
-    {
-        std::cout << "Login Gerente invalido!\n";
-        return false;
-    }
-}
+    while (stop != 1 || stop != 2);
 
-bool Loginpessoa::esta_Logado_Funcionario()
-{
-    if (_senha == 10)
-    {
-        std::cout << "Voce logou como Funcionario!\n";
-        return true;
-    }
-    else
-    {
-        std::cout << "Login Funcionario invalido!\n";
-        return false;
-    }
+    return stop;
 }
