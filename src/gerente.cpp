@@ -1,6 +1,13 @@
 #include "gerente.hpp"
 
-Gerente::Gerente(int _senha_digitada)
+bool Gerente::esta_Logado()
+{
+    if (_chave_acesso == 1)
     {
-        _senha = _senha_digitada;
+        return true;
     }
+    else
+    {
+        return false;
+    }
+}
