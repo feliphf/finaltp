@@ -1,13 +1,13 @@
 #ifndef FUNCIONARIO_H
 #define FUNCIONARIO_H
 
-#include "loginpessoa.hpp"
+#include "LoginPessoa.hpp"
 
-class Funcionario : public Loginpessoa
+class Funcionario : public LoginPessoa
 {
-    
+
 public:
-    Funcionario (int _senha_digitada);
+    bool esta_Logado();
 };
 
 #endif
