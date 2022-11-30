@@ -1,6 +1,13 @@
 #include "funcionario.hpp"
 
-Funcionario::Funcionario(int _senha_digitada)
+bool Funcionario::esta_Logado()
+{
+    if (_chave_acesso == 2)
     {
-        _senha = _senha_digitada;
+        return true;
     }
+    else
+    {
+        return false;
+    }
+}
