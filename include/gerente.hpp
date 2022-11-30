@@ -1,13 +1,13 @@
 #ifndef GERENTE_H
 #define GERENTE_H
 
-#include "loginpessoa.hpp"
+#include "LoginPessoa.hpp"
 
-class Gerente : public Loginpessoa
+class Gerente : public LoginPessoa
 {
 
 public:
-    Gerente (int _senha_digitada);
+    bool esta_Logado();
 };
 
 #endif
