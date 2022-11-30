@@ -5,7 +5,6 @@
 
 class LoginPessoa
 {
-
 public:
     int Logar();
     std::string _senha, _senha_Gerente = "123456", _senha_Funcionario = "654321";
