@@ -23,9 +23,11 @@ void Sistema::opcoesMenuGerente(){
     cin >> escolha;
     switch(escolha){
         case 1:{
+            //registrar venda
             break;
         }
         case 2:{
+            //registrar compra
             break;
         }
         case 3:{
@@ -85,6 +87,7 @@ void Sistema::opcoesMenuFuncionario(){
     cin >> escolha;
     switch(escolha){
         case 1:{
+            //registrar venda
             break;
         }
         case 2:{
