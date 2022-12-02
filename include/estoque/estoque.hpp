@@ -32,7 +32,7 @@ class Estoque{
         void alterarFabricanteProduto(string pesquisa,string fabric);
         void alterarCategoriaProduto(string pesquisa,string categ);
         void alterarPrecoProduto(string pesquisa, float preco);
-
+        void alterarProduto();
         //possiveis outras funçoes de pesquisa se der tempo
 
 };

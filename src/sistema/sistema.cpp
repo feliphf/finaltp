@@ -40,6 +40,7 @@ void Sistema::opcoesMenuGerente(){
             break;
         }
         case 5:{
+            //relatório
             break;
         }
         case 6:{
@@ -58,6 +59,7 @@ void Sistema::opcoesMenuAdministrativo(){
     cin >> escolha;
     switch(escolha){
         case 1:
+            _estoque.alterarProduto();
             break;
         case 2:
             _sistemaLogin.alterarUsuario();
