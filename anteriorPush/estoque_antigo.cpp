@@ -132,16 +132,16 @@ void Estoque::cadastroDeProdutos(string codig, string nome, string fabri, string
     {
         if (nome.size() >= 20)
         {
-            //throw ExcecaoTamanhoNomeCad;
+            //throw ExcecaoTamanhoNomeAlt;
         }else if (fabri.size() >= 20)
         {
-           // throw ExcecaoTamanhoFabriCad;
+           // throw ExcecaoTamanhoFabricAlt;
         }else if (categ.size() >= 20)
         {
-          //  throw ExcecaoTamanhoCategCad;
+          //  throw ExcecaoTamanhoCategAlt;
         }else if (preco < 0)
         {
-           // throw ExcecaoPrecoNegativoCad;
+           // throw ExcecaoPrecoNegativoAlt;
         }else
         {
             Produto produto(nome, fabri, categ, codig, preco, quant);
