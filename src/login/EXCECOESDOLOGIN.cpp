@@ -18,17 +18,10 @@ virtual const char* SenhaIncorreta::what() const throw(){
 	return mensagem.c_str();
 }
 
-EntradaLoginInvalida::EntradaLoginInvalida(){
-	mensagem = "Entrada Inválida";	
-}
-
-virtual const char* EntradaLoginInvalida::what() const throw(){
-	return mensagem.c_str();
-}
-
 EscolhaInvalida::EscolhaInvalida(){
 	mensagem = "Escolha Inválida";	
 }
 
 virtual const char* EscolhaInvalida::what() const throw(){
 	return mensagem.c_str();
+}
