@@ -13,7 +13,15 @@ void Sistema::salvarParametrosSistema(){
 
 void Sistema::efetuarLogin(){
     do{
-        _usuarioLogado = _sistemaLogin.menuLogin();
+        try{
+            _usuarioLogado = _sistemaLogin.menuLogin();
+        }catch(SenhaIncorreta& erro){
+            cout<<erro.what()<<endl;     
+        }catch(UsuarioNaoCadastrado& erro){
+            cout<<erro.what()<<endl;     
+        }catch(EscolhaInvalida& erro){
+            cout<<erro.what()<<endl;     
+        }
     } while(_usuarioLogado == nullptr);
 }
 
@@ -35,12 +43,10 @@ void Sistema::opcoesMenuGerente(){
             cout << "Digite o código do produto: ";
             cin >> s;
             try{
-                 _estoque.pesquisarProduto(s);
-                
-               }catch(ProdutoNaoCadastrado& erro){
-                    cout<<erro.what()<<endl;
-                    
-                }
+                 _estoque.pesquisarProduto(s);   
+            }catch(ProdutoNaoCadastrado& erro){
+                    cout<<erro.what()<<endl;     
+            }
             break;
         }
         case 4:{
@@ -52,7 +58,11 @@ void Sistema::opcoesMenuGerente(){
             break;
         }
         case 6:{
-            opcoesMenuAdministrativo();
+            try{
+                opcoesMenuAdministrativo();
+            }catch(EscolhaSistemaInvalida& erro){
+                    cout<<erro.what()<<endl;     
+            }
             break;
         }
         case 7:
@@ -70,19 +80,35 @@ void Sistema::opcoesMenuAdministrativo(){
     cin >> escolha;
     switch(escolha){
         case 1:
-            _estoque.alterarProduto();
+            try{
+                _estoque.alterarProduto();
+            }catch(EntradaInvalida& erro){
+                  cout<<erro.what()<<endl;
+            }
             break;
         case 2:
-            _sistemaLogin.alterarUsuario();
+            try{
+                _sistemaLogin.alterarUsuario();
+            }catch(UsuarioNaoCadastrado& erro){
+                  cout<<erro.what()<<endl;
+            }
             break;
         case 3:
             _sistemaLogin.listarUsuarios();
             break;
         case 4:
-            _sistemaLogin.cadastrarUsuario();
+            try{
+                _sistemaLogin.cadastrarUsuario();
+            }catch(EscolhaInvalida& erro){
+                  cout<<erro.what()<<endl;
+            }
             break;
         case 5:
-            _sistemaLogin.excluirUsuario();
+            try{
+                _sistemaLogin.excluirUsuario();
+            }catch(UsuarioNaoCadastrado& erro){
+                  cout<<erro.what()<<endl;
+            }
             break;
         case 6:
             salvarParametrosSistema();
@@ -108,10 +134,9 @@ void Sistema::opcoesMenuFuncionario(){
             cin >> s;
             try{
                 _estoque.pesquisarProduto(s);
-                }catch(ProdutoNaoCadastrado& erro){
-                    cout<<erro.what()<<endl;
-                 
-                 }
+            }catch(ProdutoNaoCadastrado& erro){
+                cout<<erro.what()<<endl;
+            }
             break;
         }
         case 3:{
@@ -119,7 +144,11 @@ void Sistema::opcoesMenuFuncionario(){
             break;
         }
         case 4:{
-            _usuarioLogado->alterarUsuarioLogado();
+            try{
+                _usuarioLogado->alterarUsuarioLogado();
+            }catch(EscolhaInvalida & erro){
+                  cout<<erro.what()<<endl;
+            }
             break;
         }
         case 5:{
@@ -139,9 +168,17 @@ void Sistema::inicializarSistema(){
             efetuarLogin();
         } else {
             if(_usuarioLogado->temPermissao()){
-                opcoesMenuGerente();
+                try{
+                    opcoesMenuGerente();
+                }catch(EscolhaSistemaInvalida& erro){
+                    cout<<erro.what()<<endl;     
+                }
             } else {
-                opcoesMenuFuncionario(); 
+                try{
+                    opcoesMenuFuncionario(); 
+                }catch(EscolhaSistemaInvalida& erro){
+                    cout<<erro.what()<<endl;     
+                }
             }
             salvarParametrosSistema();
             if (!_usuarioLogado->getEstaAutenticado())
