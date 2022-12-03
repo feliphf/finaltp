@@ -42,8 +42,8 @@ void sistemaLogin::listarUsuarios(){
         cout << "Nenhum usuário cadastrado!!" << endl;
     }else{
     map<string, Usuario*>::iterator it;
-    cout << "+-----+---------------------------+------------+---------------+----------------------------+---------------+-------+"<< endl;
-    cout << "| ID  |           NOME            |    TIPO    |      CPF      |            EMAIL           | ÚLTIMO ACESSO | SENHA |"<< endl;
+    	cout << "+-----+---------------------------+------------+---------------+----------------------------+---------------+-------+"<< endl;
+    	cout << "| ID  |           NOME            |    TIPO    |      CPF      |            EMAIL           | ÚLTIMO ACESSO | SENHA |"<< endl;
 	cout << "+-----+---------------------------+------------+---------------+----------------------------+---------------+-------+"<< endl;
     for(it=_usuarios.begin(); it!=_usuarios.end(); it++){
         cout << left << '|' << setw(5) << (it->second)->getId() <<  '|' << setw(27) << (it->second)->getNome() <<  '|' << setw(12) <<
@@ -95,7 +95,7 @@ Usuario* sistemaLogin::pesquisarUsuario(string pesquisa){
         }
     if (contador != 0)
         return it->second;
-    return nullptr;
+    	return nullptr;
 }
 
 void sistemaLogin::excluirUsuario(){
@@ -113,9 +113,9 @@ void sistemaLogin::excluirUsuario(){
 
 void sistemaLogin::cadastrarUsuario(){
 	cout << "+----------------------------------+" << endl;
-	cout << "| " << "1 - Gerente                      |" << endl;
-	cout << "| " << "2 - Funcionário                  |" << endl;
-	cout << "| " << "3 - Voltar                       |" << endl;
+	cout << "| 1 - Gerente                      |" << endl;
+	cout << "| 2 - Funcionário                  |" << endl;
+	cout << "| 3 - Voltar                       |" << endl;
 	cout << "+----------------------------------+" << endl;
     cout << "Escolha qual tipo de usuário: ";
     int escolha;
@@ -153,7 +153,10 @@ void sistemaLogin::cadastrarUsuario(){
         }
         case 3:
             break;
-    }
+    	}
+	default:
+            throw EscolhaInvalida();
+            break;
 }
 
 Usuario* sistemaLogin::menuLogin(){
@@ -168,8 +171,8 @@ Usuario* sistemaLogin::menuLogin(){
                                                       
 )" << endl;
 	cout << "+----------------------------------+" << endl;
-	cout << "| " << "1 - Fazer Login                  |" << endl;
-	cout << "| " << "2 - Encerrar Programa            |" << endl;
+	cout << "| 1 - Fazer Login                  |" << endl;
+	cout << "| 2 - Encerrar Programa            |" << endl;
 	cout << "+----------------------------------+" << endl;
     cout << "Escolha uma opcao: ";
     int escolha;
@@ -198,6 +201,9 @@ Usuario* sistemaLogin::menuLogin(){
         case 2:{
             exit(0);
         }
+	default:
+            throw EscolhaInvalida();
+            break;
     }
     return nullptr;
 }
