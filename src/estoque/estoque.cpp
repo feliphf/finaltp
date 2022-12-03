@@ -76,9 +76,15 @@ void Estoque::alterarNomeProduto(string pesquisa, string nome){
 void Estoque::alterarFabricanteProduto(string pesquisa, string fabric){
       if (_estoque.count(pesquisa) == 1)
       {
-        map<string, Produto>::iterator it = _estoque.find(pesquisa);
+        if (nome.size() >= 20)
+        {
+            throw ExcecaoTamanhoNomeAlt;
+        }else
+        {
+		map<string, Produto>::iterator it = _estoque.find(pesquisa);
         cout<<"O fabricante do prduto foi alterado de "<<(it->second).getFabricante()<<" para "<<fabric<<endl;
         (it->second).setFabricante(fabric);
+	}
       }else
         throw ProdutoNaoCadastrado();
 }
