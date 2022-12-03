@@ -21,7 +21,7 @@ virtual const char* PrecoNaoENumero::what() const throw(){
 }
 
 EntradaInválida::EntradaInvalida(){
-	mensagem = "Entrada inválida, digite um número de 1 a 5";
+	mensagem = "Escolha inválida, digite um número de 1 a 5";
 }
 
 virtual const char* EntradaInvalida::what() const throw(){
