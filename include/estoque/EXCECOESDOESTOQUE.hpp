@@ -9,7 +9,7 @@ using namespace std;
 class ProdutoNaoCadastrado : public std::exception{
 	private:
 		string mensagem;
-    public:,
+    public:
 		ProdutoNaoCadastrado();
 		virtual const char* what() const throw();
 };
