@@ -2,8 +2,6 @@
 #include <string>
 #include <iostream>
 
-using namespace std;
-
 UsuarioNaoCadastrado::UsuarioNaoCadastrado(){
 	mensagem = "Usuário não cadastrado";	
 }
