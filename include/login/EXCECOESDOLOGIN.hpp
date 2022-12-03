@@ -20,14 +20,6 @@ class SenhaIncorreta : public std::exception(){
 		virtual const char* what() const throw();
 };
 
-class EntradaLoginInvalida : public std::exception(){
-	private:
-		std::string mensagem;
-    	public:
-		EntradaLoginInvalida();
-		virtual const char* what() const throw();
-};
-
 class EscolhaInvalida : public std::exception(){
 	private:
 		std::string mensagem;
