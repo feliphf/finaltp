@@ -5,7 +5,7 @@
 using namespace std;
 
 ProdutoNaoCadastrado::ProdutoNaoCadastrado(){
-	mensagem = "Produto não cadastrado";	
+	mensagem = "Produto não localizado no sistema";	
 }
 
 virtual const char* ProdutoNaoCadastrado::what() const throw(){
@@ -13,7 +13,7 @@ virtual const char* ProdutoNaoCadastrado::what() const throw(){
 }
 
 PrecoNaoENumero::PrecoNaoENumero(){
-	mensagem = "Preço inválido, digite novamente";	
+	mensagem = "Preço desejado é inválido";	
 }
 
 virtual const char* PrecoNaoENumero::what() const throw(){
@@ -21,7 +21,7 @@ virtual const char* PrecoNaoENumero::what() const throw(){
 }
 
 EntradaInvalida::EntradaInvalida(){
-	mensagem = "Escolha inválida, digite novamente";
+	mensagem = "Escolha deseja é inválida";
 }
 
 virtual const char* EntradaInvalida::what() const throw(){
@@ -29,7 +29,7 @@ virtual const char* EntradaInvalida::what() const throw(){
 }
 
 ExcecaoTamanhoNomeAlt::ExcecaoTamanhoNomeAlt(){
-	mensagem = "Nome escolhido maior que o esperado, digite novamente o nome que deseja, com até 20 caracteres";
+	mensagem = "Nome desejado maior que o esperado, o nome deve conter até 20 caracteres";
 }
 
 virtual const char* ExcecaoTamanhoNomeAlt::what() const throw(){
@@ -37,7 +37,7 @@ virtual const char* ExcecaoTamanhoNomeAlt::what() const throw(){
 }
 
 ExcecaoTamanhoFabricAlt::ExcecaoTamanhoFabricAlt(){
-	mensagem = "Fabricante escolhido maior que o esperado, digite novamente o fabricante que deseja, com até 20 caracteres";
+	mensagem = "Fabricante desejado maior que o esperado, o fabricante deve conter até 20 caracteres";
 }
 
 virtual const char* ExcecaoTamanhoFabricAlt::what() const throw(){
@@ -45,7 +45,7 @@ virtual const char* ExcecaoTamanhoFabricAlt::what() const throw(){
 }
 
 ExcecaoTamanhoCategAlt::ExcecaoTamanhoCategAlt(){
-	mensagem = "Categoria escolhida maior que o esperado, digite novamente a categoria que deseja, com até 20 caracteres";
+	mensagem = "Categoria desejada maior que o esperado, a categoria deve conter até 20 caracteres";
 }
 
 virtual const char* ExcecaoTamanhoCategAlt::what() const throw(){
@@ -53,7 +53,7 @@ virtual const char* ExcecaoTamanhoCategAlt::what() const throw(){
 }
 
 ExcecaoPrecoNegativoAlt::ExcecaoPrecoNegativoAlt(){
-	mensagem = "Preço inválido, digite novamente";
+	mensagem = "Preço desejado é inválido";
 }
 
 virtual const char* ExcecaoPrecoNegativoAlt::what() const throw(){
