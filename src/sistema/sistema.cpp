@@ -52,7 +52,10 @@ void Sistema::opcoesMenuGerente(){
         case 7:
             _sistemaLogin.fazerLogout(_usuarioLogado);
             break;
-    }
+        }
+        default:
+            throw EscolhaSistemaInvalida();
+            break;
 }
 
 void Sistema::opcoesMenuAdministrativo(){
@@ -77,6 +80,9 @@ void Sistema::opcoesMenuAdministrativo(){
             break;
         case 6:
             salvarParametrosSistema();
+            break;
+        default:
+            throw EscolhaInvalida();
             break;
     }    
 }
@@ -105,8 +111,12 @@ void Sistema::opcoesMenuFuncionario(){
             _usuarioLogado->alterarUsuarioLogado();
             break;
         }
-        case 5:
+        case 5:{
             _sistemaLogin.fazerLogout(_usuarioLogado);
+            break;
+        }
+        default:
+            throw EscolhaInvalida();
             break;
     }
 }
