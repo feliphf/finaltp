@@ -72,12 +72,12 @@ void Usuario::setEstaAutenticado(bool b){
 
 void Usuario::alterarUsuario(){
     cout << "+----------------------------------+" << endl;
-    cout << "| " << "1 - Nome                         |" << endl;
-    cout << "| " << "2 - Tipo                         |" << endl;
-    cout << "| " << "3 - CPF                          |" << endl;
-    cout << "| " << "4 - Email                        |" << endl;
-    cout << "| " << "5 - Senha                        |" << endl;
-    cout << "| " << "6 - Voltar                       |" << endl;
+    cout << "| 1 - Nome                         |" << endl;
+    cout << "| 2 - Tipo                         |" << endl;
+    cout << "| 3 - CPF                          |" << endl;
+    cout << "| 4 - Email                        |" << endl;
+    cout << "| 5 - Senha                        |" << endl;
+    cout << "| 6 - Voltar                       |" << endl;
     cout << "+----------------------------------+" << endl;
     cout << "Escolha o que deseja alterar: ";
     int escolha;
@@ -94,9 +94,9 @@ void Usuario::alterarUsuario(){
         }
         case 2:{
             cout << "+----------------------------------+" << endl;
-	        cout << "| " << "1 - Gerente                      |" << endl;
-	        cout << "| " << "2 - Funcionário                  |" << endl;
-	        cout << "+----------------------------------+" << endl;
+	    cout << "| 1 - Gerente                      |" << endl;
+	    cout << "| 2 - Funcionário                  |" << endl;
+	    cout << "+----------------------------------+" << endl;
             cout << "Escolha qual tipo de usuário: ";
             int escolha;
             cin >> escolha;
@@ -111,6 +111,9 @@ void Usuario::alterarUsuario(){
                     setTipo("Funcionario");
                     break;
                 }
+		default:
+        	    throw EscolhaInvalida();
+                    break;
             }
             break;
         }
@@ -141,5 +144,8 @@ void Usuario::alterarUsuario(){
         case 6:{
             break;
         }
+	default:
+       	    throw EscolhaInvalida();
+            break;
     }
 }
