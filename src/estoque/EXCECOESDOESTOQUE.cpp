@@ -9,7 +9,7 @@ ProdutoNaoCadastrado::ProdutoNaoCadastrado(){
 }
 
 virtual const char* ProdutoNaoCadastrado::what() const throw(){
-	return memsagem.c_str();
+	return mensagem.c_str();
 }
 
 PrecoNaoENumero::PrecoNaoENumero(){
@@ -17,7 +17,7 @@ PrecoNaoENumero::PrecoNaoENumero(){
 }
 
 virtual const char* PrecoNaoENumero::what() const throw(){
-	return memsagem.c_str();
+	return mensagem.c_str();
 }
 
 EntradaInválida::EntradaInvalida(){
@@ -25,6 +25,6 @@ EntradaInválida::EntradaInvalida(){
 }
 
 virtual const char* EntradaInvalida::what() const throw(){
-	return memsagem.c_str();
+	return mensagem.c_str();
 }
 
