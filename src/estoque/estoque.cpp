@@ -67,9 +67,8 @@ void Estoque::alterarNomeProduto(string pesquisa, string nome){
       if (_estoque.count(pesquisa) == 1)
       {
 	if (nome.size() > 20)
-        {
-            throw ExcecaoTamanhoNomeAlt;
-        }else
+            throw ExcecaoTamanhoNomeAlt();
+        else
         {
 	   map<string, Produto>::iterator it = _estoque.find(pesquisa);
            cout<<"O nome do prduto foi alterado de "<<(it->second).getNome()<<" para "<<nome<<endl;
@@ -83,9 +82,8 @@ void Estoque::alterarFabricanteProduto(string pesquisa, string fabric){
       if (_estoque.count(pesquisa) == 1)
       {
 	if (fabric.size() > 20)
-        {
-            throw ExcecaoTamanhoFabricAlt;
-        }else
+            throw ExcecaoTamanhoFabricAlt();
+        else
 	{
             map<string, Produto>::iterator it = _estoque.find(pesquisa);
             cout<<"O fabricante do prduto foi alterado de "<<(it->second).getFabricante()<<" para "<<fabric<<endl;
@@ -99,9 +97,8 @@ void Estoque::alterarCategoriaProduto(string pesquisa, string categ){
       if (_estoque.count(pesquisa) == 1)
       {
 	if (categ.size() > 20)
-        {
-           throw ExcecaoTamanhoCategAlt;
-        }else
+           throw ExcecaoTamanhoCategAlt();
+        else
 	{
            map<string, Produto>::iterator it = _estoque.find(pesquisa);
            cout<<"A categoria do prduto foi alterada de "<<(it->second).getCategoria()<<" para "<<categ<<endl;
@@ -117,15 +114,15 @@ void Estoque::alterarPrecoProduto(string pesquisa, float preco){
 	if (preco != (int)preco)
 	    throw PrecoNaoENumero();
         else if (preco < 0)
-            throw ExcecaoPrecoNegativo;
+            throw ExcecaoPrecoNegativo();
 	else
         {
 	    map<string, Produto>::iterator it = _estoque.find(pesquisa);
             cout<<setprecision(2)<<"O preço do prduto foi alterado de "<<(it->second).getPreco()<<" para "<<preco<<endl;
             (it->second).setPreco(preco);
      	} 
-     }else
-        throw ProdutoNaoCadastrado();
+      }else
+          throw ProdutoNaoCadastrado();
 }
 
 void Estoque::alterarProduto(){
