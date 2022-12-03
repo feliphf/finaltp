@@ -34,7 +34,13 @@ void Sistema::opcoesMenuGerente(){
             string s;
             cout << "Digite o código do produto: ";
             cin >> s;
-            _estoque.pesquisarProduto(s);
+            try{
+                 _estoque.pesquisarProduto(s);
+                
+               }catch(ProdutoNaoCadastrado& erro){
+                    cout<<erro.what()<<endl;
+                    
+                }
             break;
         }
         case 4:{
@@ -100,7 +106,12 @@ void Sistema::opcoesMenuFuncionario(){
             string s;
             cout << "Digite o código do produto: ";
             cin >> s;
-            _estoque.pesquisarProduto(s);
+            try{
+                _estoque.pesquisarProduto(s);
+                }catch(ProdutoNaoCadastrado& erro){
+                    cout<<erro.what()<<endl;
+                 
+                 }
             break;
         }
         case 3:{
