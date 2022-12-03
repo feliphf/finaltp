@@ -1,33 +1,30 @@
-#ifndef _EXCECOESDOESTOQUE_HPP_
-#define _EXCECOESDOESTOQUE_HPP_
-#include "exception.hpp"
+#include "EXCECOESDOESTOQUE.hpp"
 #include <string>
 #include <iostream>
 
 using namespace std;
 
-class ProdutoNaoCadastrado : public std::exception{
-	private:
-		string mensagem;
-    public:,
-		ProdutoNaoCadastrado();
-		virtual const char* what() const throw();
-};
+ProdutoNaoCadastrado::ProdutoNaoCadastrado(){
+	mensagem = "Produto não cadastrado";	
+}
 
-class PrecoNaoENumero : public std::exception{
-	private:
-		std::string mensagem;
-    public:
-		PrecoNaoENumero();
-		virtual const char* what() const throw();
-};
+virtual const char* ProdutoNaoCadastrado::what() const throw(){
+	return memsagem.c_str();
+}
 
-class EntradaInvalida : public std::exception{
-	private:
-		std::string mensagem;
-    public:
-		EntradaInvalida();
-		virtual const char* what() const throw();
-};
+PrecoNaoENumero::PrecoNaoENumero(){
+	mensagem = "Preço selecionado para alteração não é válido";	
+}
 
-#endif
+virtual const char* PrecoNaoENumero::what() const throw(){
+	return memsagem.c_str();
+}
+
+EntradaInválida::EntradaInvalida(){
+	mensagem = "Entrada inválida, digite um número de 1 a 5";
+}
+
+virtual const char* EntradaInvalida::what() const throw(){
+	return memsagem.c_str();
+}
+
