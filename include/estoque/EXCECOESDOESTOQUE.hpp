@@ -4,11 +4,9 @@
 #include <string>
 #include <iostream>
 
-using namespace std;
-
 class ProdutoNaoCadastrado : public std::exception{
 	private:
-		string mensagem;
+		std::string mensagem;
     public:
 		ProdutoNaoCadastrado();
 		virtual const char* what() const throw();
