@@ -4,12 +4,10 @@
 #include <string>
 #include <iostream>
 
-using namespace std;
-
 class UsuarioNaoCadastrado : public std::exception{
 	private:
 		std::string mensagem;
-    public:
+    	public:
 		UsuarioNaoCadastrado();
 		virtual const char* what() const throw();
 };
@@ -17,7 +15,7 @@ class UsuarioNaoCadastrado : public std::exception{
 class SenhaIncorreta : public std::exception(){
 	private:
 		std::string mensagem;
-    public:
+    	public:
 		SenhaIncorreta();
 		virtual const char* what() const throw();
 };
@@ -25,7 +23,7 @@ class SenhaIncorreta : public std::exception(){
 class EntradaLoginInvalida : public std::exception(){
 	private:
 		std::string mensagem;
-    public:
+    	public:
 		EntradaLoginInvalida();
 		virtual const char* what() const throw();
 };
@@ -33,7 +31,7 @@ class EntradaLoginInvalida : public std::exception(){
 class EscolhaInvalida : public std::exception(){
 	private:
 		std::string mensagem;
-    public:
+    	public:
 		EscolhaInvalida();
 		virtual const char* what() const throw();
 };
