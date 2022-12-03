@@ -148,7 +148,13 @@ void Estoque::alterarProduto(){
         it = _estoque.find(codigoProdutoAlterado); // SE O CÓDIGO NAO EXISTIR OU FOR ENTRADA INVALIDA ELE DA BAD ALLOC E ABORT
         std::cout<<"Digite um novo nome para "<<(it->second).getNome()<<std::endl;
         std::cin>>novaString;
-        alterarNomeProduto(codigoProdutoAlterado,novaString);
+        try{
+		alterarNomeProduto(codigoProdutoAlterado,novaString);
+	}catch(ProdutoNaoCadastrado& erro){
+                  cout<<erro.what()<<endl;
+        }catch(ExcecaoTamanhoNomeAlt& erro){
+                  cout<<erro.what()<<endl;
+        }   
         break;
     
     case '2':
@@ -157,7 +163,13 @@ void Estoque::alterarProduto(){
         it = _estoque.find(codigoProdutoAlterado);
         std::cout<<"Digite uma nova categoria para "<<(it->second).getNome()<<std::endl;
         std::cin>>novaString;
-        alterarCategoriaProduto(codigoProdutoAlterado,novaString);
+        try{
+		alterarCategoriaProduto(codigoProdutoAlterado,novaString);
+	}catch(ProdutoNaoCadastrado& erro){
+                  cout<<erro.what()<<endl;
+        }catch(ExcecaoTamanhoCategAlt& erro){
+                  cout<<erro.what()<<endl;
+        }  
         break;
     
     case '3':
@@ -166,7 +178,13 @@ void Estoque::alterarProduto(){
         it = _estoque.find(codigoProdutoAlterado);
         std::cout<<"Digite um novo fabricante para "<<(it->second).getNome()<<std::endl;
         std::cin>>novaString;
-        alterarFabricanteProduto(codigoProdutoAlterado,novaString);
+        try{
+		alterarFabricanteProduto(codigoProdutoAlterado,novaString);
+	}catch(ProdutoNaoCadastrado& erro){
+                  cout<<erro.what()<<endl;
+        }catch(ExcecaoTamanhoFabricAlt& erro){
+                  cout<<erro.what()<<endl;
+	}
         break;
 
     case '4':
@@ -175,8 +193,16 @@ void Estoque::alterarProduto(){
         it = _estoque.find(codigoProdutoAlterado);
         std::cout<<"Digite um novo preço para "<<(it->second).getNome()<<std::endl;
         std::cin>>novoFloat;
-        alterarPrecoProduto(codigoProdutoAlterado,novoFloat);
-        break;    
+	try{
+        	alterarPrecoProduto(codigoProdutoAlterado,novoFloat);
+        }catch(ProdutoNaoCadastrado& erro){
+                cout<<erro.what()<<endl;
+        }catch(PrecoNaoENumero& erro){
+		cout<<erro.what()<<endl;
+	}catch(ExcecaoPrecoNegativoAlt& erro){
+		cout<<erro.what()<<endl;
+	}
+	break;    
 
     case '5':
         break;
