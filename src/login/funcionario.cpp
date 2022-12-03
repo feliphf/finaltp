@@ -17,11 +17,11 @@ void Funcionario::menuInicial(){
 	cout << "| Olá " << left << setw(27) << getNome() << " | " << setw(12) << getTipo() << " |" << endl;
 	cout << "+------------------------------------------------+" << endl;
    	cout << "+----------------------------------------------+" << endl;
-	cout << "| " << "1 - Registrar venda                    |" << endl;
-	cout << "| " << "2 - Consultar produto                  |" << endl;
-	cout << "| " << "3 - Listar todos os produtos           |" << endl;
-	cout << "| " << "4 - Alterar meu dados                  |" << endl;
-	cout << "| " << "5 - Fazer logout                       |" << endl;
+	cout << "| 1 - Registrar venda                          |" << endl;
+	cout << "| 2 - Consultar produto                        |" << endl;
+	cout << "| 3 - Listar todos os produtos                 |" << endl;
+	cout << "| 4 - Alterar meu dados                        |" << endl;
+	cout << "| 5 - Fazer logout                             |" << endl;
 	cout << "+----------------------------------------------+" << endl;
     	cout << "Escolha uma opcao: ";
 }
@@ -32,8 +32,8 @@ bool Funcionario::temPermissao(){
 
 void Funcionario::alterarUsuarioLogado(){
     cout << "+----------------------------------+" << endl;
-    cout << "| " << "1 - Senha                  |" << endl;
-    cout << "| " << "2 - Voltar                 |" << endl;
+    cout << "| 1 - Senha                        |" << endl;
+    cout << "| 2 - Voltar                       |" << endl;
     cout << "+----------------------------------+" << endl;
     cout << "Escolha o que deseja alterar: ";
     int escolha;
@@ -51,7 +51,7 @@ void Funcionario::alterarUsuarioLogado(){
             break;
         }
 	default:
-        throw EntradaLoginInvalida();
+        throw EscolhaInvalida();
         break;
     }
 }
