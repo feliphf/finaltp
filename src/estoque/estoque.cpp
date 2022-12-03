@@ -37,13 +37,13 @@ void Estoque::lerArquivo(){
 
 void Estoque::listarProdutos(){
     map<string, Produto>::iterator it;
-    cout << left << setw(20) << "Nome" << setw(23) << "Fabricante"<< setw(23) <<
-        "Categoria"<< setw(24) << "Código" << setw(22) << "Preço" << setw(20) <<
+    cout << left << setw(21) << "Nome" << setw(21) << "Fabricante"<< setw(21) <<
+        "Categoria"<< setw(21) << "Código" << setw(21) << "Preço" << setw(10) <<
         "Quantidade" << endl << fixed << showpoint;
     cout << endl;
     for(it=_estoque.begin(); it!=_estoque.end(); it++){
-        cout << setprecision(2) << left << setw(20) << (it->second).getNome() << setw(23) << (it->second).getFabricante() << setw(23) <<
-        (it->second).getCategoria() << setw(23) << (it->second).getCodigo() << setw(17) << (it->second).getPreco() << setw(10) << right <<
+        cout << setprecision(2) << left << setw(21) << (it->second).getNome() << setw(21) << (it->second).getFabricante() << setw(21) <<
+        (it->second).getCategoria() << setw(21) << (it->second).getCodigo() << setw(21) << (it->second).getPreco() << setw(10) << right <<
         (it->second).getQuantidade() << endl;
     }
 }
@@ -52,12 +52,12 @@ void Estoque::pesquisarProduto(string pesquisa){
       if (_estoque.count(pesquisa) == 1)
       {
         map<string, Produto>::iterator it = _estoque.find(pesquisa);
-        cout << left << setw(20) << "Nome" << setw(23) << "Fabricante"<< setw(23) <<
-        "Categoria"<< setw(24) << "Código" << setw(22) << "Preço" << setw(20) <<
+        cout << left << setw(21) << "Nome" << setw(21) << "Fabricante"<< setw(21) <<
+        "Categoria"<< setw(21) << "Código" << setw(21) << "Preço" << setw(10) <<
         "Quantidade" << endl << fixed << showpoint;
         cout << endl;
-        cout << setprecision(2) << left << setw(20) << (it->second).getNome() << setw(23) << (it->second).getFabricante() << setw(23) <<
-        (it->second).getCategoria() << setw(23) << (it->second).getCodigo() << setw(17) << (it->second).getPreco() << setw(10) << right <<
+        cout << setprecision(2) << left << setw(21) << (it->second).getNome() << setw(21) << (it->second).getFabricante() << setw(21) <<
+        (it->second).getCategoria() << setw(21) << (it->second).getCodigo() << setw(21) << (it->second).getPreco() << setw(10) << right <<
         (it->second).getQuantidade() << endl;
       }else
         throw ProdutoNaoCadastrado();
@@ -66,14 +66,14 @@ void Estoque::pesquisarProduto(string pesquisa){
 void Estoque::alterarNomeProduto(string pesquisa, string nome){
       if (_estoque.count(pesquisa) == 1)
       {
-	if (nome.size() >= 20)
+	if (nome.size() > 20)
         {
             throw ExcecaoTamanhoNomeAlt;
         }else
         {
-        map<string, Produto>::iterator it = _estoque.find(pesquisa);
-        cout<<"O nome do prduto foi alterado de "<<(it->second).getNome()<<" para "<<nome<<endl;
-        (it->second).setNome(nome);
+	   map<string, Produto>::iterator it = _estoque.find(pesquisa);
+           cout<<"O nome do prduto foi alterado de "<<(it->second).getNome()<<" para "<<nome<<endl;
+	   (it->second).setNome(nome);
 	}
       }else
         throw ProdutoNaoCadastrado();
@@ -82,9 +82,15 @@ void Estoque::alterarNomeProduto(string pesquisa, string nome){
 void Estoque::alterarFabricanteProduto(string pesquisa, string fabric){
       if (_estoque.count(pesquisa) == 1)
       {
-        map<string, Produto>::iterator it = _estoque.find(pesquisa);
-        cout<<"O fabricante do prduto foi alterado de "<<(it->second).getFabricante()<<" para "<<fabric<<endl;
-        (it->second).setFabricante(fabric);
+	if (fabric.size() > 20)
+        {
+            throw ExcecaoTamanhoFabricAlt;
+        }else
+	{
+            map<string, Produto>::iterator it = _estoque.find(pesquisa);
+            cout<<"O fabricante do prduto foi alterado de "<<(it->second).getFabricante()<<" para "<<fabric<<endl;
+           (it->second).setFabricante(fabric);
+	}
       }else
         throw ProdutoNaoCadastrado();
 }
@@ -92,9 +98,15 @@ void Estoque::alterarFabricanteProduto(string pesquisa, string fabric){
 void Estoque::alterarCategoriaProduto(string pesquisa, string categ){
       if (_estoque.count(pesquisa) == 1)
       {
-        map<string, Produto>::iterator it = _estoque.find(pesquisa);
-        cout<<"A categoria do prduto foi alterada de "<<(it->second).getCategoria()<<" para "<<categ<<endl;
-        (it->second).setCategoria(categ);
+	if (categ.size() > 20)
+        {
+           throw ExcecaoTamanhoCategAlt;
+        }else
+	{
+           map<string, Produto>::iterator it = _estoque.find(pesquisa);
+           cout<<"A categoria do prduto foi alterada de "<<(it->second).getCategoria()<<" para "<<categ<<endl;
+           (it->second).setCategoria(categ);
+      	}
       }else
         throw ProdutoNaoCadastrado();
 }
@@ -102,15 +114,15 @@ void Estoque::alterarCategoriaProduto(string pesquisa, string categ){
 void Estoque::alterarPrecoProduto(string pesquisa, float preco){
       if (_estoque.count(pesquisa) == 1)
       { //NAO PODE SER LETRA SE NAO BUGA BIZARRAMENTE
-	if (preco == (int)preco&&preco>0){
+	if (preco < 0)
+            throw ExcecaoPrecoNegativo;
+	else if (preco == (int)preco){
             map<string, Produto>::iterator it = _estoque.find(pesquisa);
             cout<<setprecision(2)<<"O preço do prduto foi alterado de "<<(it->second).getPreco()<<" para "<<preco<<endl;
            (it->second).setPreco(preco);
 	}else
 	    throw PrecoNaoENumero();
-      }else
-        }
-        
+     }else
         throw ProdutoNaoCadastrado();
 }
 
