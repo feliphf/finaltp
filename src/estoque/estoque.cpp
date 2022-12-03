@@ -60,7 +60,7 @@ void Estoque::pesquisarProduto(string pesquisa){
         (it->second).getCategoria() << setw(23) << (it->second).getCodigo() << setw(17) << (it->second).getPreco() << setw(10) << right <<
         (it->second).getQuantidade() << endl;
       }else
-        cout << "Produto não cadastrado" << endl;
+        throw ProdutoNaoCadastrado();
 }
 
 void Estoque::alterarNomeProduto(string pesquisa, string nome){
@@ -70,7 +70,7 @@ void Estoque::alterarNomeProduto(string pesquisa, string nome){
         cout<<"O nome do prduto foi alterado de "<<(it->second).getNome()<<" para "<<nome<<endl;
         (it->second).setNome(nome);
       }else
-        cout << "Produto não cadastrado" << endl;
+        throw ProdutoNaoCadastrado();
 }
 
 void Estoque::alterarFabricanteProduto(string pesquisa, string fabric){
@@ -80,7 +80,7 @@ void Estoque::alterarFabricanteProduto(string pesquisa, string fabric){
         cout<<"O fabricante do prduto foi alterado de "<<(it->second).getFabricante()<<" para "<<fabric<<endl;
         (it->second).setFabricante(fabric);
       }else
-        cout << "Produto não cadastrado" << endl;
+        throw ProdutoNaoCadastrado();
 }
 
 void Estoque::alterarCategoriaProduto(string pesquisa, string categ){
@@ -90,17 +90,22 @@ void Estoque::alterarCategoriaProduto(string pesquisa, string categ){
         cout<<"A categoria do prduto foi alterada de "<<(it->second).getCategoria()<<" para "<<categ<<endl;
         (it->second).setCategoria(categ);
       }else
-        cout << "Produto não cadastrado" << endl;
+        throw ProdutoNaoCadastrado();
 }
 
 void Estoque::alterarPrecoProduto(string pesquisa, float preco){
       if (_estoque.count(pesquisa) == 1)
       { //NAO PODE SER LETRA SE NAO BUGA BIZARRAMENTE
-        map<string, Produto>::iterator it = _estoque.find(pesquisa);
-        cout<<setprecision(2)<<"O preço do prduto foi alterado de "<<(it->second).getPreco()<<" para "<<preco<<endl;
-        (it->second).setPreco(preco);
+	if (preco == (int)preco&&preco>0){
+            map<string, Produto>::iterator it = _estoque.find(pesquisa);
+            cout<<setprecision(2)<<"O preço do prduto foi alterado de "<<(it->second).getPreco()<<" para "<<preco<<endl;
+           (it->second).setPreco(preco);
+	}else
+	    throw PrecoNaoENumero();
       }else
-        cout << "Produto não cadastrado" << endl;
+        }
+        
+        throw ProdutoNaoCadastrado();
 }
 
 void Estoque::alterarProduto(){
@@ -160,7 +165,7 @@ void Estoque::alterarProduto(){
         break;
         
     default:
-        std::cout<<"Entrada inválida, digite um número de 1 a 5"<<std::endl;
+        throw EntradaInvalida();
         alterarProduto();
         break;
     }
