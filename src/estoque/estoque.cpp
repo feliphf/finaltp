@@ -113,15 +113,17 @@ void Estoque::alterarCategoriaProduto(string pesquisa, string categ){
 
 void Estoque::alterarPrecoProduto(string pesquisa, float preco){
       if (_estoque.count(pesquisa) == 1)
-      { //NAO PODE SER LETRA SE NAO BUGA BIZARRAMENTE
-	if (preco < 0)
-            throw ExcecaoPrecoNegativo;
-	else if (preco == (int)preco){
-            map<string, Produto>::iterator it = _estoque.find(pesquisa);
-            cout<<setprecision(2)<<"O preço do prduto foi alterado de "<<(it->second).getPreco()<<" para "<<preco<<endl;
-           (it->second).setPreco(preco);
-	}else
+      { //NAO PODE SER LETRA SE NAO BUGA BIZARRAMENTE	
+	if (preco != (int)preco)
 	    throw PrecoNaoENumero();
+        else if (preco < 0)
+            throw ExcecaoPrecoNegativo;
+	else
+        {
+	    map<string, Produto>::iterator it = _estoque.find(pesquisa);
+            cout<<setprecision(2)<<"O preço do prduto foi alterado de "<<(it->second).getPreco()<<" para "<<preco<<endl;
+            (it->second).setPreco(preco);
+     	} 
      }else
         throw ProdutoNaoCadastrado();
 }
