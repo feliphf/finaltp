@@ -68,7 +68,7 @@ void Estoque::alterarNomeProduto(string pesquisa, string nome){
       {
 	if (nome.size() >= 20)
         {
-            //throw ExcecaoTamanhoNomeAlt;
+            throw ExcecaoTamanhoNomeAlt;
         }else
         {
         map<string, Produto>::iterator it = _estoque.find(pesquisa);
