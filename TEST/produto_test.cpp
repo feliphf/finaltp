@@ -56,87 +56,69 @@ TEST_CASE("Testando a função retornar quantidade do produto")
     CHECK(p2.getQuantidade() == 2);
 }
 
+TEST_CASE("Testando a função que altera o nome do produto") 
+{
+    Produto p1;
+    p1.setNome ("malbec");
+    CHECK (p1.getNome() == 'malbec');
+	
+    Produto p2;
+    p2.setNome ("egeo");
+    CHECK (p2.getNome() == 'egeo');
+}
+
 TEST_CASE("Testando a função que altera o fabricante do produto") 
 {
-    //EXEMPLOS DE 3 CHECAGENS
-    Triangle t1(3,2,2);
-    CHECK(t1.getPerimeter()==7);
-
-    Usuario usuario = Usuario();
-	usuario.setCpf("12341234123");
-	usuario.setSenha("senha");
-	CHECK(usuario.login());
-    
-    Usuario usuario = Usuario();
-	usuario.setCpf("32132132132");
-	usuario.setSenha("senha");
-	CHECK_THROWS_AS(usuario.login(), UsuarioNaoEncontradoException);
+    Produto p1;
+    p1.setFabricante ("avon");
+    CHECK (p1.getFabricante() == 'avon');
+	
+    Produto p2;
+    p2.setFabricante ("natura");
+    CHECK (p2.getFabricante() == 'natura');
 }
 
 TEST_CASE("Testando a função que altera a categoria do produto") 
 {
-    //EXEMPLOS DE 3 CHECAGENS
-    Triangle t1(3,2,2);
-    CHECK(t1.getPerimeter()==7);
-
-    Usuario usuario = Usuario();
-	usuario.setCpf("12341234123");
-	usuario.setSenha("senha");
-	CHECK(usuario.login());
-    
-    Usuario usuario = Usuario();
-	usuario.setCpf("32132132132");
-	usuario.setSenha("senha");
-	CHECK_THROWS_AS(usuario.login(), UsuarioNaoEncontradoException);
+    Produto p1;
+    p1.setCategoria ("doce");
+    CHECK (p1.getCategoria() == 'doce');
+	
+    Produto p2;
+    p2.setCategoria ("intenso");
+    CHECK (p2.getCategoria() == 'intenso');
 }
 
 TEST_CASE("Testando a função que altera o código do produto") 
 {
-    //EXEMPLOS DE 3 CHECAGENS
-    Triangle t1(3,2,2);
-    CHECK(t1.getPerimeter()==7);
-
-    Usuario usuario = Usuario();
-	usuario.setCpf("12341234123");
-	usuario.setSenha("senha");
-	CHECK(usuario.login());
-    
-    Usuario usuario = Usuario();
-	usuario.setCpf("32132132132");
-	usuario.setSenha("senha");
-	CHECK_THROWS_AS(usuario.login(), UsuarioNaoEncontradoException);
-}
-
-TEST_CASE("Testando a função que altera a quantidade do produto") 
-{
-    //EXEMPLOS DE 3 CHECAGENS
-    Triangle t1(3,2,2);
-    CHECK(t1.getPerimeter()==7);
-
-    Usuario usuario = Usuario();
-	usuario.setCpf("12341234123");
-	usuario.setSenha("senha");
-	CHECK(usuario.login());
-    
-    Usuario usuario = Usuario();
-	usuario.setCpf("32132132132");
-	usuario.setSenha("senha");
-	CHECK_THROWS_AS(usuario.login(), UsuarioNaoEncontradoException);
+    Produto p1;
+    p1.setCodigo ("973");
+    CHECK (p1.getCodigo() == '973');
+	
+    Produto p2;
+    p2.setCodigo ("192");
+    CHECK (p2.getCodigo() == '192');
 }
 
 TEST_CASE("Testando a função que altera o preço do produto") 
 {
-    //EXEMPLOS DE 3 CHECAGENS
-    Triangle t1(3,2,2);
-    CHECK(t1.getPerimeter()==7);
-
-    Usuario usuario = Usuario();
-	usuario.setCpf("12341234123");
-	usuario.setSenha("senha");
-	CHECK(usuario.login());
-    
-    Usuario usuario = Usuario();
-	usuario.setCpf("32132132132");
-	usuario.setSenha("senha");
-	CHECK_THROWS_AS(usuario.login(), UsuarioNaoEncontradoException);
+    Produto p1;
+    p1.setPreco ("180");
+    CHECK (p1.getPreco() == '180');
+	
+    Produto p2;
+    p2.setPreco ("110");
+    CHECK (p2.getPreco() == '110');
 }
+
+TEST_CASE("Testando a função que altera a quantidade do produto") 
+{
+    Produto p1;
+    p1.setQuantidade ("3");
+    CHECK (p1.getQuantidade() == '3');
+	
+    Produto p2;
+    p2.setQuantidade ("2");
+    CHECK (p2.getQuantidade() == '2');
+}
+
