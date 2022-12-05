@@ -64,47 +64,76 @@ void Estoque::pesquisarProduto(string pesquisa){
         (it->second).getCategoria() << setw(23) << (it->second).getCodigo() << setw(17) << (it->second).getPreco() << setw(10) << right <<
         (it->second).getQuantidade() << endl;
       }else
-        cout << "Produto não cadastrado" << endl;
+        throw ProdutoNaoCadastrado();
 }
 
 void Estoque::alterarNomeProduto(string pesquisa, string nome){ 
       if (_estoque.count(pesquisa) == 1)
       {
-        map<string, Produto>::iterator it = _estoque.find(pesquisa);
-        cout<<"O nome do produto foi alterado de "<<(it->second).getNome()<<" para "<<nome<<endl;
-        (it->second).setNome(nome);
+        if (nome.size() > 20)
+	{
+            throw ExcecaoTamanhoNomeAlt();
+        }else
+        {
+	   map<string, Produto>::iterator it = _estoque.find(pesquisa);
+           cout<<"O nome do prduto foi alterado de "<<(it->second).getNome()<<" para "<<nome<<endl;
+	   (it->second).setNome(nome);
+	}
       }else
-        cout << "Produto não cadastrado" << endl;
+        throw ProdutoNaoCadastrado();
 }
+
 
 void Estoque::alterarFabricanteProduto(string pesquisa, string fabric){
       if (_estoque.count(pesquisa) == 1)
       {
-        map<string, Produto>::iterator it = _estoque.find(pesquisa);
-        cout<<"O fabricante do produto foi alterado de "<<(it->second).getFabricante()<<" para "<<fabric<<endl;
-        (it->second).setFabricante(fabric);
+        if (fabric.size() > 20)
+	{
+            throw ExcecaoTamanhoFabricAlt();
+        }else
+	{
+            map<string, Produto>::iterator it = _estoque.find(pesquisa);
+            cout<<"O fabricante do prduto foi alterado de "<<(it->second).getFabricante()<<" para "<<fabric<<endl;
+           (it->second).setFabricante(fabric);
+	}
       }else
-        cout << "Produto não cadastrado" << endl;
+        throw ProdutoNaoCadastrado();
 }
+
 
 void Estoque::alterarCategoriaProduto(string pesquisa, string categ){
       if (_estoque.count(pesquisa) == 1)
       {
-        map<string, Produto>::iterator it = _estoque.find(pesquisa);
-        cout<<"A categoria do produto foi alterada de "<<(it->second).getCategoria()<<" para "<<categ<<endl;
-        (it->second).setCategoria(categ);
+       	if (categ.size() > 20)
+        {
+           throw ExcecaoTamanhoCategAlt();
+        }else
+	{
+           map<string, Produto>::iterator it = _estoque.find(pesquisa);
+           cout<<"A categoria do prduto foi alterada de "<<(it->second).getCategoria()<<" para "<<categ<<endl;
+           (it->second).setCategoria(categ);
+      	}
       }else
-        cout << "Produto não cadastrado" << endl;
+        throw ProdutoNaoCadastrado();
 }
 
 void Estoque::alterarPrecoProduto(string pesquisa, float preco){
       if (_estoque.count(pesquisa) == 1)
-      { //NAO PODE SER LETRA SE NAO BUGA BIZARRAMENTE
-        map<string, Produto>::iterator it = _estoque.find(pesquisa);
-        cout<<setprecision(2)<<"O preço do produto foi alterado de "<<(it->second).getPreco()<<" para "<<preco<<endl;
-        (it->second).setPreco(preco);
+      {
+        if (preco != (int)preco)
+	{
+	    throw PrecoNaoENumero();
+        }else if (preco < 0)
+        {
+		throw ExcecaoPrecoNegativo();
+	}else
+        {
+	    map<string, Produto>::iterator it = _estoque.find(pesquisa);
+            cout<<setprecision(2)<<"O preço do prduto foi alterado de "<<(it->second).getPreco()<<" para "<<preco<<endl;
+            (it->second).setPreco(preco);
+     	} 
       }else
-        cout << "Produto não cadastrado" << endl;
+          throw ProdutoNaoCadastrado();
 }
 
 void Estoque::alterarProduto(){
@@ -131,41 +160,67 @@ void Estoque::alterarProduto(){
         std::cout<<"Digite um novo nome para "<<(it->second).getNome() << ": ";
         cin.ignore(1,'\n');
         getline(cin, novaString);
-        alterarNomeProduto(codigoProdutoAlterado,novaString);
+        try{
+		alterarNomeProduto(codigoProdutoAlterado,novaString);
+	}catch(ProdutoNaoCadastrado& erro){
+                  cout<<erro.what()<<endl;
+        }catch(ExcecaoTamanhoNomeAlt& erro){
+                  cout<<erro.what()<<endl;
+        }   
         break;
-    
+	
     case '2':
         std::cout<<"Digite o código do produto que será alterado"<<endl;
         std::cin>>codigoProdutoAlterado;
         it = _estoque.find(codigoProdutoAlterado);
         std::cout<<"Digite uma nova categoria para "<<(it->second).getNome()<<std::endl;
         std::cin>>novaString;
-        alterarCategoriaProduto(codigoProdutoAlterado,novaString);
+        try{
+		alterarCategoriaProduto(codigoProdutoAlterado,novaString);
+	}catch(ProdutoNaoCadastrado& erro){
+                  cout<<erro.what()<<endl;
+        }catch(ExcecaoTamanhoCategAlt& erro){
+                  cout<<erro.what()<<endl;
+        }  
         break;
-    
+	
     case '3':
         std::cout<<"Digite o código do produto que será alterado"<<endl;
         std::cin>>codigoProdutoAlterado;
         it = _estoque.find(codigoProdutoAlterado);
         std::cout<<"Digite um novo fabricante para "<<(it->second).getNome()<<std::endl;
         std::cin>>novaString;
-        alterarFabricanteProduto(codigoProdutoAlterado,novaString);
+        try{
+		alterarFabricanteProduto(codigoProdutoAlterado,novaString);
+	}catch(ProdutoNaoCadastrado& erro){
+                  cout<<erro.what()<<endl;
+        }catch(ExcecaoTamanhoFabricAlt& erro){
+                  cout<<erro.what()<<endl;
+	}
         break;
-
+	
     case '4':
         std::cout<<"Digite o código do produto que será alterado"<<endl;
         std::cin>>codigoProdutoAlterado;
         it = _estoque.find(codigoProdutoAlterado);
         std::cout<<"Digite um novo preço para "<<(it->second).getNome()<<std::endl;
         std::cin>>novoFloat;
-        alterarPrecoProduto(codigoProdutoAlterado,novoFloat);
-        break;    
+        try{
+        	alterarPrecoProduto(codigoProdutoAlterado,novoFloat);
+        }catch(ProdutoNaoCadastrado& erro){
+                cout<<erro.what()<<endl;
+        }catch(PrecoNaoENumero& erro){
+		cout<<erro.what()<<endl;
+	}catch(ExcecaoPrecoNegativoAlt& erro){
+		cout<<erro.what()<<endl;
+	}
+	break;     
 
     case '5':
         break;
         
     default:
-        std::cout<<"Entrada inválida, digite um número de 1 a 5"<<std::endl;
+        throw EntradaInvalida();
         alterarProduto();
         break;
     }
@@ -173,29 +228,30 @@ void Estoque::alterarProduto(){
 
 void Estoque::cadastroDeProdutos(string codig, string nome, string fabri, string categ, float preco){ // 
     if (_estoque.count(codig) == 0){
-        if (nome.size() >= 20){
-            //throw ExcecaoTamanhoNomeCad;
-        } else if (fabri.size() >= 20) {
-           // throw ExcecaoTamanhoFabriCad;
-        } else if (categ.size() >= 20) {
-          //  throw ExcecaoTamanhoCategCad;
-        } else if (preco < 0) {
-           // throw ExcecaoPrecoNegativoCad;
-        } else {
+        if (nome.size() > 20){
+            throw ExcecaoTamanhoNomeCad();
+        }else if (fabri.size() > 20) {
+            throw ExcecaoTamanhoFabriCad();
+        }else if (categ.size() > 20) {
+            throw ExcecaoTamanhoCategCad();
+        }else if (preco < 0) {
+            throw ExcecaoPrecoNegativoCad();
+        }else 
+	{
             Produto produto(nome, fabri, categ, codig, preco,0);
             _estoque.insert(pair<string,Produto>(codig, produto));
             std::cout<<"O produto "<<produto.getNome()<<" foi cadastrado com sucesso"<<std::endl;
         }
     }else
-        std::cout << "Produto já cadastrado, Por favor adicionar quantidade no campo de entradas" << std::endl;
+        throw ProdutoJaCadastrado();
 }
 
 void Estoque::entradasDeProdutos(string codig, int quant, string nomeUsuario, string dataAtual){
     if (_estoque.count(codig) == 1){
         if(quant==0){
-            cout<<"Produto não adiocionado, quantidade pedida 0"<<endl; //throw quantZero
+            throw ProdutoNaoAdicionado();
         }else if (quant < 0){
-          //throw quantNegativa
+            throw ExcecaoPrecoNegativoAlt();
         }
         else{
             map<string, Produto>::iterator it = _estoque.find(codig);
@@ -216,11 +272,11 @@ void Estoque::saidasDeProdutos(string codig, int quant, string nomeUsuario, stri
     if (_estoque.count(codig) == 1){
         map<string, Produto>::iterator it = _estoque.find(codig);
         if(quant == 0){
-            cout<<"Produto não retirado, quantidade pedida 0"<<endl; //throw quantZero
+            throw ProdutoNaoRetirado();
         }else if((it->second).getQuantidade()<quant){
-            cout<<"Tentativa de retirada do produto "<<(it->second).getNome()<<" abaixo da quantidade disponível em estoque"<<endl;
+            throw TentativaDeRetirada();
         }else if (quant < 0){
-           //throw quantNegativa
+            throw ExcecaoPrecoNegativoAlt();
         }else{
             int quantidade;
             quantidade = (it->second).getQuantidade();
@@ -310,9 +366,8 @@ void Estoque::menuEntradaESaidaDeProdutos(std::list<pair<unsigned int,pair<Produ
         std::cout<<"Digite o código do produto que será adicionado: ";
         std::cin>>codigoProduto;
         if(_estoque.count(codigoProduto)==0){
-          cout<<"Produto nao cadastrado"<<endl;
-          //throw Produtonaocadastrado;
-          break;
+            throw ProdutoNaoCadastrado();
+            break;
         }
         std::cout<<"Digite a quantidade do produto que será adicionada: ";
         std::cin>>qtd;
@@ -325,13 +380,11 @@ void Estoque::menuEntradaESaidaDeProdutos(std::list<pair<unsigned int,pair<Produ
     case '2':
         if(listaQuantidades.empty()){
             std::cout << "Nenhum item adicionado!!" << std::endl;
-            // throw listaQuantidadesVazia;
         }else{
             std::cout<<"Digite qual item será removido: ";
             std::cin>>posicao;
             if (posicao < 1 || posicao > listaQuantidades.size()){
                 std::cout << "Posição inválida! Digite um número de 1 até "<< (count - 1) << std::endl;
-                //throw PosicaoInvalidaDaLista;
             }
             int auxiliar = 0;
             for (itItem = listaQuantidades.begin(); itItem != listaQuantidades.end() ; itItem++)
@@ -344,16 +397,14 @@ void Estoque::menuEntradaESaidaDeProdutos(std::list<pair<unsigned int,pair<Produ
             }
             if (auxiliar == 0){
                 std::cout << "Item já removido da lista!!" << std::endl;
-                //throw ProdutoJaRemovidoDaLista;
             }
-            }
+          }
         }
         break;
     
     case '3':
         if(listaQuantidades.empty()){
             std::cout << "Nenhum item adicionado!!" << std::endl;
-            // throw listaQuantidadesVazia;
         }else{
             cout << "+----+---------------------+---------------------+------------+"<< endl;
             cout << "| ID |       CÓDIGO        |       PRODUTO       | QUANTIDADE |"<< endl;
@@ -371,7 +422,6 @@ void Estoque::menuEntradaESaidaDeProdutos(std::list<pair<unsigned int,pair<Produ
     case '4':
         if(listaQuantidades.empty()){
             std::cout << "Nenhum item adicionado!!" << std::endl;
-            // throw listaQuantidadesVazia;
         }else{
             for(itItem=listaQuantidades.begin(); itItem!=listaQuantidades.end(); itItem++){
                 if (modo=="entrada"){
@@ -392,8 +442,7 @@ void Estoque::menuEntradaESaidaDeProdutos(std::list<pair<unsigned int,pair<Produ
         break;
         
     default:
-        // throw std::cout<<"Entrada inválida, digite um número de 1 a 5"<<std::endl;
-        //continua no looping
+        std::cout<<"Entrada inválida, digite um número de 1 a 5"<<std::endl;
         break;
     }
 }
@@ -404,9 +453,9 @@ void Estoque::excluirProduto(string codigo){
         cout<<"O produto "<< ((_estoque.find(codigo))->second).getNome()<<" foi removido com sucesso!"<<endl;
          _estoque.erase(codigo);
       }else
-        cout << "Produto não cadastrado" << endl; //throw ProdutoNaoCadastrado
-
+        throw ProdutoNaoCadastrado();
 }
+
 void Estoque::limparTela(string modo){
     if (modo == "perguntar"){
         std::cout << "Pressione enter para continuar!";
