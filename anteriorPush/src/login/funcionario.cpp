@@ -49,6 +49,9 @@ void Funcionario::alterarUsuarioLogado(){
         }
         case 2:{
             break;
-        }
+       }
+	default:
+        throw EscolhaInvalida();
+        break;
     }
 }
