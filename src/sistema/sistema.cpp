@@ -123,7 +123,7 @@ void Sistema::opcoesMenuGerente(){
                     limparTela("perguntar");
                     break;
             }
-            limparTela("continuar");
+            //limparTela("perguntar");
             break;
         }
         case '7':
@@ -159,7 +159,24 @@ void Sistema::opcoesMenuAdministrativo(){
                   cout<<erro.what()<<endl;
                   limparTela("perguntar");
                   break;
+            }catch(ExcecaoTamanhoCategAlt& erro){
+                  cout<<erro.what()<<endl;
+                  limparTela("perguntar");
+                  break;
+            }catch(ExcecaoTamanhoFabricAlt& erro){
+                  cout<<erro.what()<<endl;
+                  limparTela("perguntar");
+                  break;
+            }catch(PrecoNaoENumero& erro){
+                  cout<<erro.what()<<endl;
+                  limparTela("perguntar");
+                  break;
+            }catch(ExcecaoPrecoNegativoAlt& erro){
+                  cout<<erro.what()<<endl;
+                  limparTela("perguntar");
+                  break;
             }
+            limparTela("perguntar");
             break;
         case '2':{
             string n,co,f,ca;
@@ -169,9 +186,46 @@ void Sistema::opcoesMenuAdministrativo(){
             getline(cin, n);
             cout << "Digite em sequência o Código, Fabricante, Categoria e Preço (separados por espaço)" << endl;
             cin >> co >> f >> ca >> p;
-            _estoque.cadastroDeProdutos(co,n,f,ca,p);
+            if (cin.fail()){
+            cin.clear();
+            cin.ignore();
+            throw PrecoNaoENumero();
+          //  }else if (p < 0) {
+          //  throw ExcecaoPrecoNegativoAlt();
+          //  }if (f.size() > 20) {
+          //  throw ExcecaoTamanhoFabricAlt();
+         //   }if (ca.size() > 20) {
+          //  throw ExcecaoTamanhoCategAlt();
+           // }
+           // if (n.size() > 20){
+           // throw ExcecaoTamanhoNomeAlt();
+            //}
+            try
+            {
+                _estoque.cadastroDeProdutos(co,n,f,ca,p);
+            }
+            catch(ExcecaoTamanhoNomeAlt& erro){
+                cout<<erro.what()<<endl;
+                limparTela("perguntar");
+            }catch(ExcecaoTamanhoCategAlt& erro){
+                cout<<erro.what()<<endl;
+                limparTela("perguntar");
+            }catch(ExcecaoTamanhoFabricAlt& erro){
+                cout<<erro.what()<<endl;
+                limparTela("perguntar");
+            }catch(ExcecaoPrecoNegativoAlt& erro){
+                cout<<erro.what()<<endl;
+                limparTela("perguntar");
+            }catch(PrecoNaoENumero& erro){
+                cout<<erro.what()<<endl;
+                limparTela("perguntar");
+            }catch(ProdutoJaCadastrado& erro){
+                cout<<erro.what()<<endl;
+                limparTela("perguntar");
+            }
             limparTela("continuar");
-            break;
+        }
+        break;
         }
         case '3':{
             string codigo;
@@ -189,6 +243,7 @@ void Sistema::opcoesMenuAdministrativo(){
                   limparTela("perguntar");
                   break;
             }
+            limparTela("perguntar");
             break;
         case '5':
             _sistemaLogin.listarUsuarios();
@@ -201,6 +256,7 @@ void Sistema::opcoesMenuAdministrativo(){
                   limparTela("perguntar");
                   break;
             }
+            limparTela("perguntar");
             break;
         case '7':
             try{
@@ -210,6 +266,7 @@ void Sistema::opcoesMenuAdministrativo(){
                   limparTela("perguntar");
                   break;
             }
+            limparTela("perguntar");
             break;
         case '8':
             salvarParametrosSistema();

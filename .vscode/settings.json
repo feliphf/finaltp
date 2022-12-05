@@ -57,6 +57,8 @@
         "thread": "cpp",
         "cinttypes": "cpp",
         "typeinfo": "cpp",
-        "bit": "cpp"
+        "bit": "cpp",
+        "csignal": "cpp",
+        "unordered_set": "cpp"
     }
 }

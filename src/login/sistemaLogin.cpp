@@ -17,7 +17,8 @@ void sistemaLogin::lerArquivo(){
         }
     }else{
         arquivo.open("database/Usuarios.txt",ios::out);
-        cout<<"Arquivo não havia sido encontrado, agora foi criado com sucesso"<<endl; // throw ExcecaoArquivoNaoEncontrado
+        arquivo << "0000 adm Gerente 111.111.111-11 adm@gmail.com 00/00/0000 1"<<endl;
+        cout<<"Arquivo não havia sido encontrado, agora foi criado com sucesso, execute o programa novamente"<<endl; // throw ExcecaoArquivoNaoEncontrado
     }
     arquivo.close(); 
 }

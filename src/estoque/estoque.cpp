@@ -76,7 +76,7 @@ void Estoque::alterarNomeProduto(string pesquisa, string nome){
         }else
         {
 	   map<string, Produto>::iterator it = _estoque.find(pesquisa);
-           cout<<"O nome do prduto foi alterado de "<<(it->second).getNome()<<" para "<<nome<<endl;
+           cout<<"O nome do produto foi alterado de "<<(it->second).getNome()<<" para "<<nome<<endl;
 	   (it->second).setNome(nome);
 	}
       }else
@@ -93,7 +93,7 @@ void Estoque::alterarFabricanteProduto(string pesquisa, string fabric){
         }else
 	{
             map<string, Produto>::iterator it = _estoque.find(pesquisa);
-            cout<<"O fabricante do prduto foi alterado de "<<(it->second).getFabricante()<<" para "<<fabric<<endl;
+            cout<<"O fabricante do produto foi alterado de "<<(it->second).getFabricante()<<" para "<<fabric<<endl;
            (it->second).setFabricante(fabric);
 	}
       }else
@@ -110,7 +110,7 @@ void Estoque::alterarCategoriaProduto(string pesquisa, string categ){
         }else
 	{
            map<string, Produto>::iterator it = _estoque.find(pesquisa);
-           cout<<"A categoria do prduto foi alterada de "<<(it->second).getCategoria()<<" para "<<categ<<endl;
+           cout<<"A categoria do produto foi alterada de "<<(it->second).getCategoria()<<" para "<<categ<<endl;
            (it->second).setCategoria(categ);
       	}
       }else
@@ -120,16 +120,12 @@ void Estoque::alterarCategoriaProduto(string pesquisa, string categ){
 void Estoque::alterarPrecoProduto(string pesquisa, float preco){
       if (_estoque.count(pesquisa) == 1)
       {
-        if (preco != (int)preco)
-	{
-	    throw PrecoNaoENumero();
-        }else if (preco < 0)
-        {
+         if (preco < 0){
 		throw ExcecaoPrecoNegativoAlt();
-	}else
+	    }else
         {
 	    map<string, Produto>::iterator it = _estoque.find(pesquisa);
-            cout<<setprecision(2)<<"O preço do prduto foi alterado de "<<(it->second).getPreco()<<" para "<<preco<<endl;
+            cout<<setprecision(2)<<"O preço do produto foi alterado de "<<(it->second).getPreco()<<" para "<<preco<<endl;
             (it->second).setPreco(preco);
      	} 
       }else
@@ -141,91 +137,86 @@ void Estoque::alterarProduto(){
     std::string novaString;
     float novoFloat;
     map<string, Produto>::iterator it;
-    std::cout << "Escolha o que deseja alterar: " << std::endl;
-	  std::cout << "+-----------------------------+"<<std::endl;
-	  std::cout << "| " << "1 - Nome                    |" << std::endl;
-	  std::cout << "| " << "2 - Categoria               |" << std::endl;
-	  std::cout << "| " << "3 - Fabricante              |" << std::endl;
-	  std::cout << "| " << "4 - Preço                   |" << std::endl;
-	  std::cout << "| " << "5 - Sair                    |" << std::endl;
-	  std::cout << "+-----------------------------+"<<std::endl;
+	std::cout << "+-----------------------------+"<<std::endl;
+	std::cout << "| " << "1 - Nome                    |" << std::endl;
+	std::cout << "| " << "2 - Categoria               |" << std::endl;
+	std::cout << "| " << "3 - Fabricante              |" << std::endl;
+	std::cout << "| " << "4 - Preço                   |" << std::endl;
+	std::cout << "| " << "5 - Sair                    |" << std::endl;
+	std::cout << "+-----------------------------+"<<std::endl;
     string aux;
+    std::cout << "Escolha o que deseja alterar: ";
     cin >> aux;
     if (aux.size()>1)
         throw EntradaInvalida();
     char escolha = aux[0];
     switch (escolha)
     {
-    case '1'://tratamento nome
-        std::cout<<"Digite o código do produto que será alterado"<<endl;
+    case '1':
+        std::cout<<"Digite o código do produto que será alterado: ";
         std::cin>>codigoProdutoAlterado;
         if (_estoque.count(codigoProdutoAlterado)==1)    
-            it = _estoque.find(codigoProdutoAlterado); // SE O CÓDIGO NAO EXISTIR OU FOR ENTRADA INVALIDA ELE DA BAD ALLOC E ABORT
+            it = _estoque.find(codigoProdutoAlterado); 
         else{
             throw ProdutoNaoCadastrado();
             break;
         }
-        cout << "CHEGUEI AQUI NO ALTERAR NOME 1" << endl;
-        std::cout<<"Digite um novo nome para "<<(it->second).getNome() << ": ";
-        cout << "CHEGUEI AQUI NO ALTERAR NOME 2" << endl;
+        std::cout<<"Digite um novo nome para "<<(it->second).getNome() <<" : ";
         cin.ignore(1,'\n');
         getline(cin, novaString);
-        // try{
 		alterarNomeProduto(codigoProdutoAlterado,novaString);
-        cout << "CHEGUEI AQUI NO ALTERAR NOME 3" << endl;
-	    // }catch(ProdutoNaoCadastrado& erro){
-        //           cout<<erro.what()<<endl;
-        // }catch(ExcecaoTamanhoNomeAlt& erro){
-        //           cout<<erro.what()<<endl;
-        // }   
         break;
 	
     case '2':
-        std::cout<<"Digite o código do produto que será alterado"<<endl;
+        std::cout<<"Digite o código do produto que será alterado: ";
         std::cin>>codigoProdutoAlterado;
-        it = _estoque.find(codigoProdutoAlterado);
-        std::cout<<"Digite uma nova categoria para "<<(it->second).getNome()<<std::endl;
+        if (_estoque.count(codigoProdutoAlterado)==1)    
+            it = _estoque.find(codigoProdutoAlterado); 
+        else{
+            throw ProdutoNaoCadastrado();
+            break;
+        }
+        std::cout<<"Digite uma nova categoria para "<<(it->second).getNome()<<" : ";
         std::cin>>novaString;
-        try{
 		alterarCategoriaProduto(codigoProdutoAlterado,novaString);
-	}catch(ProdutoNaoCadastrado& erro){
-                  cout<<erro.what()<<endl;
-        }catch(ExcecaoTamanhoCategAlt& erro){
-                  cout<<erro.what()<<endl;
-        }  
         break;
 	
     case '3':
-        std::cout<<"Digite o código do produto que será alterado"<<endl;
+        std::cout<<"Digite o código do produto que será alterado: ";
         std::cin>>codigoProdutoAlterado;
-        it = _estoque.find(codigoProdutoAlterado);
-        std::cout<<"Digite um novo fabricante para "<<(it->second).getNome()<<std::endl;
+        if (_estoque.count(codigoProdutoAlterado)==1)    
+            it = _estoque.find(codigoProdutoAlterado); 
+        else{
+            throw ProdutoNaoCadastrado();
+            break;
+        }
+        std::cout<<"Digite um novo fabricante para "<<(it->second).getNome()<<" : ";
         std::cin>>novaString;
-        try{
 		alterarFabricanteProduto(codigoProdutoAlterado,novaString);
-	}catch(ProdutoNaoCadastrado& erro){
-                  cout<<erro.what()<<endl;
-        }catch(ExcecaoTamanhoFabricAlt& erro){
-                  cout<<erro.what()<<endl;
-	}
         break;
 	
     case '4':
-        std::cout<<"Digite o código do produto que será alterado"<<endl;
+        std::cout<<"Digite o código do produto que será alterado: ";
         std::cin>>codigoProdutoAlterado;
-        it = _estoque.find(codigoProdutoAlterado);
-        std::cout<<"Digite um novo preço para "<<(it->second).getNome()<<std::endl;
+        if (_estoque.count(codigoProdutoAlterado)==1)    
+            it = _estoque.find(codigoProdutoAlterado); 
+        else{
+            throw ProdutoNaoCadastrado();
+            break;
+        }
+        std::cout<<"Digite um novo preço para "<<(it->second).getNome()<<" : ";
         std::cin>>novoFloat;
-        try{
+        if (cin.fail())
+        {
+            cin.clear();
+            cin.ignore();
+            throw PrecoNaoENumero();
+            break;
+        }else
+        
         	alterarPrecoProduto(codigoProdutoAlterado,novoFloat);
-        }catch(ProdutoNaoCadastrado& erro){
-                cout<<erro.what()<<endl;
-        }catch(PrecoNaoENumero& erro){
-		cout<<erro.what()<<endl;
-	}catch(ExcecaoPrecoNegativoAlt& erro){
-		cout<<erro.what()<<endl;
-	}
-	break;     
+
+        break;     
 
     case '5':
         break;
@@ -245,17 +236,17 @@ void Estoque::cadastroDeProdutos(string codig, string nome, string fabri, string
             throw ExcecaoTamanhoFabricAlt();
         }else if (categ.size() > 20) {
             throw ExcecaoTamanhoCategAlt();
-        }else if (preco < 0) {
+       }else if (preco < 0) {
             throw ExcecaoPrecoNegativoAlt();
-        }else 
-	{
+        }else{
             Produto produto(nome, fabri, categ, codig, preco,0);
             _estoque.insert(pair<string,Produto>(codig, produto));
             std::cout<<"O produto "<<produto.getNome()<<" foi cadastrado com sucesso"<<std::endl;
-        }
-    }else
+        } 
+        }else
         throw ProdutoJaCadastrado();
 }
+
 
 void Estoque::entradasDeProdutos(string codig, int quant, string nomeUsuario, string dataAtual){
     if (_estoque.count(codig) == 1){
