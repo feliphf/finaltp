@@ -2,258 +2,101 @@
 #include "doctest.h"
 #include "usuario.hpp"
 
-TEST_CASE("Testando a função retornar o id do usuário")
+TEST_CASE("Testando a função retornar e setar o id do usuário")
 {
-    //EXEMPLOS DE 3 CHECAGENS
-    Triangle t1(3,2,2);
-    CHECK(t1.getPerimeter()==7);
-
-    Usuario usuario = Usuario();
-	usuario.setCpf("12341234123");
-	usuario.setSenha("senha");
-	CHECK(usuario.login());
+    	Usuario usuario1;
+	usuario1.setId("1234");
+	CHECK(usuario1.getId()=="1234");
     
-    Usuario usuario = Usuario();
-	usuario.setCpf("32132132132");
-	usuario.setSenha("senha");
-	CHECK_THROWS_AS(usuario.login(), UsuarioNaoEncontradoException);
+    	Usuario usuario2;
+	usuario2.setId("4321");
+	CHECK(usuario2.getId()=="4321");
 }
 
-TEST_CASE("Testando a função retornar o tipo do usuário") 
+TEST_CASE("Testando a função retornar e setar o tipo do usuário") 
 {
-    //EXEMPLOS DE 3 CHECAGENS
-    Triangle t1(3,2,2);
-    CHECK(t1.getPerimeter()==7);
-
-    Usuario usuario = Usuario();
-	usuario.setCpf("12341234123");
-	usuario.setSenha("senha");
-	CHECK(usuario.login());
+    	Usuario usuario1;
+	usuario1.setTipo("funcionário");
+	CHECK(usuario1.getTipo()=="funcionário");
     
-    Usuario usuario = Usuario();
-	usuario.setCpf("32132132132");
-	usuario.setSenha("senha");
-	CHECK_THROWS_AS(usuario.login(), UsuarioNaoEncontradoException);
+    	Usuario usuario2;
+	usuario2.setTipo("gerente");
+	CHECK(usuario2.getTipo()=="gerente");
 }
 
-TEST_CASE("Testando a função retornar o nome do usuário") 
+TEST_CASE("Testando a função retornar e setar o nome do usuário") 
 {
-    //EXEMPLOS DE 3 CHECAGENS
-    Triangle t1(3,2,2);
-    CHECK(t1.getPerimeter()==7);
-
-    Usuario usuario = Usuario();
-	usuario.setCpf("12341234123");
-	usuario.setSenha("senha");
-	CHECK(usuario.login());
+    	Usuario usuario1;
+	usuario1.setNome("Ana_Carolina_Lima");
+	CHECK(usuario1.getNome()=="Ana Carolina Lima");
     
-    Usuario usuario = Usuario();
-	usuario.setCpf("32132132132");
-	usuario.setSenha("senha");
-	CHECK_THROWS_AS(usuario.login(), UsuarioNaoEncontradoException);
+    	Usuario usuario2;
+	usuario2.setNome("Guilherme_de_Souza");
+	CHECK(usuario2.getNome()=="Guilherme de Souza");
 }
 
-TEST_CASE("Testando a função retornar o CPF do usuário") 
+TEST_CASE("Testando a função retornar e setar o CPF do usuário") 
 {
-    //EXEMPLOS DE 3 CHECAGENS
-    Triangle t1(3,2,2);
-    CHECK(t1.getPerimeter()==7);
-
-    Usuario usuario = Usuario();
-	usuario.setCpf("12341234123");
-	usuario.setSenha("senha");
-	CHECK(usuario.login());
+    	Usuario usuario1;
+	usuario1.setCpf("49562799916");
+	CHECK(usuario1.getCpf()=="49562799916");
     
-    Usuario usuario = Usuario();
-	usuario.setCpf("32132132132");
-	usuario.setSenha("senha");
-	CHECK_THROWS_AS(usuario.login(), UsuarioNaoEncontradoException);
+    	Usuario usuario2;
+	usuario2.setCpf("70545688857");
+	CHECK(usuario2.getCpf()=="70545688857");
 }
 
-TEST_CASE("Testando a função retornar o email do usuário") 
+TEST_CASE("Testando a função retornar e setar o email do usuário") 
 {
-    //EXEMPLOS DE 3 CHECAGENS
-    Triangle t1(3,2,2);
-    CHECK(t1.getPerimeter()==7);
-
-    Usuario usuario = Usuario();
-	usuario.setCpf("12341234123");
-	usuario.setSenha("senha");
-	CHECK(usuario.login());
+    	Usuario usuario1;
+	usuario1.setEmail("anapat@gmail.com");
+	CHECK(usuario1.getEmail()=="anapat@gmail.com");
     
-    Usuario usuario = Usuario();
-	usuario.setCpf("32132132132");
-	usuario.setSenha("senha");
-	CHECK_THROWS_AS(usuario.login(), UsuarioNaoEncontradoException);
+    	Usuario usuario2;
+	usuario2.setEmail("vinicius@gmail.com");
+	CHECK(usuario2.getEmail()=="vinicius@gmail.com");
 }
 
-TEST_CASE("Testando a função retornar o ultimo acesso do usuário") 
+TEST_CASE("Testando a função retornar e setar o ultimo acesso do usuário") 
 {
-    //EXEMPLOS DE 3 CHECAGENS
-    Triangle t1(3,2,2);
-    CHECK(t1.getPerimeter()==7);
-
-    Usuario usuario = Usuario();
-	usuario.setCpf("12341234123");
-	usuario.setSenha("senha");
-	CHECK(usuario.login());
+    	Usuario usuario1;
+	usuario1.setUltimoAcesso("dia 05 de novembro");
+	CHECK(usuario1.getUltimoAcesso()=="dia 05 de novembro");
     
-    Usuario usuario = Usuario();
-	usuario.setCpf("32132132132");
-	usuario.setSenha("senha");
-	CHECK_THROWS_AS(usuario.login(), UsuarioNaoEncontradoException);
+    	Usuario usuario2;
+	usuario2.setUltimoAcesso("dia 14 de outubro");
+	CHECK(usuario2.getUltimoAcesso()=="dia 14 de outubro");
 }
 
-TEST_CASE("Testando a função retornar a senha do usuário") 
+TEST_CASE("Testando a função retornar e setar a senha do usuário") 
 {
-    //EXEMPLOS DE 3 CHECAGENS
-    Triangle t1(3,2,2);
-    CHECK(t1.getPerimeter()==7);
-
-    Usuario usuario = Usuario();
-	usuario.setCpf("12341234123");
-	usuario.setSenha("senha");
-	CHECK(usuario.login());
+    	Usuario usuario1;
+	usuario1.setSenha("251436");
+	CHECK(usuario1.getSenha()=="251436");
     
-    Usuario usuario = Usuario();
-	usuario.setCpf("32132132132");
-	usuario.setSenha("senha");
-	CHECK_THROWS_AS(usuario.login(), UsuarioNaoEncontradoException);
+    	Usuario usuario2;
+	usuario2.setSenha("584769");
+	CHECK(usuario2.getSenha()=="584769");
 }
 
 TEST_CASE("Testando a função retornar se o usuário está autenticado ou não") 
 {
-    //EXEMPLOS DE 3 CHECAGENS
-    Triangle t1(3,2,2);
-    CHECK(t1.getPerimeter()==7);
-
-    Usuario usuario = Usuario();
-	usuario.setCpf("12341234123");
-	usuario.setSenha("senha");
-	CHECK(usuario.login());
+    	Usuario usuario1;
+	usuario1.setEstaAutenticado(true);
+	CHECK(usuario1.getEmail()==true);
     
-    Usuario usuario = Usuario();
-	usuario.setCpf("32132132132");
-	usuario.setSenha("senha");
-	CHECK_THROWS_AS(usuario.login(), UsuarioNaoEncontradoException);
+    	Usuario usuario2;
+	usuario2.setEmail(false);
+	CHECK(usuario2.getEmail()==false);
 }
 
-TEST_CASE("Testando a função que altera o id do usuário") 
+TEST_CASE("Testando a função alterarUsuario") 
 {
-    //EXEMPLOS DE 3 CHECAGENS
-    Triangle t1(3,2,2);
-    CHECK(t1.getPerimeter()==7);
-
-    Usuario usuario = Usuario();
-	usuario.setCpf("12341234123");
-	usuario.setSenha("senha");
-	CHECK(usuario.login());
-    
-    Usuario usuario = Usuario();
-	usuario.setCpf("32132132132");
-	usuario.setSenha("senha");
-	CHECK_THROWS_AS(usuario.login(), UsuarioNaoEncontradoException);
-}
-
-TEST_CASE("Testando a função que altera o tipo do usuário") 
-{
-    //EXEMPLOS DE 3 CHECAGENS
-    Triangle t1(3,2,2);
-    CHECK(t1.getPerimeter()==7);
-
-    Usuario usuario = Usuario();
-	usuario.setCpf("12341234123");
-	usuario.setSenha("senha");
-	CHECK(usuario.login());
-    
-    Usuario usuario = Usuario();
-	usuario.setCpf("32132132132");
-	usuario.setSenha("senha");
-	CHECK_THROWS_AS(usuario.login(), UsuarioNaoEncontradoException);
-}
-
-TEST_CASE("Testando a função que altera o nome do usuário") 
-{
-    //EXEMPLOS DE 3 CHECAGENS
-    Triangle t1(3,2,2);
-    CHECK(t1.getPerimeter()==7);
-
-    Usuario usuario = Usuario();
-	usuario.setCpf("12341234123");
-	usuario.setSenha("senha");
-	CHECK(usuario.login());
-    
-    Usuario usuario = Usuario();
-	usuario.setCpf("32132132132");
-	usuario.setSenha("senha");
-	CHECK_THROWS_AS(usuario.login(), UsuarioNaoEncontradoException);
-}
-
-TEST_CASE("Testando a função que altera o CPF do usuário") 
-{
-    //EXEMPLOS DE 3 CHECAGENS
-    Triangle t1(3,2,2);
-    CHECK(t1.getPerimeter()==7);
-
-    Usuario usuario = Usuario();
-	usuario.setCpf("12341234123");
-	usuario.setSenha("senha");
-	CHECK(usuario.login());
-    
-    Usuario usuario = Usuario();
-	usuario.setCpf("32132132132");
-	usuario.setSenha("senha");
-	CHECK_THROWS_AS(usuario.login(), UsuarioNaoEncontradoException);
-}
-
-TEST_CASE("Testando a função que altera o email do usuário") 
-{
-    //EXEMPLOS DE 3 CHECAGENS
-    Triangle t1(3,2,2);
-    CHECK(t1.getPerimeter()==7);
-
-    Usuario usuario = Usuario();
-	usuario.setCpf("12341234123");
-	usuario.setSenha("senha");
-	CHECK(usuario.login());
-    
-    Usuario usuario = Usuario();
-	usuario.setCpf("32132132132");
-	usuario.setSenha("senha");
-	CHECK_THROWS_AS(usuario.login(), UsuarioNaoEncontradoException);
-}
-
-TEST_CASE("Testando a função que altera o usuário") 
-{
-    //EXEMPLOS DE 3 CHECAGENS
-    Triangle t1(3,2,2);
-    CHECK(t1.getPerimeter()==7);
-
-    Usuario usuario = Usuario();
-	usuario.setCpf("12341234123");
-	usuario.setSenha("senha");
-	CHECK(usuario.login());
-    
-    Usuario usuario = Usuario();
-	usuario.setCpf("32132132132");
-	usuario.setSenha("senha");
-	CHECK_THROWS_AS(usuario.login(), UsuarioNaoEncontradoException);
 }
 
 TEST_CASE("Testando a função que limpa a tela") 
 {
-    //EXEMPLOS DE 3 CHECAGENS
-    Triangle t1(3,2,2);
-    CHECK(t1.getPerimeter()==7);
-
-    Usuario usuario = Usuario();
-	usuario.setCpf("12341234123");
-	usuario.setSenha("senha");
-	CHECK(usuario.login());
-    
-    Usuario usuario = Usuario();
-	usuario.setCpf("32132132132");
-	usuario.setSenha("senha");
-	CHECK_THROWS_AS(usuario.login(), UsuarioNaoEncontradoException);
+    	Usuario usuario1;
+	CHECK(usuario1.limparTela("perguntar");
 }
 
