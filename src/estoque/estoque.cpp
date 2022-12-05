@@ -491,6 +491,7 @@ void Estoque::menuEntradaESaidaDeProdutos(std::list<pair<unsigned int,pair<Produ
             }
             std::cout<<"O estoque foi atualizado com sucesso"<<std::endl;
             loop = false;
+            listaQuantidades.clear();
             limparTela("perguntar");
         }
         break;    
@@ -541,4 +542,8 @@ void Estoque::limparTela(string modo){
             std::cout << "O sistema não conseguiu limpar a tela!" << std::endl;
         }
     }
+}
+
+Estoque::~Estoque(){
+    _estoque.~map();
 }

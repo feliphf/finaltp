@@ -44,6 +44,7 @@ class Estoque{
         void imprimirLog();
         void excluirProduto(string codigo);
         void limparTela(string modo);
+        ~Estoque();
 };
 
 #endif

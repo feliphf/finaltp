@@ -276,3 +276,12 @@ void sistemaLogin::limparTela(string modo){
         }
     }
 }
+
+sistemaLogin::~sistemaLogin(){
+    std::map<string,Usuario*>::iterator it;
+    for (it = _usuarios.begin(); it != _usuarios.end(); it++)
+    {
+        delete (it->second);
+    }
+    _usuarios.~map();
+}

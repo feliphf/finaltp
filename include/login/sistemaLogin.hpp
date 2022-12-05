@@ -27,6 +27,7 @@ class sistemaLogin{
         string gerarDataAtual(); 
         Usuario* menuLogin(); 
         Usuario* pesquisarUsuario(string pesquisa);
+        ~sistemaLogin();
 };
 
 #endif
