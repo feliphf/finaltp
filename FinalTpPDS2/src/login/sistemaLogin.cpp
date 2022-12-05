@@ -155,10 +155,10 @@ void sistemaLogin::cadastrarUsuario(){
         }
         case 3:
             break;
-    	}
-	default:
+	    default:
             throw EscolhaInvalida();
             break;
+    }
 }
 
 Usuario* sistemaLogin::menuLogin(){
@@ -198,18 +198,19 @@ Usuario* sistemaLogin::menuLogin(){
                     return u;
                 }else
                     throw SenhaIncorreta();
-            }else
+            }else{
                 throw UsuarioNaoCadastrado();      
             	return nullptr;
+            }
         }
         case 2:{
             exit(0);
        }
 	default:
             throw EscolhaInvalida();
+            return nullptr;
             break;
     }
-    return nullptr;
 }
 
 void sistemaLogin::alterarUsuario(){  

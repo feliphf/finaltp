@@ -17,6 +17,7 @@
 #include <map>
 #include <list>
 #include <sstream>
+#include "EXCECOESDOESTOQUE.hpp"
 #include "produto.hpp"
 
 using namespace std;

@@ -2,6 +2,7 @@
 #define FUNCIONARIO_H
 
 #include "usuario.hpp"
+#include "EXCECOESDOLOGIN.hpp"
 
 using namespace std;
 

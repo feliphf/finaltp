@@ -2,6 +2,7 @@
 #define SISTEMA_H
 
 #include <iostream>
+#include "EXCECOESDOSISTEMA.hpp"
 #include "sistemaLogin.hpp"
 #include "estoque.hpp"
 

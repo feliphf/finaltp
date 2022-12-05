@@ -80,10 +80,10 @@ void Sistema::opcoesMenuGerente(){
         case 7:
             _sistemaLogin.fazerLogout(_usuarioLogado);
             break;
-        }
         default:
             throw EscolhaSistemaInvalida();
             break;
+    }
 }
 
 void Sistema::opcoesMenuAdministrativo(){

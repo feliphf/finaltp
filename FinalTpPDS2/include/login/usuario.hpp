@@ -4,6 +4,7 @@
 #include <iostream>
 #include <string>
 #include <iomanip>
+#include "EXCECOESDOLOGIN.hpp"
 using namespace std;
 
 class Usuario {
