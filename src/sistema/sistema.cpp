@@ -13,7 +13,15 @@ void Sistema::salvarParametrosSistema(){
 
 void Sistema::efetuarLogin(){
     do{
-        _usuarioLogado = _sistemaLogin.menuLogin();
+        try{
+            _usuarioLogado = _sistemaLogin.menuLogin();
+        }catch(SenhaIncorreta& erro){
+            cout<<erro.what()<<endl;     
+        }catch(UsuarioNaoCadastrado& erro){
+            cout<<erro.what()<<endl;     
+        }catch(EscolhaInvalida& erro){
+            cout<<erro.what()<<endl;     
+        }
     } while(_usuarioLogado == nullptr);
 }
 
@@ -44,7 +52,11 @@ void Sistema::opcoesMenuGerente(){
             string s;
             cout << "Digite o código do produto: ";
             cin >> s;
-            _estoque.pesquisarProduto(s);
+            try{
+                 _estoque.pesquisarProduto(s);   
+            }catch(ProdutoNaoCadastrado& erro){
+                    cout<<erro.what()<<endl;     
+            }
             break;
         }
         case 4:{
@@ -58,13 +70,20 @@ void Sistema::opcoesMenuGerente(){
             break;
         }
         case 6:{
-            opcoesMenuAdministrativo();
+            try{
+                opcoesMenuAdministrativo();
+            }catch(EscolhaSistemaInvalida& erro){
+                    cout<<erro.what()<<endl;     
+            }
             break;
         }
         case 7:
             _sistemaLogin.fazerLogout(_usuarioLogado);
             break;
-    }
+        }
+        default:
+            throw EscolhaSistemaInvalida();
+            break;
 }
 
 void Sistema::opcoesMenuAdministrativo(){
@@ -73,40 +92,33 @@ void Sistema::opcoesMenuAdministrativo(){
     cin >> escolha;
     switch(escolha){
         case 1:
-            _estoque.alterarProduto();
+            try{
+                _estoque.alterarProduto();
+            }catch(EntradaInvalida& erro){
+                  cout<<erro.what()<<endl;
+            }
             break;
-        case 2:{
-            string n,co,f,ca;
-            float p;
-            cout << "Digite o Nome: ";
-            cin.ignore(1,'\n');
-            getline(cin, n);
-            cout << "Digite em sequência o Código, Fabricante, Categoria e Preço (separados por espaço)" << endl;
-            cin >> co >> f >> ca >> p;
-            _estoque.cadastroDeProdutos(co,n,f,ca,p);
-            break;
-        }
-        case 3:{
-            string codigo;
-            cout<<"Digite o código do produto que será removido: ";
-            cin>>codigo;
-            _estoque.excluirProduto(codigo);
-            break;
-        }        
-        case 4:
-            _sistemaLogin.alterarUsuario();
+        case 2:
+            try{
+                _sistemaLogin.alterarUsuario();
+            }catch(UsuarioNaoCadastrado& erro){
+                  cout<<erro.what()<<endl;
+            }
             break;
         case 5:
             _sistemaLogin.listarUsuarios();
             break;
-        case 6:
+        case 4:
             _sistemaLogin.cadastrarUsuario();
             break;
-        case 7:
+        case 5:
             _sistemaLogin.excluirUsuario();
             break;
         case 8:
             salvarParametrosSistema();
+            break;
+        default:
+            throw EscolhaInvalida();
             break;
     }    
 }
@@ -129,7 +141,11 @@ void Sistema::opcoesMenuFuncionario(){
             string s;
             cout << "Digite o código do produto: ";
             cin >> s;
-            _estoque.pesquisarProduto(s);
+            try{
+                _estoque.pesquisarProduto(s);
+            }catch(ProdutoNaoCadastrado& erro){
+                cout<<erro.what()<<endl;
+            }
             break;
         }
         case 3:{
@@ -138,11 +154,19 @@ void Sistema::opcoesMenuFuncionario(){
             break;
         }
         case 4:{
-            _usuarioLogado->alterarUsuarioLogado();
+            try{
+                _usuarioLogado->alterarUsuarioLogado();
+            }catch(EscolhaInvalida & erro){
+                  cout<<erro.what()<<endl;
+            }
             break;
         }
-        case 5:
+        case 5:{
             _sistemaLogin.fazerLogout(_usuarioLogado);
+            break;
+        }
+        default:
+            throw EscolhaInvalida();
             break;
     }
 }
@@ -154,30 +178,21 @@ void Sistema::inicializarSistema(){
             efetuarLogin();
         } else {
             if(_usuarioLogado->temPermissao()){
-                opcoesMenuGerente();
+                try{
+                    opcoesMenuGerente();
+                }catch(EscolhaSistemaInvalida& erro){
+                    cout<<erro.what()<<endl;     
+                }
             } else {
-                opcoesMenuFuncionario(); 
+                try{
+                    opcoesMenuFuncionario(); 
+                }catch(EscolhaSistemaInvalida& erro){
+                    cout<<erro.what()<<endl;     
+                }
             }
             salvarParametrosSistema();
             if (!_usuarioLogado->getEstaAutenticado())
                 _usuarioLogado = nullptr;
-        }
-    }
-}
-void Sistema::limparTela(string modo){
-    if (modo == "perguntar"){
-        std::cout << "Pressione enter para continuar!";
-        char temp;
-        std::cin.ignore();
-        std::cin.get(temp);
-        int aux = system("cls||clear");
-        if (aux == -1){
-            std::cout << "O sistema não conseguiu limpar a tela!" << std::endl;
-        }
-    } else {
-        int aux = system("cls||clear");
-        if (aux == -1){
-            std::cout << "O sistema não conseguiu limpar a tela!" << std::endl;
         }
     }
 }

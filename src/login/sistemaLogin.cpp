@@ -44,8 +44,8 @@ void sistemaLogin::listarUsuarios(){
         cout << "Nenhum usuário cadastrado!!" << endl;
     }else{
     map<string, Usuario*>::iterator it;
-    cout << "+-----+---------------------------+------------+---------------+----------------------------+---------------+-------+"<< endl;
-    cout << "| ID  |           NOME            |    TIPO    |      CPF      |            EMAIL           | ÚLTIMO ACESSO | SENHA |"<< endl;
+    	cout << "+-----+---------------------------+------------+---------------+----------------------------+---------------+-------+"<< endl;
+    	cout << "| ID  |           NOME            |    TIPO    |      CPF      |            EMAIL           | ÚLTIMO ACESSO | SENHA |"<< endl;
 	cout << "+-----+---------------------------+------------+---------------+----------------------------+---------------+-------+"<< endl;
     for(it=_usuarios.begin(); it!=_usuarios.end(); it++){
         cout << left << '|' << setw(5) << (it->second)->getId() <<  '|' << setw(27) << (it->second)->getNome() <<  '|' << setw(12) <<
@@ -97,7 +97,7 @@ Usuario* sistemaLogin::pesquisarUsuario(string pesquisa){
         }
     if (contador != 0)
         return it->second;
-    return nullptr;
+    	return nullptr;
 }
 
 void sistemaLogin::excluirUsuario(){
@@ -110,14 +110,14 @@ void sistemaLogin::excluirUsuario(){
         cout << "O usuário " << u->getNome() << " foi excluído com sucesso!" << endl;
         _usuarios.erase(u->getId());
     } else
-        cout << "Usuário não cadastrado!" << endl;
+        throw UsuarioNaoCadastrado();
 }
 
 void sistemaLogin::cadastrarUsuario(){
 	cout << "+----------------------------------+" << endl;
-	cout << "| " << "1 - Gerente                      |" << endl;
-	cout << "| " << "2 - Funcionário                  |" << endl;
-	cout << "| " << "3 - Voltar                       |" << endl;
+	cout << "| 1 - Gerente                      |" << endl;
+	cout << "| 2 - Funcionário                  |" << endl;
+	cout << "| 3 - Voltar                       |" << endl;
 	cout << "+----------------------------------+" << endl;
     cout << "Escolha qual tipo de usuário: ";
     int escolha;
@@ -155,7 +155,10 @@ void sistemaLogin::cadastrarUsuario(){
         }
         case 3:
             break;
-    }
+    	}
+	default:
+            throw EscolhaInvalida();
+            break;
 }
 
 Usuario* sistemaLogin::menuLogin(){
@@ -171,8 +174,8 @@ Usuario* sistemaLogin::menuLogin(){
                                                       
 )" << endl;
 	cout << "+----------------------------------+" << endl;
-	cout << "| " << "1 - Fazer Login                  |" << endl;
-	cout << "| " << "2 - Encerrar Programa            |" << endl;
+	cout << "| 1 - Fazer Login                  |" << endl;
+	cout << "| 2 - Encerrar Programa            |" << endl;
 	cout << "+----------------------------------+" << endl;
     cout << "Escolha uma opcao: ";
     int escolha;
@@ -194,14 +197,17 @@ Usuario* sistemaLogin::menuLogin(){
                     cout << "Logado com sucesso :)" << endl;
                     return u;
                 }else
-                    cout << "Senha incorreta!" << endl;
+                    throw SenhaIncorreta();
             }else
-                cout << "Usuário não cadastrado!" << endl;     
+                throw UsuarioNaoCadastrado();     
             return nullptr;
         }
         case 2:{
             exit(0);
         }
+	default:
+            throw EscolhaInvalida();
+            break;
     }
     return nullptr;
 }
@@ -215,28 +221,10 @@ void sistemaLogin::alterarUsuario(){
     if (u != nullptr){     
         u->alterarUsuario();
     } else
-        cout << "Usuário não cadastrado!" << endl;     
+        throw UsuarioNaoCadastrado();    
 }
 
 void sistemaLogin::fazerLogout(Usuario *u){
     _usuarios[u->getId()] = u;
     u->setEstaAutenticado(false);
-}
-
-void sistemaLogin::limparTela(string modo){
-    if (modo == "perguntar"){
-        std::cout << "Pressione enter para continuar!";
-        char temp;
-        std::cin.ignore();
-        std::cin.get(temp);
-        int aux = system("cls||clear");
-        if (aux == -1){
-            std::cout << "O sistema não conseguiu limpar a tela!" << std::endl;
-        }
-    } else {
-        int aux = system("cls||clear");
-        if (aux == -1){
-            std::cout << "O sistema não conseguiu limpar a tela!" << std::endl;
-        }
-    }
 }
