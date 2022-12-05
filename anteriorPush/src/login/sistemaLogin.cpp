@@ -110,7 +110,7 @@ void sistemaLogin::excluirUsuario(){
         cout << "O usuário " << u->getNome() << " foi excluído com sucesso!" << endl;
         _usuarios.erase(u->getId());
     } else
-        cout << "Usuário não cadastrado!" << endl;
+        throw UsuarioNaoCadastrado();
 }
 
 void sistemaLogin::cadastrarUsuario(){
@@ -155,7 +155,10 @@ void sistemaLogin::cadastrarUsuario(){
         }
         case 3:
             break;
-    }
+    	}
+	default:
+            throw EscolhaInvalida();
+            break;
 }
 
 Usuario* sistemaLogin::menuLogin(){
@@ -194,14 +197,17 @@ Usuario* sistemaLogin::menuLogin(){
                     cout << "Logado com sucesso :)" << endl;
                     return u;
                 }else
-                    cout << "Senha incorreta!" << endl;
+                    throw SenhaIncorreta();
             }else
-                cout << "Usuário não cadastrado!" << endl;     
-            return nullptr;
+                throw UsuarioNaoCadastrado();      
+            	return nullptr;
         }
         case 2:{
             exit(0);
-        }
+       }
+	default:
+            throw EscolhaInvalida();
+            break;
     }
     return nullptr;
 }
@@ -215,7 +221,7 @@ void sistemaLogin::alterarUsuario(){
     if (u != nullptr){     
         u->alterarUsuario();
     } else
-        cout << "Usuário não cadastrado!" << endl;     
+        throw UsuarioNaoCadastrado();     
 }
 
 void sistemaLogin::fazerLogout(Usuario *u){
