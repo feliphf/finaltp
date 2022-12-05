@@ -111,6 +111,9 @@ void Usuario::alterarUsuario(){
                     setTipo("Funcionario");
                     break;
                 }
+		default:
+        	    throw EscolhaInvalida();
+                    break;
             }
             break;
         }
@@ -141,6 +144,9 @@ void Usuario::alterarUsuario(){
         case 6:{
             break;
         }
+	default:
+       	    throw EscolhaInvalida();
+            break;
     }
 }
 
