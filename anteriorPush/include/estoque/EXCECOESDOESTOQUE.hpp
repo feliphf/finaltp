@@ -8,7 +8,7 @@ class ProdutoNaoCadastrado : public std::exception{
 		std::string mensagem;
     public:
 		ProdutoNaoCadastrado();
-		virtual const char* what() const throw() override;
+		virtual const char* what() const throw();
 };
 
 class PrecoNaoENumero : public std::exception{
@@ -16,7 +16,7 @@ class PrecoNaoENumero : public std::exception{
 		std::string mensagem;
     public:
 		PrecoNaoENumero();
-		virtual const char* what() const throw() override;
+		virtual const char* what() const throw();
 };
 
 class EntradaInvalida : public std::exception{
@@ -24,7 +24,7 @@ class EntradaInvalida : public std::exception{
 		std::string mensagem;
     public:
 		EntradaInvalida();
-		virtual const char* what() const throw() override;
+		virtual const char* what() const throw();
 };
 
 class ExcecaoTamanhoNomeAlt : public std::exception{
@@ -32,7 +32,7 @@ class ExcecaoTamanhoNomeAlt : public std::exception{
 		std::string mensagem;
     public:
 		ExcecaoTamanhoNomeAlt();
-		virtual const char* what() const throw() override;
+		virtual const char* what() const throw();
 };
 
 class ExcecaoTamanhoFabricAlt : public std::exception{
@@ -40,7 +40,7 @@ class ExcecaoTamanhoFabricAlt : public std::exception{
 		std::string mensagem;
     public:
 		ExcecaoTamanhoFabricAlt();
-		virtual const char* what() const throw() override;
+		virtual const char* what() const throw();
 };
 
 class ExcecaoTamanhoCategAlt : public std::exception{
@@ -48,7 +48,7 @@ class ExcecaoTamanhoCategAlt : public std::exception{
 		std::string mensagem;
     public:
 		ExcecaoTamanhoCategAlt();
-		virtual const char* what() const throw() override;
+		virtual const char* what() const throw();
 };
 
 class ExcecaoPrecoNegativoAlt : public std::exception{
@@ -56,7 +56,7 @@ class ExcecaoPrecoNegativoAlt : public std::exception{
 		std::string mensagem;
     public:
 		EntradaInvalida();
-		virtual const char* what() const throw() override;
+		virtual const char* what() const throw();
 };
 
 class ProdutoJaCadastrado : public std::exception{
@@ -64,7 +64,7 @@ class ProdutoJaCadastrado : public std::exception{
 		std::string mensagem;
     public:
 		ProdutoJaCadastrado();
-		virtual const char* what() const throw() override;
+		virtual const char* what() const throw();
 };
 
 class ProdutoNaoAdicionado : public std::exception{
@@ -72,7 +72,7 @@ class ProdutoNaoAdicionado : public std::exception{
 		std::string mensagem;
     public:
 		ProdutoNaoAdicionado();
-		virtual const char* what() const throw() override;
+		virtual const char* what() const throw();
 };
 
 class ProdutoNaoRetirado : public std::exception{
@@ -80,7 +80,7 @@ class ProdutoNaoRetirado : public std::exception{
 		std::string mensagem;
     public:
 		ProdutoNaoRetirado();
-		virtual const char* what() const throw() override;
+		virtual const char* what() const throw();
 };
 
 class TentativaDeRetirada : public std::exception{
@@ -88,7 +88,7 @@ class TentativaDeRetirada : public std::exception{
 		std::string mensagem;
     public:
 		TentativaDeRetirada();
-		virtual const char* what() const throw() override;
+		virtual const char* what() const throw();
 };
 
 

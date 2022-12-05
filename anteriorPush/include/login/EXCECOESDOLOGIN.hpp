@@ -16,7 +16,7 @@ class SenhaIncorreta : public std::exception(){
 		std::string mensagem;
     	public:
 		SenhaIncorreta();
-		virtual const char* what() const throw() override;
+		virtual const char* what() const throw();
 };
 
 class EscolhaInvalida : public std::exception(){
@@ -24,7 +24,7 @@ class EscolhaInvalida : public std::exception(){
 		std::string mensagem;
     	public:
 		EscolhaInvalida();
-		virtual const char* what() const throw() override;
+		virtual const char* what() const throw();
 };
 
 #endif

@@ -6,6 +6,6 @@ EscolhaSistemaInvalida::EscolhaSistemaInvalida(){
 	mensagem = "Escolha Inválida";	
 }
 
-virtual const char* EscolhaSistemaInvalida::what() const throw() override{
+virtual const char* EscolhaSistemaInvalida::what() const throw(){
 	return mensagem.c_str();
 }

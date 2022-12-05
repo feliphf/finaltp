@@ -72,18 +72,21 @@ void Usuario::setEstaAutenticado(bool b){
 
 void Usuario::alterarUsuario(){
     cout << "+----------------------------------+" << endl;
-    cout << "| 1 - Nome                         |" << endl;
-    cout << "| 2 - Tipo                         |" << endl;
-    cout << "| 3 - CPF                          |" << endl;
-    cout << "| 4 - Email                        |" << endl;
-    cout << "| 5 - Senha                        |" << endl;
-    cout << "| 6 - Voltar                       |" << endl;
+    cout << "| " << "1 - Nome                         |" << endl;
+    cout << "| " << "2 - Tipo                         |" << endl;
+    cout << "| " << "3 - CPF                          |" << endl;
+    cout << "| " << "4 - Email                        |" << endl;
+    cout << "| " << "5 - Senha                        |" << endl;
+    cout << "| " << "6 - Voltar                       |" << endl;
     cout << "+----------------------------------+" << endl;
     cout << "Escolha o que deseja alterar: ";
-    int escolha;
-    cin >> escolha;
+    string aux;
+    cin >> aux;
+    if (aux.size()>1)
+        throw EscolhaInvalida();
+    char escolha = aux[0];
     switch (escolha){
-        case 1:{
+        case '1':{
             string n;
             cout << "Digite o novo nome: ";
             cin.ignore(1,'\n');
@@ -92,21 +95,24 @@ void Usuario::alterarUsuario(){
             setNome(n);
             break;
         }
-        case 2:{
+        case '2':{
             cout << "+----------------------------------+" << endl;
-	    cout << "| 1 - Gerente                      |" << endl;
-	    cout << "| 2 - Funcionário                  |" << endl;
-	    cout << "+----------------------------------+" << endl;
+	        cout << "| " << "1 - Gerente                      |" << endl;
+	        cout << "| " << "2 - Funcionário                  |" << endl;
+	        cout << "+----------------------------------+" << endl;
             cout << "Escolha qual tipo de usuário: ";
-            int escolha;
-            cin >> escolha;
+            string aux;
+            cin >> aux;
+            if (aux.size()>1)
+                throw EscolhaInvalida();
+            char escolha = aux[0];
             switch (escolha){
-               case 1:{
+               case '1':{
                     cout << "O tipo foi alterado de " << getTipo() << " para Gerente com sucesso!" << endl;
                     setTipo("Gerente");
                     break;
                 }
-                 case 2:{
+                 case '2':{
                     cout << "O tipo foi alterado de " << getTipo() << " para Funcionário com sucesso!" << endl;
                     setTipo("Funcionario");
                     break;
@@ -117,7 +123,7 @@ void Usuario::alterarUsuario(){
             }
             break;
         }
-        case 3:{
+        case '3':{
             string c;
             cout << "Digite o novo CPF: ";
             cin >> c;
@@ -125,7 +131,7 @@ void Usuario::alterarUsuario(){
             setCpf(c);
             break;
         }
-        case 4:{
+        case '4':{
             string e;
             cout << "Digite o novo Email: ";
             cin >> e;
@@ -133,7 +139,7 @@ void Usuario::alterarUsuario(){
             setEmail(e);
             break;
         }
-        case 5:{
+        case '5':{
             string s;
             cout << "Digite a nova senha: ";
             cin >> s;
@@ -141,11 +147,29 @@ void Usuario::alterarUsuario(){
             setSenha(s);
             break;
         }
-        case 6:{
+        case '6':{
             break;
         }
 	default:
        	    throw EscolhaInvalida();
             break;
+    }
+}
+
+void Usuario::limparTela(string modo){
+    if (modo == "perguntar"){
+        std::cout << "Pressione enter para continuar!";
+        char temp;
+        std::cin.ignore();
+        std::cin.get(temp);
+        int aux = system("cls||clear");
+        if (aux == -1){
+            std::cout << "O sistema não conseguiu limpar a tela!" << std::endl;
+        }
+    } else {
+        int aux = system("cls||clear");
+        if (aux == -1){
+            std::cout << "O sistema não conseguiu limpar a tela!" << std::endl;
+        }
     }
 }

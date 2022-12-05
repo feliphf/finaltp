@@ -13,15 +13,15 @@ void Sistema::salvarParametrosSistema(){
 
 void Sistema::efetuarLogin(){
     do{
-       try{
+        try{
             _usuarioLogado = _sistemaLogin.menuLogin();
-       }catch(SenhaIncorreta& erro){
+        }catch(SenhaIncorreta& erro){
             cout<<erro.what()<<endl;     
-       }catch(UsuarioNaoCadastrado& erro){
+        }catch(UsuarioNaoCadastrado& erro){
             cout<<erro.what()<<endl;     
-       }catch(EscolhaInvalida& erro){
+        }catch(EscolhaInvalida& erro){
             cout<<erro.what()<<endl;     
-       }
+        }
     } while(_usuarioLogado == nullptr);
 }
 
@@ -98,25 +98,7 @@ void Sistema::opcoesMenuAdministrativo(){
                   cout<<erro.what()<<endl;
             }
             break;
-        case 2:{
-            string n,co,f,ca;
-            float p;
-            cout << "Digite o Nome: ";
-            cin.ignore(1,'\n');
-            getline(cin, n);
-            cout << "Digite em sequência o Código, Fabricante, Categoria e Preço (separados por espaço)" << endl;
-            cin >> co >> f >> ca >> p;
-            _estoque.cadastroDeProdutos(co,n,f,ca,p);
-            break;
-        }
-        case 3:{
-            string codigo;
-            cout<<"Digite o código do produto que será removido: ";
-            cin>>codigo;
-            _estoque.excluirProduto(codigo);
-            break;
-            }        
-        case 4:
+        case 2:
             try{
                 _sistemaLogin.alterarUsuario();
             }catch(UsuarioNaoCadastrado& erro){
@@ -126,19 +108,11 @@ void Sistema::opcoesMenuAdministrativo(){
         case 5:
             _sistemaLogin.listarUsuarios();
             break;
-        case 6:
-            try{
-                _sistemaLogin.cadastrarUsuario();
-            }catch(EscolhaInvalida& erro){
-                  cout<<erro.what()<<endl;
-            }
+        case 4:
+            _sistemaLogin.cadastrarUsuario();
             break;
-        case 7:
-            try{
-                _sistemaLogin.excluirUsuario();
-            }catch(UsuarioNaoCadastrado& erro){
-                  cout<<erro.what()<<endl;
-            }
+        case 5:
+            _sistemaLogin.excluirUsuario();
             break;
         case 8:
             salvarParametrosSistema();
@@ -146,7 +120,7 @@ void Sistema::opcoesMenuAdministrativo(){
         default:
             throw EscolhaInvalida();
             break;
-    }       
+    }    
 }
 
 void Sistema::opcoesMenuFuncionario(){
@@ -187,9 +161,10 @@ void Sistema::opcoesMenuFuncionario(){
             }
             break;
         }
-        case 5:
+        case 5:{
             _sistemaLogin.fazerLogout(_usuarioLogado);
             break;
+        }
         default:
             throw EscolhaInvalida();
             break;
@@ -218,23 +193,6 @@ void Sistema::inicializarSistema(){
             salvarParametrosSistema();
             if (!_usuarioLogado->getEstaAutenticado())
                 _usuarioLogado = nullptr;
-        }
-    }
-}
-void Sistema::limparTela(string modo){
-    if (modo == "perguntar"){
-        std::cout << "Pressione enter para continuar!";
-        char temp;
-        std::cin.ignore();
-        std::cin.get(temp);
-        int aux = system("cls||clear");
-        if (aux == -1){
-            std::cout << "O sistema não conseguiu limpar a tela!" << std::endl;
-        }
-    } else {
-        int aux = system("cls||clear");
-        if (aux == -1){
-            std::cout << "O sistema não conseguiu limpar a tela!" << std::endl;
         }
     }
 }

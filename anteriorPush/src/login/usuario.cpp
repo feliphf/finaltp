@@ -72,12 +72,12 @@ void Usuario::setEstaAutenticado(bool b){
 
 void Usuario::alterarUsuario(){
     cout << "+----------------------------------+" << endl;
-    cout << "| " << "1 - Nome                         |" << endl;
-    cout << "| " << "2 - Tipo                         |" << endl;
-    cout << "| " << "3 - CPF                          |" << endl;
-    cout << "| " << "4 - Email                        |" << endl;
-    cout << "| " << "5 - Senha                        |" << endl;
-    cout << "| " << "6 - Voltar                       |" << endl;
+    cout << "| 1 - Nome                         |" << endl;
+    cout << "| 2 - Tipo                         |" << endl;
+    cout << "| 3 - CPF                          |" << endl;
+    cout << "| 4 - Email                        |" << endl;
+    cout << "| 5 - Senha                        |" << endl;
+    cout << "| 6 - Voltar                       |" << endl;
     cout << "+----------------------------------+" << endl;
     cout << "Escolha o que deseja alterar: ";
     int escolha;
@@ -94,9 +94,9 @@ void Usuario::alterarUsuario(){
         }
         case 2:{
             cout << "+----------------------------------+" << endl;
-	        cout << "| " << "1 - Gerente                      |" << endl;
-	        cout << "| " << "2 - Funcionário                  |" << endl;
-	        cout << "+----------------------------------+" << endl;
+	    cout << "| 1 - Gerente                      |" << endl;
+	    cout << "| 2 - Funcionário                  |" << endl;
+	    cout << "+----------------------------------+" << endl;
             cout << "Escolha qual tipo de usuário: ";
             int escolha;
             cin >> escolha;
@@ -147,23 +147,5 @@ void Usuario::alterarUsuario(){
 	default:
        	    throw EscolhaInvalida();
             break;
-    }
-}
-
-void Usuario::limparTela(string modo){
-    if (modo == "perguntar"){
-        std::cout << "Pressione enter para continuar!";
-        char temp;
-        std::cin.ignore();
-        std::cin.get(temp);
-        int aux = system("cls||clear");
-        if (aux == -1){
-            std::cout << "O sistema não conseguiu limpar a tela!" << std::endl;
-        }
-    } else {
-        int aux = system("cls||clear");
-        if (aux == -1){
-            std::cout << "O sistema não conseguiu limpar a tela!" << std::endl;
-        }
     }
 }

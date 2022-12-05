@@ -42,10 +42,11 @@ void sistemaLogin::salvarArquivo(){
 void sistemaLogin::listarUsuarios(){
     if(_usuarios.empty()){
         cout << "Nenhum usuário cadastrado!!" << endl;
+        limparTela("perguntar");
     }else{
     map<string, Usuario*>::iterator it;
-    	cout << "+-----+---------------------------+------------+---------------+----------------------------+---------------+-------+"<< endl;
-    	cout << "| ID  |           NOME            |    TIPO    |      CPF      |            EMAIL           | ÚLTIMO ACESSO | SENHA |"<< endl;
+    cout << "+-----+---------------------------+------------+---------------+----------------------------+---------------+-------+"<< endl;
+    cout << "| ID  |           NOME            |    TIPO    |      CPF      |            EMAIL           | ÚLTIMO ACESSO | SENHA |"<< endl;
 	cout << "+-----+---------------------------+------------+---------------+----------------------------+---------------+-------+"<< endl;
     for(it=_usuarios.begin(); it!=_usuarios.end(); it++){
         cout << left << '|' << setw(5) << (it->second)->getId() <<  '|' << setw(27) << (it->second)->getNome() <<  '|' << setw(12) <<
@@ -54,6 +55,7 @@ void sistemaLogin::listarUsuarios(){
          cout << '|' << endl;
         cout << "+-----+---------------------------+------------+---------------+----------------------------+---------------+-------+"<< endl;
         }
+        limparTela("perguntar");
     }
 }
 
@@ -97,7 +99,7 @@ Usuario* sistemaLogin::pesquisarUsuario(string pesquisa){
         }
     if (contador != 0)
         return it->second;
-    	return nullptr;
+    return nullptr;
 }
 
 void sistemaLogin::excluirUsuario(){
@@ -115,15 +117,18 @@ void sistemaLogin::excluirUsuario(){
 
 void sistemaLogin::cadastrarUsuario(){
 	cout << "+----------------------------------+" << endl;
-	cout << "| 1 - Gerente                      |" << endl;
-	cout << "| 2 - Funcionário                  |" << endl;
-	cout << "| 3 - Voltar                       |" << endl;
+	cout << "| " << "1 - Gerente                      |" << endl;
+	cout << "| " << "2 - Funcionário                  |" << endl;
+	cout << "| " << "3 - Voltar                       |" << endl;
 	cout << "+----------------------------------+" << endl;
     cout << "Escolha qual tipo de usuário: ";
-    int escolha;
-    cin >> escolha;
+    string aux;
+    cin >> aux;
+    if (aux.size()>1)
+        throw EscolhaInvalida();
+    char escolha = aux[0];
     switch (escolha){
-        case 1:{
+        case '1':{
             string i = gerarID(), t = "Gerente", d = gerarDataAtual();
             string n, c, e, s;
             cout << "Digite o Nome completo: ";
@@ -138,7 +143,7 @@ void sistemaLogin::cadastrarUsuario(){
             _usuarios.insert(pair<string,Usuario*>(i,u));
             break;
         }
-        case 2:{
+        case '2':{
             string i = gerarID(), t = "Funcionario", d = gerarDataAtual();
             string n, c, e, s;
             cout << "Digite o Nome completo: ";
@@ -153,12 +158,12 @@ void sistemaLogin::cadastrarUsuario(){
             _usuarios.insert(pair<string,Usuario*>(i,u));
             break;
         }
-        case 3:
+        case '3':
             break;
-    	}
-	default:
+	    default:
             throw EscolhaInvalida();
             break;
+    }
 }
 
 Usuario* sistemaLogin::menuLogin(){
@@ -169,19 +174,20 @@ Usuario* sistemaLogin::menuLogin(){
  | |_) | ___ _ __ ___    \ \  / / _ _ __   __| | ___  
  |  _ < / _ \ '_ ` _ \    \ \/ / | | '_ \ / _` |/ _ \ 
  | |_) |  __/ | | | | |    \  /  | | | | | (_| | (_) |
- |____/ \___|_| |_| |_|     \/   |_|_| |_|\__,_|\___/ 
-                                                      
-                                                      
+ |____/ \___|_| |_| |_|     \/   |_|_| |_|\__,_|\___/                                                                                                 
 )" << endl;
 	cout << "+----------------------------------+" << endl;
-	cout << "| 1 - Fazer Login                  |" << endl;
-	cout << "| 2 - Encerrar Programa            |" << endl;
+	cout << "| " << "1 - Fazer Login                  |" << endl;
+	cout << "| " << "2 - Encerrar Programa            |" << endl;
 	cout << "+----------------------------------+" << endl;
     cout << "Escolha uma opcao: ";
-    int escolha;
-    cin >> escolha;
+    string aux;
+    cin >> aux;
+    if (aux.size()>1)
+        throw EscolhaInvalida();
+    char escolha = aux[0];
     switch (escolha){
-        case 1:{
+        case '1':{
             string usuario, senha;
             cout << "Digite o nome ou ID: ";
             cin.ignore(1,'\n');
@@ -198,18 +204,19 @@ Usuario* sistemaLogin::menuLogin(){
                     return u;
                 }else
                     throw SenhaIncorreta();
-            }else
-                throw UsuarioNaoCadastrado();     
-            return nullptr;
+            }else{
+                throw UsuarioNaoCadastrado();      
+            	return nullptr;
+            }
         }
-        case 2:{
+        case '2':{
             exit(0);
-        }
+       }
 	default:
             throw EscolhaInvalida();
+            return nullptr;
             break;
     }
-    return nullptr;
 }
 
 void sistemaLogin::alterarUsuario(){  
@@ -221,10 +228,28 @@ void sistemaLogin::alterarUsuario(){
     if (u != nullptr){     
         u->alterarUsuario();
     } else
-        throw UsuarioNaoCadastrado();    
+        throw UsuarioNaoCadastrado();     
 }
 
 void sistemaLogin::fazerLogout(Usuario *u){
     _usuarios[u->getId()] = u;
     u->setEstaAutenticado(false);
+}
+
+void sistemaLogin::limparTela(string modo){
+    if (modo == "perguntar"){
+        std::cout << "Pressione enter para continuar!";
+        char temp;
+        std::cin.ignore();
+        std::cin.get(temp);
+        int aux = system("cls||clear");
+        if (aux == -1){
+            std::cout << "O sistema não conseguiu limpar a tela!" << std::endl;
+        }
+    } else {
+        int aux = system("cls||clear");
+        if (aux == -1){
+            std::cout << "O sistema não conseguiu limpar a tela!" << std::endl;
+        }
+    }
 }

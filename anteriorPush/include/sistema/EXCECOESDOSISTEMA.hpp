@@ -8,7 +8,7 @@ class EscolhaSistemaInvalida : public std::exception{
 		std::string mensagem;
   public:
 		EscolhaSistemaInvalida();
-		virtual const char* what() const throw() override;
+		virtual const char* what() const throw();
 };
 
 #endif
