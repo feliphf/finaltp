@@ -15,6 +15,8 @@
 #include <iostream>
 #include <string>
 #include <map>
+#include <list>
+#include <sstream>
 #include "produto.hpp"
 
 using namespace std;
@@ -33,8 +35,15 @@ class Estoque{
         void alterarCategoriaProduto(string pesquisa,string categ);
         void alterarPrecoProduto(string pesquisa, float preco);
         void alterarProduto();
-        //possiveis outras funçoes de pesquisa se der tempo
-
+        void entradasDeProdutos(string codig, int quant, string nomeUsuario, string dataAtual);
+        void saidasDeProdutos(string codig, int quant, string nomeUsuario, string dataAtual);
+        void cadastroDeProdutos(string codig, string nome, string fabri, string categ, float preco);
+        void menuEntradaESaidaDeProdutos(std::list<pair<unsigned int,pair<Produto,int>>>& listaQuantidades, std::string modo,
+         bool& loop,int& count, string nomeUsuario, string dataAtual);
+        void gerarLog(string mensagem, string nomeUsuario, string dataAtual);
+        void imprimirLog();
+        void excluirProduto(string codigo);
+        void limparTela(string modo);
 };
 
 #endif

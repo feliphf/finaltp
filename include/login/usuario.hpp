@@ -38,6 +38,7 @@ class Usuario {
         virtual void alterarUsuarioLogado() = 0;
         virtual void menuInicial() = 0;
         virtual bool temPermissao() = 0;
+        void limparTela(string modo);
 };
 
 #endif

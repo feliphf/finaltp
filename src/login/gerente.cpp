@@ -18,7 +18,7 @@ void Gerente::menuInicial(){
 	cout << "| " << "2 - Registrar compra                           |" << endl;
 	cout << "| " << "3 - Consultar produto                          |" << endl;
 	cout << "| " << "4 - Listar todos os produtos                   |" << endl;
-	cout << "| " << "5 - Gerar relatório                            |" << endl;
+	cout << "| " << "5 - Exibir movimentações                       |" << endl;
 	cout << "| " << "6 - Funções admnistrativas                     |" << endl;
 	cout << "| " << "7 - Fazer logout                               |" << endl;
 	cout << "+------------------------------------------------+" << endl;
@@ -29,11 +29,13 @@ void Gerente::menuInicial(){
 void Gerente::menuAdministrativo(){
 	cout << "+------------------------------------------------+" << endl;
 	cout << "| " << "1 - Alterar produto                            |" << endl;
-	cout << "| " << "2 - Alterar usuário                            |" << endl;
-	cout << "| " << "3 - Listar usuários                            |" << endl;
-	cout << "| " << "4 - Cadastrar usuário                          |" << endl;
-	cout << "| " << "5 - Remover usuário                            |" << endl;
-	cout << "| " << "6 - Voltar                                     |" << endl;
+	cout << "| " << "2 - Cadastrar produto                          |" << endl;
+	cout << "| " << "3 - Remover produto                            |" << endl;
+	cout << "| " << "4 - Alterar usuário                            |" << endl;
+	cout << "| " << "5 - Listar usuários                            |" << endl;
+	cout << "| " << "6 - Cadastrar usuário                          |" << endl;
+	cout << "| " << "7 - Remover usuário                            |" << endl;
+	cout << "| " << "8 - Voltar                                     |" << endl;
 	cout << "+------------------------------------------------+" << endl;
 	cout << "Escolha uma opcao: ";
 }

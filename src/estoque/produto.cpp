@@ -10,7 +10,10 @@ Produto::Produto(string n, string fabricante, string categoria, string codigo, f
 }
 
 string Produto::getNome(){
-return _nome;
+    for (unsigned i = 0; i < _nome.size(); i++)
+        if (_nome[i] == '_')
+            _nome[i] = ' ';     
+    return _nome;
 }
 
 string Produto::getFabricante(){
@@ -34,6 +37,9 @@ return _preco;
 }
 
 void Produto::setNome(string n){
+    for (unsigned i = 0; i < _nome.size(); i++)
+        if (_nome[i] == ' ')
+            _nome[i] = '_';     
     _nome=n;
 }
 

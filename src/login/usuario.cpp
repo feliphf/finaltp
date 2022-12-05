@@ -143,3 +143,21 @@ void Usuario::alterarUsuario(){
         }
     }
 }
+
+void Usuario::limparTela(string modo){
+    if (modo == "perguntar"){
+        std::cout << "Pressione enter para continuar!";
+        char temp;
+        std::cin.ignore();
+        std::cin.get(temp);
+        int aux = system("cls||clear");
+        if (aux == -1){
+            std::cout << "O sistema não conseguiu limpar a tela!" << std::endl;
+        }
+    } else {
+        int aux = system("cls||clear");
+        if (aux == -1){
+            std::cout << "O sistema não conseguiu limpar a tela!" << std::endl;
+        }
+    }
+}

@@ -15,8 +15,10 @@ void sistemaLogin::lerArquivo(){
                 _usuarios.insert(pair<string,Usuario*>(id,f)); 
             }
         }
-    }else
+    }else{
         arquivo.open("database/Usuarios.txt",ios::out);
+        cout<<"Arquivo não havia sido encontrado, agora foi criado com sucesso"<<endl; // throw ExcecaoArquivoNaoEncontrado
+    }
     arquivo.close(); 
 }
 
@@ -157,6 +159,7 @@ void sistemaLogin::cadastrarUsuario(){
 }
 
 Usuario* sistemaLogin::menuLogin(){
+    limparTela("continuar");
     cout << R"(
   ____                  __      ___           _       
  |  _ \                 \ \    / (_)         | |      
@@ -185,9 +188,10 @@ Usuario* sistemaLogin::menuLogin(){
                 cout << "Digite a senha: ";
                 cin >> senha;
                 if (senha == u->getSenha()){
-                    cout << "Logado com sucesso :)" << endl;
                     u->setUltimoAcesso(gerarDataAtual());
                     u->setEstaAutenticado(true);
+                    limparTela("continuar");
+                    cout << "Logado com sucesso :)" << endl;
                     return u;
                 }else
                     cout << "Senha incorreta!" << endl;
@@ -217,4 +221,22 @@ void sistemaLogin::alterarUsuario(){
 void sistemaLogin::fazerLogout(Usuario *u){
     _usuarios[u->getId()] = u;
     u->setEstaAutenticado(false);
+}
+
+void sistemaLogin::limparTela(string modo){
+    if (modo == "perguntar"){
+        std::cout << "Pressione enter para continuar!";
+        char temp;
+        std::cin.ignore();
+        std::cin.get(temp);
+        int aux = system("cls||clear");
+        if (aux == -1){
+            std::cout << "O sistema não conseguiu limpar a tela!" << std::endl;
+        }
+    } else {
+        int aux = system("cls||clear");
+        if (aux == -1){
+            std::cout << "O sistema não conseguiu limpar a tela!" << std::endl;
+        }
+    }
 }

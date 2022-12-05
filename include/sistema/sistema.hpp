@@ -19,6 +19,7 @@ class Sistema{
         void opcoesMenuFuncionario();
         void efetuarLogin();
         void inicializarSistema();
+        void limparTela(string modo);
 };
 
 #endif

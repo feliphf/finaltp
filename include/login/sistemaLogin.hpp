@@ -21,6 +21,7 @@ class sistemaLogin{
         void listarUsuarios();
         void alterarUsuario();
         void limparMemoria();
+        void limparTela(string modo);
         void fazerLogout(Usuario *u);
         string gerarID(); 
         string gerarDataAtual(); 
