@@ -90,10 +90,6 @@ TEST_CASE("Testando a função retornar se o usuário está autenticado ou não"
 	CHECK(usuario2.getEmail()==false);
 }
 
-TEST_CASE("Testando a função alterarUsuario") 
-{
-}
-
 TEST_CASE("Testando a função que limpa a tela") 
 {
     	Usuario usuario1;
