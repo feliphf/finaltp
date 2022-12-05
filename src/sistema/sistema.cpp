@@ -179,32 +179,9 @@ void Sistema::opcoesMenuAdministrativo(){
             limparTela("perguntar");
             break;
         case '2':{
-            string n,co,f,ca;
-            float p;
-            cout << "Digite o Nome: ";
-            cin.ignore(1,'\n');
-            getline(cin, n);
-            cout << "Digite em sequência o Código, Fabricante, Categoria e Preço (separados por espaço)" << endl;
-            cin >> co >> f >> ca >> p;
-            if (cin.fail()){
-            cin.clear();
-            cin.ignore();
-            throw PrecoNaoENumero();
-          //  }else if (p < 0) {
-          //  throw ExcecaoPrecoNegativoAlt();
-          //  }if (f.size() > 20) {
-          //  throw ExcecaoTamanhoFabricAlt();
-         //   }if (ca.size() > 20) {
-          //  throw ExcecaoTamanhoCategAlt();
-           // }
-           // if (n.size() > 20){
-           // throw ExcecaoTamanhoNomeAlt();
-            //}
-            try
-            {
-                _estoque.cadastroDeProdutos(co,n,f,ca,p);
-            }
-            catch(ExcecaoTamanhoNomeAlt& erro){
+            try{
+                _estoque.cadastroDeProdutos();
+            }catch(ExcecaoTamanhoNomeAlt& erro){
                 cout<<erro.what()<<endl;
                 limparTela("perguntar");
             }catch(ExcecaoTamanhoCategAlt& erro){
@@ -224,8 +201,7 @@ void Sistema::opcoesMenuAdministrativo(){
                 limparTela("perguntar");
             }
             limparTela("continuar");
-        }
-        break;
+            break;
         }
         case '3':{
             string codigo;

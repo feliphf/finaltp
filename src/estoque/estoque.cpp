@@ -228,22 +228,34 @@ void Estoque::alterarProduto(){
     }
 }
 
-void Estoque::cadastroDeProdutos(string codig, string nome, string fabri, string categ, float preco){ // 
-    if (_estoque.count(codig) == 0){
-        if (nome.size() > 20){
-            throw ExcecaoTamanhoNomeAlt();
-        }else if (fabri.size() > 20) {
+void Estoque::cadastroDeProdutos(){
+    string n,co,f,ca;
+    float p;
+    cout << "Digite o Nome: ";
+    cin.ignore(1,'\n');
+    getline(cin, n);
+    if (n.size() > 20){
+        throw ExcecaoTamanhoNomeAlt();
+    }
+    cout << "Digite em sequência o Código, Fabricante, Categoria e Preço (separados por espaço)" << endl;
+    cin >> co >> f >> ca >> p;
+    if (_estoque.count(co) == 0){
+        if (f.size() > 20) {
             throw ExcecaoTamanhoFabricAlt();
-        }else if (categ.size() > 20) {
+        }else if (ca.size() > 20) {
             throw ExcecaoTamanhoCategAlt();
-       }else if (preco < 0) {
+        }else if (p < 0) {
             throw ExcecaoPrecoNegativoAlt();
+        }else if(cin.fail()){
+            cin.clear();
+            cin.ignore();
+            throw PrecoNaoENumero();
         }else{
-            Produto produto(nome, fabri, categ, codig, preco,0);
-            _estoque.insert(pair<string,Produto>(codig, produto));
+            Produto produto(n, f, ca, co, p,0);
+            _estoque.insert(pair<string,Produto>(co, produto));
             std::cout<<"O produto "<<produto.getNome()<<" foi cadastrado com sucesso"<<std::endl;
         } 
-        }else
+    }else
         throw ProdutoJaCadastrado();
 }
 

@@ -38,7 +38,7 @@ class Estoque{
         void alterarProduto();
         void entradasDeProdutos(string codig, int quant, string nomeUsuario, string dataAtual);
         void saidasDeProdutos(string codig, int quant, string nomeUsuario, string dataAtual);
-        void cadastroDeProdutos(string codig, string nome, string fabri, string categ, float preco);
+        void cadastroDeProdutos();
         void menuEntradaESaidaDeProdutos(std::list<pair<unsigned int,pair<Produto,int>>>& listaQuantidades, std::string modo,
          bool& loop,int& count, string nomeUsuario, string dataAtual);
         void gerarLog(string mensagem, string nomeUsuario, string dataAtual);
