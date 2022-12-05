@@ -241,22 +241,32 @@ void Estoque::cadastroDeProdutos(){
     cin >> co >> f >> ca >> p;
     if (_estoque.count(co) == 0){
         if (f.size() > 20) {
+            std::cin.clear();
+            std::cin.ignore();
             throw ExcecaoTamanhoFabricAlt();
         }else if (ca.size() > 20) {
+            std::cin.clear();
+            std::cin.ignore();
             throw ExcecaoTamanhoCategAlt();
         }else if (p < 0) {
+            std::cin.clear();
+            std::cin.ignore();
             throw ExcecaoPrecoNegativoAlt();
-        }else if(cin.fail()){
-            cin.clear();
-            cin.ignore();
+        }else if(!cin){
+            std::cin.clear();
+            std::cin.ignore();
             throw PrecoNaoENumero();
         }else{
             Produto produto(n, f, ca, co, p,0);
             _estoque.insert(pair<string,Produto>(co, produto));
             std::cout<<"O produto "<<produto.getNome()<<" foi cadastrado com sucesso"<<std::endl;
+            limparTela("perguntar");
         } 
-    }else
+    }else{
+        std::cin.clear();
+        std::cin.ignore();
         throw ProdutoJaCadastrado();
+    }
 }
 
 
