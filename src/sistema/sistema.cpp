@@ -207,7 +207,13 @@ void Sistema::opcoesMenuAdministrativo(){
             string codigo;
             cout<<"Digite o código do produto que será removido: ";
             cin>>codigo;
+            try{
             _estoque.excluirProduto(codigo);
+            }catch(ProdutoNaoCadastrado& e){
+                cout<<e.what()<<endl;
+                limparTela("perguntar");
+                break;
+            }
             limparTela("perguntar");
             break;
             }        
