@@ -35,20 +35,53 @@ using namespace std;
 
 class sistemaLogin{
     private:
+  
+        ///@brief
         map<string,Usuario*> _usuarios;
+  
     public:
+  
+        ///@brief
         void lerArquivo();
-        void salvarArquivo(); 
-        void cadastrarUsuario(); 
-        void excluirUsuario(); 
+  
+        ///@brief
+        void salvarArquivo();
+  
+        ///@brief
+        void cadastrarUsuario();
+  
+        ///@brief
+        void excluirUsuario();
+  
+        ///@brief
         void listarUsuarios();
+  
+        ///@brief
         void alterarUsuario();
+  
+        ///@brief
         void limparMemoria();
+  
+        ///@brief
         void limparTela(string modo);
+  
+        ///@brief
         void fazerLogout(Usuario *u);
-        string gerarID(); 
-        string gerarDataAtual(); 
-        Usuario* menuLogin(); 
+  
+        ///@brief
+        ///@return
+        string gerarID();
+  
+        ///@brief
+        ///@return
+        string gerarDataAtual();
+  
+        ///@brief
+        ///@return
+        Usuario* menuLogin();
+  
+        ///@brief
+        ///@return
         Usuario* pesquisarUsuario(string pesquisa);
 };
 
