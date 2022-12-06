@@ -92,13 +92,13 @@ TEST_CASE("Testando a função retornar se o usuário está autenticado ou não"
 
 TEST_CASE("Testando a função que limpa a tela") 
 {
-    	Estoque estoque;
-	CHECK(estoque.limparTela("clear"));
+    	Usuario usuario1;
+	CHECK(usuario1.limparTela("clear"));
 	
-	Estoque estoque;
-	CHECK(estoque.limparTela("perguntar"));
+	Usuario usuario2;
+	CHECK(usuario2.limparTela("perguntar"));
 	
-	Estoque estoque;
-	CHECK(estoque.limparTela("cls"));
+	Usuario usuario3;
+	CHECK(usuario3.limparTela("cls"));
 }
 
