@@ -1,5 +1,12 @@
 <map id="tests/funcionario_test.cpp" name="tests/funcionario_test.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="14,5,205,32"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,80,88,107"/>
-<area shape="rect" id="node3" title=" " alt="" coords="112,80,235,107"/>
+<area shape="rect" id="node1" title=" " alt="" coords="166,5,357,32"/>
+<area shape="rect" id="node2" href="$doctest_8h.html" title=" " alt="" coords="158,80,240,107"/>
+<area shape="rect" id="node4" href="$funcionario_8hpp.html" title="Classe responsável por armazenar todos os atributos de um funcionário." alt="" coords="264,80,387,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="162,155,236,181"/>
+<area shape="rect" id="node5" href="$usuario_8hpp.html" title="Classe para armazenamento de todas as informações de cada usuário." alt="" coords="268,155,367,181"/>
+<area shape="rect" id="node9" href="$EXCECOESDOLOGIN_8hpp.html" title=" " alt="" coords="401,229,581,256"/>
+<area shape="rect" id="node6" title=" " alt="" coords="86,304,166,331"/>
+<area shape="rect" id="node7" title=" " alt="" coords="334,304,392,331"/>
+<area shape="rect" id="node8" title=" " alt="" coords="251,229,326,256"/>
+<area shape="rect" id="node10" href="$EXCECOESDOESTOQUE_8hpp.html" title=" " alt="" coords="25,229,226,256"/>
 </map>

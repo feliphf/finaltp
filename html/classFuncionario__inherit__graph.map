@@ -1,4 +1,4 @@
 <map id="Funcionario" name="Funcionario">
-<area shape="rect" id="node1" title=" " alt="" coords="5,80,103,107"/>
-<area shape="rect" id="node2" href="$classUsuario.html" title=" " alt="" coords="18,5,90,32"/>
+<area shape="rect" id="node1" title="Classe filha de usuário, onde possui todos os seus atributos." alt="" coords="5,80,103,107"/>
+<area shape="rect" id="node2" href="$classUsuario.html" title="Armazena todos os atributos de um determinado usuário." alt="" coords="18,5,90,32"/>
 </map>

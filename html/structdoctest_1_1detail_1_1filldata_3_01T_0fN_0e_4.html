@@ -74,12 +74,10 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="anteriorPush_2third__party_2doctest_8h_source.html">doctest.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="doctest_8h_source.html">doctest.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a28c8a80e176bede55e829dead140c80a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdoctest_1_1detail_1_1filldata_3_01T_0fN_0e_4.html#a28c8a80e176bede55e829dead140c80a">fill</a> (std::ostream *stream, const T(&amp;in)[N])</td></tr>
-<tr class="separator:a28c8a80e176bede55e829dead140c80a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a28c8a80e176bede55e829dead140c80a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdoctest_1_1detail_1_1filldata_3_01T_0fN_0e_4.html#a28c8a80e176bede55e829dead140c80a">fill</a> (std::ostream *stream, const T(&amp;in)[N])</td></tr>
 <tr class="separator:a28c8a80e176bede55e829dead140c80a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -88,10 +86,10 @@ Static Public Member Functions</h2></td></tr>
 struct doctest::detail::filldata&lt; T[N]&gt;</h3>
 
 
-<p class="definition">Definition at line <a class="el" href="anteriorPush_2third__party_2doctest_8h_source.html#l01135">1135</a> of file <a class="el" href="anteriorPush_2third__party_2doctest_8h_source.html">doctest.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="doctest_8h_source.html#l01135">1135</a> of file <a class="el" href="doctest_8h_source.html">doctest.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a28c8a80e176bede55e829dead140c80a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a28c8a80e176bede55e829dead140c80a">&#9670;&nbsp;</a></span>fill() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a28c8a80e176bede55e829dead140c80a">&#9670;&nbsp;</a></span>fill()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -126,60 +124,12 @@ template&lt;typename T , size_t N&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="anteriorPush_2third__party_2doctest_8h_source.html#l01136">1136</a> of file <a class="el" href="anteriorPush_2third__party_2doctest_8h_source.html">doctest.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="doctest_8h_source.html#l01136">1136</a> of file <a class="el" href="doctest_8h_source.html">doctest.h</a>.</p>
 <div class="fragment"><div class="line"><a name="l01136"></a><span class="lineno"> 1136</span>&#160;                                                              {</div>
 <div class="line"><a name="l01137"></a><span class="lineno"> 1137</span>&#160;            *stream &lt;&lt; <span class="stringliteral">&quot;[&quot;</span>;</div>
 <div class="line"><a name="l01138"></a><span class="lineno"> 1138</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; N; i++) {</div>
 <div class="line"><a name="l01139"></a><span class="lineno"> 1139</span>&#160;                <span class="keywordflow">if</span> (i != 0) { *stream &lt;&lt; <span class="stringliteral">&quot;, &quot;</span>; }</div>
-<div class="line"><a name="l01140"></a><span class="lineno"> 1140</span>&#160;                *stream &lt;&lt; (<a class="code" href="anteriorPush_2third__party_2doctest_8h.html#a0feffec655cbb5c12c8c9ddfcfd31b21">DOCTEST_STRINGIFY</a>(in[i]));</div>
-<div class="line"><a name="l01141"></a><span class="lineno"> 1141</span>&#160;            }</div>
-<div class="line"><a name="l01142"></a><span class="lineno"> 1142</span>&#160;            *stream &lt;&lt; <span class="stringliteral">&quot;]&quot;</span>;</div>
-<div class="line"><a name="l01143"></a><span class="lineno"> 1143</span>&#160;        }</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="a28c8a80e176bede55e829dead140c80a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a28c8a80e176bede55e829dead140c80a">&#9670;&nbsp;</a></span>fill() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T , size_t N&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void <a class="el" href="structdoctest_1_1detail_1_1filldata.html">doctest::detail::filldata</a>&lt; T[N]&gt;::fill </td>
-          <td>(</td>
-          <td class="paramtype">std::ostream *&#160;</td>
-          <td class="paramname"><em>stream</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const T(&amp;)&#160;</td>
-          <td class="paramname"><em>in</em>[N]&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="third__party_2doctest_8h_source.html#l01136">1136</a> of file <a class="el" href="third__party_2doctest_8h_source.html">doctest.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l01136"></a><span class="lineno"> 1136</span>&#160;                                                              {</div>
-<div class="line"><a name="l01137"></a><span class="lineno"> 1137</span>&#160;            *stream &lt;&lt; <span class="stringliteral">&quot;[&quot;</span>;</div>
-<div class="line"><a name="l01138"></a><span class="lineno"> 1138</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; N; i++) {</div>
-<div class="line"><a name="l01139"></a><span class="lineno"> 1139</span>&#160;                <span class="keywordflow">if</span> (i != 0) { *stream &lt;&lt; <span class="stringliteral">&quot;, &quot;</span>; }</div>
-<div class="line"><a name="l01140"></a><span class="lineno"> 1140</span>&#160;                *stream &lt;&lt; (<a class="code" href="third__party_2doctest_8h.html#a0feffec655cbb5c12c8c9ddfcfd31b21">DOCTEST_STRINGIFY</a>(in[i]));</div>
+<div class="line"><a name="l01140"></a><span class="lineno"> 1140</span>&#160;                *stream &lt;&lt; (<a class="code" href="doctest_8h.html#a0feffec655cbb5c12c8c9ddfcfd31b21">DOCTEST_STRINGIFY</a>(in[i]));</div>
 <div class="line"><a name="l01141"></a><span class="lineno"> 1141</span>&#160;            }</div>
 <div class="line"><a name="l01142"></a><span class="lineno"> 1142</span>&#160;            *stream &lt;&lt; <span class="stringliteral">&quot;]&quot;</span>;</div>
 <div class="line"><a name="l01143"></a><span class="lineno"> 1143</span>&#160;        }</div>
@@ -187,11 +137,10 @@ template&lt;typename T , size_t N&gt; </div>
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>anteriorPush/third_party/<a class="el" href="anteriorPush_2third__party_2doctest_8h_source.html">doctest.h</a></li>
+<li>third_party/<a class="el" href="doctest_8h_source.html">doctest.h</a></li>
 </ul>
 </div><!-- contents -->
-<div class="ttc" id="aanteriorPush_2third__party_2doctest_8h_html_a0feffec655cbb5c12c8c9ddfcfd31b21"><div class="ttname"><a href="anteriorPush_2third__party_2doctest_8h.html#a0feffec655cbb5c12c8c9ddfcfd31b21">DOCTEST_STRINGIFY</a></div><div class="ttdeci">#define DOCTEST_STRINGIFY(...)</div><div class="ttdef"><b>Definition:</b> <a href="anteriorPush_2third__party_2doctest_8h_source.html#l01060">doctest.h:1060</a></div></div>
-<div class="ttc" id="athird__party_2doctest_8h_html_a0feffec655cbb5c12c8c9ddfcfd31b21"><div class="ttname"><a href="third__party_2doctest_8h.html#a0feffec655cbb5c12c8c9ddfcfd31b21">DOCTEST_STRINGIFY</a></div><div class="ttdeci">#define DOCTEST_STRINGIFY(...)</div><div class="ttdef"><b>Definition:</b> <a href="third__party_2doctest_8h_source.html#l01060">doctest.h:1060</a></div></div>
+<div class="ttc" id="adoctest_8h_html_a0feffec655cbb5c12c8c9ddfcfd31b21"><div class="ttname"><a href="doctest_8h.html#a0feffec655cbb5c12c8c9ddfcfd31b21">DOCTEST_STRINGIFY</a></div><div class="ttdeci">#define DOCTEST_STRINGIFY(...)</div><div class="ttdef"><b>Definition:</b> <a href="doctest_8h_source.html#l01060">doctest.h:1060</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

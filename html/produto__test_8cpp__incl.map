@@ -1,5 +1,8 @@
 <map id="tests/produto_test.cpp" name="tests/produto_test.cpp">
 <area shape="rect" id="node1" title=" " alt="" coords="21,5,187,32"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,80,88,107"/>
-<area shape="rect" id="node3" title=" " alt="" coords="113,80,213,107"/>
+<area shape="rect" id="node2" href="$doctest_8h.html" title=" " alt="" coords="5,80,88,107"/>
+<area shape="rect" id="node4" href="$produto_8hpp.html" title="Classe para armazenamento dos produtos." alt="" coords="113,80,213,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="10,155,83,181"/>
+<area shape="rect" id="node5" title=" " alt="" coords="115,155,195,181"/>
+<area shape="rect" id="node6" title=" " alt="" coords="219,155,277,181"/>
 </map>

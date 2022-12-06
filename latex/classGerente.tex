@@ -2,6 +2,11 @@
 \label{classGerente}\index{Gerente@{Gerente}}
 
 
+Classe filha de usuário, onde possui todos os seus atributos.  
+
+
+
+
 {\ttfamily \#include $<$gerente.\+hpp$>$}
 
 
@@ -28,32 +33,24 @@ Collaboration diagram for Gerente\+:
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classGerente_a98992e2ec7f859db4ee3af199499cb3d}{Gerente}} (string id, string t, string n, string c, string e, string u, string s)
-\item 
+\begin{DoxyCompactList}\small\item\em Construtor da classe \mbox{\hyperlink{classGerente}{Gerente}}, recebe todos os atributos como parâmetro. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classGerente_a36ff097423739923eca6ca2dcffd0dbb}{menu\+Inicial}} () override
-\item 
+\begin{DoxyCompactList}\small\item\em Esta Função abre o menu incial com todas as escolhas possíveis do gerente. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classGerente_a0858b78f711e3aee20d348383092b2e5}{menu\+Administrativo}} () override
-\item 
+\begin{DoxyCompactList}\small\item\em Esta Função abre o menu administrativo com todas as escolhas possíveis do gerente. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classGerente_a0850bf905ee25f3c53bec691f6201209}{tem\+Permissao}} () override
-\item 
+\begin{DoxyCompactList}\small\item\em Retorna se o gerente tem ou não permissão. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classGerente_abee6710d97a4e7e9bc95642b2cfc21a2}{alterar\+Usuario\+Logado}} () override
-\item 
-\mbox{\hyperlink{classGerente_a98992e2ec7f859db4ee3af199499cb3d}{Gerente}} (string id, string t, string n, string c, string e, string u, string s)
-\item 
-void \mbox{\hyperlink{classGerente_a36ff097423739923eca6ca2dcffd0dbb}{menu\+Inicial}} () override
-\item 
-void \mbox{\hyperlink{classGerente_a0858b78f711e3aee20d348383092b2e5}{menu\+Administrativo}} () override
-\item 
-bool \mbox{\hyperlink{classGerente_a0850bf905ee25f3c53bec691f6201209}{tem\+Permissao}} () override
-\item 
-void \mbox{\hyperlink{classGerente_abee6710d97a4e7e9bc95642b2cfc21a2}{alterar\+Usuario\+Logado}} () override
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Esta função altera o usuário que está logado no momento da execução. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
 
 \doxysubsection{Detailed Description}
-A classe gerente é responsável por 
+Classe filha de usuário, onde possui todos os seus atributos. 
 
-Definition at line 8 of file gerente.\+hpp.
+A classe gerente é responsável por possuir todoas as funções que são possíveis de fazer com as movimentaçõs do sistema, ela possui funções que são necessárias para poder tornar um sistema seguro, além de possuir um menu com as funções iniciais de um gerente, que será utilizado na inicialização do sistema 
+
+Definition at line 30 of file gerente.\+hpp.
 
 
 
@@ -61,14 +58,12 @@ Definition at line 8 of file gerente.\+hpp.
 \mbox{\Hypertarget{classGerente_a98992e2ec7f859db4ee3af199499cb3d}\label{classGerente_a98992e2ec7f859db4ee3af199499cb3d}} 
 \index{Gerente@{Gerente}!Gerente@{Gerente}}
 \index{Gerente@{Gerente}!Gerente@{Gerente}}
-\doxysubsubsection{\texorpdfstring{Gerente()}{Gerente()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+\doxysubsubsection{\texorpdfstring{Gerente()}{Gerente()}}
 {\footnotesize\ttfamily Gerente\+::\+Gerente (\begin{DoxyParamCaption}\item[{string}]{id,  }\item[{string}]{t,  }\item[{string}]{n,  }\item[{string}]{c,  }\item[{string}]{e,  }\item[{string}]{u,  }\item[{string}]{s }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{classGerente_a98992e2ec7f859db4ee3af199499cb3d}\label{classGerente_a98992e2ec7f859db4ee3af199499cb3d}} 
-\index{Gerente@{Gerente}!Gerente@{Gerente}}
-\index{Gerente@{Gerente}!Gerente@{Gerente}}
-\doxysubsubsection{\texorpdfstring{Gerente()}{Gerente()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily Gerente\+::\+Gerente (\begin{DoxyParamCaption}\item[{string}]{id,  }\item[{string}]{t,  }\item[{string}]{n,  }\item[{string}]{c,  }\item[{string}]{e,  }\item[{string}]{u,  }\item[{string}]{s }\end{DoxyParamCaption})}
+
+
+Construtor da classe \mbox{\hyperlink{classGerente}{Gerente}}, recebe todos os atributos como parâmetro. 
 
 
 
@@ -93,8 +88,12 @@ Definition at line 3 of file gerente.\+cpp.
 \mbox{\Hypertarget{classGerente_abee6710d97a4e7e9bc95642b2cfc21a2}\label{classGerente_abee6710d97a4e7e9bc95642b2cfc21a2}} 
 \index{Gerente@{Gerente}!alterarUsuarioLogado@{alterarUsuarioLogado}}
 \index{alterarUsuarioLogado@{alterarUsuarioLogado}!Gerente@{Gerente}}
-\doxysubsubsection{\texorpdfstring{alterarUsuarioLogado()}{alterarUsuarioLogado()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+\doxysubsubsection{\texorpdfstring{alterarUsuarioLogado()}{alterarUsuarioLogado()}}
 {\footnotesize\ttfamily void Gerente\+::alterar\+Usuario\+Logado (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Esta função altera o usuário que está logado no momento da execução. 
 
 
 
@@ -102,30 +101,22 @@ Implements \mbox{\hyperlink{classUsuario_a3d39624354ba93690acbbd9979dd6733}{Usua
 
 
 
-Definition at line 47 of file gerente.\+cpp.
+Definition at line 49 of file gerente.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{47                                   \{}
-\DoxyCodeLine{48     \mbox{\hyperlink{classUsuario_afc7bab8d6ad1528fe0394a5ea901d334}{alterarUsuario}}();}
-\DoxyCodeLine{49 \}}
+\DoxyCodeLine{53                               : \textcolor{stringliteral}{";}}
 
 \end{DoxyCode}
-\mbox{\Hypertarget{classGerente_abee6710d97a4e7e9bc95642b2cfc21a2}\label{classGerente_abee6710d97a4e7e9bc95642b2cfc21a2}} 
-\index{Gerente@{Gerente}!alterarUsuarioLogado@{alterarUsuarioLogado}}
-\index{alterarUsuarioLogado@{alterarUsuarioLogado}!Gerente@{Gerente}}
-\doxysubsubsection{\texorpdfstring{alterarUsuarioLogado()}{alterarUsuarioLogado()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily void Gerente\+::alterar\+Usuario\+Logado (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
-
-
-
-Implements \mbox{\hyperlink{classUsuario_a3d39624354ba93690acbbd9979dd6733}{Usuario}}.
-
 \mbox{\Hypertarget{classGerente_a0858b78f711e3aee20d348383092b2e5}\label{classGerente_a0858b78f711e3aee20d348383092b2e5}} 
 \index{Gerente@{Gerente}!menuAdministrativo@{menuAdministrativo}}
 \index{menuAdministrativo@{menuAdministrativo}!Gerente@{Gerente}}
-\doxysubsubsection{\texorpdfstring{menuAdministrativo()}{menuAdministrativo()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+\doxysubsubsection{\texorpdfstring{menuAdministrativo()}{menuAdministrativo()}}
 {\footnotesize\ttfamily void Gerente\+::menu\+Administrativo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Esta Função abre o menu administrativo com todas as escolhas possíveis do gerente. 
 
 
 
@@ -133,40 +124,33 @@ Implements \mbox{\hyperlink{classUsuario_a5e10aeefe82c9fa76ed4457f33d6ba4b}{Usua
 
 
 
-Definition at line 29 of file gerente.\+cpp.
+Definition at line 30 of file gerente.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{29                                 \{}
-\DoxyCodeLine{30     cout << \textcolor{stringliteral}{"+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+"} << endl;}
-\DoxyCodeLine{31     cout << \textcolor{stringliteral}{"| "} << \textcolor{stringliteral}{"1 -\/ Alterar produto                            |"} << endl;}
-\DoxyCodeLine{32     cout << \textcolor{stringliteral}{"| "} << \textcolor{stringliteral}{"2 -\/ Cadastrar produto                          |"} << endl;}
-\DoxyCodeLine{33     cout << \textcolor{stringliteral}{"| "} << \textcolor{stringliteral}{"3 -\/ Remover produto                            |"} << endl;}
-\DoxyCodeLine{34     cout << \textcolor{stringliteral}{"| "} << \textcolor{stringliteral}{"4 -\/ Alterar usuário                            |"} << endl;}
-\DoxyCodeLine{35     cout << \textcolor{stringliteral}{"| "} << \textcolor{stringliteral}{"5 -\/ Listar usuários                            |"} << endl;}
-\DoxyCodeLine{36     cout << \textcolor{stringliteral}{"| "} << \textcolor{stringliteral}{"6 -\/ Cadastrar usuário                          |"} << endl;}
-\DoxyCodeLine{37     cout << \textcolor{stringliteral}{"| "} << \textcolor{stringliteral}{"7 -\/ Remover usuário                            |"} << endl;}
-\DoxyCodeLine{38     cout << \textcolor{stringliteral}{"| "} << \textcolor{stringliteral}{"8 -\/ Voltar                                     |"} << endl;}
-\DoxyCodeLine{39     cout << \textcolor{stringliteral}{"+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+"} << endl;}
-\DoxyCodeLine{40     cout << \textcolor{stringliteral}{"Escolha uma opcao: "};}
-\DoxyCodeLine{41 \}}
+\DoxyCodeLine{32                               : \textcolor{stringliteral}{";}}
+\DoxyCodeLine{33 \textcolor{stringliteral}{}}
+\DoxyCodeLine{34 \textcolor{stringliteral}{\}}}
+\DoxyCodeLine{35 \textcolor{stringliteral}{}}
+\DoxyCodeLine{36 \textcolor{stringliteral}{void Gerente::menuAdministrativo()\{}}
+\DoxyCodeLine{37 \textcolor{stringliteral}{    cout << R"}(}
+\DoxyCodeLine{38     \_\_  \_\_\_                    \_\_\_       \_\_          \_       \_      \_\_             \_\_  \_           }
+\DoxyCodeLine{39    /  |/  /\_\_  \_\_\_\_  \_\_  \_\_   /   | \_\_\_\_/ /\_\_\_ \_\_\_  (\_)\_\_\_  (\_)\_\_\_\_/ /\_\_\_\_\_\_\_\_\_\_ \_/ /\_(\_)   \_\_\_\_\_\_ }
+\DoxyCodeLine{40   / /|\_/ / \_ \(\backslash\)/ \_\_ \(\backslash\)/ / / /  / /| |/ \_\_  / \_\_ `\_\_ \(\backslash\)/ / \_\_ \(\backslash\)/ / \_\_\_/ \_\_/ \_\_\_/ \_\_ `/ \_\_/ / | / / \_\_ \(\backslash\)}
+\DoxyCodeLine{41  / /  / /  \_\_/ / / / /\_/ /  / \_\_\_ / /\_/ / / / / / / / / / / (\_\_  ) /\_/ /  / /\_/ / /\_/ /| |/ / /\_/ /}
+\DoxyCodeLine{42 /\_/  /\_/\(\backslash\)\_\_\_/\_/ /\_/\(\backslash\)\_\_,\_/  /\_/  |\_\(\backslash\)\_\_,\_/\_/ /\_/ /\_/\_/\_/ /\_/\_/\_\_\_\_/\(\backslash\)\_\_/\_/   \(\backslash\)\_\_,\_/\(\backslash\)\_\_/\_/ |\_\_\_/\(\backslash\)\_\_\_\_/)\textcolor{stringliteral}{" << endl;}}
+\DoxyCodeLine{43 \textcolor{stringliteral}{    cout << "}+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+\textcolor{stringliteral}{" << endl;}}
 
 \end{DoxyCode}
-\mbox{\Hypertarget{classGerente_a0858b78f711e3aee20d348383092b2e5}\label{classGerente_a0858b78f711e3aee20d348383092b2e5}} 
-\index{Gerente@{Gerente}!menuAdministrativo@{menuAdministrativo}}
-\index{menuAdministrativo@{menuAdministrativo}!Gerente@{Gerente}}
-\doxysubsubsection{\texorpdfstring{menuAdministrativo()}{menuAdministrativo()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily void Gerente\+::menu\+Administrativo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
-
-
-
-Implements \mbox{\hyperlink{classUsuario_a5e10aeefe82c9fa76ed4457f33d6ba4b}{Usuario}}.
-
 \mbox{\Hypertarget{classGerente_a36ff097423739923eca6ca2dcffd0dbb}\label{classGerente_a36ff097423739923eca6ca2dcffd0dbb}} 
 \index{Gerente@{Gerente}!menuInicial@{menuInicial}}
 \index{menuInicial@{menuInicial}!Gerente@{Gerente}}
-\doxysubsubsection{\texorpdfstring{menuInicial()}{menuInicial()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+\doxysubsubsection{\texorpdfstring{menuInicial()}{menuInicial()}}
 {\footnotesize\ttfamily void Gerente\+::menu\+Inicial (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Esta Função abre o menu incial com todas as escolhas possíveis do gerente. 
 
 
 
@@ -179,66 +163,52 @@ Definition at line 13 of file gerente.\+cpp.
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{13                          \{}
-\DoxyCodeLine{14     cout << \textcolor{stringliteral}{"+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+"} << endl;}
-\DoxyCodeLine{15     cout << \textcolor{stringliteral}{"| Olá "} << left << setw(27) << \mbox{\hyperlink{classUsuario_aca725547a496bfe313faac8e90bf37a7}{getNome}}() << \textcolor{stringliteral}{" | "} << setw(12) << \mbox{\hyperlink{classUsuario_a6281341916bf46c0df195639a9c36ac8}{getTipo}}() << \textcolor{stringliteral}{" |"} << endl;}
-\DoxyCodeLine{16     cout << \textcolor{stringliteral}{"+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+"} << endl;}
-\DoxyCodeLine{17     cout << \textcolor{stringliteral}{"| "} << \textcolor{stringliteral}{"1 -\/ Registrar venda                            |"} << endl;}
-\DoxyCodeLine{18     cout << \textcolor{stringliteral}{"| "} << \textcolor{stringliteral}{"2 -\/ Registrar compra                           |"} << endl;}
-\DoxyCodeLine{19     cout << \textcolor{stringliteral}{"| "} << \textcolor{stringliteral}{"3 -\/ Consultar produto                          |"} << endl;}
-\DoxyCodeLine{20     cout << \textcolor{stringliteral}{"| "} << \textcolor{stringliteral}{"4 -\/ Listar todos os produtos                   |"} << endl;}
-\DoxyCodeLine{21     cout << \textcolor{stringliteral}{"| "} << \textcolor{stringliteral}{"5 -\/ Exibir movimentações                       |"} << endl;}
-\DoxyCodeLine{22     cout << \textcolor{stringliteral}{"| "} << \textcolor{stringliteral}{"6 -\/ Funções admnistrativas                     |"} << endl;}
-\DoxyCodeLine{23     cout << \textcolor{stringliteral}{"| "} << \textcolor{stringliteral}{"7 -\/ Fazer logout                               |"} << endl;}
-\DoxyCodeLine{24     cout << \textcolor{stringliteral}{"+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+"} << endl;}
-\DoxyCodeLine{25     cout << \textcolor{stringliteral}{"Escolha uma opcao: "};}
-\DoxyCodeLine{26 }
-\DoxyCodeLine{27 \}}
+\DoxyCodeLine{14         cout << R\textcolor{stringliteral}{"(}}
+\DoxyCodeLine{15 \textcolor{stringliteral}{    \_\_  \_\_\_                    \_\_\_\_       \_            \_             \_\_}}
+\DoxyCodeLine{16 \textcolor{stringliteral}{   /  |/  /\_\_  \_\_\_\_  \_\_  \_\_   / \_\_ \(\backslash\)\_\_\_\_\_(\_)\_\_\_  \_\_\_\_\_(\_)\_\_\_  \_\_\_\_ \_/ /}}
+\DoxyCodeLine{17 \textcolor{stringliteral}{  / /|\_/ / \_ \(\backslash\)/ \_\_ \(\backslash\)/ / / /  / /\_/ / \_\_\_/ / \_\_ \(\backslash\)/ \_\_\_/ / \_\_ \(\backslash\)/ \_\_ `/ / }}
+\DoxyCodeLine{18 \textcolor{stringliteral}{ / /  / /  \_\_/ / / / /\_/ /  / \_\_\_\_/ /  / / / / / /\_\_/ / /\_/ / /\_/ / /  }}
+\DoxyCodeLine{19 \textcolor{stringliteral}{/\_/  /\_/\(\backslash\)\_\_\_/\_/ /\_/\(\backslash\)\_\_,\_/  /\_/   /\_/  /\_/\_/ /\_/\(\backslash\)\_\_\_/\_/ .\_\_\_/\(\backslash\)\_\_,\_/\_/   }}
+\DoxyCodeLine{20 \textcolor{stringliteral}{                                                    /\_/)" << endl;}}
+\DoxyCodeLine{21 \textcolor{stringliteral}{    cout << }\textcolor{stringliteral}{"+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+"} << endl;}
+\DoxyCodeLine{22     cout << \textcolor{stringliteral}{"| Olá "} << left << setw(27) << \mbox{\hyperlink{classUsuario_aca725547a496bfe313faac8e90bf37a7}{getNome}}() << \textcolor{stringliteral}{" | "} << setw(12) << \mbox{\hyperlink{classUsuario_a6281341916bf46c0df195639a9c36ac8}{getTipo}}() << \textcolor{stringliteral}{" |"} << endl;}
+\DoxyCodeLine{23     cout << \textcolor{stringliteral}{"+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+"} << endl;}
+\DoxyCodeLine{24     cout << \textcolor{stringliteral}{"| "} << \textcolor{stringliteral}{"1 -\/ Registrar venda                            |"} << endl;}
+\DoxyCodeLine{25     cout << \textcolor{stringliteral}{"| "} << \textcolor{stringliteral}{"2 -\/ Registrar compra                           |"} << endl;}
+\DoxyCodeLine{26     cout << \textcolor{stringliteral}{"| "} << \textcolor{stringliteral}{"3 -\/ Consultar produto                          |"} << endl;}
+\DoxyCodeLine{27     cout << \textcolor{stringliteral}{"| "} << \textcolor{stringliteral}{"4 -\/ Listar todos os produtos                   |"} << endl;}
+\DoxyCodeLine{28     cout << \textcolor{stringliteral}{"| "} << \textcolor{stringliteral}{"5 -\/ Exibir movimentações                       |"} << endl;}
 
 \end{DoxyCode}
-\mbox{\Hypertarget{classGerente_a36ff097423739923eca6ca2dcffd0dbb}\label{classGerente_a36ff097423739923eca6ca2dcffd0dbb}} 
-\index{Gerente@{Gerente}!menuInicial@{menuInicial}}
-\index{menuInicial@{menuInicial}!Gerente@{Gerente}}
-\doxysubsubsection{\texorpdfstring{menuInicial()}{menuInicial()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily void Gerente\+::menu\+Inicial (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
-
-
-
-Implements \mbox{\hyperlink{classUsuario_acc41ccb4c666766c305b19dd16dde50c}{Usuario}}.
-
 \mbox{\Hypertarget{classGerente_a0850bf905ee25f3c53bec691f6201209}\label{classGerente_a0850bf905ee25f3c53bec691f6201209}} 
 \index{Gerente@{Gerente}!temPermissao@{temPermissao}}
 \index{temPermissao@{temPermissao}!Gerente@{Gerente}}
-\doxysubsubsection{\texorpdfstring{temPermissao()}{temPermissao()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+\doxysubsubsection{\texorpdfstring{temPermissao()}{temPermissao()}}
 {\footnotesize\ttfamily bool Gerente\+::tem\+Permissao (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
+
+
+Retorna se o gerente tem ou não permissão. 
+
+\begin{DoxyReturn}{Returns}
+Retorna true ou false, de acordo com a permissão do gerente 
+\end{DoxyReturn}
 
 
 Implements \mbox{\hyperlink{classUsuario_ab311ad6f74a2b3971445127690c3bfcc}{Usuario}}.
 
 
 
-Definition at line 43 of file gerente.\+cpp.
+Definition at line 45 of file gerente.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{43                           \{}
-\DoxyCodeLine{44     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{45 \}}
+\DoxyCodeLine{53                               : \textcolor{stringliteral}{";}}
 
 \end{DoxyCode}
-\mbox{\Hypertarget{classGerente_a0850bf905ee25f3c53bec691f6201209}\label{classGerente_a0850bf905ee25f3c53bec691f6201209}} 
-\index{Gerente@{Gerente}!temPermissao@{temPermissao}}
-\index{temPermissao@{temPermissao}!Gerente@{Gerente}}
-\doxysubsubsection{\texorpdfstring{temPermissao()}{temPermissao()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily bool Gerente\+::tem\+Permissao (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
-
-
-
-Implements \mbox{\hyperlink{classUsuario_ab311ad6f74a2b3971445127690c3bfcc}{Usuario}}.
-
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-anterior\+Push/include/login/\mbox{\hyperlink{anteriorPush_2include_2login_2gerente_8hpp}{gerente.\+hpp}}\item 
-anterior\+Push/src/login/\mbox{\hyperlink{anteriorPush_2src_2login_2gerente_8cpp}{gerente.\+cpp}}\end{DoxyCompactItemize}
+include/login/\mbox{\hyperlink{gerente_8hpp}{gerente.\+hpp}}\item 
+src/login/\mbox{\hyperlink{gerente_8cpp}{gerente.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,8 @@
+<map id="include/estoque/estoque.hpp" name="include/estoque/estoque.hpp">
+<area shape="rect" id="node1" title="Classe responsavel por adicionar, alterar ou retirar um produto ou uma lista de produtos." alt="" coords="300,5,509,32"/>
+<area shape="rect" id="node2" href="$sistema_8hpp.html" title="Classe responsável pela inicialização do sistema." alt="" coords="81,80,291,107"/>
+<area shape="rect" id="node5" href="$estoque_8cpp.html" title=" " alt="" coords="315,80,495,107"/>
+<area shape="rect" id="node6" href="$estoque__test_8cpp.html" title=" " alt="" coords="519,80,688,107"/>
+<area shape="rect" id="node3" href="$sistema_8cpp.html" title=" " alt="" coords="5,155,185,181"/>
+<area shape="rect" id="node4" href="$main_8cpp.html" title=" " alt="" coords="209,155,344,181"/>
+</map>

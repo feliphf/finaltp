@@ -2,91 +2,61 @@
 \label{classEstoque}\index{Estoque@{Estoque}}
 
 
+Armazena um map de vários produtos.  
+
+
+
+
 {\ttfamily \#include $<$estoque.\+hpp$>$}
 
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classEstoque_a5ef465af5814ce8c048f891e72fbf4a2}{Estoque}} ()=default
-\item 
+\begin{DoxyCompactList}\small\item\em Esta é uma função que destroi um mapa para não ocupar lugar na memória. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classEstoque_a970ca21567e806f1f0e6ca90e55eb189}{salvar\+Arquivo}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Esta função salva o arquivo que contém todos os produtos e seus atributos. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classEstoque_ad074ec3a2f8c5ead78734a72e225d6c4}{ler\+Arquivo}} ()
-\item 
-void \mbox{\hyperlink{classEstoque_aabf8bfdb75bed365713e27983d06e212}{pesquisar\+Produto}} (string pesquisa)
-\item 
-void \mbox{\hyperlink{classEstoque_a255e29af4afb8d3f7adbe448c756c9bd}{listar\+Produtos}} ()
-\item 
-void \mbox{\hyperlink{classEstoque_a883d79902102c03981affd5f4fa18662}{alterar\+Nome\+Produto}} (string pesquisa, string nome)
-\item 
-void \mbox{\hyperlink{classEstoque_a12f19d204d13efde595c778d8d824c6b}{alterar\+Fabricante\+Produto}} (string pesquisa, string fabric)
-\item 
-void \mbox{\hyperlink{classEstoque_a59159caf12395903903632fa2fc00a96}{alterar\+Categoria\+Produto}} (string pesquisa, string categ)
-\item 
-void \mbox{\hyperlink{classEstoque_a51e59287ccef6c53147d3301739ab1f3}{alterar\+Preco\+Produto}} (string pesquisa, float preco)
-\item 
-void \mbox{\hyperlink{classEstoque_a6d5a491db754f7cd01bfcdaf8b7ee317}{alterar\+Produto}} ()
-\item 
-void \mbox{\hyperlink{classEstoque_a0fb96f0e13da7c7be6766f63b2cfd7b9}{entradas\+De\+Produtos}} (string codig, int quant, string nome\+Usuario, string data\+Atual)
-\item 
-void \mbox{\hyperlink{classEstoque_a076a768e14db50d3292f1a1032f8d5f0}{saidas\+De\+Produtos}} (string codig, int quant, string nome\+Usuario, string data\+Atual)
-\item 
-void \mbox{\hyperlink{classEstoque_a4bd0231410297e5fa6c80eb96fcabd67}{cadastro\+De\+Produtos}} (string codig, string nome, string fabri, string categ, float preco)
-\item 
-void \mbox{\hyperlink{classEstoque_aaf043813fe368bcfba658f73629907f3}{menu\+Entrada\+E\+Saida\+De\+Produtos}} (std\+::list$<$ pair$<$ unsigned int, pair$<$ \mbox{\hyperlink{classProduto}{Produto}}, int $>$$>$$>$ \&lista\+Quantidades, std\+::string modo, bool \&loop, int \&count, string nome\+Usuario, string data\+Atual)
-\item 
-void \mbox{\hyperlink{classEstoque_ae0a465ecb58cb77618faf67466c51fb4}{gerar\+Log}} (string mensagem, string nome\+Usuario, string data\+Atual)
-\item 
-void \mbox{\hyperlink{classEstoque_ab61aaf35ee05a8415f4fb32fec5fa87b}{imprimir\+Log}} ()
-\item 
-void \mbox{\hyperlink{classEstoque_ac5b8f34db951f75ff2ddd52c7b370700}{excluir\+Produto}} (string codigo)
-\item 
-void \mbox{\hyperlink{classEstoque_a724e0febe581bac6d5a6ee1a03cb8734}{limpar\+Tela}} (string modo)
-\item 
-\mbox{\hyperlink{classEstoque_a5ef465af5814ce8c048f891e72fbf4a2}{Estoque}} ()=default
-\item 
-void \mbox{\hyperlink{classEstoque_a970ca21567e806f1f0e6ca90e55eb189}{salvar\+Arquivo}} ()
-\item 
-void \mbox{\hyperlink{classEstoque_ad074ec3a2f8c5ead78734a72e225d6c4}{ler\+Arquivo}} ()
-\begin{DoxyCompactList}\small\item\em ~\newline
+\begin{DoxyCompactList}\small\item\em Esta função lê o arquivo que contém todas as informações salvas, da última vez que foi acessado ~\newline
  \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classEstoque_aabf8bfdb75bed365713e27983d06e212}{pesquisar\+Produto}} (string pesquisa)
-\item 
+\begin{DoxyCompactList}\small\item\em Esta função dá a possibilidade de pesquisar um produto específico de acordo com o código ou nome. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classEstoque_a255e29af4afb8d3f7adbe448c756c9bd}{listar\+Produtos}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Esta função lista todos os produtos que há no estoque no presente momento. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classEstoque_a883d79902102c03981affd5f4fa18662}{alterar\+Nome\+Produto}} (string pesquisa, string nome)
-\item 
+\begin{DoxyCompactList}\small\item\em Esta função altera o nome de um determinado produto. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classEstoque_a12f19d204d13efde595c778d8d824c6b}{alterar\+Fabricante\+Produto}} (string pesquisa, string fabric)
-\item 
+\begin{DoxyCompactList}\small\item\em Esta função altera o fabricante de um determinado produto. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classEstoque_a59159caf12395903903632fa2fc00a96}{alterar\+Categoria\+Produto}} (string pesquisa, string categ)
-\item 
+\begin{DoxyCompactList}\small\item\em Esta função altera a categoria de um determinado produto. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classEstoque_a51e59287ccef6c53147d3301739ab1f3}{alterar\+Preco\+Produto}} (string pesquisa, float preco)
-\item 
+\begin{DoxyCompactList}\small\item\em Esta função altera o preço de um determinado produto. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classEstoque_a6d5a491db754f7cd01bfcdaf8b7ee317}{alterar\+Produto}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Esta função abre um menu de opções, ao qual chama todas as funções de alterar acima. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classEstoque_a0fb96f0e13da7c7be6766f63b2cfd7b9}{entradas\+De\+Produtos}} (string codig, int quant, string nome\+Usuario, string data\+Atual)
-\item 
+\begin{DoxyCompactList}\small\item\em Esta função adiciona produtos com seus atributos específicos. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classEstoque_a076a768e14db50d3292f1a1032f8d5f0}{saidas\+De\+Produtos}} (string codig, int quant, string nome\+Usuario, string data\+Atual)
-\item 
+\begin{DoxyCompactList}\small\item\em Esta função retira produtos com seus atributos específicos. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classEstoque_ad424b0fd59b47b4c61d3bbc09238e2df}{cadastro\+De\+Produtos}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Esta função cadastra produto com seus atributos específicos. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classEstoque_a5eb81a75ea5222f4a8078b42f68ffd65}{menu\+Entrada\+E\+Saida\+De\+Produtos}} (std\+::list$<$ pair$<$ unsigned int, pair$<$ \mbox{\hyperlink{classProduto}{Produto}}, int $>$$>$$>$ \&lista\+Quantidades, std\+::string modo, bool \&loop, unsigned int \&count, string nome\+Usuario, string data\+Atual)
-\item 
+\begin{DoxyCompactList}\small\item\em Esta função abre um menu com todas as opções de movimentação. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classEstoque_ae0a465ecb58cb77618faf67466c51fb4}{gerar\+Log}} (string mensagem, string nome\+Usuario, string data\+Atual)
-\item 
+\begin{DoxyCompactList}\small\item\em Esta função gera um histórico de movimentações feitas pelo funcionário ou gerente. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classEstoque_ab61aaf35ee05a8415f4fb32fec5fa87b}{imprimir\+Log}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Esta função imprimi o histórico acima. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classEstoque_ac5b8f34db951f75ff2ddd52c7b370700}{excluir\+Produto}} (string codigo)
-\item 
+\begin{DoxyCompactList}\small\item\em Esta função exclui um cadastro de um produto com todos os seus atributos. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classEstoque_a724e0febe581bac6d5a6ee1a03cb8734}{limpar\+Tela}} (string modo)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Esta função limpa a tela, para poder ter uma melhor visualização na compilação. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-A classe estoque é responsável por ~\newline
- 
+Armazena um map de vários produtos. 
 
-Definition at line 24 of file estoque.\+hpp.
+A classe estoque é responsável por armazenar varios produtos, usando um map, separamos cada produto de acordo com sua chave, sendo seu código, e o valor sendo todos os atributos de um produto, esta classe possui um menu, onde o gerente pode fazer modificações em um determinado produto, além do mesmo poder adicionar ou retirar quantos produtos desejar, diferente do funcionário ao qual só terá permissão de retirar os produtos de acordo com as vendas dos mesmos. 
+
+Definition at line 36 of file estoque.\+hpp.
 
 
 
@@ -94,14 +64,12 @@ Definition at line 24 of file estoque.\+hpp.
 \mbox{\Hypertarget{classEstoque_a5ef465af5814ce8c048f891e72fbf4a2}\label{classEstoque_a5ef465af5814ce8c048f891e72fbf4a2}} 
 \index{Estoque@{Estoque}!Estoque@{Estoque}}
 \index{Estoque@{Estoque}!Estoque@{Estoque}}
-\doxysubsubsection{\texorpdfstring{Estoque()}{Estoque()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+\doxysubsubsection{\texorpdfstring{Estoque()}{Estoque()}}
 {\footnotesize\ttfamily Estoque\+::\+Estoque (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
 
-\mbox{\Hypertarget{classEstoque_a5ef465af5814ce8c048f891e72fbf4a2}\label{classEstoque_a5ef465af5814ce8c048f891e72fbf4a2}} 
-\index{Estoque@{Estoque}!Estoque@{Estoque}}
-\index{Estoque@{Estoque}!Estoque@{Estoque}}
-\doxysubsubsection{\texorpdfstring{Estoque()}{Estoque()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily Estoque\+::\+Estoque (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+Esta é uma função que destroi um mapa para não ocupar lugar na memória. 
 
 
 
@@ -109,424 +77,386 @@ Definition at line 24 of file estoque.\+hpp.
 \mbox{\Hypertarget{classEstoque_a59159caf12395903903632fa2fc00a96}\label{classEstoque_a59159caf12395903903632fa2fc00a96}} 
 \index{Estoque@{Estoque}!alterarCategoriaProduto@{alterarCategoriaProduto}}
 \index{alterarCategoriaProduto@{alterarCategoriaProduto}!Estoque@{Estoque}}
-\doxysubsubsection{\texorpdfstring{alterarCategoriaProduto()}{alterarCategoriaProduto()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily void Estoque\+::alterar\+Categoria\+Produto (\begin{DoxyParamCaption}\item[{string}]{pesquisa,  }\item[{string}]{categ }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{classEstoque_a59159caf12395903903632fa2fc00a96}\label{classEstoque_a59159caf12395903903632fa2fc00a96}} 
-\index{Estoque@{Estoque}!alterarCategoriaProduto@{alterarCategoriaProduto}}
-\index{alterarCategoriaProduto@{alterarCategoriaProduto}!Estoque@{Estoque}}
-\doxysubsubsection{\texorpdfstring{alterarCategoriaProduto()}{alterarCategoriaProduto()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+\doxysubsubsection{\texorpdfstring{alterarCategoriaProduto()}{alterarCategoriaProduto()}}
 {\footnotesize\ttfamily void Estoque\+::alterar\+Categoria\+Produto (\begin{DoxyParamCaption}\item[{string}]{pesquisa,  }\item[{string}]{categ }\end{DoxyParamCaption})}
 
 
 
-Definition at line 100 of file estoque.\+cpp.
+Esta função altera a categoria de um determinado produto. 
+
+
+
+Definition at line 105 of file estoque.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{100                                                                   \{}
-\DoxyCodeLine{101       \textcolor{keywordflow}{if} (\_estoque.count(pesquisa) == 1)}
-\DoxyCodeLine{102       \{}
-\DoxyCodeLine{103     \textcolor{keywordflow}{if} (categ.size() > 20)}
-\DoxyCodeLine{104            \textcolor{keywordflow}{throw} \mbox{\hyperlink{classExcecaoTamanhoCategAlt}{ExcecaoTamanhoCategAlt}}();}
-\DoxyCodeLine{105         \textcolor{keywordflow}{else}}
-\DoxyCodeLine{106     \{}
-\DoxyCodeLine{107            map<string, Produto>::iterator it = \_estoque.find(pesquisa);}
-\DoxyCodeLine{108            cout<<\textcolor{stringliteral}{"A categoria do prduto foi alterada de "}<<(it-\/>second).getCategoria()<<\textcolor{stringliteral}{" para "}<<categ<<endl;}
-\DoxyCodeLine{109            (it-\/>second).setCategoria(categ);}
-\DoxyCodeLine{110         \}}
-\DoxyCodeLine{111       \}\textcolor{keywordflow}{else}}
-\DoxyCodeLine{112         \textcolor{keywordflow}{throw} \mbox{\hyperlink{classProdutoNaoCadastrado}{ProdutoNaoCadastrado}}();}
-\DoxyCodeLine{113 \}}
+\DoxyCodeLine{111                                                                   \{}
+\DoxyCodeLine{112       \textcolor{keywordflow}{if} (\_estoque.count(pesquisa) == 1)}
+\DoxyCodeLine{113       \{}
+\DoxyCodeLine{114         \textcolor{keywordflow}{if} (categ.size() > 23)}
+\DoxyCodeLine{115         \{}
+\DoxyCodeLine{116            \textcolor{keywordflow}{throw} \mbox{\hyperlink{classExcecaoTamanhoCategAlt}{ExcecaoTamanhoCategAlt}}();}
+\DoxyCodeLine{117         \}\textcolor{keywordflow}{else}}
+\DoxyCodeLine{118     \{}
+\DoxyCodeLine{119            map<string, Produto>::iterator it = \_estoque.find(pesquisa);}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classEstoque_a12f19d204d13efde595c778d8d824c6b}\label{classEstoque_a12f19d204d13efde595c778d8d824c6b}} 
 \index{Estoque@{Estoque}!alterarFabricanteProduto@{alterarFabricanteProduto}}
 \index{alterarFabricanteProduto@{alterarFabricanteProduto}!Estoque@{Estoque}}
-\doxysubsubsection{\texorpdfstring{alterarFabricanteProduto()}{alterarFabricanteProduto()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily void Estoque\+::alterar\+Fabricante\+Produto (\begin{DoxyParamCaption}\item[{string}]{pesquisa,  }\item[{string}]{fabric }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{classEstoque_a12f19d204d13efde595c778d8d824c6b}\label{classEstoque_a12f19d204d13efde595c778d8d824c6b}} 
-\index{Estoque@{Estoque}!alterarFabricanteProduto@{alterarFabricanteProduto}}
-\index{alterarFabricanteProduto@{alterarFabricanteProduto}!Estoque@{Estoque}}
-\doxysubsubsection{\texorpdfstring{alterarFabricanteProduto()}{alterarFabricanteProduto()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+\doxysubsubsection{\texorpdfstring{alterarFabricanteProduto()}{alterarFabricanteProduto()}}
 {\footnotesize\ttfamily void Estoque\+::alterar\+Fabricante\+Produto (\begin{DoxyParamCaption}\item[{string}]{pesquisa,  }\item[{string}]{fabric }\end{DoxyParamCaption})}
 
 
 
-Definition at line 85 of file estoque.\+cpp.
+Esta função altera o fabricante de um determinado produto. 
+
+
+
+Definition at line 88 of file estoque.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{85                                                                     \{}
-\DoxyCodeLine{86       \textcolor{keywordflow}{if} (\_estoque.count(pesquisa) == 1)}
-\DoxyCodeLine{87       \{}
-\DoxyCodeLine{88     \textcolor{keywordflow}{if} (fabric.size() > 20)}
-\DoxyCodeLine{89             \textcolor{keywordflow}{throw} \mbox{\hyperlink{classExcecaoTamanhoFabricAlt}{ExcecaoTamanhoFabricAlt}}();}
-\DoxyCodeLine{90         \textcolor{keywordflow}{else}}
-\DoxyCodeLine{91     \{}
-\DoxyCodeLine{92             map<string, Produto>::iterator it = \_estoque.find(pesquisa);}
-\DoxyCodeLine{93             cout<<\textcolor{stringliteral}{"O fabricante do prduto foi alterado de "}<<(it-\/>second).getFabricante()<<\textcolor{stringliteral}{" para "}<<fabric<<endl;}
-\DoxyCodeLine{94            (it-\/>second).setFabricante(fabric);}
-\DoxyCodeLine{95     \}}
-\DoxyCodeLine{96       \}\textcolor{keywordflow}{else}}
-\DoxyCodeLine{97         \textcolor{keywordflow}{throw} \mbox{\hyperlink{classProdutoNaoCadastrado}{ProdutoNaoCadastrado}}();}
-\DoxyCodeLine{98 \}}
+\DoxyCodeLine{94                                                                     \{}
+\DoxyCodeLine{95       \textcolor{keywordflow}{if} (\_estoque.count(pesquisa) == 1)}
+\DoxyCodeLine{96       \{}
+\DoxyCodeLine{97         \textcolor{keywordflow}{if} (fabric.size() > 23)}
+\DoxyCodeLine{98     \{}
+\DoxyCodeLine{99             \textcolor{keywordflow}{throw} \mbox{\hyperlink{classExcecaoTamanhoFabricAlt}{ExcecaoTamanhoFabricAlt}}();}
+\DoxyCodeLine{100         \}\textcolor{keywordflow}{else}}
+\DoxyCodeLine{101     \{}
+\DoxyCodeLine{102             map<string, Produto>::iterator it = \_estoque.find(pesquisa);}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classEstoque_a883d79902102c03981affd5f4fa18662}\label{classEstoque_a883d79902102c03981affd5f4fa18662}} 
 \index{Estoque@{Estoque}!alterarNomeProduto@{alterarNomeProduto}}
 \index{alterarNomeProduto@{alterarNomeProduto}!Estoque@{Estoque}}
-\doxysubsubsection{\texorpdfstring{alterarNomeProduto()}{alterarNomeProduto()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily void Estoque\+::alterar\+Nome\+Produto (\begin{DoxyParamCaption}\item[{string}]{pesquisa,  }\item[{string}]{nome }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{classEstoque_a883d79902102c03981affd5f4fa18662}\label{classEstoque_a883d79902102c03981affd5f4fa18662}} 
-\index{Estoque@{Estoque}!alterarNomeProduto@{alterarNomeProduto}}
-\index{alterarNomeProduto@{alterarNomeProduto}!Estoque@{Estoque}}
-\doxysubsubsection{\texorpdfstring{alterarNomeProduto()}{alterarNomeProduto()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+\doxysubsubsection{\texorpdfstring{alterarNomeProduto()}{alterarNomeProduto()}}
 {\footnotesize\ttfamily void Estoque\+::alterar\+Nome\+Produto (\begin{DoxyParamCaption}\item[{string}]{pesquisa,  }\item[{string}]{nome }\end{DoxyParamCaption})}
 
 
 
-Definition at line 70 of file estoque.\+cpp.
+Esta função altera o nome de um determinado produto. 
+
+
+
+Definition at line 73 of file estoque.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{70                                                             \{ }
-\DoxyCodeLine{71       \textcolor{keywordflow}{if} (\_estoque.count(pesquisa) == 1)}
-\DoxyCodeLine{72       \{}
-\DoxyCodeLine{73     \textcolor{keywordflow}{if} (nome.size() > 20)}
-\DoxyCodeLine{74             \textcolor{keywordflow}{throw} \mbox{\hyperlink{classExcecaoTamanhoNomeAlt}{ExcecaoTamanhoNomeAlt}}();}
-\DoxyCodeLine{75         \textcolor{keywordflow}{else}}
-\DoxyCodeLine{76         \{}
-\DoxyCodeLine{77        map<string, Produto>::iterator it = \_estoque.find(pesquisa);}
-\DoxyCodeLine{78            cout<<\textcolor{stringliteral}{"O nome do prduto foi alterado de "}<<(it-\/>second).getNome()<<\textcolor{stringliteral}{" para "}<<nome<<endl;}
-\DoxyCodeLine{79        (it-\/>second).setNome(nome);}
-\DoxyCodeLine{80     \}}
-\DoxyCodeLine{81       \}\textcolor{keywordflow}{else}}
-\DoxyCodeLine{82         \textcolor{keywordflow}{throw} \mbox{\hyperlink{classProdutoNaoCadastrado}{ProdutoNaoCadastrado}}();}
-\DoxyCodeLine{83 \}}
+\DoxyCodeLine{79                                                             \{ }
+\DoxyCodeLine{80       \textcolor{keywordflow}{if} (\_estoque.count(pesquisa) == 1)}
+\DoxyCodeLine{81       \{}
+\DoxyCodeLine{82         \textcolor{keywordflow}{if} (nome.size() > 26)\{}
+\DoxyCodeLine{83             \textcolor{keywordflow}{throw} \mbox{\hyperlink{classExcecaoTamanhoNomeAlt}{ExcecaoTamanhoNomeAlt}}();}
+\DoxyCodeLine{84         \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{85        map<string, Produto>::iterator it = \_estoque.find(pesquisa);}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classEstoque_a51e59287ccef6c53147d3301739ab1f3}\label{classEstoque_a51e59287ccef6c53147d3301739ab1f3}} 
 \index{Estoque@{Estoque}!alterarPrecoProduto@{alterarPrecoProduto}}
 \index{alterarPrecoProduto@{alterarPrecoProduto}!Estoque@{Estoque}}
-\doxysubsubsection{\texorpdfstring{alterarPrecoProduto()}{alterarPrecoProduto()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily void Estoque\+::alterar\+Preco\+Produto (\begin{DoxyParamCaption}\item[{string}]{pesquisa,  }\item[{float}]{preco }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{classEstoque_a51e59287ccef6c53147d3301739ab1f3}\label{classEstoque_a51e59287ccef6c53147d3301739ab1f3}} 
-\index{Estoque@{Estoque}!alterarPrecoProduto@{alterarPrecoProduto}}
-\index{alterarPrecoProduto@{alterarPrecoProduto}!Estoque@{Estoque}}
-\doxysubsubsection{\texorpdfstring{alterarPrecoProduto()}{alterarPrecoProduto()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+\doxysubsubsection{\texorpdfstring{alterarPrecoProduto()}{alterarPrecoProduto()}}
 {\footnotesize\ttfamily void Estoque\+::alterar\+Preco\+Produto (\begin{DoxyParamCaption}\item[{string}]{pesquisa,  }\item[{float}]{preco }\end{DoxyParamCaption})}
 
 
 
-Definition at line 115 of file estoque.\+cpp.
+Esta função altera o preço de um determinado produto. 
+
+
+
+Definition at line 121 of file estoque.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{115                                                              \{}
-\DoxyCodeLine{116       \textcolor{keywordflow}{if} (\_estoque.count(pesquisa) == 1)}
-\DoxyCodeLine{117       \{ \textcolor{comment}{//NAO PODE SER LETRA SE NAO BUGA BIZARRAMENTE   }}
-\DoxyCodeLine{118     \textcolor{keywordflow}{if} (preco != (\textcolor{keywordtype}{int})preco)}
-\DoxyCodeLine{119         \textcolor{keywordflow}{throw} \mbox{\hyperlink{classPrecoNaoENumero}{PrecoNaoENumero}}();}
-\DoxyCodeLine{120         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (preco < 0)}
-\DoxyCodeLine{121             \textcolor{keywordflow}{throw} ExcecaoPrecoNegativo();}
-\DoxyCodeLine{122     \textcolor{keywordflow}{else}}
-\DoxyCodeLine{123         \{}
-\DoxyCodeLine{124         map<string, Produto>::iterator it = \_estoque.find(pesquisa);}
-\DoxyCodeLine{125             cout<<setprecision(2)<<\textcolor{stringliteral}{"O preço do prduto foi alterado de "}<<(it-\/>second).getPreco()<<\textcolor{stringliteral}{" para "}<<preco<<endl;}
-\DoxyCodeLine{126             (it-\/>second).setPreco(preco);}
-\DoxyCodeLine{127         \} }
-\DoxyCodeLine{128       \}\textcolor{keywordflow}{else}}
-\DoxyCodeLine{129           \textcolor{keywordflow}{throw} \mbox{\hyperlink{classProdutoNaoCadastrado}{ProdutoNaoCadastrado}}();}
-\DoxyCodeLine{130 \}}
+\DoxyCodeLine{127                                                              \{}
+\DoxyCodeLine{128       \textcolor{keywordflow}{if} (\_estoque.count(pesquisa) == 1)}
+\DoxyCodeLine{129       \{}
+\DoxyCodeLine{130          \textcolor{keywordflow}{if} (preco < 0)\{}
+\DoxyCodeLine{131         \textcolor{keywordflow}{throw} \mbox{\hyperlink{classExcecaoPrecoNegativoAlt}{ExcecaoPrecoNegativoAlt}}();}
+\DoxyCodeLine{132         \}\textcolor{keywordflow}{else}}
+\DoxyCodeLine{133         \{}
+\DoxyCodeLine{134         map<string, Produto>::iterator it = \_estoque.find(pesquisa);}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classEstoque_a6d5a491db754f7cd01bfcdaf8b7ee317}\label{classEstoque_a6d5a491db754f7cd01bfcdaf8b7ee317}} 
 \index{Estoque@{Estoque}!alterarProduto@{alterarProduto}}
 \index{alterarProduto@{alterarProduto}!Estoque@{Estoque}}
-\doxysubsubsection{\texorpdfstring{alterarProduto()}{alterarProduto()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+\doxysubsubsection{\texorpdfstring{alterarProduto()}{alterarProduto()}}
 {\footnotesize\ttfamily void Estoque\+::alterar\+Produto (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
-Definition at line 132 of file estoque.\+cpp.
+Esta função abre um menu de opções, ao qual chama todas as funções de alterar acima. 
+
+
+
+Definition at line 136 of file estoque.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{132                             \{}
-\DoxyCodeLine{133     \textcolor{keywordtype}{char} escolha;}
-\DoxyCodeLine{134     std::string codigoProdutoAlterado;}
-\DoxyCodeLine{135     std::string novaString;}
-\DoxyCodeLine{136     \textcolor{keywordtype}{float} novoFloat;}
-\DoxyCodeLine{137     map<string, Produto>::iterator it;}
-\DoxyCodeLine{138     std::cout << \textcolor{stringliteral}{"Escolha o que deseja alterar: "} << std::endl;}
-\DoxyCodeLine{139       std::cout << \textcolor{stringliteral}{"+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+"}<<std::endl;}
-\DoxyCodeLine{140       std::cout << \textcolor{stringliteral}{"| "} << \textcolor{stringliteral}{"1 -\/ Nome                    |"} << std::endl;}
-\DoxyCodeLine{141       std::cout << \textcolor{stringliteral}{"| "} << \textcolor{stringliteral}{"2 -\/ Categoria               |"} << std::endl;}
-\DoxyCodeLine{142       std::cout << \textcolor{stringliteral}{"| "} << \textcolor{stringliteral}{"3 -\/ Fabricante              |"} << std::endl;}
-\DoxyCodeLine{143       std::cout << \textcolor{stringliteral}{"| "} << \textcolor{stringliteral}{"4 -\/ Preço                   |"} << std::endl;}
-\DoxyCodeLine{144       std::cout << \textcolor{stringliteral}{"| "} << \textcolor{stringliteral}{"5 -\/ Sair                    |"} << std::endl;}
-\DoxyCodeLine{145       std::cout << \textcolor{stringliteral}{"+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+"}<<std::endl;}
-\DoxyCodeLine{146     std::cin>>escolha;}
-\DoxyCodeLine{147     \textcolor{keywordflow}{switch} (escolha)}
-\DoxyCodeLine{148     \{}
-\DoxyCodeLine{149     \textcolor{keywordflow}{case} \textcolor{charliteral}{'1'}:\textcolor{comment}{//tratamento nome}}
-\DoxyCodeLine{150         std::cout<<\textcolor{stringliteral}{"Digite o código do produto que será alterado"}<<endl;}
-\DoxyCodeLine{151         std::cin>>codigoProdutoAlterado;}
-\DoxyCodeLine{152         it = \_estoque.find(codigoProdutoAlterado); \textcolor{comment}{// SE O CÓDIGO NAO EXISTIR OU FOR ENTRADA INVALIDA ELE DA BAD ALLOC E ABORT}}
-\DoxyCodeLine{153         std::cout<<\textcolor{stringliteral}{"Digite um novo nome para "}<<(it-\/>second).getNome()<<std::endl;}
-\DoxyCodeLine{154         std::cin>>novaString;}
-\DoxyCodeLine{155         \textcolor{keywordflow}{try}\{}
-\DoxyCodeLine{156         \mbox{\hyperlink{classEstoque_a883d79902102c03981affd5f4fa18662}{alterarNomeProduto}}(codigoProdutoAlterado,novaString);}
-\DoxyCodeLine{157     \}\textcolor{keywordflow}{catch}(\mbox{\hyperlink{classProdutoNaoCadastrado}{ProdutoNaoCadastrado}}\& erro)\{}
-\DoxyCodeLine{158                   cout<<erro.\mbox{\hyperlink{classProdutoNaoCadastrado_a510ed82ba12dc4dc1d427bac732c69c6}{what}}()<<endl;}
-\DoxyCodeLine{159         \}\textcolor{keywordflow}{catch}(\mbox{\hyperlink{classExcecaoTamanhoNomeAlt}{ExcecaoTamanhoNomeAlt}}\& erro)\{}
-\DoxyCodeLine{160                   cout<<erro.\mbox{\hyperlink{classExcecaoTamanhoNomeAlt_a59b0db6942bbf623c7b3e9a1fac14792}{what}}()<<endl;}
-\DoxyCodeLine{161         \}   }
-\DoxyCodeLine{162         \textcolor{keywordflow}{break};}
-\DoxyCodeLine{163     }
-\DoxyCodeLine{164     \textcolor{keywordflow}{case} \textcolor{charliteral}{'2'}:}
-\DoxyCodeLine{165         std::cout<<\textcolor{stringliteral}{"Digite o código do produto que será alterado"}<<endl;}
-\DoxyCodeLine{166         std::cin>>codigoProdutoAlterado;}
-\DoxyCodeLine{167         it = \_estoque.find(codigoProdutoAlterado);}
-\DoxyCodeLine{168         std::cout<<\textcolor{stringliteral}{"Digite uma nova categoria para "}<<(it-\/>second).getNome()<<std::endl;}
-\DoxyCodeLine{169         std::cin>>novaString;}
-\DoxyCodeLine{170         \textcolor{keywordflow}{try}\{}
-\DoxyCodeLine{171         \mbox{\hyperlink{classEstoque_a59159caf12395903903632fa2fc00a96}{alterarCategoriaProduto}}(codigoProdutoAlterado,novaString);}
-\DoxyCodeLine{172     \}\textcolor{keywordflow}{catch}(\mbox{\hyperlink{classProdutoNaoCadastrado}{ProdutoNaoCadastrado}}\& erro)\{}
-\DoxyCodeLine{173                   cout<<erro.\mbox{\hyperlink{classProdutoNaoCadastrado_a510ed82ba12dc4dc1d427bac732c69c6}{what}}()<<endl;}
-\DoxyCodeLine{174         \}\textcolor{keywordflow}{catch}(\mbox{\hyperlink{classExcecaoTamanhoCategAlt}{ExcecaoTamanhoCategAlt}}\& erro)\{}
-\DoxyCodeLine{175                   cout<<erro.\mbox{\hyperlink{classExcecaoTamanhoCategAlt_a741333e5654ac5d67d1ab85eb0276ff5}{what}}()<<endl;}
-\DoxyCodeLine{176         \}  }
-\DoxyCodeLine{177         \textcolor{keywordflow}{break};}
-\DoxyCodeLine{178     }
-\DoxyCodeLine{179     \textcolor{keywordflow}{case} \textcolor{charliteral}{'3'}:}
-\DoxyCodeLine{180         std::cout<<\textcolor{stringliteral}{"Digite o código do produto que será alterado"}<<endl;}
-\DoxyCodeLine{181         std::cin>>codigoProdutoAlterado;}
-\DoxyCodeLine{182         it = \_estoque.find(codigoProdutoAlterado);}
-\DoxyCodeLine{183         std::cout<<\textcolor{stringliteral}{"Digite um novo fabricante para "}<<(it-\/>second).getNome()<<std::endl;}
-\DoxyCodeLine{184         std::cin>>novaString;}
-\DoxyCodeLine{185         \textcolor{keywordflow}{try}\{}
-\DoxyCodeLine{186         \mbox{\hyperlink{classEstoque_a12f19d204d13efde595c778d8d824c6b}{alterarFabricanteProduto}}(codigoProdutoAlterado,novaString);}
-\DoxyCodeLine{187     \}\textcolor{keywordflow}{catch}(\mbox{\hyperlink{classProdutoNaoCadastrado}{ProdutoNaoCadastrado}}\& erro)\{}
-\DoxyCodeLine{188                   cout<<erro.\mbox{\hyperlink{classProdutoNaoCadastrado_a510ed82ba12dc4dc1d427bac732c69c6}{what}}()<<endl;}
-\DoxyCodeLine{189         \}\textcolor{keywordflow}{catch}(\mbox{\hyperlink{classExcecaoTamanhoFabricAlt}{ExcecaoTamanhoFabricAlt}}\& erro)\{}
-\DoxyCodeLine{190                   cout<<erro.\mbox{\hyperlink{classExcecaoTamanhoFabricAlt_a595da70fa8e86ce70931d0ddda076e89}{what}}()<<endl;}
-\DoxyCodeLine{191     \}}
-\DoxyCodeLine{192         \textcolor{keywordflow}{break};}
-\DoxyCodeLine{193 }
-\DoxyCodeLine{194     \textcolor{keywordflow}{case} \textcolor{charliteral}{'4'}:}
-\DoxyCodeLine{195         std::cout<<\textcolor{stringliteral}{"Digite o código do produto que será alterado"}<<endl;}
-\DoxyCodeLine{196         std::cin>>codigoProdutoAlterado;}
-\DoxyCodeLine{197         it = \_estoque.find(codigoProdutoAlterado);}
-\DoxyCodeLine{198         std::cout<<\textcolor{stringliteral}{"Digite um novo preço para "}<<(it-\/>second).getNome()<<std::endl;}
-\DoxyCodeLine{199         std::cin>>novoFloat;}
-\DoxyCodeLine{200     \textcolor{keywordflow}{try}\{}
-\DoxyCodeLine{201             \mbox{\hyperlink{classEstoque_a51e59287ccef6c53147d3301739ab1f3}{alterarPrecoProduto}}(codigoProdutoAlterado,novoFloat);}
-\DoxyCodeLine{202         \}\textcolor{keywordflow}{catch}(\mbox{\hyperlink{classProdutoNaoCadastrado}{ProdutoNaoCadastrado}}\& erro)\{}
-\DoxyCodeLine{203                 cout<<erro.\mbox{\hyperlink{classProdutoNaoCadastrado_a510ed82ba12dc4dc1d427bac732c69c6}{what}}()<<endl;}
-\DoxyCodeLine{204         \}\textcolor{keywordflow}{catch}(\mbox{\hyperlink{classPrecoNaoENumero}{PrecoNaoENumero}}\& erro)\{}
-\DoxyCodeLine{205         cout<<erro.\mbox{\hyperlink{classPrecoNaoENumero_ada2d111e604f8d01f2c336cc43af9b46}{what}}()<<endl;}
-\DoxyCodeLine{206     \}\textcolor{keywordflow}{catch}(\mbox{\hyperlink{classExcecaoPrecoNegativoAlt}{ExcecaoPrecoNegativoAlt}}\& erro)\{}
-\DoxyCodeLine{207         cout<<erro.\mbox{\hyperlink{classExcecaoPrecoNegativoAlt_a123622b990e1c966f060c9a67f9941e7}{what}}()<<endl;}
-\DoxyCodeLine{208     \}}
-\DoxyCodeLine{209     \textcolor{keywordflow}{break};    }
-\DoxyCodeLine{210 }
-\DoxyCodeLine{211     \textcolor{keywordflow}{case} \textcolor{charliteral}{'5'}:}
-\DoxyCodeLine{212         \textcolor{keywordflow}{break};}
-\DoxyCodeLine{213         }
-\DoxyCodeLine{214     \textcolor{keywordflow}{default}:}
-\DoxyCodeLine{215         \textcolor{keywordflow}{throw} \mbox{\hyperlink{classEntradaInvalida}{EntradaInvalida}}();}
-\DoxyCodeLine{216         \mbox{\hyperlink{classEstoque_a6d5a491db754f7cd01bfcdaf8b7ee317}{alterarProduto}}();}
-\DoxyCodeLine{217         \textcolor{keywordflow}{break};}
-\DoxyCodeLine{218     \}}
-\DoxyCodeLine{219 \}}
+\DoxyCodeLine{142                             \{}
+\DoxyCodeLine{143     cout << R\textcolor{stringliteral}{"(}}
+\DoxyCodeLine{144 \textcolor{stringliteral}{    \_\_\_    \_\_\_\_                                               \_\_      \_\_      }}
+\DoxyCodeLine{145 \textcolor{stringliteral}{   /   |  / / /\_\_\_\_  \_\_\_\_\_\_\_\_\_ \_\_\_\_\_\_   \_\_\_\_  \_\_\_\_\_\_\_\_\_  \_\_\_\_/ /\_  \_\_/ /\_\_\_\_\_ }}
+\DoxyCodeLine{146 \textcolor{stringliteral}{  / /| | / / \_\_/ \_ \(\backslash\)/ \_\_\_/ \_\_ `/ \_\_\_/  / \_\_ \(\backslash\)/ \_\_\_/ \_\_ \(\backslash\)/ \_\_  / / / / \_\_/ \_\_ \(\backslash\)}}
+\DoxyCodeLine{147 \textcolor{stringliteral}{ / \_\_\_ |/ / /\_/  \_\_/ /  / /\_/ / /     / /\_/ / /  / /\_/ / /\_/ / /\_/ / /\_/ /\_/ /}}
+\DoxyCodeLine{148 \textcolor{stringliteral}{/\_/  |\_/\_/\(\backslash\)\_\_/\(\backslash\)\_\_\_/\_/   \(\backslash\)\_\_,\_/\_/     / .\_\_\_/\_/   \(\backslash\)\_\_\_\_/\(\backslash\)\_\_,\_/\(\backslash\)\_\_,\_/\(\backslash\)\_\_/\(\backslash\)\_\_\_\_/ }}
+\DoxyCodeLine{149 \textcolor{stringliteral}{                                    /\_/)" << endl;}}
+\DoxyCodeLine{150 \textcolor{stringliteral}{    std::string codigoProdutoAlterado;}}
+\DoxyCodeLine{151 \textcolor{stringliteral}{    std::string novaString;}}
+\DoxyCodeLine{152 \textcolor{stringliteral}{    }\textcolor{keywordtype}{float} novoFloat;}
+\DoxyCodeLine{153     map<string, Produto>::iterator it;}
+\DoxyCodeLine{154     std::cout << \textcolor{stringliteral}{"+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+"}<<std::endl;}
+\DoxyCodeLine{155     std::cout << \textcolor{stringliteral}{"| "} << \textcolor{stringliteral}{"1 -\/ Nome                    |"} << std::endl;}
+\DoxyCodeLine{156     std::cout << \textcolor{stringliteral}{"| "} << \textcolor{stringliteral}{"2 -\/ Categoria               |"} << std::endl;}
+\DoxyCodeLine{157     std::cout << \textcolor{stringliteral}{"| "} << \textcolor{stringliteral}{"3 -\/ Fabricante              |"} << std::endl;}
+\DoxyCodeLine{158     std::cout << \textcolor{stringliteral}{"| "} << \textcolor{stringliteral}{"4 -\/ Preço                   |"} << std::endl;}
+\DoxyCodeLine{159     std::cout << \textcolor{stringliteral}{"| "} << \textcolor{stringliteral}{"5 -\/ Sair                    |"} << std::endl;}
+\DoxyCodeLine{160     std::cout << \textcolor{stringliteral}{"+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+"}<<std::endl;}
+\DoxyCodeLine{161     \textcolor{keywordtype}{string} aux;}
+\DoxyCodeLine{162     std::cout << \textcolor{stringliteral}{"Escolha o que deseja alterar: "};}
+\DoxyCodeLine{163     cin >> aux;}
+\DoxyCodeLine{164     \textcolor{keywordflow}{if} (aux.size()>1)}
+\DoxyCodeLine{165         \textcolor{keywordflow}{throw} \mbox{\hyperlink{classEntradaInvalida}{EntradaInvalida}}();}
+\DoxyCodeLine{166     \textcolor{keywordtype}{char} escolha = aux[0];}
+\DoxyCodeLine{167     \textcolor{keywordflow}{switch} (escolha)}
+\DoxyCodeLine{168     \{}
+\DoxyCodeLine{169     \textcolor{keywordflow}{case} \textcolor{charliteral}{'1'}:}
+\DoxyCodeLine{170         std::cout<<\textcolor{stringliteral}{"Digite o código do produto que será alterado: "};}
+\DoxyCodeLine{171         std::cin>>codigoProdutoAlterado;}
+\DoxyCodeLine{172         \textcolor{keywordflow}{if} (\_estoque.count(codigoProdutoAlterado)==1)    }
+\DoxyCodeLine{173             it = \_estoque.find(codigoProdutoAlterado); }
+\DoxyCodeLine{174         \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{175             \textcolor{keywordflow}{throw} \mbox{\hyperlink{classProdutoNaoCadastrado}{ProdutoNaoCadastrado}}();}
+\DoxyCodeLine{176             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{177         \}}
+\DoxyCodeLine{178         std::cout<<\textcolor{stringliteral}{"Digite um novo nome para "}<<(it-\/>second).getNome() <<\textcolor{stringliteral}{" : "};}
+\DoxyCodeLine{179         cin.ignore(1,\textcolor{charliteral}{'\(\backslash\)n'});}
+\DoxyCodeLine{180         getline(cin, novaString);}
+\DoxyCodeLine{181         \mbox{\hyperlink{classEstoque_a883d79902102c03981affd5f4fa18662}{alterarNomeProduto}}(codigoProdutoAlterado,novaString);}
+\DoxyCodeLine{182         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{183     }
+\DoxyCodeLine{184     \textcolor{keywordflow}{case} \textcolor{charliteral}{'2'}:}
+\DoxyCodeLine{185         std::cout<<\textcolor{stringliteral}{"Digite o código do produto que será alterado: "};}
+\DoxyCodeLine{186         std::cin>>codigoProdutoAlterado;}
+\DoxyCodeLine{187         \textcolor{keywordflow}{if} (\_estoque.count(codigoProdutoAlterado)==1)    }
+\DoxyCodeLine{188             it = \_estoque.find(codigoProdutoAlterado); }
+\DoxyCodeLine{189         \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{190             \textcolor{keywordflow}{throw} \mbox{\hyperlink{classProdutoNaoCadastrado}{ProdutoNaoCadastrado}}();}
+\DoxyCodeLine{191             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{192         \}}
+\DoxyCodeLine{193         std::cout<<\textcolor{stringliteral}{"Digite uma nova categoria para "}<<(it-\/>second).getNome()<<\textcolor{stringliteral}{" : "};}
+\DoxyCodeLine{194         std::cin>>novaString;}
+\DoxyCodeLine{195         \mbox{\hyperlink{classEstoque_a59159caf12395903903632fa2fc00a96}{alterarCategoriaProduto}}(codigoProdutoAlterado,novaString);}
+\DoxyCodeLine{196         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{197     }
+\DoxyCodeLine{198     \textcolor{keywordflow}{case} \textcolor{charliteral}{'3'}:}
+\DoxyCodeLine{199         std::cout<<\textcolor{stringliteral}{"Digite o código do produto que será alterado: "};}
+\DoxyCodeLine{200         std::cin>>codigoProdutoAlterado;}
+\DoxyCodeLine{201         \textcolor{keywordflow}{if} (\_estoque.count(codigoProdutoAlterado)==1)    }
+\DoxyCodeLine{202             it = \_estoque.find(codigoProdutoAlterado); }
+\DoxyCodeLine{203         \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{204             \textcolor{keywordflow}{throw} \mbox{\hyperlink{classProdutoNaoCadastrado}{ProdutoNaoCadastrado}}();}
+\DoxyCodeLine{205             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{206         \}}
+\DoxyCodeLine{207         std::cout<<\textcolor{stringliteral}{"Digite um novo fabricante para "}<<(it-\/>second).getNome()<<\textcolor{stringliteral}{" : "};}
+\DoxyCodeLine{208         std::cin>>novaString;}
+\DoxyCodeLine{209         \mbox{\hyperlink{classEstoque_a12f19d204d13efde595c778d8d824c6b}{alterarFabricanteProduto}}(codigoProdutoAlterado,novaString);}
+\DoxyCodeLine{210         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{211     }
+\DoxyCodeLine{212     \textcolor{keywordflow}{case} \textcolor{charliteral}{'4'}:}
+\DoxyCodeLine{213         std::cout<<\textcolor{stringliteral}{"Digite o código do produto que será alterado: "};}
+\DoxyCodeLine{214         std::cin>>codigoProdutoAlterado;}
+\DoxyCodeLine{215         \textcolor{keywordflow}{if} (\_estoque.count(codigoProdutoAlterado)==1)    }
+\DoxyCodeLine{216             it = \_estoque.find(codigoProdutoAlterado); }
+\DoxyCodeLine{217         \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{218             \textcolor{keywordflow}{throw} \mbox{\hyperlink{classProdutoNaoCadastrado}{ProdutoNaoCadastrado}}();}
+\DoxyCodeLine{219             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{220         \}}
+\DoxyCodeLine{221         std::cout<<\textcolor{stringliteral}{"Digite um novo preço para "}<<(it-\/>second).getNome()<<\textcolor{stringliteral}{" : "};}
+\DoxyCodeLine{222         std::cin>>novoFloat;}
+\DoxyCodeLine{223         \textcolor{keywordflow}{if} (cin.fail())}
+\DoxyCodeLine{224         \{}
+\DoxyCodeLine{225             cin.clear();}
+\DoxyCodeLine{226             cin.ignore();}
+\DoxyCodeLine{227             \textcolor{keywordflow}{throw} \mbox{\hyperlink{classPrecoNaoENumero}{PrecoNaoENumero}}();}
+\DoxyCodeLine{228             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{229         \}\textcolor{keywordflow}{else}}
+\DoxyCodeLine{230         }
+\DoxyCodeLine{231             \mbox{\hyperlink{classEstoque_a51e59287ccef6c53147d3301739ab1f3}{alterarPrecoProduto}}(codigoProdutoAlterado,novoFloat);}
 
 \end{DoxyCode}
-\mbox{\Hypertarget{classEstoque_a6d5a491db754f7cd01bfcdaf8b7ee317}\label{classEstoque_a6d5a491db754f7cd01bfcdaf8b7ee317}} 
-\index{Estoque@{Estoque}!alterarProduto@{alterarProduto}}
-\index{alterarProduto@{alterarProduto}!Estoque@{Estoque}}
-\doxysubsubsection{\texorpdfstring{alterarProduto()}{alterarProduto()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily void Estoque\+::alterar\+Produto (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
 \mbox{\Hypertarget{classEstoque_ad424b0fd59b47b4c61d3bbc09238e2df}\label{classEstoque_ad424b0fd59b47b4c61d3bbc09238e2df}} 
 \index{Estoque@{Estoque}!cadastroDeProdutos@{cadastroDeProdutos}}
 \index{cadastroDeProdutos@{cadastroDeProdutos}!Estoque@{Estoque}}
-\doxysubsubsection{\texorpdfstring{cadastroDeProdutos()}{cadastroDeProdutos()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+\doxysubsubsection{\texorpdfstring{cadastroDeProdutos()}{cadastroDeProdutos()}}
 {\footnotesize\ttfamily void Estoque\+::cadastro\+De\+Produtos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
-Definition at line 235 of file estoque.\+cpp.
+Esta função cadastra produto com seus atributos específicos. 
+
+
+
+Definition at line 233 of file estoque.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{237             :}
-\DoxyCodeLine{238         \textcolor{keywordflow}{break};}
-\DoxyCodeLine{239         }
-\DoxyCodeLine{240     \textcolor{keywordflow}{default}:}
-\DoxyCodeLine{241         \textcolor{keywordflow}{throw} \mbox{\hyperlink{classEntradaInvalida}{EntradaInvalida}}();}
-\DoxyCodeLine{242         \mbox{\hyperlink{classEstoque_a6d5a491db754f7cd01bfcdaf8b7ee317}{alterarProduto}}();}
-\DoxyCodeLine{243         \textcolor{keywordflow}{break};}
-\DoxyCodeLine{244     \}}
-\DoxyCodeLine{245 \}}
-\DoxyCodeLine{246 }
-\DoxyCodeLine{247 \textcolor{keywordtype}{void} \mbox{\hyperlink{classEstoque_ad424b0fd59b47b4c61d3bbc09238e2df}{Estoque::cadastroDeProdutos}}()\{}
-\DoxyCodeLine{248     cout << R\textcolor{stringliteral}{"(}}
-\DoxyCodeLine{249 \textcolor{stringliteral}{   \_\_\_\_\_\_          \_\_           \_\_                    \_\_                             \_\_      \_\_      }}
-\DoxyCodeLine{250 \textcolor{stringliteral}{  / \_\_\_\_/\_\_\_ \_\_\_\_\_/ /\_\_\_ \_\_\_\_\_\_/ /\_\_\_\_\_\_\_\_\_\_     \_\_\_\_/ /\_\_     \_\_\_\_  \_\_\_\_\_\_\_\_\_  \_\_\_\_/ /\_  \_\_/ /\_\_\_\_\_ }}
-\DoxyCodeLine{251 \textcolor{stringliteral}{ / /   / \_\_ `/ \_\_  / \_\_ `/ \_\_\_/ \_\_/ \_\_\_/ \_\_ \(\backslash\)   / \_\_  / \_ \(\backslash\)   / \_\_ \(\backslash\)/ \_\_\_/ \_\_ \(\backslash\)/ \_\_  / / / / \_\_/ \_\_ \(\backslash\)}}
-\DoxyCodeLine{252 \textcolor{stringliteral}{/ /\_\_\_/ /\_/ / /\_/ / /\_/ (\_\_  ) /\_/ /  / /\_/ /  / /\_/ /  \_\_/  / /\_/ / /  / /\_/ / /\_/ / /\_/ / /\_/ /\_/ /}}
-\DoxyCodeLine{253 \textcolor{stringliteral}{\(\backslash\)\_\_\_\_/\(\backslash\)\_\_,\_/\(\backslash\)\_\_,\_/\(\backslash\)\_\_,\_/\_\_\_\_/\(\backslash\)\_\_/\_/   \(\backslash\)\_\_\_\_/   \(\backslash\)\_\_,\_/\(\backslash\)\_\_\_/  / .\_\_\_/\_/   \(\backslash\)\_\_\_\_/\(\backslash\)\_\_,\_/\(\backslash\)\_\_,\_/\(\backslash\)\_\_/\(\backslash\)\_\_\_\_/ }}
-\DoxyCodeLine{254 \textcolor{stringliteral}{                                                           /\_/)" << endl;}}
-\DoxyCodeLine{255 \textcolor{stringliteral}{    }\textcolor{keywordtype}{string} n,co,f,ca;}
-\DoxyCodeLine{256     \textcolor{keywordtype}{float} p;}
-\DoxyCodeLine{257     cout << \textcolor{stringliteral}{"Digite o Nome: "};}
-\DoxyCodeLine{258     cin.ignore(1,\textcolor{charliteral}{'\(\backslash\)n'});}
-\DoxyCodeLine{259     getline(cin, n);}
-\DoxyCodeLine{260     \textcolor{keywordflow}{if} (n.size() > 20)\{}
-\DoxyCodeLine{261         \textcolor{keywordflow}{throw} \mbox{\hyperlink{classExcecaoTamanhoNomeAlt}{ExcecaoTamanhoNomeAlt}}();}
-\DoxyCodeLine{262     \}}
-\DoxyCodeLine{263     cout << \textcolor{stringliteral}{"Digite em sequência o Código, Fabricante, Categoria e Preço (separados por espaço)"} << endl;}
-\DoxyCodeLine{264     cin >> co >> f >> ca >> p;}
-\DoxyCodeLine{265     \textcolor{keywordflow}{if} (\_estoque.count(co) == 0)\{}
-\DoxyCodeLine{266         \textcolor{keywordflow}{if} (f.size() > 20) \{}
-\DoxyCodeLine{267             std::cin.clear();}
-\DoxyCodeLine{268             std::cin.ignore();}
-\DoxyCodeLine{269             \textcolor{keywordflow}{throw} \mbox{\hyperlink{classExcecaoTamanhoFabricAlt}{ExcecaoTamanhoFabricAlt}}();}
-\DoxyCodeLine{270         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (ca.size() > 20) \{}
-\DoxyCodeLine{271             std::cin.clear();}
-\DoxyCodeLine{272             std::cin.ignore();}
-\DoxyCodeLine{273             \textcolor{keywordflow}{throw} \mbox{\hyperlink{classExcecaoTamanhoCategAlt}{ExcecaoTamanhoCategAlt}}();}
-\DoxyCodeLine{274         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (p < 0) \{}
-\DoxyCodeLine{275             std::cin.clear();}
+\DoxyCodeLine{235             :}
+\DoxyCodeLine{236         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{237         }
+\DoxyCodeLine{238     \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{239         \textcolor{keywordflow}{throw} \mbox{\hyperlink{classEntradaInvalida}{EntradaInvalida}}();}
+\DoxyCodeLine{240         \mbox{\hyperlink{classEstoque_a6d5a491db754f7cd01bfcdaf8b7ee317}{alterarProduto}}();}
+\DoxyCodeLine{241         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{242     \}}
+\DoxyCodeLine{243 \}}
+\DoxyCodeLine{244 }
+\DoxyCodeLine{245 \textcolor{keywordtype}{void} \mbox{\hyperlink{classEstoque_ad424b0fd59b47b4c61d3bbc09238e2df}{Estoque::cadastroDeProdutos}}()\{}
+\DoxyCodeLine{246     cout << R\textcolor{stringliteral}{"(}}
+\DoxyCodeLine{247 \textcolor{stringliteral}{   \_\_\_\_\_\_          \_\_           \_\_                    \_\_                             \_\_      \_\_      }}
+\DoxyCodeLine{248 \textcolor{stringliteral}{  / \_\_\_\_/\_\_\_ \_\_\_\_\_/ /\_\_\_ \_\_\_\_\_\_/ /\_\_\_\_\_\_\_\_\_\_     \_\_\_\_/ /\_\_     \_\_\_\_  \_\_\_\_\_\_\_\_\_  \_\_\_\_/ /\_  \_\_/ /\_\_\_\_\_ }}
+\DoxyCodeLine{249 \textcolor{stringliteral}{ / /   / \_\_ `/ \_\_  / \_\_ `/ \_\_\_/ \_\_/ \_\_\_/ \_\_ \(\backslash\)   / \_\_  / \_ \(\backslash\)   / \_\_ \(\backslash\)/ \_\_\_/ \_\_ \(\backslash\)/ \_\_  / / / / \_\_/ \_\_ \(\backslash\)}}
+\DoxyCodeLine{250 \textcolor{stringliteral}{/ /\_\_\_/ /\_/ / /\_/ / /\_/ (\_\_  ) /\_/ /  / /\_/ /  / /\_/ /  \_\_/  / /\_/ / /  / /\_/ / /\_/ / /\_/ / /\_/ /\_/ /}}
+\DoxyCodeLine{251 \textcolor{stringliteral}{\(\backslash\)\_\_\_\_/\(\backslash\)\_\_,\_/\(\backslash\)\_\_,\_/\(\backslash\)\_\_,\_/\_\_\_\_/\(\backslash\)\_\_/\_/   \(\backslash\)\_\_\_\_/   \(\backslash\)\_\_,\_/\(\backslash\)\_\_\_/  / .\_\_\_/\_/   \(\backslash\)\_\_\_\_/\(\backslash\)\_\_,\_/\(\backslash\)\_\_,\_/\(\backslash\)\_\_/\(\backslash\)\_\_\_\_/ }}
+\DoxyCodeLine{252 \textcolor{stringliteral}{                                                           /\_/)" << endl;}}
+\DoxyCodeLine{253 \textcolor{stringliteral}{    }\textcolor{keywordtype}{string} n,co,f,ca;}
+\DoxyCodeLine{254     \textcolor{keywordtype}{float} p;}
+\DoxyCodeLine{255     cout << \textcolor{stringliteral}{"Digite o Nome: "};}
+\DoxyCodeLine{256     cin.ignore(1,\textcolor{charliteral}{'\(\backslash\)n'});}
+\DoxyCodeLine{257     getline(cin, n);}
+\DoxyCodeLine{258     \textcolor{keywordflow}{if} (n.size() > 26)\{}
+\DoxyCodeLine{259         \textcolor{keywordflow}{throw} \mbox{\hyperlink{classExcecaoTamanhoNomeAlt}{ExcecaoTamanhoNomeAlt}}();}
+\DoxyCodeLine{260     \}}
+\DoxyCodeLine{261     cout << \textcolor{stringliteral}{"Digite em sequência o Código, Fabricante, Categoria e Preço (separados por espaço)"} << endl;}
+\DoxyCodeLine{262     cin >> co >> f >> ca >> p;}
+\DoxyCodeLine{263     \textcolor{keywordflow}{if} (\_estoque.count(co) == 0)\{}
+\DoxyCodeLine{264         \textcolor{keywordflow}{if} (f.size() > 23) \{}
+\DoxyCodeLine{265             std::cin.clear();}
+\DoxyCodeLine{266             std::cin.ignore();}
+\DoxyCodeLine{267             \textcolor{keywordflow}{throw} \mbox{\hyperlink{classExcecaoTamanhoFabricAlt}{ExcecaoTamanhoFabricAlt}}();}
+\DoxyCodeLine{268         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (ca.size() > 23) \{}
+\DoxyCodeLine{269             std::cin.clear();}
+\DoxyCodeLine{270             std::cin.ignore();}
+\DoxyCodeLine{271             \textcolor{keywordflow}{throw} \mbox{\hyperlink{classExcecaoTamanhoCategAlt}{ExcecaoTamanhoCategAlt}}();}
+\DoxyCodeLine{272         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (p < 0) \{}
+\DoxyCodeLine{273             std::cin.clear();}
 
 \end{DoxyCode}
-\mbox{\Hypertarget{classEstoque_a4bd0231410297e5fa6c80eb96fcabd67}\label{classEstoque_a4bd0231410297e5fa6c80eb96fcabd67}} 
-\index{Estoque@{Estoque}!cadastroDeProdutos@{cadastroDeProdutos}}
-\index{cadastroDeProdutos@{cadastroDeProdutos}!Estoque@{Estoque}}
-\doxysubsubsection{\texorpdfstring{cadastroDeProdutos()}{cadastroDeProdutos()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily void Estoque\+::cadastro\+De\+Produtos (\begin{DoxyParamCaption}\item[{string}]{codig,  }\item[{string}]{nome,  }\item[{string}]{fabri,  }\item[{string}]{categ,  }\item[{float}]{preco }\end{DoxyParamCaption})}
-
 \mbox{\Hypertarget{classEstoque_a0fb96f0e13da7c7be6766f63b2cfd7b9}\label{classEstoque_a0fb96f0e13da7c7be6766f63b2cfd7b9}} 
 \index{Estoque@{Estoque}!entradasDeProdutos@{entradasDeProdutos}}
 \index{entradasDeProdutos@{entradasDeProdutos}!Estoque@{Estoque}}
-\doxysubsubsection{\texorpdfstring{entradasDeProdutos()}{entradasDeProdutos()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily void Estoque\+::entradas\+De\+Produtos (\begin{DoxyParamCaption}\item[{string}]{codig,  }\item[{int}]{quant,  }\item[{string}]{nome\+Usuario,  }\item[{string}]{data\+Atual }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{classEstoque_a0fb96f0e13da7c7be6766f63b2cfd7b9}\label{classEstoque_a0fb96f0e13da7c7be6766f63b2cfd7b9}} 
-\index{Estoque@{Estoque}!entradasDeProdutos@{entradasDeProdutos}}
-\index{entradasDeProdutos@{entradasDeProdutos}!Estoque@{Estoque}}
-\doxysubsubsection{\texorpdfstring{entradasDeProdutos()}{entradasDeProdutos()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+\doxysubsubsection{\texorpdfstring{entradasDeProdutos()}{entradasDeProdutos()}}
 {\footnotesize\ttfamily void Estoque\+::entradas\+De\+Produtos (\begin{DoxyParamCaption}\item[{string}]{codig,  }\item[{int}]{quant,  }\item[{string}]{nome\+Usuario,  }\item[{string}]{data\+Atual }\end{DoxyParamCaption})}
 
 
 
-Definition at line 278 of file estoque.\+cpp.
+Esta função adiciona produtos com seus atributos específicos. 
+
+
+
+Definition at line 276 of file estoque.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{278                       \{}
-\DoxyCodeLine{279             std::cin.clear();}
-\DoxyCodeLine{280             std::cin.ignore();}
-\DoxyCodeLine{281             \textcolor{keywordflow}{throw} \mbox{\hyperlink{classPrecoNaoENumero}{PrecoNaoENumero}}();}
-\DoxyCodeLine{282         \}\textcolor{keywordflow}{else}\{}
-\DoxyCodeLine{283             \mbox{\hyperlink{classProduto}{Produto}} produto(n, f, ca, co, p,0);}
-\DoxyCodeLine{284             \_estoque.insert(pair<string,Produto>(co, produto));}
-\DoxyCodeLine{285             std::cout<<\textcolor{stringliteral}{"O produto "}<<produto.getNome()<<\textcolor{stringliteral}{" foi cadastrado com sucesso"}<<std::endl;}
-\DoxyCodeLine{286             \mbox{\hyperlink{classEstoque_a724e0febe581bac6d5a6ee1a03cb8734}{limparTela}}(\textcolor{stringliteral}{"perguntar"});}
-\DoxyCodeLine{287         \} }
-\DoxyCodeLine{288     \}\textcolor{keywordflow}{else}\{}
-\DoxyCodeLine{289         std::cin.clear();}
-\DoxyCodeLine{290         std::cin.ignore();}
-\DoxyCodeLine{291         \textcolor{keywordflow}{throw} \mbox{\hyperlink{classProdutoJaCadastrado}{ProdutoJaCadastrado}}();}
-\DoxyCodeLine{292     \}}
-\DoxyCodeLine{293 \}}
+\DoxyCodeLine{276                       \{}
+\DoxyCodeLine{277             std::cin.clear();}
+\DoxyCodeLine{278             std::cin.ignore();}
+\DoxyCodeLine{279             \textcolor{keywordflow}{throw} \mbox{\hyperlink{classPrecoNaoENumero}{PrecoNaoENumero}}();}
+\DoxyCodeLine{280         \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{281             \mbox{\hyperlink{classProduto}{Produto}} produto(n, f, ca, co, p,0);}
+\DoxyCodeLine{282             \_estoque.insert(pair<string,Produto>(co, produto));}
+\DoxyCodeLine{283             std::cout<<\textcolor{stringliteral}{"O produto "}<<produto.getNome()<<\textcolor{stringliteral}{" foi cadastrado com sucesso"}<<std::endl;}
+\DoxyCodeLine{284             \mbox{\hyperlink{classEstoque_a724e0febe581bac6d5a6ee1a03cb8734}{limparTela}}(\textcolor{stringliteral}{"perguntar"});}
+\DoxyCodeLine{285         \} }
+\DoxyCodeLine{286     \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{287         std::cin.clear();}
+\DoxyCodeLine{288         std::cin.ignore();}
+\DoxyCodeLine{289         \textcolor{keywordflow}{throw} \mbox{\hyperlink{classProdutoJaCadastrado}{ProdutoJaCadastrado}}();}
+\DoxyCodeLine{290     \}}
+\DoxyCodeLine{291 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classEstoque_ac5b8f34db951f75ff2ddd52c7b370700}\label{classEstoque_ac5b8f34db951f75ff2ddd52c7b370700}} 
 \index{Estoque@{Estoque}!excluirProduto@{excluirProduto}}
 \index{excluirProduto@{excluirProduto}!Estoque@{Estoque}}
-\doxysubsubsection{\texorpdfstring{excluirProduto()}{excluirProduto()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily void Estoque\+::excluir\+Produto (\begin{DoxyParamCaption}\item[{string}]{codigo }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{classEstoque_ac5b8f34db951f75ff2ddd52c7b370700}\label{classEstoque_ac5b8f34db951f75ff2ddd52c7b370700}} 
-\index{Estoque@{Estoque}!excluirProduto@{excluirProduto}}
-\index{excluirProduto@{excluirProduto}!Estoque@{Estoque}}
-\doxysubsubsection{\texorpdfstring{excluirProduto()}{excluirProduto()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+\doxysubsubsection{\texorpdfstring{excluirProduto()}{excluirProduto()}}
 {\footnotesize\ttfamily void Estoque\+::excluir\+Produto (\begin{DoxyParamCaption}\item[{string}]{codigo }\end{DoxyParamCaption})}
 
 
 
-Definition at line 469 of file estoque.\+cpp.
+Esta função exclui um cadastro de um produto com todos os seus atributos. 
+
+
+
+Definition at line 468 of file estoque.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{475             :}
-\DoxyCodeLine{476         \mbox{\hyperlink{classEstoque_a724e0febe581bac6d5a6ee1a03cb8734}{limparTela}}(\textcolor{stringliteral}{"continuar"});}
+\DoxyCodeLine{474             :}
+\DoxyCodeLine{475         \mbox{\hyperlink{classEstoque_a724e0febe581bac6d5a6ee1a03cb8734}{limparTela}}(\textcolor{stringliteral}{"continuar"});}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classEstoque_ae0a465ecb58cb77618faf67466c51fb4}\label{classEstoque_ae0a465ecb58cb77618faf67466c51fb4}} 
 \index{Estoque@{Estoque}!gerarLog@{gerarLog}}
 \index{gerarLog@{gerarLog}!Estoque@{Estoque}}
-\doxysubsubsection{\texorpdfstring{gerarLog()}{gerarLog()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily void Estoque\+::gerar\+Log (\begin{DoxyParamCaption}\item[{string}]{mensagem,  }\item[{string}]{nome\+Usuario,  }\item[{string}]{data\+Atual }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{classEstoque_ae0a465ecb58cb77618faf67466c51fb4}\label{classEstoque_ae0a465ecb58cb77618faf67466c51fb4}} 
-\index{Estoque@{Estoque}!gerarLog@{gerarLog}}
-\index{gerarLog@{gerarLog}!Estoque@{Estoque}}
-\doxysubsubsection{\texorpdfstring{gerarLog()}{gerarLog()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+\doxysubsubsection{\texorpdfstring{gerarLog()}{gerarLog()}}
 {\footnotesize\ttfamily void Estoque\+::gerar\+Log (\begin{DoxyParamCaption}\item[{string}]{mensagem,  }\item[{string}]{nome\+Usuario,  }\item[{string}]{data\+Atual }\end{DoxyParamCaption})}
 
 
 
-Definition at line 312 of file estoque.\+cpp.
+Esta função gera um histórico de movimentações feitas pelo funcionário ou gerente. 
+
+
+
+Definition at line 310 of file estoque.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{313                                                                                            \{}
-\DoxyCodeLine{314     \textcolor{keywordflow}{if} (\_estoque.count(codig) == 1)\{}
-\DoxyCodeLine{315         map<string, Produto>::iterator it = \_estoque.find(codig);}
-\DoxyCodeLine{316         \textcolor{keywordtype}{int} quantidade;}
-\DoxyCodeLine{317         quantidade = (it-\/>second).getQuantidade();}
+\DoxyCodeLine{311                                                                                            \{}
+\DoxyCodeLine{312     \textcolor{keywordflow}{if} (\_estoque.count(codig) == 1)\{}
+\DoxyCodeLine{313         map<string, Produto>::iterator it = \_estoque.find(codig);}
+\DoxyCodeLine{314         \textcolor{keywordtype}{int} quantidade;}
+\DoxyCodeLine{315         quantidade = (it-\/>second).getQuantidade();}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classEstoque_ab61aaf35ee05a8415f4fb32fec5fa87b}\label{classEstoque_ab61aaf35ee05a8415f4fb32fec5fa87b}} 
 \index{Estoque@{Estoque}!imprimirLog@{imprimirLog}}
 \index{imprimirLog@{imprimirLog}!Estoque@{Estoque}}
-\doxysubsubsection{\texorpdfstring{imprimirLog()}{imprimirLog()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+\doxysubsubsection{\texorpdfstring{imprimirLog()}{imprimirLog()}}
 {\footnotesize\ttfamily void Estoque\+::imprimir\+Log (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
-Definition at line 319 of file estoque.\+cpp.
+Esta função imprimi o histórico acima. 
+
+
+
+Definition at line 317 of file estoque.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{324          \{}
-\DoxyCodeLine{325         cout << \textcolor{stringliteral}{"Produto não cadastrado, não poderá ser retirado"} << endl;}
-\DoxyCodeLine{326         \mbox{\hyperlink{classEstoque_a724e0febe581bac6d5a6ee1a03cb8734}{limparTela}}(\textcolor{stringliteral}{"perguntar"});}
-\DoxyCodeLine{327     \}}
-\DoxyCodeLine{328 \}}
-\DoxyCodeLine{329 }
-\DoxyCodeLine{330 \textcolor{keywordtype}{void} \mbox{\hyperlink{classEstoque_ae0a465ecb58cb77618faf67466c51fb4}{Estoque::gerarLog}}(\textcolor{keywordtype}{string} mensagem, \textcolor{keywordtype}{string} nomeUsuario, \textcolor{keywordtype}{string} dataAtual)\{}
-\DoxyCodeLine{331    fstream arquivo;}
+\DoxyCodeLine{322          \{}
+\DoxyCodeLine{323         cout << \textcolor{stringliteral}{"Produto não cadastrado, não poderá ser retirado"} << endl;}
+\DoxyCodeLine{324         \mbox{\hyperlink{classEstoque_a724e0febe581bac6d5a6ee1a03cb8734}{limparTela}}(\textcolor{stringliteral}{"perguntar"});}
+\DoxyCodeLine{325     \}}
+\DoxyCodeLine{326 \}}
+\DoxyCodeLine{327 }
+\DoxyCodeLine{328 \textcolor{keywordtype}{void} \mbox{\hyperlink{classEstoque_ae0a465ecb58cb77618faf67466c51fb4}{Estoque::gerarLog}}(\textcolor{keywordtype}{string} mensagem, \textcolor{keywordtype}{string} nomeUsuario, \textcolor{keywordtype}{string} dataAtual)\{}
+\DoxyCodeLine{329    fstream arquivo;}
 
 \end{DoxyCode}
-\mbox{\Hypertarget{classEstoque_ab61aaf35ee05a8415f4fb32fec5fa87b}\label{classEstoque_ab61aaf35ee05a8415f4fb32fec5fa87b}} 
-\index{Estoque@{Estoque}!imprimirLog@{imprimirLog}}
-\index{imprimirLog@{imprimirLog}!Estoque@{Estoque}}
-\doxysubsubsection{\texorpdfstring{imprimirLog()}{imprimirLog()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily void Estoque\+::imprimir\+Log (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
 \mbox{\Hypertarget{classEstoque_ad074ec3a2f8c5ead78734a72e225d6c4}\label{classEstoque_ad074ec3a2f8c5ead78734a72e225d6c4}} 
 \index{Estoque@{Estoque}!lerArquivo@{lerArquivo}}
 \index{lerArquivo@{lerArquivo}!Estoque@{Estoque}}
-\doxysubsubsection{\texorpdfstring{lerArquivo()}{lerArquivo()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+\doxysubsubsection{\texorpdfstring{lerArquivo()}{lerArquivo()}}
 {\footnotesize\ttfamily void Estoque\+::ler\+Arquivo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Esta função lê o arquivo que contém todas as informações salvas, da última vez que foi acessado ~\newline
+ 
 
 
 
@@ -554,57 +484,48 @@ Definition at line 23 of file estoque.\+cpp.
 \DoxyCodeLine{40 \}}
 
 \end{DoxyCode}
-\mbox{\Hypertarget{classEstoque_ad074ec3a2f8c5ead78734a72e225d6c4}\label{classEstoque_ad074ec3a2f8c5ead78734a72e225d6c4}} 
-\index{Estoque@{Estoque}!lerArquivo@{lerArquivo}}
-\index{lerArquivo@{lerArquivo}!Estoque@{Estoque}}
-\doxysubsubsection{\texorpdfstring{lerArquivo()}{lerArquivo()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily void Estoque\+::ler\+Arquivo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-~\newline
- 
-
 \mbox{\Hypertarget{classEstoque_a724e0febe581bac6d5a6ee1a03cb8734}\label{classEstoque_a724e0febe581bac6d5a6ee1a03cb8734}} 
 \index{Estoque@{Estoque}!limparTela@{limparTela}}
 \index{limparTela@{limparTela}!Estoque@{Estoque}}
-\doxysubsubsection{\texorpdfstring{limparTela()}{limparTela()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily void Estoque\+::limpar\+Tela (\begin{DoxyParamCaption}\item[{string}]{modo }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{classEstoque_a724e0febe581bac6d5a6ee1a03cb8734}\label{classEstoque_a724e0febe581bac6d5a6ee1a03cb8734}} 
-\index{Estoque@{Estoque}!limparTela@{limparTela}}
-\index{limparTela@{limparTela}!Estoque@{Estoque}}
-\doxysubsubsection{\texorpdfstring{limparTela()}{limparTela()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+\doxysubsubsection{\texorpdfstring{limparTela()}{limparTela()}}
 {\footnotesize\ttfamily void Estoque\+::limpar\+Tela (\begin{DoxyParamCaption}\item[{string}]{modo }\end{DoxyParamCaption})}
 
 
 
-Definition at line 478 of file estoque.\+cpp.
+Esta função limpa a tela, para poder ter uma melhor visualização na compilação. 
+
+
+
+Definition at line 477 of file estoque.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{480              \{}
-\DoxyCodeLine{481             \textcolor{keywordflow}{for}(itItem=listaQuantidades.begin(); itItem!=listaQuantidades.end(); itItem++)\{}
-\DoxyCodeLine{482                 \textcolor{keywordflow}{if} (modo==\textcolor{stringliteral}{"entrada"})\{}
-\DoxyCodeLine{483                     \mbox{\hyperlink{classEstoque_a0fb96f0e13da7c7be6766f63b2cfd7b9}{entradasDeProdutos}}(((itItem-\/>second).first.getCodigo()),((itItem-\/>second).second),nomeUsuario,dataAtual);}
-\DoxyCodeLine{484                 \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(modo==\textcolor{stringliteral}{"saida"})\{}
-\DoxyCodeLine{485                     \mbox{\hyperlink{classEstoque_a076a768e14db50d3292f1a1032f8d5f0}{saidasDeProdutos}}(((itItem-\/>second).first.getCodigo()),((itItem-\/>second).second),nomeUsuario,dataAtual);}
-\DoxyCodeLine{486                 \}}
-\DoxyCodeLine{487             \}}
-\DoxyCodeLine{488             std::cout<<\textcolor{stringliteral}{"O estoque foi atualizado com sucesso"}<<std::endl;}
-\DoxyCodeLine{489             loop = \textcolor{keyword}{false};}
-\DoxyCodeLine{490             listaQuantidades.clear();}
-\DoxyCodeLine{491             \mbox{\hyperlink{classEstoque_a724e0febe581bac6d5a6ee1a03cb8734}{limparTela}}(\textcolor{stringliteral}{"perguntar"});}
-\DoxyCodeLine{492         \}}
-\DoxyCodeLine{493         \textcolor{keywordflow}{break};    }
-\DoxyCodeLine{494 }
+\DoxyCodeLine{479              \{}
+\DoxyCodeLine{480             \textcolor{keywordflow}{for}(itItem=listaQuantidades.begin(); itItem!=listaQuantidades.end(); itItem++)\{}
+\DoxyCodeLine{481                 \textcolor{keywordflow}{if} (modo==\textcolor{stringliteral}{"entrada"})\{}
+\DoxyCodeLine{482                     \mbox{\hyperlink{classEstoque_a0fb96f0e13da7c7be6766f63b2cfd7b9}{entradasDeProdutos}}(((itItem-\/>second).first.getCodigo()),((itItem-\/>second).second),nomeUsuario,dataAtual);}
+\DoxyCodeLine{483                 \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(modo==\textcolor{stringliteral}{"saida"})\{}
+\DoxyCodeLine{484                     \mbox{\hyperlink{classEstoque_a076a768e14db50d3292f1a1032f8d5f0}{saidasDeProdutos}}(((itItem-\/>second).first.getCodigo()),((itItem-\/>second).second),nomeUsuario,dataAtual);}
+\DoxyCodeLine{485                 \}}
+\DoxyCodeLine{486             \}}
+\DoxyCodeLine{487             std::cout<<\textcolor{stringliteral}{"O estoque foi atualizado com sucesso"}<<std::endl;}
+\DoxyCodeLine{488             loop = \textcolor{keyword}{false};}
+\DoxyCodeLine{489             listaQuantidades.clear();}
+\DoxyCodeLine{490             \mbox{\hyperlink{classEstoque_a724e0febe581bac6d5a6ee1a03cb8734}{limparTela}}(\textcolor{stringliteral}{"perguntar"});}
+\DoxyCodeLine{491         \}}
+\DoxyCodeLine{492         \textcolor{keywordflow}{break};    }
+\DoxyCodeLine{493 }
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classEstoque_a255e29af4afb8d3f7adbe448c756c9bd}\label{classEstoque_a255e29af4afb8d3f7adbe448c756c9bd}} 
 \index{Estoque@{Estoque}!listarProdutos@{listarProdutos}}
 \index{listarProdutos@{listarProdutos}!Estoque@{Estoque}}
-\doxysubsubsection{\texorpdfstring{listarProdutos()}{listarProdutos()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+\doxysubsubsection{\texorpdfstring{listarProdutos()}{listarProdutos()}}
 {\footnotesize\ttfamily void Estoque\+::listar\+Produtos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Esta função lista todos os produtos que há no estoque no presente momento. 
 
 
 
@@ -613,250 +534,240 @@ Definition at line 42 of file estoque.\+cpp.
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{42                             \{}
-\DoxyCodeLine{43     map<string, Produto>::iterator it;}
-\DoxyCodeLine{44     cout << left << setw(21) << \textcolor{stringliteral}{"Nome"} << setw(21) << \textcolor{stringliteral}{"Fabricante"}<< setw(21) <<}
-\DoxyCodeLine{45         \textcolor{stringliteral}{"Categoria"}<< setw(21) << \textcolor{stringliteral}{"Código"} << setw(21) << \textcolor{stringliteral}{"Preço"} << setw(10) <<}
-\DoxyCodeLine{46         \textcolor{stringliteral}{"Quantidade"} << endl << fixed << showpoint;}
-\DoxyCodeLine{47     cout << endl;}
-\DoxyCodeLine{48     \textcolor{keywordflow}{for}(it=\_estoque.begin(); it!=\_estoque.end(); it++)\{}
-\DoxyCodeLine{49         cout << setprecision(2) << left << setw(21) << (it-\/>second).getNome() << setw(21) << (it-\/>second).getFabricante() << setw(21) <<}
-\DoxyCodeLine{50         (it-\/>second).getCategoria() << setw(21) << (it-\/>second).getCodigo() << setw(21) << (it-\/>second).getPreco() << setw(10) << right <<}
-\DoxyCodeLine{51         (it-\/>second).getQuantidade() << endl;}
-\DoxyCodeLine{52     \}}
-\DoxyCodeLine{53 \}}
+\DoxyCodeLine{43     cout << R\textcolor{stringliteral}{"(}}
+\DoxyCodeLine{44 \textcolor{stringliteral}{    \_\_\_\_                 \_\_      \_\_                    \_\_         \_\_\_\_\_\_     \_\_                       }}
+\DoxyCodeLine{45 \textcolor{stringliteral}{   / \_\_ \(\backslash\)\_\_\_\_\_\_\_\_\_  \_\_\_\_/ /\_  \_\_/ /\_\_\_\_\_  \_\_\_\_\_   \_\_\_\_/ /\_\_\_     / \_\_\_\_/\_\_\_\_/ /\_\_\_\_\_  \_\_\_\_ \_\_\_  \_\_\_\_\_ }}
+\DoxyCodeLine{46 \textcolor{stringliteral}{  / /\_/ / \_\_\_/ \_\_ \(\backslash\)/ \_\_  / / / / \_\_/ \_\_ \(\backslash\)/ \_\_\_/  / \_\_  / \_\_ \(\backslash\)   / \_\_/ / \_\_\_/ \_\_/ \_\_ \(\backslash\)/ \_\_ `/ / / / \_ \(\backslash\)}}
+\DoxyCodeLine{47 \textcolor{stringliteral}{ / \_\_\_\_/ /  / /\_/ / /\_/ / /\_/ / /\_/ /\_/ (\_\_  )  / /\_/ / /\_/ /  / /\_\_\_(\_\_  ) /\_/ /\_/ / /\_/ / /\_/ /  \_\_/}}
+\DoxyCodeLine{48 \textcolor{stringliteral}{/\_/   /\_/   \(\backslash\)\_\_\_\_/\(\backslash\)\_\_,\_/\(\backslash\)\_\_,\_/\(\backslash\)\_\_/\(\backslash\)\_\_\_\_/\_\_\_\_/   \(\backslash\)\_\_,\_/\(\backslash\)\_\_\_\_/  /\_\_\_\_\_/\_\_\_\_/\(\backslash\)\_\_/\(\backslash\)\_\_\_\_/\(\backslash\)\_\_, /\(\backslash\)\_\_,\_/\(\backslash\)\_\_\_/ }}
+\DoxyCodeLine{49 \textcolor{stringliteral}{                                                                                      /\_/ )" << endl;}}
+\DoxyCodeLine{50 \textcolor{stringliteral}{    map<string, Produto>::iterator it;}}
+\DoxyCodeLine{51 \textcolor{stringliteral}{    }\textcolor{comment}{//              14                   26                      23                       23                 12         9}}
+\DoxyCodeLine{52     cout << \textcolor{stringliteral}{"+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/-\/-\/-\/-\/+"}<< endl;}
+\DoxyCodeLine{53     cout << \textcolor{stringliteral}{"|    CÓDIGO    |           NOME           |       CATEGORIA       |       FABRICANTE      | QUANTIDADE |  PREÇO  |"}<< endl;}
+\DoxyCodeLine{54     cout << \textcolor{stringliteral}{"+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/-\/-\/-\/-\/+"}<< endl;}
+\DoxyCodeLine{55     \textcolor{keywordflow}{for}(it=\_estoque.begin(); it!=\_estoque.end(); it++)\{}
 
 \end{DoxyCode}
-\mbox{\Hypertarget{classEstoque_a255e29af4afb8d3f7adbe448c756c9bd}\label{classEstoque_a255e29af4afb8d3f7adbe448c756c9bd}} 
-\index{Estoque@{Estoque}!listarProdutos@{listarProdutos}}
-\index{listarProdutos@{listarProdutos}!Estoque@{Estoque}}
-\doxysubsubsection{\texorpdfstring{listarProdutos()}{listarProdutos()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily void Estoque\+::listar\+Produtos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{classEstoque_aaf043813fe368bcfba658f73629907f3}\label{classEstoque_aaf043813fe368bcfba658f73629907f3}} 
-\index{Estoque@{Estoque}!menuEntradaESaidaDeProdutos@{menuEntradaESaidaDeProdutos}}
-\index{menuEntradaESaidaDeProdutos@{menuEntradaESaidaDeProdutos}!Estoque@{Estoque}}
-\doxysubsubsection{\texorpdfstring{menuEntradaESaidaDeProdutos()}{menuEntradaESaidaDeProdutos()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily void Estoque\+::menu\+Entrada\+E\+Saida\+De\+Produtos (\begin{DoxyParamCaption}\item[{std\+::list$<$ pair$<$ unsigned int, pair$<$ \mbox{\hyperlink{classProduto}{Produto}}, int $>$$>$$>$ \&}]{lista\+Quantidades,  }\item[{std\+::string}]{modo,  }\item[{bool \&}]{loop,  }\item[{int \&}]{count,  }\item[{string}]{nome\+Usuario,  }\item[{string}]{data\+Atual }\end{DoxyParamCaption})}
-
 \mbox{\Hypertarget{classEstoque_a5eb81a75ea5222f4a8078b42f68ffd65}\label{classEstoque_a5eb81a75ea5222f4a8078b42f68ffd65}} 
 \index{Estoque@{Estoque}!menuEntradaESaidaDeProdutos@{menuEntradaESaidaDeProdutos}}
 \index{menuEntradaESaidaDeProdutos@{menuEntradaESaidaDeProdutos}!Estoque@{Estoque}}
-\doxysubsubsection{\texorpdfstring{menuEntradaESaidaDeProdutos()}{menuEntradaESaidaDeProdutos()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+\doxysubsubsection{\texorpdfstring{menuEntradaESaidaDeProdutos()}{menuEntradaESaidaDeProdutos()}}
 {\footnotesize\ttfamily void Estoque\+::menu\+Entrada\+E\+Saida\+De\+Produtos (\begin{DoxyParamCaption}\item[{std\+::list$<$ pair$<$ unsigned int, pair$<$ \mbox{\hyperlink{classProduto}{Produto}}, int $>$$>$$>$ \&}]{lista\+Quantidades,  }\item[{std\+::string}]{modo,  }\item[{bool \&}]{loop,  }\item[{unsigned int \&}]{count,  }\item[{string}]{nome\+Usuario,  }\item[{string}]{data\+Atual }\end{DoxyParamCaption})}
 
 
 
-Definition at line 333 of file estoque.\+cpp.
+Esta função abre um menu com todas as opções de movimentação. 
+
+
+
+Definition at line 331 of file estoque.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{337                          \{}
-\DoxyCodeLine{338   fstream arquivo;  }
-\DoxyCodeLine{339   arquivo.open(\textcolor{stringliteral}{"database/Movimentacoes.txt"},ios::in);}
-\DoxyCodeLine{340     \textcolor{keywordflow}{if} (arquivo.is\_open())}
-\DoxyCodeLine{341     \{}
-\DoxyCodeLine{342     cout << R\textcolor{stringliteral}{"(}}
-\DoxyCodeLine{343 \textcolor{stringliteral}{  \_   \_ \_     \_    \_\_       \_                 \_                             \_                      \_                            }}
-\DoxyCodeLine{344 \textcolor{stringliteral}{ | | | (\_)\_\_\_| |\_ /\_/  \_ \_\_(\_) \_\_\_ \_\_\_     \_\_| | \_\_\_   \_ \_\_ \_\_\_   \_\_\_\_\_   \_(\_)\_ \_\_ \_\_\_   \_\_\_ \_ \_\_ | |\_ \_\_ \_  \_\_\_ \_\_\_   \_\_\_  \_\_\_ }}
-\DoxyCodeLine{345 \textcolor{stringliteral}{ | |\_| | / \_\_| \_\_/ \_ \(\backslash\)| '\_\_| |/ \_\_/ \_ \(\backslash\)   / \_` |/ \_ \(\backslash\) | '\_ ` \_ \(\backslash\) / \_ \(\backslash\) \(\backslash\) / / | '\_ ` \_ \(\backslash\) / \_ \(\backslash\) '\_ \(\backslash\)| \_\_/ \_` |/ \_\_/ \_ \(\backslash\) / \_ \(\backslash\)/ \_\_|}}
-\DoxyCodeLine{346 \textcolor{stringliteral}{ |  \_  | \(\backslash\)\_\_ \(\backslash\) || (\_) | |  | | (\_| (\_) | | (\_| |  \_\_/ | | | | | | (\_) \(\backslash\) V /| | | | | | |  \_\_/ | | | || (\_| | (\_| (\_) |  \_\_/\(\backslash\)\_\_ \(\backslash\)}}
-\DoxyCodeLine{347 \textcolor{stringliteral}{ |\_| |\_|\_|\_\_\_/\(\backslash\)\_\_\(\backslash\)\_\_\_/|\_|  |\_|\(\backslash\)\_\_\_\(\backslash\)\_\_\_/   \(\backslash\)\_\_,\_|\(\backslash\)\_\_\_| |\_| |\_| |\_|\(\backslash\)\_\_\_/ \(\backslash\)\_/ |\_|\_| |\_| |\_|\(\backslash\)\_\_\_|\_| |\_|\(\backslash\)\_\_\(\backslash\)\_\_,\_|\(\backslash\)\_\_\_\(\backslash\)\_\_\_/ \(\backslash\)\_\_\_||\_\_\_/}}
-\DoxyCodeLine{348 \textcolor{stringliteral}{                                                                                                             )\_))" << endl;}}
-\DoxyCodeLine{349 \textcolor{stringliteral}{      cout<<arquivo.rdbuf()<<endl;}}
-\DoxyCodeLine{350 \textcolor{stringliteral}{    \}}\textcolor{keywordflow}{else}\{}
-\DoxyCodeLine{351         arquivo.open(\textcolor{stringliteral}{"database/Movimentacoes.txt"},ios::out);}
-\DoxyCodeLine{352         cout<<\textcolor{stringliteral}{"Arquivo não havia sido encontrado, agora foi criado com sucesso"}<<endl; \textcolor{comment}{// throw ExcecaoArquivoNaoEncontrado}}
-\DoxyCodeLine{353     \}    }
-\DoxyCodeLine{354     arquivo.close();}
-\DoxyCodeLine{355 \}}
-\DoxyCodeLine{356 }
-\DoxyCodeLine{357 \textcolor{keywordtype}{void} \mbox{\hyperlink{classEstoque_aaf043813fe368bcfba658f73629907f3}{Estoque::menuEntradaESaidaDeProdutos}}(std::list<pair<\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int},pair<Produto,int>>>\& listaQuantidades,}
-\DoxyCodeLine{358  std::string modo, \textcolor{keywordtype}{bool}\& loop,\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}\& count, \textcolor{keywordtype}{string} nomeUsuario, \textcolor{keywordtype}{string} dataAtual)\{}
-\DoxyCodeLine{359     \textcolor{keywordtype}{int} qtd;}
-\DoxyCodeLine{360     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} posicao;}
-\DoxyCodeLine{361     std::string codigoProduto;}
-\DoxyCodeLine{362     std::list<pair<unsigned int,pair<Produto,int>>>::iterator itItem;}
-\DoxyCodeLine{363     map<string, Produto>::iterator it;}
-\DoxyCodeLine{364     \textcolor{keywordflow}{if} (modo==\textcolor{stringliteral}{"entrada"})}
-\DoxyCodeLine{365     \{}
-\DoxyCodeLine{366         cout << R\textcolor{stringliteral}{"(}}
-\DoxyCodeLine{367 \textcolor{stringliteral}{  \_\_\_          \_    \_                \_               \_               \_         }}
-\DoxyCodeLine{368 \textcolor{stringliteral}{ | \_ \(\backslash\)\_\_\_ \_\_ \_(\_)\_\_| |\_ \_ \_ \_\_\_   \_\_| |\_\_\_   \_\_\_ \_ \_| |\_ \_ \_ \_\_ \_ \_\_| |\_\_ \_ \_\_\_}}
-\DoxyCodeLine{369 \textcolor{stringliteral}{ |   / -\/\_) \_` | (\_-\/<  \_| '\_/ \_ \(\backslash\) / \_` / -\/\_) / -\/\_) ' \(\backslash\)  \_| '\_/ \_` / \_` / \_` (\_-\/<}}
-\DoxyCodeLine{370 \textcolor{stringliteral}{ |\_|\_\(\backslash\)\_\_\_\(\backslash\)\_\_, |\_/\_\_/\(\backslash\)\_\_|\_| \(\backslash\)\_\_\_/ \(\backslash\)\_\_,\_\(\backslash\)\_\_\_| \(\backslash\)\_\_\_|\_||\_\(\backslash\)\_\_|\_| \(\backslash\)\_\_,\_\(\backslash\)\_\_,\_\(\backslash\)\_\_,\_/\_\_/}}
-\DoxyCodeLine{371 \textcolor{stringliteral}{         |\_\_\_/ )" << endl;}}
-\DoxyCodeLine{372 \textcolor{stringliteral}{    \}}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (modo==\textcolor{stringliteral}{"saida"})}
-\DoxyCodeLine{373     \{}
-\DoxyCodeLine{374          cout << R\textcolor{stringliteral}{"(}}
-\DoxyCodeLine{375 \textcolor{stringliteral}{  \_\_\_          \_    \_                \_                \_\_   \_         }}
-\DoxyCodeLine{376 \textcolor{stringliteral}{ | \_ \(\backslash\)\_\_\_ \_\_ \_(\_)\_\_| |\_ \_ \_ \_\_\_   \_\_| |\_\_\_   \_\_\_ \_\_ \_/\_/\_\_| |\_\_ \_ \_\_\_}}
-\DoxyCodeLine{377 \textcolor{stringliteral}{ |   / -\/\_) \_` | (\_-\/<  \_| '\_/ \_ \(\backslash\) / \_` / -\/\_) (\_-\/</ \_` | / \_` / \_` (\_-\/<}}
-\DoxyCodeLine{378 \textcolor{stringliteral}{ |\_|\_\(\backslash\)\_\_\_\(\backslash\)\_\_, |\_/\_\_/\(\backslash\)\_\_|\_| \(\backslash\)\_\_\_/ \(\backslash\)\_\_,\_\(\backslash\)\_\_\_| /\_\_/\(\backslash\)\_\_,\_|\_\(\backslash\)\_\_,\_\(\backslash\)\_\_,\_/\_\_/}}
-\DoxyCodeLine{379 \textcolor{stringliteral}{         |\_\_\_/)" << endl;}}
-\DoxyCodeLine{380 \textcolor{stringliteral}{    \}}}
-\DoxyCodeLine{381 \textcolor{stringliteral}{    }}
-\DoxyCodeLine{382 \textcolor{stringliteral}{    std::cout << }\textcolor{stringliteral}{"+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+"}<<std::endl;}
-\DoxyCodeLine{383     std::cout << \textcolor{stringliteral}{"| "} << \textcolor{stringliteral}{"1 -\/ Adicionar produto à lista     |"} << std::endl;}
-\DoxyCodeLine{384     std::cout << \textcolor{stringliteral}{"| "} << \textcolor{stringliteral}{"2 -\/ Remover produto da lista      |"} << std::endl;}
-\DoxyCodeLine{385     std::cout << \textcolor{stringliteral}{"| "} << \textcolor{stringliteral}{"3 -\/ Exibir lista                  |"} << std::endl;}
-\DoxyCodeLine{386     std::cout << \textcolor{stringliteral}{"| "} << \textcolor{stringliteral}{"4 -\/ Finalizar lista               |"} << std::endl;}
-\DoxyCodeLine{387     std::cout << \textcolor{stringliteral}{"| "} << \textcolor{stringliteral}{"5 -\/ Cancelar lista                |"} << std::endl;}
-\DoxyCodeLine{388     std::cout << \textcolor{stringliteral}{"+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+"}<<std::endl;}
-\DoxyCodeLine{389     std::cout << \textcolor{stringliteral}{"Escolha uma opção: "};}
-\DoxyCodeLine{390     \textcolor{keywordtype}{string} aux;}
-\DoxyCodeLine{391     cin >> aux;}
-\DoxyCodeLine{392     \textcolor{keywordflow}{if} (aux.size()>1)}
-\DoxyCodeLine{393         \textcolor{keywordflow}{throw} \mbox{\hyperlink{classEntradaInvalida}{EntradaInvalida}}();}
-\DoxyCodeLine{394     \textcolor{keywordtype}{char} escolha = aux[0];}
-\DoxyCodeLine{395     \textcolor{keywordflow}{switch} (escolha)\{}
-\DoxyCodeLine{396     \textcolor{keywordflow}{case} \textcolor{charliteral}{'1'}:}
-\DoxyCodeLine{397         std::cout<<\textcolor{stringliteral}{"Digite o código do produto que será adicionado: "};}
-\DoxyCodeLine{398         std::cin>>codigoProduto;}
-\DoxyCodeLine{399         \textcolor{keywordflow}{if}(\_estoque.count(codigoProduto)==0)\{}
-\DoxyCodeLine{400             \textcolor{keywordflow}{throw} \mbox{\hyperlink{classProdutoNaoCadastrado}{ProdutoNaoCadastrado}}();}
-\DoxyCodeLine{401         \}}
-\DoxyCodeLine{402         std::cout<<\textcolor{stringliteral}{"Digite a quantidade do produto que será adicionada: "};}
-\DoxyCodeLine{403         std::cin>>qtd;}
-\DoxyCodeLine{404         it = \_estoque.find(codigoProduto);}
-\DoxyCodeLine{405         \textcolor{keywordflow}{if}(qtd<0)\{}
-\DoxyCodeLine{406             \textcolor{keywordflow}{throw} \mbox{\hyperlink{classquantidadeInvalida}{quantidadeInvalida}}();}
-\DoxyCodeLine{407         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (qtd == 0)\{}
-\DoxyCodeLine{408             \textcolor{keywordflow}{throw} \mbox{\hyperlink{classProdutoNaoRetirado}{ProdutoNaoRetirado}}();}
-\DoxyCodeLine{409         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}((it-\/>second).getQuantidade()<qtd \&\& modo == \textcolor{stringliteral}{"saida"})\{}
-\DoxyCodeLine{410             \textcolor{keywordflow}{throw} \mbox{\hyperlink{classTentativaDeRetirada}{TentativaDeRetirada}}();}
-\DoxyCodeLine{411         \}        }
-\DoxyCodeLine{412         listaQuantidades.push\_back(make\_pair(count,make\_pair(it-\/>second,qtd)));}
-\DoxyCodeLine{413         count++;}
-\DoxyCodeLine{414         \mbox{\hyperlink{classEstoque_a724e0febe581bac6d5a6ee1a03cb8734}{limparTela}}(\textcolor{stringliteral}{"continuar"});}
-\DoxyCodeLine{415         std::cout<<\textcolor{stringliteral}{"O produto "}<<(it-\/>second).getNome()<<\textcolor{stringliteral}{" foi adicionado à lista com quantidade "}<<qtd<<std::endl;}
-\DoxyCodeLine{416         \textcolor{keywordflow}{break};}
-\DoxyCodeLine{417     }
-\DoxyCodeLine{418     \textcolor{keywordflow}{case} \textcolor{charliteral}{'2'}:}
-\DoxyCodeLine{419         \textcolor{keywordflow}{if}(listaQuantidades.empty())\{}
-\DoxyCodeLine{420             std::cout << \textcolor{stringliteral}{"Nenhum item adicionado!!"} << std::endl;}
-\DoxyCodeLine{421             \mbox{\hyperlink{classEstoque_a724e0febe581bac6d5a6ee1a03cb8734}{limparTela}}(\textcolor{stringliteral}{"perguntar"});}
-\DoxyCodeLine{422         \}\textcolor{keywordflow}{else}\{}
-\DoxyCodeLine{423             std::cout<<\textcolor{stringliteral}{"Digite qual item será removido: "};}
-\DoxyCodeLine{424             std::cin>>posicao;}
-\DoxyCodeLine{425             \textcolor{keywordflow}{if} (posicao < 1 || posicao >= count)\{}
-\DoxyCodeLine{426                 std::cout << \textcolor{stringliteral}{"Posição inválida! Digite um número de 1 até "}<< (count -\/ 1) << std::endl;}
-\DoxyCodeLine{427                 \mbox{\hyperlink{classEstoque_a724e0febe581bac6d5a6ee1a03cb8734}{limparTela}}(\textcolor{stringliteral}{"perguntar"});}
-\DoxyCodeLine{428             \}}
-\DoxyCodeLine{429             \textcolor{keywordflow}{else}\{}
-\DoxyCodeLine{430                 \textcolor{keywordtype}{int} auxiliar = 0;}
-\DoxyCodeLine{431                 \textcolor{keywordflow}{for} (itItem = listaQuantidades.begin(); itItem != listaQuantidades.end() ; itItem++)}
-\DoxyCodeLine{432                 \{}
-\DoxyCodeLine{433                     \textcolor{keywordflow}{if}((itItem-\/>first)==posicao)\{}
-\DoxyCodeLine{434                         auxiliar++;}
-\DoxyCodeLine{435                         listaQuantidades.erase(itItem);}
-\DoxyCodeLine{436                         std::cout<<\textcolor{stringliteral}{"O item "}<<posicao<<\textcolor{stringliteral}{" foi retirado da lista"}<<std::endl;}
-\DoxyCodeLine{437                         \mbox{\hyperlink{classEstoque_a724e0febe581bac6d5a6ee1a03cb8734}{limparTela}}(\textcolor{stringliteral}{"continuar"});}
-\DoxyCodeLine{438                         \textcolor{keywordflow}{break};}
-\DoxyCodeLine{439                 \}}
-\DoxyCodeLine{440                 \textcolor{keywordflow}{if} (auxiliar == 0)\{}
-\DoxyCodeLine{441                     std::cout << \textcolor{stringliteral}{"Item já removido da lista!!"} << std::endl;}
-\DoxyCodeLine{442                     \mbox{\hyperlink{classEstoque_a724e0febe581bac6d5a6ee1a03cb8734}{limparTela}}(\textcolor{stringliteral}{"perguntar"});}
+\DoxyCodeLine{335                          \{}
+\DoxyCodeLine{336   fstream arquivo;  }
+\DoxyCodeLine{337   arquivo.open(\textcolor{stringliteral}{"database/Movimentacoes.txt"},ios::in);}
+\DoxyCodeLine{338     \textcolor{keywordflow}{if} (arquivo.is\_open())}
+\DoxyCodeLine{339     \{}
+\DoxyCodeLine{340     cout << R\textcolor{stringliteral}{"(}}
+\DoxyCodeLine{341 \textcolor{stringliteral}{  \_   \_ \_     \_    \_\_       \_                 \_                             \_                      \_                            }}
+\DoxyCodeLine{342 \textcolor{stringliteral}{ | | | (\_)\_\_\_| |\_ /\_/  \_ \_\_(\_) \_\_\_ \_\_\_     \_\_| | \_\_\_   \_ \_\_ \_\_\_   \_\_\_\_\_   \_(\_)\_ \_\_ \_\_\_   \_\_\_ \_ \_\_ | |\_ \_\_ \_  \_\_\_ \_\_\_   \_\_\_  \_\_\_ }}
+\DoxyCodeLine{343 \textcolor{stringliteral}{ | |\_| | / \_\_| \_\_/ \_ \(\backslash\)| '\_\_| |/ \_\_/ \_ \(\backslash\)   / \_` |/ \_ \(\backslash\) | '\_ ` \_ \(\backslash\) / \_ \(\backslash\) \(\backslash\) / / | '\_ ` \_ \(\backslash\) / \_ \(\backslash\) '\_ \(\backslash\)| \_\_/ \_` |/ \_\_/ \_ \(\backslash\) / \_ \(\backslash\)/ \_\_|}}
+\DoxyCodeLine{344 \textcolor{stringliteral}{ |  \_  | \(\backslash\)\_\_ \(\backslash\) || (\_) | |  | | (\_| (\_) | | (\_| |  \_\_/ | | | | | | (\_) \(\backslash\) V /| | | | | | |  \_\_/ | | | || (\_| | (\_| (\_) |  \_\_/\(\backslash\)\_\_ \(\backslash\)}}
+\DoxyCodeLine{345 \textcolor{stringliteral}{ |\_| |\_|\_|\_\_\_/\(\backslash\)\_\_\(\backslash\)\_\_\_/|\_|  |\_|\(\backslash\)\_\_\_\(\backslash\)\_\_\_/   \(\backslash\)\_\_,\_|\(\backslash\)\_\_\_| |\_| |\_| |\_|\(\backslash\)\_\_\_/ \(\backslash\)\_/ |\_|\_| |\_| |\_|\(\backslash\)\_\_\_|\_| |\_|\(\backslash\)\_\_\(\backslash\)\_\_,\_|\(\backslash\)\_\_\_\(\backslash\)\_\_\_/ \(\backslash\)\_\_\_||\_\_\_/}}
+\DoxyCodeLine{346 \textcolor{stringliteral}{                                                                                                             )\_))" << endl;}}
+\DoxyCodeLine{347 \textcolor{stringliteral}{      cout<<arquivo.rdbuf()<<endl;}}
+\DoxyCodeLine{348 \textcolor{stringliteral}{    \}}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{349         arquivo.open(\textcolor{stringliteral}{"database/Movimentacoes.txt"},ios::out);}
+\DoxyCodeLine{350         cout<<\textcolor{stringliteral}{"Arquivo não havia sido encontrado, agora foi criado com sucesso"}<<endl; \textcolor{comment}{// throw ExcecaoArquivoNaoEncontrado}}
+\DoxyCodeLine{351     \}    }
+\DoxyCodeLine{352     arquivo.close();}
+\DoxyCodeLine{353 \}}
+\DoxyCodeLine{354 }
+\DoxyCodeLine{355 \textcolor{keywordtype}{void} \mbox{\hyperlink{classEstoque_a5eb81a75ea5222f4a8078b42f68ffd65}{Estoque::menuEntradaESaidaDeProdutos}}(std::list<pair<\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int},pair<Produto,int>>>\& listaQuantidades,}
+\DoxyCodeLine{356  std::string modo, \textcolor{keywordtype}{bool}\& loop,\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}\& count, \textcolor{keywordtype}{string} nomeUsuario, \textcolor{keywordtype}{string} dataAtual)\{}
+\DoxyCodeLine{357     \textcolor{keywordtype}{int} qtd;}
+\DoxyCodeLine{358     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} posicao;}
+\DoxyCodeLine{359     std::string codigoProduto;}
+\DoxyCodeLine{360     std::list<pair<unsigned int,pair<Produto,int>>>::iterator itItem;}
+\DoxyCodeLine{361     map<string, Produto>::iterator it;}
+\DoxyCodeLine{362     \textcolor{keywordflow}{if} (modo==\textcolor{stringliteral}{"entrada"})}
+\DoxyCodeLine{363     \{}
+\DoxyCodeLine{364         cout << R\textcolor{stringliteral}{"(}}
+\DoxyCodeLine{365 \textcolor{stringliteral}{  \_\_\_          \_    \_                \_               \_               \_         }}
+\DoxyCodeLine{366 \textcolor{stringliteral}{ | \_ \(\backslash\)\_\_\_ \_\_ \_(\_)\_\_| |\_ \_ \_ \_\_\_   \_\_| |\_\_\_   \_\_\_ \_ \_| |\_ \_ \_ \_\_ \_ \_\_| |\_\_ \_ \_\_\_}}
+\DoxyCodeLine{367 \textcolor{stringliteral}{ |   / -\/\_) \_` | (\_-\/<  \_| '\_/ \_ \(\backslash\) / \_` / -\/\_) / -\/\_) ' \(\backslash\)  \_| '\_/ \_` / \_` / \_` (\_-\/<}}
+\DoxyCodeLine{368 \textcolor{stringliteral}{ |\_|\_\(\backslash\)\_\_\_\(\backslash\)\_\_, |\_/\_\_/\(\backslash\)\_\_|\_| \(\backslash\)\_\_\_/ \(\backslash\)\_\_,\_\(\backslash\)\_\_\_| \(\backslash\)\_\_\_|\_||\_\(\backslash\)\_\_|\_| \(\backslash\)\_\_,\_\(\backslash\)\_\_,\_\(\backslash\)\_\_,\_/\_\_/}}
+\DoxyCodeLine{369 \textcolor{stringliteral}{         |\_\_\_/ )" << endl;}}
+\DoxyCodeLine{370 \textcolor{stringliteral}{    \}}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (modo==\textcolor{stringliteral}{"saida"})}
+\DoxyCodeLine{371     \{}
+\DoxyCodeLine{372          cout << R\textcolor{stringliteral}{"(}}
+\DoxyCodeLine{373 \textcolor{stringliteral}{  \_\_\_          \_    \_                \_                \_\_   \_         }}
+\DoxyCodeLine{374 \textcolor{stringliteral}{ | \_ \(\backslash\)\_\_\_ \_\_ \_(\_)\_\_| |\_ \_ \_ \_\_\_   \_\_| |\_\_\_   \_\_\_ \_\_ \_/\_/\_\_| |\_\_ \_ \_\_\_}}
+\DoxyCodeLine{375 \textcolor{stringliteral}{ |   / -\/\_) \_` | (\_-\/<  \_| '\_/ \_ \(\backslash\) / \_` / -\/\_) (\_-\/</ \_` | / \_` / \_` (\_-\/<}}
+\DoxyCodeLine{376 \textcolor{stringliteral}{ |\_|\_\(\backslash\)\_\_\_\(\backslash\)\_\_, |\_/\_\_/\(\backslash\)\_\_|\_| \(\backslash\)\_\_\_/ \(\backslash\)\_\_,\_\(\backslash\)\_\_\_| /\_\_/\(\backslash\)\_\_,\_|\_\(\backslash\)\_\_,\_\(\backslash\)\_\_,\_/\_\_/}}
+\DoxyCodeLine{377 \textcolor{stringliteral}{         |\_\_\_/)" << endl;}}
+\DoxyCodeLine{378 \textcolor{stringliteral}{    \}}}
+\DoxyCodeLine{379 \textcolor{stringliteral}{    }}
+\DoxyCodeLine{380 \textcolor{stringliteral}{    std::cout << }\textcolor{stringliteral}{"+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+"}<<std::endl;}
+\DoxyCodeLine{381     std::cout << \textcolor{stringliteral}{"| "} << \textcolor{stringliteral}{"1 -\/ Adicionar produto à lista     |"} << std::endl;}
+\DoxyCodeLine{382     std::cout << \textcolor{stringliteral}{"| "} << \textcolor{stringliteral}{"2 -\/ Remover produto da lista      |"} << std::endl;}
+\DoxyCodeLine{383     std::cout << \textcolor{stringliteral}{"| "} << \textcolor{stringliteral}{"3 -\/ Exibir lista                  |"} << std::endl;}
+\DoxyCodeLine{384     std::cout << \textcolor{stringliteral}{"| "} << \textcolor{stringliteral}{"4 -\/ Finalizar lista               |"} << std::endl;}
+\DoxyCodeLine{385     std::cout << \textcolor{stringliteral}{"| "} << \textcolor{stringliteral}{"5 -\/ Cancelar lista                |"} << std::endl;}
+\DoxyCodeLine{386     std::cout << \textcolor{stringliteral}{"+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+"}<<std::endl;}
+\DoxyCodeLine{387     std::cout << \textcolor{stringliteral}{"Escolha uma opção: "};}
+\DoxyCodeLine{388     \textcolor{keywordtype}{string} aux;}
+\DoxyCodeLine{389     cin >> aux;}
+\DoxyCodeLine{390     \textcolor{keywordflow}{if} (aux.size()>1)}
+\DoxyCodeLine{391         \textcolor{keywordflow}{throw} \mbox{\hyperlink{classEntradaInvalida}{EntradaInvalida}}();}
+\DoxyCodeLine{392     \textcolor{keywordtype}{char} escolha = aux[0];}
+\DoxyCodeLine{393     \textcolor{keywordflow}{switch} (escolha)\{}
+\DoxyCodeLine{394     \textcolor{keywordflow}{case} \textcolor{charliteral}{'1'}:}
+\DoxyCodeLine{395         std::cout<<\textcolor{stringliteral}{"Digite o código do produto que será adicionado: "};}
+\DoxyCodeLine{396         std::cin>>codigoProduto;}
+\DoxyCodeLine{397         \textcolor{keywordflow}{if}(\_estoque.count(codigoProduto)==0)\{}
+\DoxyCodeLine{398             \textcolor{keywordflow}{throw} \mbox{\hyperlink{classProdutoNaoCadastrado}{ProdutoNaoCadastrado}}();}
+\DoxyCodeLine{399         \}}
+\DoxyCodeLine{400         std::cout<<\textcolor{stringliteral}{"Digite a quantidade do produto que será adicionada: "};}
+\DoxyCodeLine{401         std::cin>>qtd;}
+\DoxyCodeLine{402         it = \_estoque.find(codigoProduto);}
+\DoxyCodeLine{403         \textcolor{keywordflow}{if}(qtd<0)\{}
+\DoxyCodeLine{404             \textcolor{keywordflow}{throw} \mbox{\hyperlink{classquantidadeInvalida}{quantidadeInvalida}}();}
+\DoxyCodeLine{405         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (qtd == 0)\{}
+\DoxyCodeLine{406             \textcolor{keywordflow}{throw} \mbox{\hyperlink{classProdutoNaoRetirado}{ProdutoNaoRetirado}}();}
+\DoxyCodeLine{407         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}((it-\/>second).getQuantidade()<qtd \&\& modo == \textcolor{stringliteral}{"saida"})\{}
+\DoxyCodeLine{408             \textcolor{keywordflow}{throw} \mbox{\hyperlink{classTentativaDeRetirada}{TentativaDeRetirada}}();}
+\DoxyCodeLine{409         \}        }
+\DoxyCodeLine{410         listaQuantidades.push\_back(make\_pair(count,make\_pair(it-\/>second,qtd)));}
+\DoxyCodeLine{411         count++;}
+\DoxyCodeLine{412         \mbox{\hyperlink{classEstoque_a724e0febe581bac6d5a6ee1a03cb8734}{limparTela}}(\textcolor{stringliteral}{"continuar"});}
+\DoxyCodeLine{413         std::cout<<\textcolor{stringliteral}{"O produto "}<<(it-\/>second).getNome()<<\textcolor{stringliteral}{" foi adicionado à lista com quantidade "}<<qtd<<std::endl;}
+\DoxyCodeLine{414         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{415     }
+\DoxyCodeLine{416     \textcolor{keywordflow}{case} \textcolor{charliteral}{'2'}:}
+\DoxyCodeLine{417         \textcolor{keywordflow}{if}(listaQuantidades.empty())\{}
+\DoxyCodeLine{418             std::cout << \textcolor{stringliteral}{"Nenhum item adicionado!!"} << std::endl;}
+\DoxyCodeLine{419             \mbox{\hyperlink{classEstoque_a724e0febe581bac6d5a6ee1a03cb8734}{limparTela}}(\textcolor{stringliteral}{"perguntar"});}
+\DoxyCodeLine{420         \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{421             std::cout<<\textcolor{stringliteral}{"Digite qual item será removido: "};}
+\DoxyCodeLine{422             std::cin>>posicao;}
+\DoxyCodeLine{423             \textcolor{keywordflow}{if} (posicao < 1 || posicao >= count)\{}
+\DoxyCodeLine{424                 std::cout << \textcolor{stringliteral}{"Posição inválida! Digite um número de 1 até "}<< (count -\/ 1) << std::endl;}
+\DoxyCodeLine{425                 \mbox{\hyperlink{classEstoque_a724e0febe581bac6d5a6ee1a03cb8734}{limparTela}}(\textcolor{stringliteral}{"perguntar"});}
+\DoxyCodeLine{426             \}}
+\DoxyCodeLine{427             \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{428                 \textcolor{keywordtype}{int} auxiliar = 0;}
+\DoxyCodeLine{429                 \textcolor{keywordflow}{for} (itItem = listaQuantidades.begin(); itItem != listaQuantidades.end() ; itItem++)}
+\DoxyCodeLine{430                 \{}
+\DoxyCodeLine{431                     \textcolor{keywordflow}{if}((itItem-\/>first)==posicao)\{}
+\DoxyCodeLine{432                         auxiliar++;}
+\DoxyCodeLine{433                         listaQuantidades.erase(itItem);}
+\DoxyCodeLine{434                         std::cout<<\textcolor{stringliteral}{"O item "}<<posicao<<\textcolor{stringliteral}{" foi retirado da lista"}<<std::endl;}
+\DoxyCodeLine{435                         \mbox{\hyperlink{classEstoque_a724e0febe581bac6d5a6ee1a03cb8734}{limparTela}}(\textcolor{stringliteral}{"perguntar"});}
+\DoxyCodeLine{436                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{437                     \}}
+\DoxyCodeLine{438                 \}}
+\DoxyCodeLine{439                 \textcolor{keywordflow}{if} (auxiliar == 0)\{}
+\DoxyCodeLine{440                     std::cout << \textcolor{stringliteral}{"Item já removido da lista!!"} << std::endl;}
+\DoxyCodeLine{441                     \mbox{\hyperlink{classEstoque_a724e0febe581bac6d5a6ee1a03cb8734}{limparTela}}(\textcolor{stringliteral}{"perguntar"});}
+\DoxyCodeLine{442                     \textcolor{keywordflow}{break};}
 \DoxyCodeLine{443                 \}}
 \DoxyCodeLine{444             \}}
-\DoxyCodeLine{445           \}}
-\DoxyCodeLine{446         \}}
-\DoxyCodeLine{447         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{445                \textcolor{keywordflow}{break};}
+\DoxyCodeLine{446           \}}
+\DoxyCodeLine{447                }
 \DoxyCodeLine{448     }
 \DoxyCodeLine{449     \textcolor{keywordflow}{case} \textcolor{charliteral}{'3'}:}
 \DoxyCodeLine{450         \textcolor{keywordflow}{if}(listaQuantidades.empty())\{}
 \DoxyCodeLine{451             std::cout << \textcolor{stringliteral}{"Nenhum item adicionado!!"} << std::endl;}
-\DoxyCodeLine{452             \mbox{\hyperlink{classEstoque_a724e0febe581bac6d5a6ee1a03cb8734}{limparTela}}(\textcolor{stringliteral}{"perguntar"});}
-\DoxyCodeLine{453         \}\textcolor{keywordflow}{else}\{}
-\DoxyCodeLine{454             \mbox{\hyperlink{classEstoque_a724e0febe581bac6d5a6ee1a03cb8734}{limparTela}}(\textcolor{stringliteral}{"continuar"});}
-\DoxyCodeLine{455             cout << R\textcolor{stringliteral}{"(}}
-\DoxyCodeLine{456 \textcolor{stringliteral}{    \_\_\_      \_\_               \_\_                             \_\_      \_\_            }}
-\DoxyCodeLine{457 \textcolor{stringliteral}{   / (\_)\_\_\_\_/ /\_\_\_\_\_ \_   \_\_\_\_/ /\_\_     \_\_\_\_  \_\_\_\_\_\_\_\_\_  \_\_\_\_/ /\_  \_\_/ /\_\_\_\_\_  \_\_\_\_\_}}
-\DoxyCodeLine{458 \textcolor{stringliteral}{  / / / \_\_\_/ \_\_/ \_\_ `/  / \_\_  / \_ \(\backslash\)   / \_\_ \(\backslash\)/ \_\_\_/ \_\_ \(\backslash\)/ \_\_  / / / / \_\_/ \_\_ \(\backslash\)/ \_\_\_/}}
-\DoxyCodeLine{459 \textcolor{stringliteral}{ / / (\_\_  ) /\_/ /\_/ /  / /\_/ /  \_\_/  / /\_/ / /  / /\_/ / /\_/ / /\_/ / /\_/ /\_/ (\_\_  ) }}
-\DoxyCodeLine{460 \textcolor{stringliteral}{/\_/\_/\_\_\_\_/\(\backslash\)\_\_/\(\backslash\)\_\_,\_/   \(\backslash\)\_\_,\_/\(\backslash\)\_\_\_/  / .\_\_\_/\_/   \(\backslash\)\_\_\_\_/\(\backslash\)\_\_,\_/\(\backslash\)\_\_,\_/\(\backslash\)\_\_/\(\backslash\)\_\_\_\_/\_\_\_\_/  }}
-\DoxyCodeLine{461 \textcolor{stringliteral}{                                   /\_/ )" << endl;}}
-\DoxyCodeLine{462 \textcolor{stringliteral}{            cout << }\textcolor{stringliteral}{"+-\/-\/-\/-\/+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+"}<< endl;}
-\DoxyCodeLine{463             cout << \textcolor{stringliteral}{"| ID |       CÓDIGO        |       PRODUTO       | QUANTIDADE |"}<< endl;}
-\DoxyCodeLine{464             cout << \textcolor{stringliteral}{"+-\/-\/-\/-\/+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+"}<< endl;}
-\DoxyCodeLine{465             \textcolor{keywordflow}{for}(itItem=listaQuantidades.begin(); itItem!=listaQuantidades.end(); itItem++)\{}
-\DoxyCodeLine{466                 cout << left << \textcolor{charliteral}{'|'} << setw(4) << itItem-\/>first <<  \textcolor{charliteral}{'|'} << setw(21) << itItem-\/>second.first.getCodigo() <<  \textcolor{charliteral}{'|'} << setw(21) <<}
-\DoxyCodeLine{467                 itItem-\/>second.first.getNome() <<  \textcolor{charliteral}{'|'} << setw(12) << itItem-\/>second.second;}
+\DoxyCodeLine{452         \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{453             \mbox{\hyperlink{classEstoque_a724e0febe581bac6d5a6ee1a03cb8734}{limparTela}}(\textcolor{stringliteral}{"continuar"});}
+\DoxyCodeLine{454             cout << R\textcolor{stringliteral}{"(}}
+\DoxyCodeLine{455 \textcolor{stringliteral}{    \_\_\_      \_\_               \_\_                             \_\_      \_\_            }}
+\DoxyCodeLine{456 \textcolor{stringliteral}{   / (\_)\_\_\_\_/ /\_\_\_\_\_ \_   \_\_\_\_/ /\_\_     \_\_\_\_  \_\_\_\_\_\_\_\_\_  \_\_\_\_/ /\_  \_\_/ /\_\_\_\_\_  \_\_\_\_\_}}
+\DoxyCodeLine{457 \textcolor{stringliteral}{  / / / \_\_\_/ \_\_/ \_\_ `/  / \_\_  / \_ \(\backslash\)   / \_\_ \(\backslash\)/ \_\_\_/ \_\_ \(\backslash\)/ \_\_  / / / / \_\_/ \_\_ \(\backslash\)/ \_\_\_/}}
+\DoxyCodeLine{458 \textcolor{stringliteral}{ / / (\_\_  ) /\_/ /\_/ /  / /\_/ /  \_\_/  / /\_/ / /  / /\_/ / /\_/ / /\_/ / /\_/ /\_/ (\_\_  ) }}
+\DoxyCodeLine{459 \textcolor{stringliteral}{/\_/\_/\_\_\_\_/\(\backslash\)\_\_/\(\backslash\)\_\_,\_/   \(\backslash\)\_\_,\_/\(\backslash\)\_\_\_/  / .\_\_\_/\_/   \(\backslash\)\_\_\_\_/\(\backslash\)\_\_,\_/\(\backslash\)\_\_,\_/\(\backslash\)\_\_/\(\backslash\)\_\_\_\_/\_\_\_\_/  }}
+\DoxyCodeLine{460 \textcolor{stringliteral}{                                   /\_/ )" << endl;}}
+\DoxyCodeLine{461 \textcolor{stringliteral}{            cout << }\textcolor{stringliteral}{"+-\/-\/-\/-\/+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+"}<< endl;}
+\DoxyCodeLine{462             cout << \textcolor{stringliteral}{"| ID |       CÓDIGO        |       PRODUTO       | QUANTIDADE |"}<< endl;}
+\DoxyCodeLine{463             cout << \textcolor{stringliteral}{"+-\/-\/-\/-\/+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+"}<< endl;}
+\DoxyCodeLine{464             \textcolor{keywordflow}{for}(itItem=listaQuantidades.begin(); itItem!=listaQuantidades.end(); itItem++)\{}
+\DoxyCodeLine{465                 cout << left << \textcolor{charliteral}{'|'} << setw(4) << itItem-\/>first <<  \textcolor{charliteral}{'|'} << setw(21) << itItem-\/>second.first.getCodigo() <<  \textcolor{charliteral}{'|'} << setw(21) <<}
+\DoxyCodeLine{466                 itItem-\/>second.first.getNome() <<  \textcolor{charliteral}{'|'} << setw(12) << itItem-\/>second.second;}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classEstoque_aabf8bfdb75bed365713e27983d06e212}\label{classEstoque_aabf8bfdb75bed365713e27983d06e212}} 
 \index{Estoque@{Estoque}!pesquisarProduto@{pesquisarProduto}}
 \index{pesquisarProduto@{pesquisarProduto}!Estoque@{Estoque}}
-\doxysubsubsection{\texorpdfstring{pesquisarProduto()}{pesquisarProduto()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily void Estoque\+::pesquisar\+Produto (\begin{DoxyParamCaption}\item[{string}]{pesquisa }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{classEstoque_aabf8bfdb75bed365713e27983d06e212}\label{classEstoque_aabf8bfdb75bed365713e27983d06e212}} 
-\index{Estoque@{Estoque}!pesquisarProduto@{pesquisarProduto}}
-\index{pesquisarProduto@{pesquisarProduto}!Estoque@{Estoque}}
-\doxysubsubsection{\texorpdfstring{pesquisarProduto()}{pesquisarProduto()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+\doxysubsubsection{\texorpdfstring{pesquisarProduto()}{pesquisarProduto()}}
 {\footnotesize\ttfamily void Estoque\+::pesquisar\+Produto (\begin{DoxyParamCaption}\item[{string}]{pesquisa }\end{DoxyParamCaption})}
 
 
 
-Definition at line 55 of file estoque.\+cpp.
+Esta função dá a possibilidade de pesquisar um produto específico de acordo com o código ou nome. 
+
+
+
+Definition at line 57 of file estoque.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{55                                              \{}
-\DoxyCodeLine{56       \textcolor{keywordflow}{if} (\_estoque.count(pesquisa) == 1)}
-\DoxyCodeLine{57       \{}
-\DoxyCodeLine{58         map<string, Produto>::iterator it = \_estoque.find(pesquisa);}
-\DoxyCodeLine{59         cout << left << setw(21) << \textcolor{stringliteral}{"Nome"} << setw(21) << \textcolor{stringliteral}{"Fabricante"}<< setw(21) <<}
-\DoxyCodeLine{60         \textcolor{stringliteral}{"Categoria"}<< setw(21) << \textcolor{stringliteral}{"Código"} << setw(21) << \textcolor{stringliteral}{"Preço"} << setw(10) <<}
-\DoxyCodeLine{61         \textcolor{stringliteral}{"Quantidade"} << endl << fixed << showpoint;}
-\DoxyCodeLine{62         cout << endl;}
-\DoxyCodeLine{63         cout << setprecision(2) << left << setw(21) << (it-\/>second).getNome() << setw(21) << (it-\/>second).getFabricante() << setw(21) <<}
-\DoxyCodeLine{64         (it-\/>second).getCategoria() << setw(21) << (it-\/>second).getCodigo() << setw(21) << (it-\/>second).getPreco() << setw(10) << right <<}
-\DoxyCodeLine{65         (it-\/>second).getQuantidade() << endl;}
-\DoxyCodeLine{66       \}\textcolor{keywordflow}{else}}
-\DoxyCodeLine{67         \textcolor{keywordflow}{throw} \mbox{\hyperlink{classProdutoNaoCadastrado}{ProdutoNaoCadastrado}}();}
-\DoxyCodeLine{68 \}}
+\DoxyCodeLine{63                                              \{}
+\DoxyCodeLine{64       \textcolor{keywordflow}{if} (\_estoque.count(pesquisa) == 1)}
+\DoxyCodeLine{65       \{}
+\DoxyCodeLine{66         map<string, Produto>::iterator it = \_estoque.find(pesquisa);}
+\DoxyCodeLine{67         \textcolor{comment}{//              14                   26                      23                       23                 12         9}}
+\DoxyCodeLine{68         cout << \textcolor{stringliteral}{"+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/-\/-\/-\/-\/+"}<< endl;}
+\DoxyCodeLine{69         cout << \textcolor{stringliteral}{"|    CÓDIGO    |           NOME           |       CATEGORIA       |       FABRICANTE      | QUANTIDADE |  PREÇO  |"}<< endl;}
+\DoxyCodeLine{70         cout << \textcolor{stringliteral}{"+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/-\/-\/-\/-\/+"}<< endl;}
+\DoxyCodeLine{71         cout << setprecision(2) << left << fixed << \textcolor{charliteral}{'|'} << setw(14) << (it-\/>second).getCodigo() <<  \textcolor{charliteral}{'|'} << setw(26) << (it-\/>second).getNome() <<  \textcolor{charliteral}{'|'} << setw(23) <<}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classEstoque_a076a768e14db50d3292f1a1032f8d5f0}\label{classEstoque_a076a768e14db50d3292f1a1032f8d5f0}} 
 \index{Estoque@{Estoque}!saidasDeProdutos@{saidasDeProdutos}}
 \index{saidasDeProdutos@{saidasDeProdutos}!Estoque@{Estoque}}
-\doxysubsubsection{\texorpdfstring{saidasDeProdutos()}{saidasDeProdutos()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily void Estoque\+::saidas\+De\+Produtos (\begin{DoxyParamCaption}\item[{string}]{codig,  }\item[{int}]{quant,  }\item[{string}]{nome\+Usuario,  }\item[{string}]{data\+Atual }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{classEstoque_a076a768e14db50d3292f1a1032f8d5f0}\label{classEstoque_a076a768e14db50d3292f1a1032f8d5f0}} 
-\index{Estoque@{Estoque}!saidasDeProdutos@{saidasDeProdutos}}
-\index{saidasDeProdutos@{saidasDeProdutos}!Estoque@{Estoque}}
-\doxysubsubsection{\texorpdfstring{saidasDeProdutos()}{saidasDeProdutos()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+\doxysubsubsection{\texorpdfstring{saidasDeProdutos()}{saidasDeProdutos()}}
 {\footnotesize\ttfamily void Estoque\+::saidas\+De\+Produtos (\begin{DoxyParamCaption}\item[{string}]{codig,  }\item[{int}]{quant,  }\item[{string}]{nome\+Usuario,  }\item[{string}]{data\+Atual }\end{DoxyParamCaption})}
 
 
 
-Definition at line 295 of file estoque.\+cpp.
+Esta função retira produtos com seus atributos específicos. 
+
+
+
+Definition at line 293 of file estoque.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{296                                                                                              \{}
-\DoxyCodeLine{297     \textcolor{keywordflow}{if} (\_estoque.count(codig) == 1)\{}
-\DoxyCodeLine{298         map<string, Produto>::iterator it = \_estoque.find(codig);}
-\DoxyCodeLine{299         \textcolor{keywordtype}{int} quantidade;}
-\DoxyCodeLine{300         quantidade=(it-\/>second).getQuantidade();}
-\DoxyCodeLine{301         quantidade+=quant;}
-\DoxyCodeLine{302         (it-\/>second).setQuantidade(quantidade);}
-\DoxyCodeLine{303         \textcolor{keywordtype}{string} cout\_string;}
-\DoxyCodeLine{304         cout\_string = \textcolor{stringliteral}{"Foram adicionadas "} + std::to\_string(quant) + \textcolor{stringliteral}{" unidades do produto "}+(it-\/>second).getNome();}
-\DoxyCodeLine{305         cout << \textcolor{stringliteral}{"Foram adicionadas "} << quant << \textcolor{stringliteral}{" unidades do produto "}<<(it-\/>second).getNome()<<\textcolor{stringliteral}{" com sucesso."}<< endl;}
-\DoxyCodeLine{306         \mbox{\hyperlink{classEstoque_ae0a465ecb58cb77618faf67466c51fb4}{gerarLog}}(cout\_string, nomeUsuario, dataAtual);}
-\DoxyCodeLine{307     \}\textcolor{keywordflow}{else}\{}
-\DoxyCodeLine{308         cout << \textcolor{stringliteral}{"Produto não cadastrado, cadastre o produto antes de adicionar ao estoque"} << endl;}
-\DoxyCodeLine{309         \mbox{\hyperlink{classEstoque_a724e0febe581bac6d5a6ee1a03cb8734}{limparTela}}(\textcolor{stringliteral}{"perguntar"});}
-\DoxyCodeLine{310     \}}
+\DoxyCodeLine{294                                                                                              \{}
+\DoxyCodeLine{295     \textcolor{keywordflow}{if} (\_estoque.count(codig) == 1)\{}
+\DoxyCodeLine{296         map<string, Produto>::iterator it = \_estoque.find(codig);}
+\DoxyCodeLine{297         \textcolor{keywordtype}{int} quantidade;}
+\DoxyCodeLine{298         quantidade=(it-\/>second).getQuantidade();}
+\DoxyCodeLine{299         quantidade+=quant;}
+\DoxyCodeLine{300         (it-\/>second).setQuantidade(quantidade);}
+\DoxyCodeLine{301         \textcolor{keywordtype}{string} cout\_string;}
+\DoxyCodeLine{302         cout\_string = \textcolor{stringliteral}{"Foram adicionadas "} + std::to\_string(quant) + \textcolor{stringliteral}{" unidades do produto "}+(it-\/>second).getNome();}
+\DoxyCodeLine{303         cout << \textcolor{stringliteral}{"Foram adicionadas "} << quant << \textcolor{stringliteral}{" unidades do produto "}<<(it-\/>second).getNome()<<\textcolor{stringliteral}{" com sucesso."}<< endl;}
+\DoxyCodeLine{304         \mbox{\hyperlink{classEstoque_ae0a465ecb58cb77618faf67466c51fb4}{gerarLog}}(cout\_string, nomeUsuario, dataAtual);}
+\DoxyCodeLine{305     \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{306         cout << \textcolor{stringliteral}{"Produto não cadastrado, cadastre o produto antes de adicionar ao estoque"} << endl;}
+\DoxyCodeLine{307         \mbox{\hyperlink{classEstoque_a724e0febe581bac6d5a6ee1a03cb8734}{limparTela}}(\textcolor{stringliteral}{"perguntar"});}
+\DoxyCodeLine{308     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classEstoque_a970ca21567e806f1f0e6ca90e55eb189}\label{classEstoque_a970ca21567e806f1f0e6ca90e55eb189}} 
 \index{Estoque@{Estoque}!salvarArquivo@{salvarArquivo}}
 \index{salvarArquivo@{salvarArquivo}!Estoque@{Estoque}}
-\doxysubsubsection{\texorpdfstring{salvarArquivo()}{salvarArquivo()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+\doxysubsubsection{\texorpdfstring{salvarArquivo()}{salvarArquivo()}}
 {\footnotesize\ttfamily void Estoque\+::salvar\+Arquivo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Esta função salva o arquivo que contém todos os produtos e seus atributos. 
 
 
 
@@ -882,15 +793,9 @@ Definition at line 6 of file estoque.\+cpp.
 \DoxyCodeLine{21 \}}
 
 \end{DoxyCode}
-\mbox{\Hypertarget{classEstoque_a970ca21567e806f1f0e6ca90e55eb189}\label{classEstoque_a970ca21567e806f1f0e6ca90e55eb189}} 
-\index{Estoque@{Estoque}!salvarArquivo@{salvarArquivo}}
-\index{salvarArquivo@{salvarArquivo}!Estoque@{Estoque}}
-\doxysubsubsection{\texorpdfstring{salvarArquivo()}{salvarArquivo()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily void Estoque\+::salvar\+Arquivo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-anterior\+Push/include/estoque/\mbox{\hyperlink{anteriorPush_2include_2estoque_2estoque_8hpp}{estoque.\+hpp}}\item 
-anterior\+Push/src/estoque/\mbox{\hyperlink{anteriorPush_2src_2estoque_2estoque_8cpp}{estoque.\+cpp}}\end{DoxyCompactItemize}
+include/estoque/\mbox{\hyperlink{estoque_8hpp}{estoque.\+hpp}}\item 
+src/estoque/\mbox{\hyperlink{estoque_8cpp}{estoque.\+cpp}}\end{DoxyCompactItemize}

@@ -77,7 +77,7 @@ $(function() {
 <p>OCLINT destructor of virtual class.  
  <a href="classdoctest_1_1detail_1_1ExceptionTranslator.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="anteriorPush_2third__party_2doctest_8h_source.html">doctest.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="doctest_8h_source.html">doctest.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for doctest::detail::ExceptionTranslator&lt; T &gt;:</div>
 <div class="dyncontent">
@@ -103,10 +103,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a3ac05488993c40c6ba55ce51a6bf7eae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a56484c4218a06bbbd1548335a8b64110"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdoctest_1_1detail_1_1ExceptionTranslator.html#a56484c4218a06bbbd1548335a8b64110">translate</a> (<a class="el" href="classdoctest_1_1String.html">String</a> &amp;res) const override</td></tr>
 <tr class="separator:a56484c4218a06bbbd1548335a8b64110"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ac05488993c40c6ba55ce51a6bf7eae"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdoctest_1_1detail_1_1ExceptionTranslator.html#a3ac05488993c40c6ba55ce51a6bf7eae">ExceptionTranslator</a> (<a class="el" href="classdoctest_1_1String.html">String</a>(*translateFunction)(T))</td></tr>
-<tr class="separator:a3ac05488993c40c6ba55ce51a6bf7eae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a56484c4218a06bbbd1548335a8b64110"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdoctest_1_1detail_1_1ExceptionTranslator.html#a56484c4218a06bbbd1548335a8b64110">translate</a> (<a class="el" href="classdoctest_1_1String.html">String</a> &amp;res) const override</td></tr>
-<tr class="separator:a56484c4218a06bbbd1548335a8b64110"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;typename T&gt;<br />
@@ -114,10 +110,10 @@ class doctest::detail::ExceptionTranslator&lt; T &gt;</h3>
 
 <p>OCLINT destructor of virtual class. </p>
 
-<p class="definition">Definition at line <a class="el" href="anteriorPush_2third__party_2doctest_8h_source.html#l01760">1760</a> of file <a class="el" href="anteriorPush_2third__party_2doctest_8h_source.html">doctest.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="doctest_8h_source.html#l01760">1760</a> of file <a class="el" href="doctest_8h_source.html">doctest.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a3ac05488993c40c6ba55ce51a6bf7eae"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3ac05488993c40c6ba55ce51a6bf7eae">&#9670;&nbsp;</a></span>ExceptionTranslator() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ac05488993c40c6ba55ce51a6bf7eae">&#9670;&nbsp;</a></span>ExceptionTranslator()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -142,45 +138,14 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="anteriorPush_2third__party_2doctest_8h_source.html#l01763">1763</a> of file <a class="el" href="anteriorPush_2third__party_2doctest_8h_source.html">doctest.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l01764"></a><span class="lineno"> 1764</span>&#160;                : m_translateFunction(translateFunction) {}</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="a3ac05488993c40c6ba55ce51a6bf7eae"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3ac05488993c40c6ba55ce51a6bf7eae">&#9670;&nbsp;</a></span>ExceptionTranslator() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classdoctest_1_1detail_1_1ExceptionTranslator.html">doctest::detail::ExceptionTranslator</a>&lt; T &gt;::<a class="el" href="classdoctest_1_1detail_1_1ExceptionTranslator.html">ExceptionTranslator</a> </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classdoctest_1_1String.html">String</a>(*)(T)&#160;</td>
-          <td class="paramname"><em>translateFunction</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="third__party_2doctest_8h_source.html#l01763">1763</a> of file <a class="el" href="third__party_2doctest_8h_source.html">doctest.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="doctest_8h_source.html#l01763">1763</a> of file <a class="el" href="doctest_8h_source.html">doctest.h</a>.</p>
 <div class="fragment"><div class="line"><a name="l01764"></a><span class="lineno"> 1764</span>&#160;                : m_translateFunction(translateFunction) {}</div>
 </div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a56484c4218a06bbbd1548335a8b64110"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a56484c4218a06bbbd1548335a8b64110">&#9670;&nbsp;</a></span>translate() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a56484c4218a06bbbd1548335a8b64110">&#9670;&nbsp;</a></span>translate()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -207,52 +172,7 @@ template&lt;typename T &gt; </div>
 
 <p>Implements <a class="el" href="structdoctest_1_1detail_1_1IExceptionTranslator.html#a9c56005e4c83c13b859cc2e31102bfbc">doctest::detail::IExceptionTranslator</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="anteriorPush_2third__party_2doctest_8h_source.html#l01766">1766</a> of file <a class="el" href="anteriorPush_2third__party_2doctest_8h_source.html">doctest.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l01766"></a><span class="lineno"> 1766</span>&#160;                                                   {</div>
-<div class="line"><a name="l01767"></a><span class="lineno"> 1767</span>&#160;<span class="preprocessor">#ifndef DOCTEST_CONFIG_NO_EXCEPTIONS</span></div>
-<div class="line"><a name="l01768"></a><span class="lineno"> 1768</span>&#160;            <span class="keywordflow">try</span> {</div>
-<div class="line"><a name="l01769"></a><span class="lineno"> 1769</span>&#160;                <span class="keywordflow">throw</span>; <span class="comment">// lgtm [cpp/rethrow-no-exception]</span></div>
-<div class="line"><a name="l01770"></a><span class="lineno"> 1770</span>&#160;                <span class="comment">// cppcheck-suppress catchExceptionByValue</span></div>
-<div class="line"><a name="l01771"></a><span class="lineno"> 1771</span>&#160;            } <span class="keywordflow">catch</span>(<span class="keyword">const</span> T&amp; ex) {</div>
-<div class="line"><a name="l01772"></a><span class="lineno"> 1772</span>&#160;                res = m_translateFunction(ex); </div>
-<div class="line"><a name="l01773"></a><span class="lineno"> 1773</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l01774"></a><span class="lineno"> 1774</span>&#160;            } <span class="keywordflow">catch</span>(...) {}         </div>
-<div class="line"><a name="l01775"></a><span class="lineno"> 1775</span>&#160;<span class="preprocessor">#endif                              // DOCTEST_CONFIG_NO_EXCEPTIONS</span></div>
-<div class="line"><a name="l01776"></a><span class="lineno"> 1776</span>&#160;            <span class="keyword">static_cast&lt;</span><span class="keywordtype">void</span><span class="keyword">&gt;</span>(res); <span class="comment">// to silence -Wunused-parameter</span></div>
-<div class="line"><a name="l01777"></a><span class="lineno"> 1777</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l01778"></a><span class="lineno"> 1778</span>&#160;        }</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="a56484c4218a06bbbd1548335a8b64110"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a56484c4218a06bbbd1548335a8b64110">&#9670;&nbsp;</a></span>translate() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool <a class="el" href="classdoctest_1_1detail_1_1ExceptionTranslator.html">doctest::detail::ExceptionTranslator</a>&lt; T &gt;::translate </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classdoctest_1_1String.html">String</a> &amp;&#160;</td>
-          <td class="paramname"><em>res</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Implements <a class="el" href="structdoctest_1_1detail_1_1IExceptionTranslator.html#a9c56005e4c83c13b859cc2e31102bfbc">doctest::detail::IExceptionTranslator</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="third__party_2doctest_8h_source.html#l01766">1766</a> of file <a class="el" href="third__party_2doctest_8h_source.html">doctest.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="doctest_8h_source.html#l01766">1766</a> of file <a class="el" href="doctest_8h_source.html">doctest.h</a>.</p>
 <div class="fragment"><div class="line"><a name="l01766"></a><span class="lineno"> 1766</span>&#160;                                                   {</div>
 <div class="line"><a name="l01767"></a><span class="lineno"> 1767</span>&#160;<span class="preprocessor">#ifndef DOCTEST_CONFIG_NO_EXCEPTIONS</span></div>
 <div class="line"><a name="l01768"></a><span class="lineno"> 1768</span>&#160;            <span class="keywordflow">try</span> {</div>
@@ -270,7 +190,7 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>anteriorPush/third_party/<a class="el" href="anteriorPush_2third__party_2doctest_8h_source.html">doctest.h</a></li>
+<li>third_party/<a class="el" href="doctest_8h_source.html">doctest.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

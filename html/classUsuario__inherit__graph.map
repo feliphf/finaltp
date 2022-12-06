@@ -1,5 +1,5 @@
 <map id="Usuario" name="Usuario">
-<area shape="rect" id="node1" title=" " alt="" coords="73,5,145,32"/>
-<area shape="rect" id="node2" href="$classFuncionario.html" title=" " alt="" coords="5,80,103,107"/>
-<area shape="rect" id="node3" href="$classGerente.html" title=" " alt="" coords="127,80,202,107"/>
+<area shape="rect" id="node1" title="Armazena todos os atributos de um determinado usuário." alt="" coords="73,5,145,32"/>
+<area shape="rect" id="node2" href="$classFuncionario.html" title="Classe filha de usuário, onde possui todos os seus atributos." alt="" coords="5,80,103,107"/>
+<area shape="rect" id="node3" href="$classGerente.html" title="Classe filha de usuário, onde possui todos os seus atributos." alt="" coords="127,80,202,107"/>
 </map>

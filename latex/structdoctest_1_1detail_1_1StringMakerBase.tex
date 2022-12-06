@@ -7,9 +7,7 @@
 \doxysubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename T $>$ }\\static \mbox{\hyperlink{classdoctest_1_1String}{String}} \mbox{\hyperlink{structdoctest_1_1detail_1_1StringMakerBase_a67d29f2a5de9a522d8e8607c1a39db9b}{convert}} (const \mbox{\hyperlink{third__party_2doctest_8h_af2901cafb023c57fb672ccb1bf14f2eb}{D\+O\+C\+T\+E\+S\+T\+\_\+\+R\+E\+F\+\_\+\+W\+R\+AP}}(T))
-\item 
-{\footnotesize template$<$typename T $>$ }\\static \mbox{\hyperlink{classdoctest_1_1String}{String}} \mbox{\hyperlink{structdoctest_1_1detail_1_1StringMakerBase_a67d29f2a5de9a522d8e8607c1a39db9b}{convert}} (const \mbox{\hyperlink{third__party_2doctest_8h_af2901cafb023c57fb672ccb1bf14f2eb}{D\+O\+C\+T\+E\+S\+T\+\_\+\+R\+E\+F\+\_\+\+W\+R\+AP}}(T))
+{\footnotesize template$<$typename T $>$ }\\static \mbox{\hyperlink{classdoctest_1_1String}{String}} \mbox{\hyperlink{structdoctest_1_1detail_1_1StringMakerBase_a67d29f2a5de9a522d8e8607c1a39db9b}{convert}} (const \mbox{\hyperlink{doctest_8h_af2901cafb023c57fb672ccb1bf14f2eb}{D\+O\+C\+T\+E\+S\+T\+\_\+\+R\+E\+F\+\_\+\+W\+R\+AP}}(T))
 \end{DoxyCompactItemize}
 
 
@@ -27,7 +25,7 @@ Definition at line 1010 of file doctest.\+h.
 \mbox{\Hypertarget{structdoctest_1_1detail_1_1StringMakerBase_a67d29f2a5de9a522d8e8607c1a39db9b}\label{structdoctest_1_1detail_1_1StringMakerBase_a67d29f2a5de9a522d8e8607c1a39db9b}} 
 \index{doctest::detail::StringMakerBase$<$ C $>$@{doctest::detail::StringMakerBase$<$ C $>$}!convert@{convert}}
 \index{convert@{convert}!doctest::detail::StringMakerBase$<$ C $>$@{doctest::detail::StringMakerBase$<$ C $>$}}
-\doxysubsubsection{\texorpdfstring{convert()}{convert()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+\doxysubsubsection{\texorpdfstring{convert()}{convert()}}
 {\footnotesize\ttfamily template$<$bool C$>$ \\
 template$<$typename T $>$ \\
 static \mbox{\hyperlink{classdoctest_1_1String}{String}} \mbox{\hyperlink{structdoctest_1_1detail_1_1StringMakerBase}{doctest\+::detail\+::\+String\+Maker\+Base}}$<$ C $>$\+::convert (\begin{DoxyParamCaption}\item[{const }]{D\+O\+C\+T\+E\+S\+T\+\_\+\+R\+E\+F\+\_\+\+W\+R\+APT }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
@@ -40,29 +38,7 @@ Definition at line 1012 of file doctest.\+h.
 \begin{DoxyCode}{0}
 \DoxyCodeLine{1012                                                          \{}
 \DoxyCodeLine{1013 \textcolor{preprocessor}{\#ifdef DOCTEST\_CONFIG\_REQUIRE\_STRINGIFICATION\_FOR\_ALL\_USED\_TYPES}}
-\DoxyCodeLine{1014             static\_assert(\mbox{\hyperlink{structdoctest_1_1detail_1_1types_1_1false__type_a58839eaf3a98b2dda1160c01e5f66a73}{deferred\_false<T>::value}}, \textcolor{stringliteral}{"No stringification detected for type T. See string conversion manual"});}
-\DoxyCodeLine{1015 \textcolor{preprocessor}{\#endif}}
-\DoxyCodeLine{1016             \textcolor{keywordflow}{return} \textcolor{stringliteral}{"\{?\}"};}
-\DoxyCodeLine{1017         \}}
-
-\end{DoxyCode}
-\mbox{\Hypertarget{structdoctest_1_1detail_1_1StringMakerBase_a67d29f2a5de9a522d8e8607c1a39db9b}\label{structdoctest_1_1detail_1_1StringMakerBase_a67d29f2a5de9a522d8e8607c1a39db9b}} 
-\index{doctest::detail::StringMakerBase$<$ C $>$@{doctest::detail::StringMakerBase$<$ C $>$}!convert@{convert}}
-\index{convert@{convert}!doctest::detail::StringMakerBase$<$ C $>$@{doctest::detail::StringMakerBase$<$ C $>$}}
-\doxysubsubsection{\texorpdfstring{convert()}{convert()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily template$<$bool C$>$ \\
-template$<$typename T $>$ \\
-static \mbox{\hyperlink{classdoctest_1_1String}{String}} \mbox{\hyperlink{structdoctest_1_1detail_1_1StringMakerBase}{doctest\+::detail\+::\+String\+Maker\+Base}}$<$ C $>$\+::convert (\begin{DoxyParamCaption}\item[{const }]{D\+O\+C\+T\+E\+S\+T\+\_\+\+R\+E\+F\+\_\+\+W\+R\+APT }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
-
-
-
-Definition at line 1012 of file doctest.\+h.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{1012                                                          \{}
-\DoxyCodeLine{1013 \textcolor{preprocessor}{\#ifdef DOCTEST\_CONFIG\_REQUIRE\_STRINGIFICATION\_FOR\_ALL\_USED\_TYPES}}
-\DoxyCodeLine{1014             static\_assert(\mbox{\hyperlink{structdoctest_1_1detail_1_1types_1_1false__type_a58839eaf3a98b2dda1160c01e5f66a73}{deferred\_false<T>::value}}, \textcolor{stringliteral}{"No stringification detected for type T. See string conversion manual"});}
+\DoxyCodeLine{1014             static\_assert(\mbox{\hyperlink{structdoctest_1_1detail_1_1types_1_1false__type_a8580f67f4b223b10e49d93b959767f6d}{deferred\_false<T>::value}}, \textcolor{stringliteral}{"No stringification detected for type T. See string conversion manual"});}
 \DoxyCodeLine{1015 \textcolor{preprocessor}{\#endif}}
 \DoxyCodeLine{1016             \textcolor{keywordflow}{return} \textcolor{stringliteral}{"\{?\}"};}
 \DoxyCodeLine{1017         \}}
@@ -72,4 +48,4 @@ Definition at line 1012 of file doctest.\+h.
 
 The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-anterior\+Push/third\+\_\+party/\mbox{\hyperlink{anteriorPush_2third__party_2doctest_8h}{doctest.\+h}}\end{DoxyCompactItemize}
+third\+\_\+party/\mbox{\hyperlink{doctest_8h}{doctest.\+h}}\end{DoxyCompactItemize}

@@ -8,8 +8,11 @@ var searchData=
   ['estoque_861',['Estoque',['../classEstoque.html',1,'']]],
   ['excecaopreconegativoalt_862',['ExcecaoPrecoNegativoAlt',['../classExcecaoPrecoNegativoAlt.html',1,'']]],
   ['excecaotamanhocategalt_863',['ExcecaoTamanhoCategAlt',['../classExcecaoTamanhoCategAlt.html',1,'']]],
-  ['excecaotamanhofabricalt_864',['ExcecaoTamanhoFabricAlt',['../classExcecaoTamanhoFabricAlt.html',1,'']]],
-  ['excecaotamanhonomealt_865',['ExcecaoTamanhoNomeAlt',['../classExcecaoTamanhoNomeAlt.html',1,'']]],
-  ['exceptiontranslator_866',['ExceptionTranslator',['../classdoctest_1_1detail_1_1ExceptionTranslator.html',1,'doctest::detail']]],
-  ['expressiondecomposer_867',['ExpressionDecomposer',['../structdoctest_1_1detail_1_1ExpressionDecomposer.html',1,'doctest::detail']]]
+  ['excecaotamanhocpf_864',['ExcecaoTamanhoCPF',['../classExcecaoTamanhoCPF.html',1,'']]],
+  ['excecaotamanhoemail_865',['ExcecaoTamanhoEmail',['../classExcecaoTamanhoEmail.html',1,'']]],
+  ['excecaotamanhofabricalt_866',['ExcecaoTamanhoFabricAlt',['../classExcecaoTamanhoFabricAlt.html',1,'']]],
+  ['excecaotamanhonomealt_867',['ExcecaoTamanhoNomeAlt',['../classExcecaoTamanhoNomeAlt.html',1,'']]],
+  ['excecaotamanhosenha_868',['ExcecaoTamanhoSenha',['../classExcecaoTamanhoSenha.html',1,'']]],
+  ['exceptiontranslator_869',['ExceptionTranslator',['../classdoctest_1_1detail_1_1ExceptionTranslator.html',1,'doctest::detail']]],
+  ['expressiondecomposer_870',['ExpressionDecomposer',['../structdoctest_1_1detail_1_1ExpressionDecomposer.html',1,'doctest::detail']]]
 ];

@@ -2,53 +2,43 @@
 \label{classSistema}\index{Sistema@{Sistema}}
 
 
+Aramzena um ponteiro de usúario, e mostra os menus de opções possíveis.  
+
+
+
+
 {\ttfamily \#include $<$sistema.\+hpp$>$}
 
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classSistema_a08346c127b05cc90e47c2210c20dd4cd}{Sistema}} ()=default
-\item 
+\begin{DoxyCompactList}\small\item\em Esta é uma função que destroi todos os atributos da classe sistema para não ocupar lugar na memória. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classSistema_af937e9da8f1b9e35daeb31f6b894d507}{inicializar\+Parametros\+Sistema}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Esta função inicaliza os parametros do sistema, como ler, e abrir de arquivos txt, chamando as funções correspondentes. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classSistema_a13d1f7199037c4e87fcfda089646198a}{salvar\+Parametros\+Sistema}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Esta função salva todos os parametros do sistema, para vários arquivos txt, chamando as funções correspondentes. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classSistema_aa4f3aeab22b1eef80bc7b1832e1785df}{opcoes\+Menu\+Gerente}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Esta função abre o menu de opções possíveis para o gerente. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classSistema_aeae83705670f1eb7b92a3f7386d9a629}{opcoes\+Menu\+Administrativo}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Esta função abre o menu de opções possíveis da parte administrativas ~\newline
+ \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classSistema_ad6bd99c7e3864edaae9e40fdd9cb1698}{opcoes\+Menu\+Funcionario}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Esta função abre o menu de opções possíveis para o funcionário. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classSistema_afe795879c39c1f2879bd540094b56b87}{efetuar\+Login}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Esta função efetua o login no sistema, de acordo com seu usuário e senha. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classSistema_a0734bca83afc9e59b1aada834e9c9654}{inicializar\+Sistema}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Esta função inicializa todo o sistema. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classSistema_ad7765bc090849c2f34f3a50ea031c1d8}{limpar\+Tela}} (string modo)
-\item 
-\mbox{\hyperlink{classSistema_a08346c127b05cc90e47c2210c20dd4cd}{Sistema}} ()=default
-\item 
-void \mbox{\hyperlink{classSistema_af937e9da8f1b9e35daeb31f6b894d507}{inicializar\+Parametros\+Sistema}} ()
-\item 
-void \mbox{\hyperlink{classSistema_a13d1f7199037c4e87fcfda089646198a}{salvar\+Parametros\+Sistema}} ()
-\item 
-void \mbox{\hyperlink{classSistema_aa4f3aeab22b1eef80bc7b1832e1785df}{opcoes\+Menu\+Gerente}} ()
-\item 
-void \mbox{\hyperlink{classSistema_aeae83705670f1eb7b92a3f7386d9a629}{opcoes\+Menu\+Administrativo}} ()
-\item 
-void \mbox{\hyperlink{classSistema_ad6bd99c7e3864edaae9e40fdd9cb1698}{opcoes\+Menu\+Funcionario}} ()
-\item 
-void \mbox{\hyperlink{classSistema_afe795879c39c1f2879bd540094b56b87}{efetuar\+Login}} ()
-\item 
-void \mbox{\hyperlink{classSistema_a0734bca83afc9e59b1aada834e9c9654}{inicializar\+Sistema}} ()
-\item 
-void \mbox{\hyperlink{classSistema_ad7765bc090849c2f34f3a50ea031c1d8}{limpar\+Tela}} (string modo)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Esta função limpa a tela, para poder ter uma melhor visualização na compilação. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-A classe sistema é responsável por 
+Aramzena um ponteiro de usúario, e mostra os menus de opções possíveis. 
 
-Definition at line 8 of file sistema.\+hpp.
+A classe sistema é responsável por inicializar o sistema, sendo assim ela armazena todas as funções, e chama-\/as de acordo com os menus de opções correspondentes, ela cria um objeto da classe estoque, para poder fazer as movimentações do funcionário ou gerente além de criar um objeto da classe \mbox{\hyperlink{classsistemaLogin}{sistema\+Login}}, para poder abrir os seus menus 
+
+Definition at line 31 of file sistema.\+hpp.
 
 
 
@@ -56,14 +46,12 @@ Definition at line 8 of file sistema.\+hpp.
 \mbox{\Hypertarget{classSistema_a08346c127b05cc90e47c2210c20dd4cd}\label{classSistema_a08346c127b05cc90e47c2210c20dd4cd}} 
 \index{Sistema@{Sistema}!Sistema@{Sistema}}
 \index{Sistema@{Sistema}!Sistema@{Sistema}}
-\doxysubsubsection{\texorpdfstring{Sistema()}{Sistema()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+\doxysubsubsection{\texorpdfstring{Sistema()}{Sistema()}}
 {\footnotesize\ttfamily Sistema\+::\+Sistema (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
 
-\mbox{\Hypertarget{classSistema_a08346c127b05cc90e47c2210c20dd4cd}\label{classSistema_a08346c127b05cc90e47c2210c20dd4cd}} 
-\index{Sistema@{Sistema}!Sistema@{Sistema}}
-\index{Sistema@{Sistema}!Sistema@{Sistema}}
-\doxysubsubsection{\texorpdfstring{Sistema()}{Sistema()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily Sistema\+::\+Sistema (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+Esta é uma função que destroi todos os atributos da classe sistema para não ocupar lugar na memória. 
 
 
 
@@ -71,8 +59,12 @@ Definition at line 8 of file sistema.\+hpp.
 \mbox{\Hypertarget{classSistema_afe795879c39c1f2879bd540094b56b87}\label{classSistema_afe795879c39c1f2879bd540094b56b87}} 
 \index{Sistema@{Sistema}!efetuarLogin@{efetuarLogin}}
 \index{efetuarLogin@{efetuarLogin}!Sistema@{Sistema}}
-\doxysubsubsection{\texorpdfstring{efetuarLogin()}{efetuarLogin()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+\doxysubsubsection{\texorpdfstring{efetuarLogin()}{efetuarLogin()}}
 {\footnotesize\ttfamily void Sistema\+::efetuar\+Login (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Esta função efetua o login no sistema, de acordo com seu usuário e senha. 
 
 
 
@@ -82,30 +74,31 @@ Definition at line 14 of file sistema.\+cpp.
 \begin{DoxyCode}{0}
 \DoxyCodeLine{14                           \{}
 \DoxyCodeLine{15     \textcolor{keywordflow}{do}\{}
-\DoxyCodeLine{16         \textcolor{keywordflow}{try}\{}
+\DoxyCodeLine{16        \textcolor{keywordflow}{try}\{}
 \DoxyCodeLine{17             \_usuarioLogado = \_sistemaLogin.\mbox{\hyperlink{classsistemaLogin_aa0c4a27c8316368d77ee20c6bd8cfde2}{menuLogin}}();}
-\DoxyCodeLine{18         \}\textcolor{keywordflow}{catch}(\mbox{\hyperlink{classSenhaIncorreta}{SenhaIncorreta}}\& erro)\{}
-\DoxyCodeLine{19             cout<<erro.\mbox{\hyperlink{classSenhaIncorreta_ac3be8cc67954343cec2312db412ae5f4}{what}}()<<endl;     }
-\DoxyCodeLine{20         \}\textcolor{keywordflow}{catch}(\mbox{\hyperlink{classUsuarioNaoCadastrado}{UsuarioNaoCadastrado}}\& erro)\{}
-\DoxyCodeLine{21             cout<<erro.\mbox{\hyperlink{classUsuarioNaoCadastrado_abece9967af18cefb7fc3e05abbd89da1}{what}}()<<endl;     }
-\DoxyCodeLine{22         \}\textcolor{keywordflow}{catch}(\mbox{\hyperlink{classEscolhaInvalida}{EscolhaInvalida}}\& erro)\{}
-\DoxyCodeLine{23             cout<<erro.\mbox{\hyperlink{classEscolhaInvalida_a62631f7c4765bd959918f8c60b318700}{what}}()<<endl;     }
-\DoxyCodeLine{24         \}}
-\DoxyCodeLine{25     \} \textcolor{keywordflow}{while}(\_usuarioLogado == \textcolor{keyword}{nullptr});}
-\DoxyCodeLine{26 \}}
+\DoxyCodeLine{18        \}\textcolor{keywordflow}{catch}(\mbox{\hyperlink{classSenhaIncorreta}{SenhaIncorreta}}\& erro)\{}
+\DoxyCodeLine{19             cout<<erro.\mbox{\hyperlink{classSenhaIncorreta_affb508e5488e35011fde67f99ed9e4f5}{what}}()<<endl;}
+\DoxyCodeLine{20             \mbox{\hyperlink{classSistema_ad7765bc090849c2f34f3a50ea031c1d8}{limparTela}}(\textcolor{stringliteral}{"perguntar"});     }
+\DoxyCodeLine{21        \}\textcolor{keywordflow}{catch}(\mbox{\hyperlink{classUsuarioNaoCadastrado}{UsuarioNaoCadastrado}}\& erro)\{}
+\DoxyCodeLine{22             cout<<erro.\mbox{\hyperlink{classUsuarioNaoCadastrado_abece9967af18cefb7fc3e05abbd89da1}{what}}()<<endl;}
+\DoxyCodeLine{23             \mbox{\hyperlink{classSistema_ad7765bc090849c2f34f3a50ea031c1d8}{limparTela}}(\textcolor{stringliteral}{"perguntar"});     }
+\DoxyCodeLine{24        \}\textcolor{keywordflow}{catch}(\mbox{\hyperlink{classEscolhaInvalida}{EscolhaInvalida}}\& erro)\{}
+\DoxyCodeLine{25             cout<<erro.\mbox{\hyperlink{classEscolhaInvalida_afa0d4f7bc4690520d6d4f4d674f4cf01}{what}}()<<endl;}
+\DoxyCodeLine{26             \mbox{\hyperlink{classSistema_ad7765bc090849c2f34f3a50ea031c1d8}{limparTela}}(\textcolor{stringliteral}{"perguntar"});     }
+\DoxyCodeLine{27        \}}
+\DoxyCodeLine{28     \} \textcolor{keywordflow}{while}(\_usuarioLogado == \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{29 \}}
 
 \end{DoxyCode}
-\mbox{\Hypertarget{classSistema_afe795879c39c1f2879bd540094b56b87}\label{classSistema_afe795879c39c1f2879bd540094b56b87}} 
-\index{Sistema@{Sistema}!efetuarLogin@{efetuarLogin}}
-\index{efetuarLogin@{efetuarLogin}!Sistema@{Sistema}}
-\doxysubsubsection{\texorpdfstring{efetuarLogin()}{efetuarLogin()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily void Sistema\+::efetuar\+Login (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
 \mbox{\Hypertarget{classSistema_af937e9da8f1b9e35daeb31f6b894d507}\label{classSistema_af937e9da8f1b9e35daeb31f6b894d507}} 
 \index{Sistema@{Sistema}!inicializarParametrosSistema@{inicializarParametrosSistema}}
 \index{inicializarParametrosSistema@{inicializarParametrosSistema}!Sistema@{Sistema}}
-\doxysubsubsection{\texorpdfstring{inicializarParametrosSistema()}{inicializarParametrosSistema()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+\doxysubsubsection{\texorpdfstring{inicializarParametrosSistema()}{inicializarParametrosSistema()}}
 {\footnotesize\ttfamily void Sistema\+::inicializar\+Parametros\+Sistema (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Esta função inicaliza os parametros do sistema, como ler, e abrir de arquivos txt, chamando as funções correspondentes. 
 
 
 
@@ -120,300 +113,489 @@ Definition at line 3 of file sistema.\+cpp.
 \DoxyCodeLine{7 \}}
 
 \end{DoxyCode}
-\mbox{\Hypertarget{classSistema_af937e9da8f1b9e35daeb31f6b894d507}\label{classSistema_af937e9da8f1b9e35daeb31f6b894d507}} 
-\index{Sistema@{Sistema}!inicializarParametrosSistema@{inicializarParametrosSistema}}
-\index{inicializarParametrosSistema@{inicializarParametrosSistema}!Sistema@{Sistema}}
-\doxysubsubsection{\texorpdfstring{inicializarParametrosSistema()}{inicializarParametrosSistema()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily void Sistema\+::inicializar\+Parametros\+Sistema (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
 \mbox{\Hypertarget{classSistema_a0734bca83afc9e59b1aada834e9c9654}\label{classSistema_a0734bca83afc9e59b1aada834e9c9654}} 
 \index{Sistema@{Sistema}!inicializarSistema@{inicializarSistema}}
 \index{inicializarSistema@{inicializarSistema}!Sistema@{Sistema}}
-\doxysubsubsection{\texorpdfstring{inicializarSistema()}{inicializarSistema()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+\doxysubsubsection{\texorpdfstring{inicializarSistema()}{inicializarSistema()}}
 {\footnotesize\ttfamily void Sistema\+::inicializar\+Sistema (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
-Definition at line 174 of file sistema.\+cpp.
+Esta função inicializa todo o sistema. 
+
+
+
+Definition at line 381 of file sistema.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{174                                 \{}
-\DoxyCodeLine{175     \textcolor{keywordflow}{while}(1)\{}
-\DoxyCodeLine{176         \mbox{\hyperlink{classSistema_af937e9da8f1b9e35daeb31f6b894d507}{inicializarParametrosSistema}}();}
-\DoxyCodeLine{177         \textcolor{keywordflow}{if}(\_usuarioLogado == \textcolor{keyword}{nullptr})\{}
-\DoxyCodeLine{178             \mbox{\hyperlink{classSistema_afe795879c39c1f2879bd540094b56b87}{efetuarLogin}}();}
-\DoxyCodeLine{179         \} \textcolor{keywordflow}{else} \{}
-\DoxyCodeLine{180             \textcolor{keywordflow}{if}(\_usuarioLogado-\/>\mbox{\hyperlink{classUsuario_ab311ad6f74a2b3971445127690c3bfcc}{temPermissao}}())\{}
-\DoxyCodeLine{181                 \textcolor{keywordflow}{try}\{}
-\DoxyCodeLine{182                     \mbox{\hyperlink{classSistema_aa4f3aeab22b1eef80bc7b1832e1785df}{opcoesMenuGerente}}();}
-\DoxyCodeLine{183                 \}\textcolor{keywordflow}{catch}(\mbox{\hyperlink{classEscolhaSistemaInvalida}{EscolhaSistemaInvalida}}\& erro)\{}
-\DoxyCodeLine{184                     cout<<erro.\mbox{\hyperlink{classEscolhaSistemaInvalida_a09e56248988ffc8109a1230f6c9c8104}{what}}()<<endl;     }
-\DoxyCodeLine{185                 \}}
-\DoxyCodeLine{186             \} \textcolor{keywordflow}{else} \{}
-\DoxyCodeLine{187                 \textcolor{keywordflow}{try}\{}
-\DoxyCodeLine{188                     \mbox{\hyperlink{classSistema_ad6bd99c7e3864edaae9e40fdd9cb1698}{opcoesMenuFuncionario}}(); }
-\DoxyCodeLine{189                 \}\textcolor{keywordflow}{catch}(\mbox{\hyperlink{classEscolhaSistemaInvalida}{EscolhaSistemaInvalida}}\& erro)\{}
-\DoxyCodeLine{190                     cout<<erro.\mbox{\hyperlink{classEscolhaSistemaInvalida_a09e56248988ffc8109a1230f6c9c8104}{what}}()<<endl;     }
-\DoxyCodeLine{191                 \}}
-\DoxyCodeLine{192             \}}
-\DoxyCodeLine{193             \mbox{\hyperlink{classSistema_a13d1f7199037c4e87fcfda089646198a}{salvarParametrosSistema}}();}
-\DoxyCodeLine{194             \textcolor{keywordflow}{if} (!\_usuarioLogado-\/>\mbox{\hyperlink{classUsuario_af7a088b130ebd032224b70e91583bb31}{getEstaAutenticado}}())}
-\DoxyCodeLine{195                 \_usuarioLogado = \textcolor{keyword}{nullptr};}
-\DoxyCodeLine{196         \}}
-\DoxyCodeLine{197     \}}
-\DoxyCodeLine{198 \}}
-
-\end{DoxyCode}
-\mbox{\Hypertarget{classSistema_a0734bca83afc9e59b1aada834e9c9654}\label{classSistema_a0734bca83afc9e59b1aada834e9c9654}} 
-\index{Sistema@{Sistema}!inicializarSistema@{inicializarSistema}}
-\index{inicializarSistema@{inicializarSistema}!Sistema@{Sistema}}
-\doxysubsubsection{\texorpdfstring{inicializarSistema()}{inicializarSistema()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily void Sistema\+::inicializar\+Sistema (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{classSistema_ad7765bc090849c2f34f3a50ea031c1d8}\label{classSistema_ad7765bc090849c2f34f3a50ea031c1d8}} 
-\index{Sistema@{Sistema}!limparTela@{limparTela}}
-\index{limparTela@{limparTela}!Sistema@{Sistema}}
-\doxysubsubsection{\texorpdfstring{limparTela()}{limparTela()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily void Sistema\+::limpar\+Tela (\begin{DoxyParamCaption}\item[{string}]{modo }\end{DoxyParamCaption})}
-
-
-
-Definition at line 372 of file sistema.\+cpp.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{374                                              \{}
-\DoxyCodeLine{375                     cout<<erro.what()<<endl;  }
-\DoxyCodeLine{376                     \mbox{\hyperlink{classSistema_ad7765bc090849c2f34f3a50ea031c1d8}{limparTela}}(\textcolor{stringliteral}{"perguntar"});  }
-\DoxyCodeLine{377                 \}}
-\DoxyCodeLine{378             \}}
-\DoxyCodeLine{379             \mbox{\hyperlink{classSistema_a13d1f7199037c4e87fcfda089646198a}{salvarParametrosSistema}}();}
-\DoxyCodeLine{380             \textcolor{keywordflow}{if} (!\_usuarioLogado-\/>\mbox{\hyperlink{classUsuario_af7a088b130ebd032224b70e91583bb31}{getEstaAutenticado}}())}
-\DoxyCodeLine{381                 \_usuarioLogado = \textcolor{keyword}{nullptr};}
-\DoxyCodeLine{382         \}}
-\DoxyCodeLine{383     \}}
-\DoxyCodeLine{384 \}}
-\DoxyCodeLine{385 }
-\DoxyCodeLine{386 }
-\DoxyCodeLine{387 \textcolor{keywordtype}{void} \mbox{\hyperlink{classSistema_ad7765bc090849c2f34f3a50ea031c1d8}{Sistema::limparTela}}(\textcolor{keywordtype}{string} modo)\{}
-\DoxyCodeLine{388     \textcolor{keywordflow}{if} (modo == \textcolor{stringliteral}{"perguntar"})\{}
+\DoxyCodeLine{387                 :}
+\DoxyCodeLine{388             \_sistemaLogin.\mbox{\hyperlink{classsistemaLogin_a99279d0a2fd4fd35e86a8b0178569022}{fazerLogout}}(\_usuarioLogado);}
+\DoxyCodeLine{389             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{390         \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{391             \textcolor{keywordflow}{throw} \mbox{\hyperlink{classEscolhaSistemaInvalida}{EscolhaSistemaInvalida}}();}
+\DoxyCodeLine{392             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{393     \}}
+\DoxyCodeLine{394 \}}
+\DoxyCodeLine{395 }
+\DoxyCodeLine{396 \textcolor{keywordtype}{void} \mbox{\hyperlink{classSistema_a0734bca83afc9e59b1aada834e9c9654}{Sistema::inicializarSistema}}()\{}
+\DoxyCodeLine{397     \textcolor{keywordflow}{while}(1)\{}
+\DoxyCodeLine{398         \mbox{\hyperlink{classSistema_af937e9da8f1b9e35daeb31f6b894d507}{inicializarParametrosSistema}}();}
+\DoxyCodeLine{399         \textcolor{keywordflow}{if}(\_usuarioLogado == \textcolor{keyword}{nullptr})\{}
+\DoxyCodeLine{400             \mbox{\hyperlink{classSistema_afe795879c39c1f2879bd540094b56b87}{efetuarLogin}}();}
+\DoxyCodeLine{401         \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{402             \textcolor{keywordflow}{if}(\_usuarioLogado-\/>\mbox{\hyperlink{classUsuario_ab311ad6f74a2b3971445127690c3bfcc}{temPermissao}}())\{}
+\DoxyCodeLine{403                 \textcolor{keywordflow}{try}\{}
+\DoxyCodeLine{404                     \mbox{\hyperlink{classSistema_aa4f3aeab22b1eef80bc7b1832e1785df}{opcoesMenuGerente}}();}
+\DoxyCodeLine{405                 \}\textcolor{keywordflow}{catch}(\mbox{\hyperlink{classEscolhaSistemaInvalida}{EscolhaSistemaInvalida}}\& erro)\{}
+\DoxyCodeLine{406                     cout<<erro.\mbox{\hyperlink{classEscolhaSistemaInvalida_a38b0c8dd1e7321aec4b3fa67f253ff57}{what}}()<<endl;  }
+\DoxyCodeLine{407                     \mbox{\hyperlink{classSistema_ad7765bc090849c2f34f3a50ea031c1d8}{limparTela}}(\textcolor{stringliteral}{"perguntar"});   }
+\DoxyCodeLine{408                 \}\textcolor{keywordflow}{catch}(\mbox{\hyperlink{classEntradaInvalida}{EntradaInvalida}}\& erro)\{}
+\DoxyCodeLine{409                     cout<<erro.\mbox{\hyperlink{classEntradaInvalida_a78bfa9f94fe11d97955411bf698fd80c}{what}}()<<endl;  }
+\DoxyCodeLine{410                     \mbox{\hyperlink{classSistema_ad7765bc090849c2f34f3a50ea031c1d8}{limparTela}}(\textcolor{stringliteral}{"perguntar"});   }
+\DoxyCodeLine{411                 \}}
+\DoxyCodeLine{412             \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{413                 \textcolor{keywordflow}{try}\{}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classSistema_ad7765bc090849c2f34f3a50ea031c1d8}\label{classSistema_ad7765bc090849c2f34f3a50ea031c1d8}} 
 \index{Sistema@{Sistema}!limparTela@{limparTela}}
 \index{limparTela@{limparTela}!Sistema@{Sistema}}
-\doxysubsubsection{\texorpdfstring{limparTela()}{limparTela()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+\doxysubsubsection{\texorpdfstring{limparTela()}{limparTela()}}
 {\footnotesize\ttfamily void Sistema\+::limpar\+Tela (\begin{DoxyParamCaption}\item[{string}]{modo }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{classSistema_aeae83705670f1eb7b92a3f7386d9a629}\label{classSistema_aeae83705670f1eb7b92a3f7386d9a629}} 
-\index{Sistema@{Sistema}!opcoesMenuAdministrativo@{opcoesMenuAdministrativo}}
-\index{opcoesMenuAdministrativo@{opcoesMenuAdministrativo}!Sistema@{Sistema}}
-\doxysubsubsection{\texorpdfstring{opcoesMenuAdministrativo()}{opcoesMenuAdministrativo()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily void Sistema\+::opcoes\+Menu\+Administrativo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+Esta função limpa a tela, para poder ter uma melhor visualização na compilação. 
 
 
 
-Definition at line 89 of file sistema.\+cpp.
+Definition at line 416 of file sistema.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{89                                       \{}
-\DoxyCodeLine{90     \_usuarioLogado-\/>\mbox{\hyperlink{classUsuario_a5e10aeefe82c9fa76ed4457f33d6ba4b}{menuAdministrativo}}();}
-\DoxyCodeLine{91     \textcolor{keywordtype}{int} escolha;}
-\DoxyCodeLine{92     cin >> escolha;}
-\DoxyCodeLine{93     \textcolor{keywordflow}{switch}(escolha)\{}
-\DoxyCodeLine{94         \textcolor{keywordflow}{case} 1:}
-\DoxyCodeLine{95             \textcolor{keywordflow}{try}\{}
-\DoxyCodeLine{96                 \_estoque.\mbox{\hyperlink{classEstoque_a6d5a491db754f7cd01bfcdaf8b7ee317}{alterarProduto}}();}
-\DoxyCodeLine{97             \}\textcolor{keywordflow}{catch}(\mbox{\hyperlink{classEntradaInvalida}{EntradaInvalida}}\& erro)\{}
-\DoxyCodeLine{98                   cout<<erro.\mbox{\hyperlink{classEntradaInvalida_a9802d549d31e257291d1d29a25ed1b84}{what}}()<<endl;}
-\DoxyCodeLine{99             \}}
-\DoxyCodeLine{100             \textcolor{keywordflow}{break};}
-\DoxyCodeLine{101         \textcolor{keywordflow}{case} 2:}
-\DoxyCodeLine{102             \textcolor{keywordflow}{try}\{}
-\DoxyCodeLine{103                 \_sistemaLogin.\mbox{\hyperlink{classsistemaLogin_af6a3c8790a61e26533ce718d2766b314}{alterarUsuario}}();}
-\DoxyCodeLine{104             \}\textcolor{keywordflow}{catch}(\mbox{\hyperlink{classUsuarioNaoCadastrado}{UsuarioNaoCadastrado}}\& erro)\{}
-\DoxyCodeLine{105                   cout<<erro.\mbox{\hyperlink{classUsuarioNaoCadastrado_abece9967af18cefb7fc3e05abbd89da1}{what}}()<<endl;}
-\DoxyCodeLine{106             \}}
-\DoxyCodeLine{107             \textcolor{keywordflow}{break};}
-\DoxyCodeLine{108         \textcolor{keywordflow}{case} 5:}
-\DoxyCodeLine{109             \_sistemaLogin.\mbox{\hyperlink{classsistemaLogin_a1859600212180666e0c91cb5863bebae}{listarUsuarios}}();}
-\DoxyCodeLine{110             \textcolor{keywordflow}{break};}
-\DoxyCodeLine{111         \textcolor{keywordflow}{case} 4:}
-\DoxyCodeLine{112             \_sistemaLogin.\mbox{\hyperlink{classsistemaLogin_ac61a70cbcfc108ec1e60f05806f09453}{cadastrarUsuario}}();}
-\DoxyCodeLine{113             \textcolor{keywordflow}{break};}
-\DoxyCodeLine{114         \textcolor{keywordflow}{case} 5:}
-\DoxyCodeLine{115             \_sistemaLogin.\mbox{\hyperlink{classsistemaLogin_a68347c85814f4231af8e5318acbc5857}{excluirUsuario}}();}
-\DoxyCodeLine{116             \textcolor{keywordflow}{break};}
-\DoxyCodeLine{117         \textcolor{keywordflow}{case} 8:}
-\DoxyCodeLine{118             \mbox{\hyperlink{classSistema_a13d1f7199037c4e87fcfda089646198a}{salvarParametrosSistema}}();}
-\DoxyCodeLine{119             \textcolor{keywordflow}{break};}
-\DoxyCodeLine{120         \textcolor{keywordflow}{default}:}
-\DoxyCodeLine{121             \textcolor{keywordflow}{throw} \mbox{\hyperlink{classEscolhaInvalida}{EscolhaInvalida}}();}
-\DoxyCodeLine{122             \textcolor{keywordflow}{break};}
-\DoxyCodeLine{123     \}    }
-\DoxyCodeLine{124 \}}
+\DoxyCodeLine{418                                              \{}
+\DoxyCodeLine{419                     cout<<erro.what()<<endl;  }
+\DoxyCodeLine{420                     \mbox{\hyperlink{classSistema_ad7765bc090849c2f34f3a50ea031c1d8}{limparTela}}(\textcolor{stringliteral}{"perguntar"});  }
+\DoxyCodeLine{421                 \}}
+\DoxyCodeLine{422             \}}
+\DoxyCodeLine{423             \mbox{\hyperlink{classSistema_a13d1f7199037c4e87fcfda089646198a}{salvarParametrosSistema}}();}
+\DoxyCodeLine{424             \textcolor{keywordflow}{if} (!\_usuarioLogado-\/>\mbox{\hyperlink{classUsuario_af7a088b130ebd032224b70e91583bb31}{getEstaAutenticado}}())}
+\DoxyCodeLine{425                 \_usuarioLogado = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{426         \}}
+\DoxyCodeLine{427     \}}
+\DoxyCodeLine{428 \}}
+\DoxyCodeLine{429 }
+\DoxyCodeLine{430 }
+\DoxyCodeLine{431 \textcolor{keywordtype}{void} \mbox{\hyperlink{classSistema_ad7765bc090849c2f34f3a50ea031c1d8}{Sistema::limparTela}}(\textcolor{keywordtype}{string} modo)\{}
+\DoxyCodeLine{432     \textcolor{keywordflow}{if} (modo == \textcolor{stringliteral}{"perguntar"})\{}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classSistema_aeae83705670f1eb7b92a3f7386d9a629}\label{classSistema_aeae83705670f1eb7b92a3f7386d9a629}} 
 \index{Sistema@{Sistema}!opcoesMenuAdministrativo@{opcoesMenuAdministrativo}}
 \index{opcoesMenuAdministrativo@{opcoesMenuAdministrativo}!Sistema@{Sistema}}
-\doxysubsubsection{\texorpdfstring{opcoesMenuAdministrativo()}{opcoesMenuAdministrativo()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+\doxysubsubsection{\texorpdfstring{opcoesMenuAdministrativo()}{opcoesMenuAdministrativo()}}
 {\footnotesize\ttfamily void Sistema\+::opcoes\+Menu\+Administrativo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{classSistema_ad6bd99c7e3864edaae9e40fdd9cb1698}\label{classSistema_ad6bd99c7e3864edaae9e40fdd9cb1698}} 
-\index{Sistema@{Sistema}!opcoesMenuFuncionario@{opcoesMenuFuncionario}}
-\index{opcoesMenuFuncionario@{opcoesMenuFuncionario}!Sistema@{Sistema}}
-\doxysubsubsection{\texorpdfstring{opcoesMenuFuncionario()}{opcoesMenuFuncionario()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily void Sistema\+::opcoes\+Menu\+Funcionario (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+Esta função abre o menu de opções possíveis da parte administrativas ~\newline
+ 
 
 
 
-Definition at line 126 of file sistema.\+cpp.
+Definition at line 139 of file sistema.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{126                                    \{}
-\DoxyCodeLine{127     \_usuarioLogado-\/>\mbox{\hyperlink{classUsuario_acc41ccb4c666766c305b19dd16dde50c}{menuInicial}}();}
-\DoxyCodeLine{128     \textcolor{keywordtype}{int} escolha;}
-\DoxyCodeLine{129     cin >> escolha;}
-\DoxyCodeLine{130     \textcolor{keywordflow}{switch}(escolha)\{}
-\DoxyCodeLine{131         \textcolor{keywordflow}{case} 1:\{}
-\DoxyCodeLine{132             \textcolor{keywordtype}{bool} loop=\textcolor{keyword}{true};}
-\DoxyCodeLine{133             std::list<pair<unsigned int,pair<Produto,int>>> listaQuantidades;}
-\DoxyCodeLine{134             \textcolor{keywordtype}{int} count=1;}
-\DoxyCodeLine{135             \textcolor{keywordflow}{while}(loop)\{   }
-\DoxyCodeLine{136                 \_estoque.\mbox{\hyperlink{classEstoque_aaf043813fe368bcfba658f73629907f3}{menuEntradaESaidaDeProdutos}}(listaQuantidades, \textcolor{stringliteral}{"saida"}, loop, count,\_usuarioLogado-\/>\mbox{\hyperlink{classUsuario_aca725547a496bfe313faac8e90bf37a7}{getNome}}(), \_usuarioLogado-\/>\mbox{\hyperlink{classUsuario_a4ed8710780cc5219f5b2ef6ba0aff386}{getUltimoAcesso}}());}
-\DoxyCodeLine{137             \}}
-\DoxyCodeLine{138             \textcolor{keywordflow}{break};}
-\DoxyCodeLine{139         \}}
-\DoxyCodeLine{140         \textcolor{keywordflow}{case} 2:\{}
-\DoxyCodeLine{141             \textcolor{keywordtype}{string} s;}
-\DoxyCodeLine{142             cout << \textcolor{stringliteral}{"Digite o código do produto: "};}
-\DoxyCodeLine{143             cin >> s;}
-\DoxyCodeLine{144             \textcolor{keywordflow}{try}\{}
-\DoxyCodeLine{145                 \_estoque.\mbox{\hyperlink{classEstoque_aabf8bfdb75bed365713e27983d06e212}{pesquisarProduto}}(s);}
-\DoxyCodeLine{146             \}\textcolor{keywordflow}{catch}(\mbox{\hyperlink{classProdutoNaoCadastrado}{ProdutoNaoCadastrado}}\& erro)\{}
-\DoxyCodeLine{147                 cout<<erro.\mbox{\hyperlink{classProdutoNaoCadastrado_a510ed82ba12dc4dc1d427bac732c69c6}{what}}()<<endl;}
-\DoxyCodeLine{148             \}}
-\DoxyCodeLine{149             \textcolor{keywordflow}{break};}
-\DoxyCodeLine{150         \}}
-\DoxyCodeLine{151         \textcolor{keywordflow}{case} 3:\{}
-\DoxyCodeLine{152             \_estoque.\mbox{\hyperlink{classEstoque_a255e29af4afb8d3f7adbe448c756c9bd}{listarProdutos}}();}
-\DoxyCodeLine{153             \mbox{\hyperlink{classSistema_ad7765bc090849c2f34f3a50ea031c1d8}{limparTela}}(\textcolor{stringliteral}{"perguntar"});}
-\DoxyCodeLine{154             \textcolor{keywordflow}{break};}
-\DoxyCodeLine{155         \}}
-\DoxyCodeLine{156         \textcolor{keywordflow}{case} 4:\{}
-\DoxyCodeLine{157             \textcolor{keywordflow}{try}\{}
-\DoxyCodeLine{158                 \_usuarioLogado-\/>\mbox{\hyperlink{classUsuario_a3d39624354ba93690acbbd9979dd6733}{alterarUsuarioLogado}}();}
-\DoxyCodeLine{159             \}\textcolor{keywordflow}{catch}(\mbox{\hyperlink{classEscolhaInvalida}{EscolhaInvalida}} \& erro)\{}
-\DoxyCodeLine{160                   cout<<erro.\mbox{\hyperlink{classEscolhaInvalida_a62631f7c4765bd959918f8c60b318700}{what}}()<<endl;}
-\DoxyCodeLine{161             \}}
-\DoxyCodeLine{162             \textcolor{keywordflow}{break};}
-\DoxyCodeLine{163         \}}
-\DoxyCodeLine{164         \textcolor{keywordflow}{case} 5:\{}
-\DoxyCodeLine{165             \_sistemaLogin.\mbox{\hyperlink{classsistemaLogin_a99279d0a2fd4fd35e86a8b0178569022}{fazerLogout}}(\_usuarioLogado);}
-\DoxyCodeLine{166             \textcolor{keywordflow}{break};}
-\DoxyCodeLine{167         \}}
-\DoxyCodeLine{168         \textcolor{keywordflow}{default}:}
-\DoxyCodeLine{169             \textcolor{keywordflow}{throw} \mbox{\hyperlink{classEscolhaInvalida}{EscolhaInvalida}}();}
-\DoxyCodeLine{170             \textcolor{keywordflow}{break};}
-\DoxyCodeLine{171     \}}
-\DoxyCodeLine{172 \}}
+\DoxyCodeLine{144                                       \{}
+\DoxyCodeLine{145     \_usuarioLogado-\/>\mbox{\hyperlink{classUsuario_a5e10aeefe82c9fa76ed4457f33d6ba4b}{menuAdministrativo}}();}
+\DoxyCodeLine{146     \textcolor{keywordtype}{string} aux;}
+\DoxyCodeLine{147     cin >> aux;}
+\DoxyCodeLine{148     \textcolor{keywordflow}{if} (aux.size()>1)}
+\DoxyCodeLine{149         \textcolor{keywordflow}{throw} \mbox{\hyperlink{classEscolhaSistemaInvalida}{EscolhaSistemaInvalida}}();}
+\DoxyCodeLine{150     \textcolor{keywordtype}{char} escolha = aux[0];}
+\DoxyCodeLine{151     \mbox{\hyperlink{classSistema_ad7765bc090849c2f34f3a50ea031c1d8}{limparTela}}(\textcolor{stringliteral}{"continuar"});}
+\DoxyCodeLine{152     \textcolor{keywordflow}{switch}(escolha)\{}
+\DoxyCodeLine{153         \textcolor{keywordflow}{case} \textcolor{charliteral}{'1'}:}
+\DoxyCodeLine{154             \textcolor{keywordflow}{try}\{}
+\DoxyCodeLine{155                 \_estoque.\mbox{\hyperlink{classEstoque_a6d5a491db754f7cd01bfcdaf8b7ee317}{alterarProduto}}();}
+\DoxyCodeLine{156             \}\textcolor{keywordflow}{catch}(\mbox{\hyperlink{classProdutoNaoCadastrado}{ProdutoNaoCadastrado}}\& erro)\{}
+\DoxyCodeLine{157                   cout<<erro.\mbox{\hyperlink{classProdutoNaoCadastrado_a7689ed160e9680a7f4ba17e0664926b9}{what}}()<<endl;}
+\DoxyCodeLine{158                   \mbox{\hyperlink{classSistema_ad7765bc090849c2f34f3a50ea031c1d8}{limparTela}}(\textcolor{stringliteral}{"perguntar"});}
+\DoxyCodeLine{159                   \textcolor{keywordflow}{break};   }
+\DoxyCodeLine{160             \}\textcolor{keywordflow}{catch}(\mbox{\hyperlink{classEntradaInvalida}{EntradaInvalida}}\& erro)\{}
+\DoxyCodeLine{161                   cout<<erro.\mbox{\hyperlink{classEntradaInvalida_a78bfa9f94fe11d97955411bf698fd80c}{what}}()<<endl;}
+\DoxyCodeLine{162                   \mbox{\hyperlink{classSistema_ad7765bc090849c2f34f3a50ea031c1d8}{limparTela}}(\textcolor{stringliteral}{"perguntar"});}
+\DoxyCodeLine{163                   \textcolor{keywordflow}{break};}
+\DoxyCodeLine{164             \}\textcolor{keywordflow}{catch}(\mbox{\hyperlink{classExcecaoTamanhoNomeAlt}{ExcecaoTamanhoNomeAlt}}\& erro)\{}
+\DoxyCodeLine{165                   cout<<erro.\mbox{\hyperlink{classExcecaoTamanhoNomeAlt_a13b1c1463c6e5626e1413c7b122da2f9}{what}}()<<endl;}
+\DoxyCodeLine{166                   \mbox{\hyperlink{classSistema_ad7765bc090849c2f34f3a50ea031c1d8}{limparTela}}(\textcolor{stringliteral}{"perguntar"});}
+\DoxyCodeLine{167                   \textcolor{keywordflow}{break};}
+\DoxyCodeLine{168             \}\textcolor{keywordflow}{catch}(\mbox{\hyperlink{classExcecaoTamanhoCategAlt}{ExcecaoTamanhoCategAlt}}\& erro)\{}
+\DoxyCodeLine{169                   cout<<erro.\mbox{\hyperlink{classExcecaoTamanhoCategAlt_a84b6eda6adb13da427aa623b9a04eccb}{what}}()<<endl;}
+\DoxyCodeLine{170                   \mbox{\hyperlink{classSistema_ad7765bc090849c2f34f3a50ea031c1d8}{limparTela}}(\textcolor{stringliteral}{"perguntar"});}
+\DoxyCodeLine{171                   \textcolor{keywordflow}{break};}
+\DoxyCodeLine{172             \}\textcolor{keywordflow}{catch}(\mbox{\hyperlink{classExcecaoTamanhoFabricAlt}{ExcecaoTamanhoFabricAlt}}\& erro)\{}
+\DoxyCodeLine{173                   cout<<erro.\mbox{\hyperlink{classExcecaoTamanhoFabricAlt_a1b2fb4a0ef4e4f3939ed6ccb64e7868e}{what}}()<<endl;}
+\DoxyCodeLine{174                   \mbox{\hyperlink{classSistema_ad7765bc090849c2f34f3a50ea031c1d8}{limparTela}}(\textcolor{stringliteral}{"perguntar"});}
+\DoxyCodeLine{175                   \textcolor{keywordflow}{break};}
+\DoxyCodeLine{176             \}\textcolor{keywordflow}{catch}(\mbox{\hyperlink{classPrecoNaoENumero}{PrecoNaoENumero}}\& erro)\{}
+\DoxyCodeLine{177                   cout<<erro.\mbox{\hyperlink{classPrecoNaoENumero_a5c14b07b9dcde229944491d2b3cd7161}{what}}()<<endl;}
+\DoxyCodeLine{178                   \mbox{\hyperlink{classSistema_ad7765bc090849c2f34f3a50ea031c1d8}{limparTela}}(\textcolor{stringliteral}{"perguntar"});}
+\DoxyCodeLine{179                   \textcolor{keywordflow}{break};}
+\DoxyCodeLine{180             \}\textcolor{keywordflow}{catch}(\mbox{\hyperlink{classExcecaoPrecoNegativoAlt}{ExcecaoPrecoNegativoAlt}}\& erro)\{}
+\DoxyCodeLine{181                   cout<<erro.\mbox{\hyperlink{classExcecaoPrecoNegativoAlt_a9abc0446a5de42d4fd01aaf35726119a}{what}}()<<endl;}
+\DoxyCodeLine{182                   \mbox{\hyperlink{classSistema_ad7765bc090849c2f34f3a50ea031c1d8}{limparTela}}(\textcolor{stringliteral}{"perguntar"});}
+\DoxyCodeLine{183                   \textcolor{keywordflow}{break};}
+\DoxyCodeLine{184             \}}
+\DoxyCodeLine{185             \mbox{\hyperlink{classSistema_ad7765bc090849c2f34f3a50ea031c1d8}{limparTela}}(\textcolor{stringliteral}{"perguntar"});}
+\DoxyCodeLine{186             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{187         \textcolor{keywordflow}{case} \textcolor{charliteral}{'2'}:\{}
+\DoxyCodeLine{188             \textcolor{keywordflow}{try}\{}
+\DoxyCodeLine{189                 \_estoque.\mbox{\hyperlink{classEstoque_ad424b0fd59b47b4c61d3bbc09238e2df}{cadastroDeProdutos}}();}
+\DoxyCodeLine{190             \}\textcolor{keywordflow}{catch}(\mbox{\hyperlink{classExcecaoTamanhoNomeAlt}{ExcecaoTamanhoNomeAlt}}\& erro)\{}
+\DoxyCodeLine{191                 cout<<erro.\mbox{\hyperlink{classExcecaoTamanhoNomeAlt_a13b1c1463c6e5626e1413c7b122da2f9}{what}}()<<endl;}
+\DoxyCodeLine{192                 \mbox{\hyperlink{classSistema_ad7765bc090849c2f34f3a50ea031c1d8}{limparTela}}(\textcolor{stringliteral}{"perguntar"});}
+\DoxyCodeLine{193             \}\textcolor{keywordflow}{catch}(\mbox{\hyperlink{classExcecaoTamanhoCategAlt}{ExcecaoTamanhoCategAlt}}\& erro)\{}
+\DoxyCodeLine{194                 cout<<erro.\mbox{\hyperlink{classExcecaoTamanhoCategAlt_a84b6eda6adb13da427aa623b9a04eccb}{what}}()<<endl;}
+\DoxyCodeLine{195                 \mbox{\hyperlink{classSistema_ad7765bc090849c2f34f3a50ea031c1d8}{limparTela}}(\textcolor{stringliteral}{"perguntar"});}
+\DoxyCodeLine{196             \}\textcolor{keywordflow}{catch}(\mbox{\hyperlink{classExcecaoTamanhoFabricAlt}{ExcecaoTamanhoFabricAlt}}\& erro)\{}
+\DoxyCodeLine{197                 cout<<erro.\mbox{\hyperlink{classExcecaoTamanhoFabricAlt_a1b2fb4a0ef4e4f3939ed6ccb64e7868e}{what}}()<<endl;}
+\DoxyCodeLine{198                 \mbox{\hyperlink{classSistema_ad7765bc090849c2f34f3a50ea031c1d8}{limparTela}}(\textcolor{stringliteral}{"perguntar"});}
+\DoxyCodeLine{199             \}\textcolor{keywordflow}{catch}(\mbox{\hyperlink{classExcecaoPrecoNegativoAlt}{ExcecaoPrecoNegativoAlt}}\& erro)\{}
+\DoxyCodeLine{200                 cout<<erro.\mbox{\hyperlink{classExcecaoPrecoNegativoAlt_a9abc0446a5de42d4fd01aaf35726119a}{what}}()<<endl;}
+\DoxyCodeLine{201                 \mbox{\hyperlink{classSistema_ad7765bc090849c2f34f3a50ea031c1d8}{limparTela}}(\textcolor{stringliteral}{"perguntar"});}
+\DoxyCodeLine{202             \}\textcolor{keywordflow}{catch}(\mbox{\hyperlink{classPrecoNaoENumero}{PrecoNaoENumero}}\& erro)\{}
+\DoxyCodeLine{203                 cout<<erro.\mbox{\hyperlink{classPrecoNaoENumero_a5c14b07b9dcde229944491d2b3cd7161}{what}}()<<endl;}
+\DoxyCodeLine{204                 \mbox{\hyperlink{classSistema_ad7765bc090849c2f34f3a50ea031c1d8}{limparTela}}(\textcolor{stringliteral}{"perguntar"});}
+\DoxyCodeLine{205             \}\textcolor{keywordflow}{catch}(\mbox{\hyperlink{classProdutoJaCadastrado}{ProdutoJaCadastrado}}\& erro)\{}
+\DoxyCodeLine{206                 cout<<erro.\mbox{\hyperlink{classProdutoJaCadastrado_a9cf12851c1d999aabfae9cb704658000}{what}}()<<endl;}
+\DoxyCodeLine{207                 \mbox{\hyperlink{classSistema_ad7765bc090849c2f34f3a50ea031c1d8}{limparTela}}(\textcolor{stringliteral}{"perguntar"});}
+\DoxyCodeLine{208             \}}
+\DoxyCodeLine{209             \mbox{\hyperlink{classSistema_ad7765bc090849c2f34f3a50ea031c1d8}{limparTela}}(\textcolor{stringliteral}{"continuar"});}
+\DoxyCodeLine{210             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{211 }
+\DoxyCodeLine{212         \}}
+\DoxyCodeLine{213         \textcolor{keywordflow}{case} \textcolor{charliteral}{'3'}:\{}
+\DoxyCodeLine{214             cout << R\textcolor{stringliteral}{"(}}
+\DoxyCodeLine{215 \textcolor{stringliteral}{    \_\_\_\_\_\_          \_\_      \_         \_\_\_\_                 \_\_      \_\_      }}
+\DoxyCodeLine{216 \textcolor{stringliteral}{   / \_\_\_\_/  \_\_\_\_\_\_\_/ /\_  \_\_(\_)\_\_\_\_   / \_\_ \(\backslash\)\_\_\_\_\_\_\_\_\_  \_\_\_\_/ /\_  \_\_/ /\_\_\_\_\_ }}
+\DoxyCodeLine{217 \textcolor{stringliteral}{  / \_\_/ | |/\_/ \_\_\_/ / / / / / \_\_\_/  / /\_/ / \_\_\_/ \_\_ \(\backslash\)/ \_\_  / / / / \_\_/ \_\_ \(\backslash\)}}
+\DoxyCodeLine{218 \textcolor{stringliteral}{ / /\_\_\_\_>  </ /\_\_/ / /\_/ / / /     / \_\_\_\_/ /  / /\_/ / /\_/ / /\_/ / /\_/ /\_/ /}}
+\DoxyCodeLine{219 \textcolor{stringliteral}{/\_\_\_\_\_/\_/|\_|\(\backslash\)\_\_\_/\_/\(\backslash\)\_\_,\_/\_/\_/     /\_/   /\_/   \(\backslash\)\_\_\_\_/\(\backslash\)\_\_,\_/\(\backslash\)\_\_,\_/\(\backslash\)\_\_/\(\backslash\)\_\_\_\_/ )" << endl << endl;}}
+\DoxyCodeLine{220 \textcolor{stringliteral}{            }\textcolor{keywordtype}{string} codigo;}
+\DoxyCodeLine{221             cout<<\textcolor{stringliteral}{"Digite o código do produto que será removido: "};}
+\DoxyCodeLine{222             cin>>codigo;}
+\DoxyCodeLine{223             \textcolor{keywordflow}{try}\{}
+\DoxyCodeLine{224             \_estoque.\mbox{\hyperlink{classEstoque_ac5b8f34db951f75ff2ddd52c7b370700}{excluirProduto}}(codigo);}
+\DoxyCodeLine{225             \}\textcolor{keywordflow}{catch}(\mbox{\hyperlink{classProdutoNaoCadastrado}{ProdutoNaoCadastrado}}\& e)\{}
+\DoxyCodeLine{226                 cout<<e.\mbox{\hyperlink{classProdutoNaoCadastrado_a7689ed160e9680a7f4ba17e0664926b9}{what}}()<<endl;}
+\DoxyCodeLine{227                 \mbox{\hyperlink{classSistema_ad7765bc090849c2f34f3a50ea031c1d8}{limparTela}}(\textcolor{stringliteral}{"perguntar"});}
+\DoxyCodeLine{228                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{229             \}}
+\DoxyCodeLine{230             \mbox{\hyperlink{classSistema_ad7765bc090849c2f34f3a50ea031c1d8}{limparTela}}(\textcolor{stringliteral}{"perguntar"});}
+\DoxyCodeLine{231             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{232         \}}
+\DoxyCodeLine{233         \textcolor{keywordflow}{case} \textcolor{charliteral}{'4'}:}
+\DoxyCodeLine{234             \textcolor{keywordflow}{try}\{}
+\DoxyCodeLine{235                 \_sistemaLogin.\mbox{\hyperlink{classsistemaLogin_af6a3c8790a61e26533ce718d2766b314}{alterarUsuario}}();}
+\DoxyCodeLine{236             \}\textcolor{keywordflow}{catch}(\mbox{\hyperlink{classUsuarioNaoCadastrado}{UsuarioNaoCadastrado}}\& erro)\{}
+\DoxyCodeLine{237                   cout<<erro.\mbox{\hyperlink{classUsuarioNaoCadastrado_abece9967af18cefb7fc3e05abbd89da1}{what}}()<<endl;}
+\DoxyCodeLine{238                   \mbox{\hyperlink{classSistema_ad7765bc090849c2f34f3a50ea031c1d8}{limparTela}}(\textcolor{stringliteral}{"perguntar"});}
+\DoxyCodeLine{239                   \textcolor{keywordflow}{break};}
+\DoxyCodeLine{240             \}\textcolor{keywordflow}{catch}(\mbox{\hyperlink{classEscolhaInvalida}{EscolhaInvalida}}\& e)\{}
+\DoxyCodeLine{241                 cout<<e.\mbox{\hyperlink{classEscolhaInvalida_afa0d4f7bc4690520d6d4f4d674f4cf01}{what}}()<<endl;}
+\DoxyCodeLine{242                 \mbox{\hyperlink{classSistema_ad7765bc090849c2f34f3a50ea031c1d8}{limparTela}}(\textcolor{stringliteral}{"perguntar"});}
+\DoxyCodeLine{243                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{244             \}\textcolor{keywordflow}{catch}(\mbox{\hyperlink{classExcecaoTamanhoNomeAlt}{ExcecaoTamanhoNomeAlt}}\& e)\{}
+\DoxyCodeLine{245                 cout<<e.\mbox{\hyperlink{classExcecaoTamanhoNomeAlt_a13b1c1463c6e5626e1413c7b122da2f9}{what}}()<<endl;}
+\DoxyCodeLine{246                 \mbox{\hyperlink{classSistema_ad7765bc090849c2f34f3a50ea031c1d8}{limparTela}}(\textcolor{stringliteral}{"perguntar"});}
+\DoxyCodeLine{247                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{248             \}\textcolor{keywordflow}{catch}(\mbox{\hyperlink{classExcecaoTamanhoCPF}{ExcecaoTamanhoCPF}}\& e)\{}
+\DoxyCodeLine{249                 cout<<e.\mbox{\hyperlink{classExcecaoTamanhoCPF_a015147965c312b949b7e613668a3b716}{what}}()<<endl;}
+\DoxyCodeLine{250                 \mbox{\hyperlink{classSistema_ad7765bc090849c2f34f3a50ea031c1d8}{limparTela}}(\textcolor{stringliteral}{"perguntar"});}
+\DoxyCodeLine{251                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{252             \}\textcolor{keywordflow}{catch}(\mbox{\hyperlink{classExcecaoTamanhoEmail}{ExcecaoTamanhoEmail}}\& e)\{}
+\DoxyCodeLine{253                 cout<<e.\mbox{\hyperlink{classExcecaoTamanhoEmail_a1f77bc8d0a7c798ddfd0a50d4660d6ed}{what}}()<<endl;}
+\DoxyCodeLine{254                 \mbox{\hyperlink{classSistema_ad7765bc090849c2f34f3a50ea031c1d8}{limparTela}}(\textcolor{stringliteral}{"perguntar"});}
+\DoxyCodeLine{255                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{256             \}\textcolor{keywordflow}{catch}(\mbox{\hyperlink{classExcecaoTamanhoSenha}{ExcecaoTamanhoSenha}}\& e)\{}
+\DoxyCodeLine{257                 cout<<e.\mbox{\hyperlink{classExcecaoTamanhoSenha_ad07e19b30d47b82d457de13bd905e451}{what}}()<<endl;}
+\DoxyCodeLine{258                 \mbox{\hyperlink{classSistema_ad7765bc090849c2f34f3a50ea031c1d8}{limparTela}}(\textcolor{stringliteral}{"perguntar"});}
+\DoxyCodeLine{259                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{260             \}}
+\DoxyCodeLine{261             \mbox{\hyperlink{classSistema_ad7765bc090849c2f34f3a50ea031c1d8}{limparTela}}(\textcolor{stringliteral}{"perguntar"});}
+\DoxyCodeLine{262             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{263         \textcolor{keywordflow}{case} \textcolor{charliteral}{'5'}:}
+\DoxyCodeLine{264             \_sistemaLogin.\mbox{\hyperlink{classsistemaLogin_a1859600212180666e0c91cb5863bebae}{listarUsuarios}}();}
+\DoxyCodeLine{265             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{266         \textcolor{keywordflow}{case} \textcolor{charliteral}{'6'}:}
+\DoxyCodeLine{267             \textcolor{keywordflow}{try}\{}
+\DoxyCodeLine{268                 \_sistemaLogin.\mbox{\hyperlink{classsistemaLogin_ac61a70cbcfc108ec1e60f05806f09453}{cadastrarUsuario}}();}
+\DoxyCodeLine{269             \}\textcolor{keywordflow}{catch}(\mbox{\hyperlink{classEscolhaInvalida}{EscolhaInvalida}}\& erro)\{}
+\DoxyCodeLine{270                   cout<<erro.\mbox{\hyperlink{classEscolhaInvalida_afa0d4f7bc4690520d6d4f4d674f4cf01}{what}}()<<endl;}
+\DoxyCodeLine{271                   \mbox{\hyperlink{classSistema_ad7765bc090849c2f34f3a50ea031c1d8}{limparTela}}(\textcolor{stringliteral}{"perguntar"});}
+\DoxyCodeLine{272                   \textcolor{keywordflow}{break};}
+\DoxyCodeLine{273             \}\textcolor{keywordflow}{catch}(\mbox{\hyperlink{classExcecaoTamanhoNomeAlt}{ExcecaoTamanhoNomeAlt}}\& erro)\{}
+\DoxyCodeLine{274                   cout<<erro.\mbox{\hyperlink{classExcecaoTamanhoNomeAlt_a13b1c1463c6e5626e1413c7b122da2f9}{what}}()<<endl;}
+\DoxyCodeLine{275                   \mbox{\hyperlink{classSistema_ad7765bc090849c2f34f3a50ea031c1d8}{limparTela}}(\textcolor{stringliteral}{"perguntar"});}
+\DoxyCodeLine{276                   \textcolor{keywordflow}{break};}
+\DoxyCodeLine{277             \}\textcolor{keywordflow}{catch}(\mbox{\hyperlink{classExcecaoTamanhoCPF}{ExcecaoTamanhoCPF}}\& erro)\{}
+\DoxyCodeLine{278                   cout<<erro.\mbox{\hyperlink{classExcecaoTamanhoCPF_a015147965c312b949b7e613668a3b716}{what}}()<<endl;}
+\DoxyCodeLine{279                   \mbox{\hyperlink{classSistema_ad7765bc090849c2f34f3a50ea031c1d8}{limparTela}}(\textcolor{stringliteral}{"perguntar"});}
+\DoxyCodeLine{280                   \textcolor{keywordflow}{break};}
+\DoxyCodeLine{281             \}\textcolor{keywordflow}{catch}(\mbox{\hyperlink{classExcecaoTamanhoEmail}{ExcecaoTamanhoEmail}}\& erro)\{}
+\DoxyCodeLine{282                   cout<<erro.\mbox{\hyperlink{classExcecaoTamanhoEmail_a1f77bc8d0a7c798ddfd0a50d4660d6ed}{what}}()<<endl;}
+\DoxyCodeLine{283                   \mbox{\hyperlink{classSistema_ad7765bc090849c2f34f3a50ea031c1d8}{limparTela}}(\textcolor{stringliteral}{"perguntar"});}
+\DoxyCodeLine{284                   \textcolor{keywordflow}{break};}
+\DoxyCodeLine{285             \}\textcolor{keywordflow}{catch}(\mbox{\hyperlink{classExcecaoTamanhoSenha}{ExcecaoTamanhoSenha}}\& erro)\{}
+\DoxyCodeLine{286                   cout<<erro.\mbox{\hyperlink{classExcecaoTamanhoSenha_ad07e19b30d47b82d457de13bd905e451}{what}}()<<endl;}
+\DoxyCodeLine{287                   \mbox{\hyperlink{classSistema_ad7765bc090849c2f34f3a50ea031c1d8}{limparTela}}(\textcolor{stringliteral}{"perguntar"});}
+\DoxyCodeLine{288                   \textcolor{keywordflow}{break};}
+\DoxyCodeLine{289             \}}
+\DoxyCodeLine{290             \mbox{\hyperlink{classSistema_ad7765bc090849c2f34f3a50ea031c1d8}{limparTela}}(\textcolor{stringliteral}{"perguntar"});}
+\DoxyCodeLine{291             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{292         \textcolor{keywordflow}{case} \textcolor{charliteral}{'7'}:}
+\DoxyCodeLine{293             \textcolor{keywordflow}{try}\{}
+\DoxyCodeLine{294                 \_sistemaLogin.\mbox{\hyperlink{classsistemaLogin_a68347c85814f4231af8e5318acbc5857}{excluirUsuario}}();}
+\DoxyCodeLine{295             \}\textcolor{keywordflow}{catch}(\mbox{\hyperlink{classUsuarioNaoCadastrado}{UsuarioNaoCadastrado}}\& erro)\{}
+\DoxyCodeLine{296                   cout<<erro.\mbox{\hyperlink{classUsuarioNaoCadastrado_abece9967af18cefb7fc3e05abbd89da1}{what}}()<<endl;}
+\DoxyCodeLine{297                   \mbox{\hyperlink{classSistema_ad7765bc090849c2f34f3a50ea031c1d8}{limparTela}}(\textcolor{stringliteral}{"perguntar"});}
+\DoxyCodeLine{298                   \textcolor{keywordflow}{break};}
+\DoxyCodeLine{299             \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classSistema_ad6bd99c7e3864edaae9e40fdd9cb1698}\label{classSistema_ad6bd99c7e3864edaae9e40fdd9cb1698}} 
 \index{Sistema@{Sistema}!opcoesMenuFuncionario@{opcoesMenuFuncionario}}
 \index{opcoesMenuFuncionario@{opcoesMenuFuncionario}!Sistema@{Sistema}}
-\doxysubsubsection{\texorpdfstring{opcoesMenuFuncionario()}{opcoesMenuFuncionario()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+\doxysubsubsection{\texorpdfstring{opcoesMenuFuncionario()}{opcoesMenuFuncionario()}}
 {\footnotesize\ttfamily void Sistema\+::opcoes\+Menu\+Funcionario (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+Esta função abre o menu de opções possíveis para o funcionário. 
+
+
+
+Definition at line 301 of file sistema.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{302                 :}
+\DoxyCodeLine{303             \mbox{\hyperlink{classSistema_a13d1f7199037c4e87fcfda089646198a}{salvarParametrosSistema}}();}
+\DoxyCodeLine{304             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{305         \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{306             \textcolor{keywordflow}{throw} \mbox{\hyperlink{classEscolhaSistemaInvalida}{EscolhaSistemaInvalida}}();}
+\DoxyCodeLine{307             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{308     \}       }
+\DoxyCodeLine{309 \}}
+\DoxyCodeLine{310 }
+\DoxyCodeLine{311 \textcolor{keywordtype}{void} \mbox{\hyperlink{classSistema_ad6bd99c7e3864edaae9e40fdd9cb1698}{Sistema::opcoesMenuFuncionario}}()\{}
+\DoxyCodeLine{312     \_usuarioLogado-\/>\mbox{\hyperlink{classUsuario_acc41ccb4c666766c305b19dd16dde50c}{menuInicial}}();}
+\DoxyCodeLine{313     \textcolor{keywordtype}{string} aux;}
+\DoxyCodeLine{314     cin >> aux;}
+\DoxyCodeLine{315     \textcolor{keywordflow}{if} (aux.size()>1)}
+\DoxyCodeLine{316         \textcolor{keywordflow}{throw} \mbox{\hyperlink{classEscolhaSistemaInvalida}{EscolhaSistemaInvalida}}();}
+\DoxyCodeLine{317     \textcolor{keywordtype}{char} escolha = aux[0];}
+\DoxyCodeLine{318     \mbox{\hyperlink{classSistema_ad7765bc090849c2f34f3a50ea031c1d8}{limparTela}}(\textcolor{stringliteral}{"continuar"});}
+\DoxyCodeLine{319     \textcolor{keywordflow}{switch}(escolha)\{}
+\DoxyCodeLine{320         \textcolor{keywordflow}{case} \textcolor{charliteral}{'1'}:\{}
+\DoxyCodeLine{321             \textcolor{keywordtype}{bool} loop=\textcolor{keyword}{true};}
+\DoxyCodeLine{322             std::list<pair<unsigned int,pair<Produto,int>>> listaQuantidades;}
+\DoxyCodeLine{323             \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} count=1;}
+\DoxyCodeLine{324             \textcolor{keywordflow}{while}(loop)\{}
+\DoxyCodeLine{325                 \textcolor{keywordflow}{try}\{   }
+\DoxyCodeLine{326                 \_estoque.\mbox{\hyperlink{classEstoque_a5eb81a75ea5222f4a8078b42f68ffd65}{menuEntradaESaidaDeProdutos}}(listaQuantidades, \textcolor{stringliteral}{"saida"}, loop, count, \_usuarioLogado-\/>\mbox{\hyperlink{classUsuario_aca725547a496bfe313faac8e90bf37a7}{getNome}}(), \_usuarioLogado-\/>\mbox{\hyperlink{classUsuario_a4ed8710780cc5219f5b2ef6ba0aff386}{getUltimoAcesso}}());}
+\DoxyCodeLine{327                 \}\textcolor{keywordflow}{catch}(\mbox{\hyperlink{classProdutoNaoCadastrado}{ProdutoNaoCadastrado}}\& erro)\{}
+\DoxyCodeLine{328                     cout<<erro.\mbox{\hyperlink{classProdutoNaoCadastrado_a7689ed160e9680a7f4ba17e0664926b9}{what}}()<<endl;}
+\DoxyCodeLine{329                     \mbox{\hyperlink{classSistema_ad7765bc090849c2f34f3a50ea031c1d8}{limparTela}}(\textcolor{stringliteral}{"perguntar"});}
+\DoxyCodeLine{330                 \}\textcolor{keywordflow}{catch}(\mbox{\hyperlink{classEntradaInvalida}{EntradaInvalida}}\& erro)\{}
+\DoxyCodeLine{331                     cout<<erro.\mbox{\hyperlink{classEntradaInvalida_a78bfa9f94fe11d97955411bf698fd80c}{what}}()<<endl;}
+\DoxyCodeLine{332                     \mbox{\hyperlink{classSistema_ad7765bc090849c2f34f3a50ea031c1d8}{limparTela}}(\textcolor{stringliteral}{"perguntar"});}
+\DoxyCodeLine{333                 \}\textcolor{keywordflow}{catch}(\mbox{\hyperlink{classquantidadeInvalida}{quantidadeInvalida}}\& erro)\{}
+\DoxyCodeLine{334                     cout<<erro.\mbox{\hyperlink{classquantidadeInvalida_a8b5a209d3705245168540f54e17be984}{what}}()<<endl;}
+\DoxyCodeLine{335                     \mbox{\hyperlink{classSistema_ad7765bc090849c2f34f3a50ea031c1d8}{limparTela}}(\textcolor{stringliteral}{"perguntar"});}
+\DoxyCodeLine{336                 \}\textcolor{keywordflow}{catch}(\mbox{\hyperlink{classTentativaDeRetirada}{TentativaDeRetirada}}\& erro)\{}
+\DoxyCodeLine{337                     cout<<erro.\mbox{\hyperlink{classTentativaDeRetirada_a54cd198b34d45d80a5aae003d41b1b19}{what}}()<<endl;}
+\DoxyCodeLine{338                     \mbox{\hyperlink{classSistema_ad7765bc090849c2f34f3a50ea031c1d8}{limparTela}}(\textcolor{stringliteral}{"perguntar"});}
+\DoxyCodeLine{339                 \}\textcolor{keywordflow}{catch}(\mbox{\hyperlink{classProdutoNaoRetirado}{ProdutoNaoRetirado}}\& erro)\{}
+\DoxyCodeLine{340                     cout<<erro.\mbox{\hyperlink{classProdutoNaoRetirado_a5f5d4d1e67fad7fa74ebaf62a371dd81}{what}}()<<endl;}
+\DoxyCodeLine{341                     \mbox{\hyperlink{classSistema_ad7765bc090849c2f34f3a50ea031c1d8}{limparTela}}(\textcolor{stringliteral}{"perguntar"});}
+\DoxyCodeLine{342                 \}}
+\DoxyCodeLine{343             \}}
+\DoxyCodeLine{344             \mbox{\hyperlink{classSistema_ad7765bc090849c2f34f3a50ea031c1d8}{limparTela}}(\textcolor{stringliteral}{"continuar"});}
+\DoxyCodeLine{345             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{346         \}}
+\DoxyCodeLine{347         \textcolor{keywordflow}{case} \textcolor{charliteral}{'2'}:\{}
+\DoxyCodeLine{348             cout << R\textcolor{stringliteral}{"(}}
+\DoxyCodeLine{349 \textcolor{stringliteral}{   \_\_\_\_\_\_                       \_\_\_\_                \_\_\_\_                 \_\_      \_\_      }}
+\DoxyCodeLine{350 \textcolor{stringliteral}{  / \_\_\_\_/\_\_\_  \_\_\_\_  \_\_\_\_\_\_\_  \_\_/ / /\_\_\_\_\_ \_\_\_\_\_\_   / \_\_ \(\backslash\)\_\_\_\_\_\_\_\_\_  \_\_\_\_/ /\_  \_\_/ /\_\_\_\_\_ }}
+\DoxyCodeLine{351 \textcolor{stringliteral}{ / /   / \_\_ \(\backslash\)/ \_\_ \(\backslash\)/ \_\_\_/ / / / / \_\_/ \_\_ `/ \_\_\_/  / /\_/ / \_\_\_/ \_\_ \(\backslash\)/ \_\_  / / / / \_\_/ \_\_ \(\backslash\)}}
+\DoxyCodeLine{352 \textcolor{stringliteral}{/ /\_\_\_/ /\_/ / / / (\_\_  ) /\_/ / / /\_/ /\_/ / /     / \_\_\_\_/ /  / /\_/ / /\_/ / /\_/ / /\_/ /\_/ /}}
+\DoxyCodeLine{353 \textcolor{stringliteral}{\(\backslash\)\_\_\_\_/\(\backslash\)\_\_\_\_/\_/ /\_/\_\_\_\_/\(\backslash\)\_\_,\_/\_/\(\backslash\)\_\_/\(\backslash\)\_\_,\_/\_/     /\_/   /\_/   \(\backslash\)\_\_\_\_/\(\backslash\)\_\_,\_/\(\backslash\)\_\_,\_/\(\backslash\)\_\_/\(\backslash\)\_\_\_\_/ )" << endl << endl;}}
+\DoxyCodeLine{354 \textcolor{stringliteral}{            }\textcolor{keywordtype}{string} s;}
+\DoxyCodeLine{355             cout << \textcolor{stringliteral}{"Digite o código do produto: "};}
+\DoxyCodeLine{356             cin >> s;}
+\DoxyCodeLine{357             \textcolor{keywordflow}{try}\{}
+\DoxyCodeLine{358                 \_estoque.\mbox{\hyperlink{classEstoque_aabf8bfdb75bed365713e27983d06e212}{pesquisarProduto}}(s);}
+\DoxyCodeLine{359             \}\textcolor{keywordflow}{catch}(\mbox{\hyperlink{classProdutoNaoCadastrado}{ProdutoNaoCadastrado}}\& erro)\{}
+\DoxyCodeLine{360                 cout<<erro.\mbox{\hyperlink{classProdutoNaoCadastrado_a7689ed160e9680a7f4ba17e0664926b9}{what}}()<<endl;}
+\DoxyCodeLine{361                 \mbox{\hyperlink{classSistema_ad7765bc090849c2f34f3a50ea031c1d8}{limparTela}}(\textcolor{stringliteral}{"perguntar"});}
+\DoxyCodeLine{362                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{363             \}}
+\DoxyCodeLine{364             \mbox{\hyperlink{classSistema_ad7765bc090849c2f34f3a50ea031c1d8}{limparTela}}(\textcolor{stringliteral}{"perguntar"});}
+\DoxyCodeLine{365             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{366         \}}
+\DoxyCodeLine{367         \textcolor{keywordflow}{case} \textcolor{charliteral}{'3'}:\{}
+\DoxyCodeLine{368             \_estoque.\mbox{\hyperlink{classEstoque_a255e29af4afb8d3f7adbe448c756c9bd}{listarProdutos}}();}
+\DoxyCodeLine{369             \mbox{\hyperlink{classSistema_ad7765bc090849c2f34f3a50ea031c1d8}{limparTela}}(\textcolor{stringliteral}{"perguntar"});}
+\DoxyCodeLine{370             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{371         \}}
+\DoxyCodeLine{372         \textcolor{keywordflow}{case} \textcolor{charliteral}{'4'}:\{}
+\DoxyCodeLine{373             \textcolor{keywordflow}{try}\{}
+\DoxyCodeLine{374                 \_usuarioLogado-\/>\mbox{\hyperlink{classUsuario_a3d39624354ba93690acbbd9979dd6733}{alterarUsuarioLogado}}();}
+\DoxyCodeLine{375             \}\textcolor{keywordflow}{catch}(\mbox{\hyperlink{classEscolhaInvalida}{EscolhaInvalida}} \& erro)\{}
+\DoxyCodeLine{376                   cout<<erro.\mbox{\hyperlink{classEscolhaInvalida_afa0d4f7bc4690520d6d4f4d674f4cf01}{what}}()<<endl;}
+\DoxyCodeLine{377                   \mbox{\hyperlink{classSistema_ad7765bc090849c2f34f3a50ea031c1d8}{limparTela}}(\textcolor{stringliteral}{"perguntar"});}
+\DoxyCodeLine{378                   \textcolor{keywordflow}{break};}
+\DoxyCodeLine{379             \}\textcolor{keywordflow}{catch}(\mbox{\hyperlink{classExcecaoTamanhoSenha}{ExcecaoTamanhoSenha}} \& erro)\{}
+
+\end{DoxyCode}
 \mbox{\Hypertarget{classSistema_aa4f3aeab22b1eef80bc7b1832e1785df}\label{classSistema_aa4f3aeab22b1eef80bc7b1832e1785df}} 
 \index{Sistema@{Sistema}!opcoesMenuGerente@{opcoesMenuGerente}}
 \index{opcoesMenuGerente@{opcoesMenuGerente}!Sistema@{Sistema}}
-\doxysubsubsection{\texorpdfstring{opcoesMenuGerente()}{opcoesMenuGerente()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+\doxysubsubsection{\texorpdfstring{opcoesMenuGerente()}{opcoesMenuGerente()}}
 {\footnotesize\ttfamily void Sistema\+::opcoes\+Menu\+Gerente (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
-Definition at line 28 of file sistema.\+cpp.
+Esta função abre o menu de opções possíveis para o gerente. 
+
+
+
+Definition at line 31 of file sistema.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{28                                \{}
-\DoxyCodeLine{29     \_usuarioLogado-\/>\mbox{\hyperlink{classUsuario_acc41ccb4c666766c305b19dd16dde50c}{menuInicial}}();}
-\DoxyCodeLine{30     \textcolor{keywordtype}{int} escolha;}
-\DoxyCodeLine{31     cin >> escolha;}
-\DoxyCodeLine{32     \textcolor{keywordflow}{switch}(escolha)\{}
-\DoxyCodeLine{33         \textcolor{keywordflow}{case} 1:\{}
-\DoxyCodeLine{34             \textcolor{keywordtype}{bool} loop=\textcolor{keyword}{true};}
-\DoxyCodeLine{35             std::list<pair<unsigned int,pair<Produto,int>>> listaQuantidades;}
-\DoxyCodeLine{36             \textcolor{keywordtype}{int} count=1;}
-\DoxyCodeLine{37             \textcolor{keywordflow}{while}(loop)\{   }
-\DoxyCodeLine{38                 \_estoque.\mbox{\hyperlink{classEstoque_aaf043813fe368bcfba658f73629907f3}{menuEntradaESaidaDeProdutos}}(listaQuantidades, \textcolor{stringliteral}{"saida"}, loop, count, \_usuarioLogado-\/>\mbox{\hyperlink{classUsuario_aca725547a496bfe313faac8e90bf37a7}{getNome}}(), \_usuarioLogado-\/>\mbox{\hyperlink{classUsuario_a4ed8710780cc5219f5b2ef6ba0aff386}{getUltimoAcesso}}());}
-\DoxyCodeLine{39             \}}
-\DoxyCodeLine{40             \textcolor{keywordflow}{break};}
-\DoxyCodeLine{41         \}}
-\DoxyCodeLine{42         \textcolor{keywordflow}{case} 2:\{}
-\DoxyCodeLine{43             \textcolor{keywordtype}{bool} loop=\textcolor{keyword}{true};}
-\DoxyCodeLine{44             std::list<pair<unsigned int,pair<Produto,int>>> listaQuantidades;}
-\DoxyCodeLine{45             \textcolor{keywordtype}{int} count=1;}
-\DoxyCodeLine{46             \textcolor{keywordflow}{while}(loop)\{   }
-\DoxyCodeLine{47                 \_estoque.\mbox{\hyperlink{classEstoque_aaf043813fe368bcfba658f73629907f3}{menuEntradaESaidaDeProdutos}}(listaQuantidades, \textcolor{stringliteral}{"entrada"}, loop, count,\_usuarioLogado-\/>\mbox{\hyperlink{classUsuario_aca725547a496bfe313faac8e90bf37a7}{getNome}}(), \_usuarioLogado-\/>\mbox{\hyperlink{classUsuario_a4ed8710780cc5219f5b2ef6ba0aff386}{getUltimoAcesso}}());}
-\DoxyCodeLine{48             \}}
-\DoxyCodeLine{49             \textcolor{keywordflow}{break};}
-\DoxyCodeLine{50         \}}
-\DoxyCodeLine{51         \textcolor{keywordflow}{case} 3:\{}
-\DoxyCodeLine{52             \textcolor{keywordtype}{string} s;}
-\DoxyCodeLine{53             cout << \textcolor{stringliteral}{"Digite o código do produto: "};}
-\DoxyCodeLine{54             cin >> s;}
-\DoxyCodeLine{55             \textcolor{keywordflow}{try}\{}
-\DoxyCodeLine{56                  \_estoque.\mbox{\hyperlink{classEstoque_aabf8bfdb75bed365713e27983d06e212}{pesquisarProduto}}(s);   }
-\DoxyCodeLine{57             \}\textcolor{keywordflow}{catch}(\mbox{\hyperlink{classProdutoNaoCadastrado}{ProdutoNaoCadastrado}}\& erro)\{}
-\DoxyCodeLine{58                     cout<<erro.\mbox{\hyperlink{classProdutoNaoCadastrado_a510ed82ba12dc4dc1d427bac732c69c6}{what}}()<<endl;     }
-\DoxyCodeLine{59             \}}
-\DoxyCodeLine{60             \textcolor{keywordflow}{break};}
-\DoxyCodeLine{61         \}}
-\DoxyCodeLine{62         \textcolor{keywordflow}{case} 4:\{}
-\DoxyCodeLine{63             \_estoque.\mbox{\hyperlink{classEstoque_a255e29af4afb8d3f7adbe448c756c9bd}{listarProdutos}}();}
-\DoxyCodeLine{64             \mbox{\hyperlink{classSistema_ad7765bc090849c2f34f3a50ea031c1d8}{limparTela}}(\textcolor{stringliteral}{"perguntar"});}
+\DoxyCodeLine{31                                \{}
+\DoxyCodeLine{32     \_usuarioLogado-\/>\mbox{\hyperlink{classUsuario_acc41ccb4c666766c305b19dd16dde50c}{menuInicial}}();}
+\DoxyCodeLine{33     \textcolor{keywordtype}{string} aux;}
+\DoxyCodeLine{34     cin >> aux;}
+\DoxyCodeLine{35     \textcolor{keywordflow}{if} (aux.size()>1)}
+\DoxyCodeLine{36         \textcolor{keywordflow}{throw} \mbox{\hyperlink{classEscolhaSistemaInvalida}{EscolhaSistemaInvalida}}();}
+\DoxyCodeLine{37     \textcolor{keywordtype}{char} escolha = aux[0];}
+\DoxyCodeLine{38     \mbox{\hyperlink{classSistema_ad7765bc090849c2f34f3a50ea031c1d8}{limparTela}}(\textcolor{stringliteral}{"continuar"});}
+\DoxyCodeLine{39     \textcolor{keywordflow}{switch}(escolha)\{}
+\DoxyCodeLine{40         \textcolor{keywordflow}{case} \textcolor{charliteral}{'1'}:\{}
+\DoxyCodeLine{41             \textcolor{keywordtype}{bool} loop=\textcolor{keyword}{true};}
+\DoxyCodeLine{42             std::list<pair<unsigned int,pair<Produto,int>>> listaQuantidades;}
+\DoxyCodeLine{43             \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} count=1;}
+\DoxyCodeLine{44             \textcolor{keywordflow}{while}(loop)\{}
+\DoxyCodeLine{45                 \textcolor{keywordflow}{try}\{   }
+\DoxyCodeLine{46                 \_estoque.\mbox{\hyperlink{classEstoque_a5eb81a75ea5222f4a8078b42f68ffd65}{menuEntradaESaidaDeProdutos}}(listaQuantidades, \textcolor{stringliteral}{"saida"}, loop, count, \_usuarioLogado-\/>\mbox{\hyperlink{classUsuario_aca725547a496bfe313faac8e90bf37a7}{getNome}}(), \_usuarioLogado-\/>\mbox{\hyperlink{classUsuario_a4ed8710780cc5219f5b2ef6ba0aff386}{getUltimoAcesso}}());}
+\DoxyCodeLine{47                 \}\textcolor{keywordflow}{catch}(\mbox{\hyperlink{classProdutoNaoCadastrado}{ProdutoNaoCadastrado}}\& erro)\{}
+\DoxyCodeLine{48                     cout<<erro.\mbox{\hyperlink{classProdutoNaoCadastrado_a7689ed160e9680a7f4ba17e0664926b9}{what}}()<<endl;}
+\DoxyCodeLine{49                     \mbox{\hyperlink{classSistema_ad7765bc090849c2f34f3a50ea031c1d8}{limparTela}}(\textcolor{stringliteral}{"perguntar"});}
+\DoxyCodeLine{50                 \}\textcolor{keywordflow}{catch}(\mbox{\hyperlink{classEntradaInvalida}{EntradaInvalida}}\& erro)\{}
+\DoxyCodeLine{51                     cout<<erro.\mbox{\hyperlink{classEntradaInvalida_a78bfa9f94fe11d97955411bf698fd80c}{what}}()<<endl;}
+\DoxyCodeLine{52                     \mbox{\hyperlink{classSistema_ad7765bc090849c2f34f3a50ea031c1d8}{limparTela}}(\textcolor{stringliteral}{"perguntar"});}
+\DoxyCodeLine{53                 \}\textcolor{keywordflow}{catch}(\mbox{\hyperlink{classquantidadeInvalida}{quantidadeInvalida}}\& erro)\{}
+\DoxyCodeLine{54                     cout<<erro.\mbox{\hyperlink{classquantidadeInvalida_a8b5a209d3705245168540f54e17be984}{what}}()<<endl;}
+\DoxyCodeLine{55                     \mbox{\hyperlink{classSistema_ad7765bc090849c2f34f3a50ea031c1d8}{limparTela}}(\textcolor{stringliteral}{"perguntar"});}
+\DoxyCodeLine{56                 \}\textcolor{keywordflow}{catch}(\mbox{\hyperlink{classTentativaDeRetirada}{TentativaDeRetirada}}\& erro)\{}
+\DoxyCodeLine{57                     cout<<erro.\mbox{\hyperlink{classTentativaDeRetirada_a54cd198b34d45d80a5aae003d41b1b19}{what}}()<<endl;}
+\DoxyCodeLine{58                     \mbox{\hyperlink{classSistema_ad7765bc090849c2f34f3a50ea031c1d8}{limparTela}}(\textcolor{stringliteral}{"perguntar"});}
+\DoxyCodeLine{59                 \}\textcolor{keywordflow}{catch}(\mbox{\hyperlink{classProdutoNaoRetirado}{ProdutoNaoRetirado}}\& erro)\{}
+\DoxyCodeLine{60                     cout<<erro.\mbox{\hyperlink{classProdutoNaoRetirado_a5f5d4d1e67fad7fa74ebaf62a371dd81}{what}}()<<endl;}
+\DoxyCodeLine{61                     \mbox{\hyperlink{classSistema_ad7765bc090849c2f34f3a50ea031c1d8}{limparTela}}(\textcolor{stringliteral}{"perguntar"});}
+\DoxyCodeLine{62                 \}}
+\DoxyCodeLine{63             \}}
+\DoxyCodeLine{64             \mbox{\hyperlink{classSistema_ad7765bc090849c2f34f3a50ea031c1d8}{limparTela}}(\textcolor{stringliteral}{"continuar"});}
 \DoxyCodeLine{65             \textcolor{keywordflow}{break};}
 \DoxyCodeLine{66         \}}
-\DoxyCodeLine{67         \textcolor{keywordflow}{case} 5:\{}
-\DoxyCodeLine{68             \_estoque.\mbox{\hyperlink{classEstoque_ab61aaf35ee05a8415f4fb32fec5fa87b}{imprimirLog}}();}
-\DoxyCodeLine{69             \mbox{\hyperlink{classSistema_ad7765bc090849c2f34f3a50ea031c1d8}{limparTela}}(\textcolor{stringliteral}{"perguntar"});}
-\DoxyCodeLine{70             \textcolor{keywordflow}{break};}
-\DoxyCodeLine{71         \}}
-\DoxyCodeLine{72         \textcolor{keywordflow}{case} 6:\{}
-\DoxyCodeLine{73             \textcolor{keywordflow}{try}\{}
-\DoxyCodeLine{74                 \mbox{\hyperlink{classSistema_aeae83705670f1eb7b92a3f7386d9a629}{opcoesMenuAdministrativo}}();}
-\DoxyCodeLine{75             \}\textcolor{keywordflow}{catch}(\mbox{\hyperlink{classEscolhaSistemaInvalida}{EscolhaSistemaInvalida}}\& erro)\{}
-\DoxyCodeLine{76                     cout<<erro.\mbox{\hyperlink{classEscolhaSistemaInvalida_a09e56248988ffc8109a1230f6c9c8104}{what}}()<<endl;     }
-\DoxyCodeLine{77             \}}
-\DoxyCodeLine{78             \textcolor{keywordflow}{break};}
-\DoxyCodeLine{79         \}}
-\DoxyCodeLine{80         \textcolor{keywordflow}{case} 7:}
-\DoxyCodeLine{81             \_sistemaLogin.\mbox{\hyperlink{classsistemaLogin_a99279d0a2fd4fd35e86a8b0178569022}{fazerLogout}}(\_usuarioLogado);}
-\DoxyCodeLine{82             \textcolor{keywordflow}{break};}
-\DoxyCodeLine{83         \}}
-\DoxyCodeLine{84         \textcolor{keywordflow}{default}:}
-\DoxyCodeLine{85             \textcolor{keywordflow}{throw} \mbox{\hyperlink{classEscolhaSistemaInvalida}{EscolhaSistemaInvalida}}();}
-\DoxyCodeLine{86             \textcolor{keywordflow}{break};}
-\DoxyCodeLine{87 \}}
+\DoxyCodeLine{67         \textcolor{keywordflow}{case} \textcolor{charliteral}{'2'}:\{}
+\DoxyCodeLine{68             \textcolor{keywordtype}{bool} loop=\textcolor{keyword}{true};}
+\DoxyCodeLine{69             std::list<pair<unsigned int,pair<Produto,int>>> listaQuantidades;}
+\DoxyCodeLine{70             \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} count=1;}
+\DoxyCodeLine{71             \textcolor{keywordflow}{while}(loop)\{   }
+\DoxyCodeLine{72                 \textcolor{keywordflow}{try}\{}
+\DoxyCodeLine{73                 \_estoque.\mbox{\hyperlink{classEstoque_a5eb81a75ea5222f4a8078b42f68ffd65}{menuEntradaESaidaDeProdutos}}(listaQuantidades, \textcolor{stringliteral}{"entrada"}, loop, count,\_usuarioLogado-\/>\mbox{\hyperlink{classUsuario_aca725547a496bfe313faac8e90bf37a7}{getNome}}(), \_usuarioLogado-\/>\mbox{\hyperlink{classUsuario_a4ed8710780cc5219f5b2ef6ba0aff386}{getUltimoAcesso}}());}
+\DoxyCodeLine{74                 \}\textcolor{keywordflow}{catch}(\mbox{\hyperlink{classProdutoNaoCadastrado}{ProdutoNaoCadastrado}}\& erro)\{}
+\DoxyCodeLine{75                     cout<<erro.\mbox{\hyperlink{classProdutoNaoCadastrado_a7689ed160e9680a7f4ba17e0664926b9}{what}}()<<endl;}
+\DoxyCodeLine{76                     \mbox{\hyperlink{classSistema_ad7765bc090849c2f34f3a50ea031c1d8}{limparTela}}(\textcolor{stringliteral}{"perguntar"});}
+\DoxyCodeLine{77                 \}\textcolor{keywordflow}{catch}(\mbox{\hyperlink{classEntradaInvalida}{EntradaInvalida}}\& erro)\{}
+\DoxyCodeLine{78                     cout<<erro.\mbox{\hyperlink{classEntradaInvalida_a78bfa9f94fe11d97955411bf698fd80c}{what}}()<<endl;}
+\DoxyCodeLine{79                     \mbox{\hyperlink{classSistema_ad7765bc090849c2f34f3a50ea031c1d8}{limparTela}}(\textcolor{stringliteral}{"perguntar"});}
+\DoxyCodeLine{80                 \}\textcolor{keywordflow}{catch}(\mbox{\hyperlink{classquantidadeInvalida}{quantidadeInvalida}}\& erro)\{}
+\DoxyCodeLine{81                     cout<<erro.\mbox{\hyperlink{classquantidadeInvalida_a8b5a209d3705245168540f54e17be984}{what}}()<<endl;}
+\DoxyCodeLine{82                     \mbox{\hyperlink{classSistema_ad7765bc090849c2f34f3a50ea031c1d8}{limparTela}}(\textcolor{stringliteral}{"perguntar"});}
+\DoxyCodeLine{83                 \}\textcolor{keywordflow}{catch}(\mbox{\hyperlink{classTentativaDeRetirada}{TentativaDeRetirada}}\& erro)\{}
+\DoxyCodeLine{84                     cout<<erro.\mbox{\hyperlink{classTentativaDeRetirada_a54cd198b34d45d80a5aae003d41b1b19}{what}}()<<endl;}
+\DoxyCodeLine{85                     \mbox{\hyperlink{classSistema_ad7765bc090849c2f34f3a50ea031c1d8}{limparTela}}(\textcolor{stringliteral}{"perguntar"});}
+\DoxyCodeLine{86                 \}\textcolor{keywordflow}{catch}(\mbox{\hyperlink{classProdutoNaoRetirado}{ProdutoNaoRetirado}}\& erro)\{}
+\DoxyCodeLine{87                     cout<<erro.\mbox{\hyperlink{classProdutoNaoRetirado_a5f5d4d1e67fad7fa74ebaf62a371dd81}{what}}()<<endl;}
+\DoxyCodeLine{88                     \mbox{\hyperlink{classSistema_ad7765bc090849c2f34f3a50ea031c1d8}{limparTela}}(\textcolor{stringliteral}{"perguntar"});}
+\DoxyCodeLine{89                 \}}
+\DoxyCodeLine{90             \}}
+\DoxyCodeLine{91             \mbox{\hyperlink{classSistema_ad7765bc090849c2f34f3a50ea031c1d8}{limparTela}}(\textcolor{stringliteral}{"continuar"});}
+\DoxyCodeLine{92             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{93         \}}
+\DoxyCodeLine{94         \textcolor{keywordflow}{case} \textcolor{charliteral}{'3'}:\{}
+\DoxyCodeLine{95             cout << R\textcolor{stringliteral}{"(}}
+\DoxyCodeLine{96 \textcolor{stringliteral}{   \_\_\_\_\_\_                       \_\_\_\_                \_\_\_\_                 \_\_      \_\_      }}
+\DoxyCodeLine{97 \textcolor{stringliteral}{  / \_\_\_\_/\_\_\_  \_\_\_\_  \_\_\_\_\_\_\_  \_\_/ / /\_\_\_\_\_ \_\_\_\_\_\_   / \_\_ \(\backslash\)\_\_\_\_\_\_\_\_\_  \_\_\_\_/ /\_  \_\_/ /\_\_\_\_\_ }}
+\DoxyCodeLine{98 \textcolor{stringliteral}{ / /   / \_\_ \(\backslash\)/ \_\_ \(\backslash\)/ \_\_\_/ / / / / \_\_/ \_\_ `/ \_\_\_/  / /\_/ / \_\_\_/ \_\_ \(\backslash\)/ \_\_  / / / / \_\_/ \_\_ \(\backslash\)}}
+\DoxyCodeLine{99 \textcolor{stringliteral}{/ /\_\_\_/ /\_/ / / / (\_\_  ) /\_/ / / /\_/ /\_/ / /     / \_\_\_\_/ /  / /\_/ / /\_/ / /\_/ / /\_/ /\_/ /}}
+\DoxyCodeLine{100 \textcolor{stringliteral}{\(\backslash\)\_\_\_\_/\(\backslash\)\_\_\_\_/\_/ /\_/\_\_\_\_/\(\backslash\)\_\_,\_/\_/\(\backslash\)\_\_/\(\backslash\)\_\_,\_/\_/     /\_/   /\_/   \(\backslash\)\_\_\_\_/\(\backslash\)\_\_,\_/\(\backslash\)\_\_,\_/\(\backslash\)\_\_/\(\backslash\)\_\_\_\_/ )" << endl << endl;}}
+\DoxyCodeLine{101 \textcolor{stringliteral}{            }\textcolor{keywordtype}{string} s;}
+\DoxyCodeLine{102             cout << \textcolor{stringliteral}{"Digite o código do produto: "};}
+\DoxyCodeLine{103             cin >> s;}
+\DoxyCodeLine{104             \textcolor{keywordflow}{try}\{}
+\DoxyCodeLine{105                  \_estoque.\mbox{\hyperlink{classEstoque_aabf8bfdb75bed365713e27983d06e212}{pesquisarProduto}}(s);   }
+\DoxyCodeLine{106             \}\textcolor{keywordflow}{catch}(\mbox{\hyperlink{classProdutoNaoCadastrado}{ProdutoNaoCadastrado}}\& erro)\{}
+\DoxyCodeLine{107                     cout<<erro.\mbox{\hyperlink{classProdutoNaoCadastrado_a7689ed160e9680a7f4ba17e0664926b9}{what}}()<<endl;}
+\DoxyCodeLine{108                     \mbox{\hyperlink{classSistema_ad7765bc090849c2f34f3a50ea031c1d8}{limparTela}}(\textcolor{stringliteral}{"perguntar"});}
+\DoxyCodeLine{109                     \textcolor{keywordflow}{break};     }
+\DoxyCodeLine{110             \}}
+\DoxyCodeLine{111             \mbox{\hyperlink{classSistema_ad7765bc090849c2f34f3a50ea031c1d8}{limparTela}}(\textcolor{stringliteral}{"perguntar"});}
+\DoxyCodeLine{112             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{113         \}}
+\DoxyCodeLine{114         \textcolor{keywordflow}{case} \textcolor{charliteral}{'4'}:\{}
+\DoxyCodeLine{115             \_estoque.\mbox{\hyperlink{classEstoque_a255e29af4afb8d3f7adbe448c756c9bd}{listarProdutos}}();}
+\DoxyCodeLine{116             \mbox{\hyperlink{classSistema_ad7765bc090849c2f34f3a50ea031c1d8}{limparTela}}(\textcolor{stringliteral}{"perguntar"});}
+\DoxyCodeLine{117             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{118         \}}
+\DoxyCodeLine{119         \textcolor{keywordflow}{case} \textcolor{charliteral}{'5'}:\{}
+\DoxyCodeLine{120             \_estoque.\mbox{\hyperlink{classEstoque_ab61aaf35ee05a8415f4fb32fec5fa87b}{imprimirLog}}();}
+\DoxyCodeLine{121             \mbox{\hyperlink{classSistema_ad7765bc090849c2f34f3a50ea031c1d8}{limparTela}}(\textcolor{stringliteral}{"perguntar"});}
+\DoxyCodeLine{122             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{123         \}}
+\DoxyCodeLine{124         \textcolor{keywordflow}{case} \textcolor{charliteral}{'6'}:\{}
+\DoxyCodeLine{125             \textcolor{keywordflow}{try}\{}
+\DoxyCodeLine{126                 \mbox{\hyperlink{classSistema_aeae83705670f1eb7b92a3f7386d9a629}{opcoesMenuAdministrativo}}();}
+\DoxyCodeLine{127             \}\textcolor{keywordflow}{catch}(\mbox{\hyperlink{classEscolhaSistemaInvalida}{EscolhaSistemaInvalida}}\& erro)\{}
+\DoxyCodeLine{128                     cout<<erro.\mbox{\hyperlink{classEscolhaSistemaInvalida_a38b0c8dd1e7321aec4b3fa67f253ff57}{what}}()<<endl;     }
+\DoxyCodeLine{129                     \mbox{\hyperlink{classSistema_ad7765bc090849c2f34f3a50ea031c1d8}{limparTela}}(\textcolor{stringliteral}{"perguntar"});}
+\DoxyCodeLine{130                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{131             \}}
+\DoxyCodeLine{132             \textcolor{comment}{//limparTela("perguntar");}}
+\DoxyCodeLine{133             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{134         \}}
+\DoxyCodeLine{135         \textcolor{keywordflow}{case} \textcolor{charliteral}{'7'}:}
+\DoxyCodeLine{136             \_sistemaLogin.\mbox{\hyperlink{classsistemaLogin_a99279d0a2fd4fd35e86a8b0178569022}{fazerLogout}}(\_usuarioLogado);}
+\DoxyCodeLine{137             \textcolor{keywordflow}{break};}
 
 \end{DoxyCode}
-\mbox{\Hypertarget{classSistema_aa4f3aeab22b1eef80bc7b1832e1785df}\label{classSistema_aa4f3aeab22b1eef80bc7b1832e1785df}} 
-\index{Sistema@{Sistema}!opcoesMenuGerente@{opcoesMenuGerente}}
-\index{opcoesMenuGerente@{opcoesMenuGerente}!Sistema@{Sistema}}
-\doxysubsubsection{\texorpdfstring{opcoesMenuGerente()}{opcoesMenuGerente()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily void Sistema\+::opcoes\+Menu\+Gerente (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
 \mbox{\Hypertarget{classSistema_a13d1f7199037c4e87fcfda089646198a}\label{classSistema_a13d1f7199037c4e87fcfda089646198a}} 
 \index{Sistema@{Sistema}!salvarParametrosSistema@{salvarParametrosSistema}}
 \index{salvarParametrosSistema@{salvarParametrosSistema}!Sistema@{Sistema}}
-\doxysubsubsection{\texorpdfstring{salvarParametrosSistema()}{salvarParametrosSistema()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+\doxysubsubsection{\texorpdfstring{salvarParametrosSistema()}{salvarParametrosSistema()}}
 {\footnotesize\ttfamily void Sistema\+::salvar\+Parametros\+Sistema (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Esta função salva todos os parametros do sistema, para vários arquivos txt, chamando as funções correspondentes. 
 
 
 
@@ -427,15 +609,9 @@ Definition at line 9 of file sistema.\+cpp.
 \DoxyCodeLine{12 \}}
 
 \end{DoxyCode}
-\mbox{\Hypertarget{classSistema_a13d1f7199037c4e87fcfda089646198a}\label{classSistema_a13d1f7199037c4e87fcfda089646198a}} 
-\index{Sistema@{Sistema}!salvarParametrosSistema@{salvarParametrosSistema}}
-\index{salvarParametrosSistema@{salvarParametrosSistema}!Sistema@{Sistema}}
-\doxysubsubsection{\texorpdfstring{salvarParametrosSistema()}{salvarParametrosSistema()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily void Sistema\+::salvar\+Parametros\+Sistema (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-anterior\+Push/include/sistema/\mbox{\hyperlink{anteriorPush_2include_2sistema_2sistema_8hpp}{sistema.\+hpp}}\item 
-anterior\+Push/src/sistema/\mbox{\hyperlink{anteriorPush_2src_2sistema_2sistema_8cpp}{sistema.\+cpp}}\end{DoxyCompactItemize}
+include/sistema/\mbox{\hyperlink{sistema_8hpp}{sistema.\+hpp}}\item 
+src/sistema/\mbox{\hyperlink{sistema_8cpp}{sistema.\+cpp}}\end{DoxyCompactItemize}

@@ -74,12 +74,10 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="anteriorPush_2third__party_2doctest_8h_source.html">doctest.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="doctest_8h_source.html">doctest.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:ac59161273947acc06c938dc7dbe1f7cd"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdoctest_1_1detail_1_1filldata.html#ac59161273947acc06c938dc7dbe1f7cd">fill</a> (std::ostream *stream, const T &amp;in)</td></tr>
-<tr class="separator:ac59161273947acc06c938dc7dbe1f7cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac59161273947acc06c938dc7dbe1f7cd"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdoctest_1_1detail_1_1filldata.html#ac59161273947acc06c938dc7dbe1f7cd">fill</a> (std::ostream *stream, const T &amp;in)</td></tr>
 <tr class="separator:ac59161273947acc06c938dc7dbe1f7cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -88,10 +86,10 @@ Static Public Member Functions</h2></td></tr>
 struct doctest::detail::filldata&lt; T &gt;</h3>
 
 
-<p class="definition">Definition at line <a class="el" href="anteriorPush_2third__party_2doctest_8h_source.html#l01021">1021</a> of file <a class="el" href="anteriorPush_2third__party_2doctest_8h_source.html">doctest.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="doctest_8h_source.html#l01021">1021</a> of file <a class="el" href="doctest_8h_source.html">doctest.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ac59161273947acc06c938dc7dbe1f7cd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac59161273947acc06c938dc7dbe1f7cd">&#9670;&nbsp;</a></span>fill() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac59161273947acc06c938dc7dbe1f7cd">&#9670;&nbsp;</a></span>fill()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -126,69 +124,22 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="anteriorPush_2third__party_2doctest_8h_source.html#l01123">1123</a> of file <a class="el" href="anteriorPush_2third__party_2doctest_8h_source.html">doctest.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="doctest_8h_source.html#l01123">1123</a> of file <a class="el" href="doctest_8h_source.html">doctest.h</a>.</p>
 <div class="fragment"><div class="line"><a name="l01123"></a><span class="lineno"> 1123</span>&#160;                                                          {</div>
 <div class="line"><a name="l01124"></a><span class="lineno"> 1124</span>&#160;<span class="preprocessor">#if defined(_MSC_VER) &amp;&amp; _MSC_VER &lt;= 1900</span></div>
 <div class="line"><a name="l01125"></a><span class="lineno"> 1125</span>&#160;        insert_hack_t&lt;T&gt;::insert(*stream, in);</div>
 <div class="line"><a name="l01126"></a><span class="lineno"> 1126</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l01127"></a><span class="lineno"> 1127</span>&#160;        <a class="code" href="namespacedoctest_1_1Color.html#a2cc3f4bdda7bfd2e0e3faf7e678d3b98">operator&lt;&lt;</a>(*stream, in);</div>
-<div class="line"><a name="l01128"></a><span class="lineno"> 1128</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l01129"></a><span class="lineno"> 1129</span>&#160;        }</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="ac59161273947acc06c938dc7dbe1f7cd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac59161273947acc06c938dc7dbe1f7cd">&#9670;&nbsp;</a></span>fill() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void <a class="el" href="structdoctest_1_1detail_1_1filldata.html">doctest::detail::filldata</a>&lt; T &gt;::fill </td>
-          <td>(</td>
-          <td class="paramtype">std::ostream *&#160;</td>
-          <td class="paramname"><em>stream</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const T &amp;&#160;</td>
-          <td class="paramname"><em>in</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="third__party_2doctest_8h_source.html#l01123">1123</a> of file <a class="el" href="third__party_2doctest_8h_source.html">doctest.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l01123"></a><span class="lineno"> 1123</span>&#160;                                                          {</div>
-<div class="line"><a name="l01124"></a><span class="lineno"> 1124</span>&#160;<span class="preprocessor">#if defined(_MSC_VER) &amp;&amp; _MSC_VER &lt;= 1900</span></div>
-<div class="line"><a name="l01125"></a><span class="lineno"> 1125</span>&#160;        insert_hack_t&lt;T&gt;::insert(*stream, in);</div>
-<div class="line"><a name="l01126"></a><span class="lineno"> 1126</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l01127"></a><span class="lineno"> 1127</span>&#160;        <a class="code" href="namespacedoctest_1_1Color.html#a2cc3f4bdda7bfd2e0e3faf7e678d3b98">operator&lt;&lt;</a>(*stream, in);</div>
+<div class="line"><a name="l01127"></a><span class="lineno"> 1127</span>&#160;        <a class="code" href="namespacedoctest_1_1Color.html#a675253fc8ae3b6d67b40649f3ee7fccf">operator&lt;&lt;</a>(*stream, in);</div>
 <div class="line"><a name="l01128"></a><span class="lineno"> 1128</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l01129"></a><span class="lineno"> 1129</span>&#160;        }</div>
 </div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>anteriorPush/third_party/<a class="el" href="anteriorPush_2third__party_2doctest_8h_source.html">doctest.h</a></li>
+<li>third_party/<a class="el" href="doctest_8h_source.html">doctest.h</a></li>
 </ul>
 </div><!-- contents -->
-<div class="ttc" id="anamespacedoctest_1_1Color_html_a2cc3f4bdda7bfd2e0e3faf7e678d3b98"><div class="ttname"><a href="namespacedoctest_1_1Color.html#a2cc3f4bdda7bfd2e0e3faf7e678d3b98">doctest::Color::operator&lt;&lt;</a></div><div class="ttdeci">DOCTEST_INTERFACE std::ostream &amp; operator&lt;&lt;(std::ostream &amp;s, Color::Enum code)</div></div>
+<div class="ttc" id="anamespacedoctest_1_1Color_html_a675253fc8ae3b6d67b40649f3ee7fccf"><div class="ttname"><a href="namespacedoctest_1_1Color.html#a675253fc8ae3b6d67b40649f3ee7fccf">doctest::Color::operator&lt;&lt;</a></div><div class="ttdeci">DOCTEST_INTERFACE std::ostream &amp; operator&lt;&lt;(std::ostream &amp;s, Color::Enum code)</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

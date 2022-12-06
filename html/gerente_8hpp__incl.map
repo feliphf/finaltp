@@ -1,0 +1,9 @@
+<map id="include/login/gerente.hpp" name="include/login/gerente.hpp">
+<area shape="rect" id="node1" title="Classe responsável por armazenar todos os atributos de um gerente." alt="" coords="247,5,434,32"/>
+<area shape="rect" id="node2" href="$usuario_8hpp.html" title="Classe para armazenamento de todas as informações de cada usuário." alt="" coords="291,80,390,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="86,229,166,256"/>
+<area shape="rect" id="node4" title=" " alt="" coords="311,229,370,256"/>
+<area shape="rect" id="node5" title=" " alt="" coords="506,155,580,181"/>
+<area shape="rect" id="node6" href="$EXCECOESDOLOGIN_8hpp.html" title=" " alt="" coords="250,155,430,181"/>
+<area shape="rect" id="node7" href="$EXCECOESDOESTOQUE_8hpp.html" title=" " alt="" coords="25,155,226,181"/>
+</map>

@@ -1,0 +1,13 @@
+<map id="include/login/sistemaLogin.hpp" name="include/login/sistemaLogin.hpp">
+<area shape="rect" id="node1" title="Classe responsável por armazenar um mapa de usuários, e as funções de um sistema de login deve ter." alt="" coords="108,5,332,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="435,304,515,331"/>
+<area shape="rect" id="node3" title=" " alt="" coords="173,304,232,331"/>
+<area shape="rect" id="node4" title=" " alt="" coords="97,80,170,107"/>
+<area shape="rect" id="node5" title=" " alt="" coords="195,80,245,107"/>
+<area shape="rect" id="node6" title=" " alt="" coords="21,229,96,256"/>
+<area shape="rect" id="node7" href="$gerente_8hpp.html" title="Classe responsável por armazenar todos os atributos de um gerente." alt="" coords="270,80,370,107"/>
+<area shape="rect" id="node11" href="$funcionario_8hpp.html" title="Classe responsável por armazenar todos os atributos de um funcionário." alt="" coords="395,80,517,107"/>
+<area shape="rect" id="node8" href="$usuario_8hpp.html" title="Classe para armazenamento de todas as informações de cada usuário." alt="" coords="271,155,369,181"/>
+<area shape="rect" id="node9" href="$EXCECOESDOLOGIN_8hpp.html" title=" " alt="" coords="449,229,629,256"/>
+<area shape="rect" id="node10" href="$EXCECOESDOESTOQUE_8hpp.html" title=" " alt="" coords="171,229,373,256"/>
+</map>

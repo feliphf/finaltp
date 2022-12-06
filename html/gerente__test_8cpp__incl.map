@@ -1,5 +1,12 @@
 <map id="tests/gerente_test.cpp" name="tests/gerente_test.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="21,5,187,32"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,80,88,107"/>
-<area shape="rect" id="node3" title=" " alt="" coords="113,80,213,107"/>
+<area shape="rect" id="node1" title=" " alt="" coords="198,5,365,32"/>
+<area shape="rect" id="node2" href="$doctest_8h.html" title=" " alt="" coords="183,80,266,107"/>
+<area shape="rect" id="node4" href="$gerente_8hpp.html" title="Classe responsável por armazenar todos os atributos de um gerente." alt="" coords="290,80,390,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="188,155,261,181"/>
+<area shape="rect" id="node5" href="$usuario_8hpp.html" title="Classe para armazenamento de todas as informações de cada usuário." alt="" coords="291,155,390,181"/>
+<area shape="rect" id="node6" title=" " alt="" coords="86,304,166,331"/>
+<area shape="rect" id="node7" title=" " alt="" coords="311,304,370,331"/>
+<area shape="rect" id="node8" title=" " alt="" coords="506,229,580,256"/>
+<area shape="rect" id="node9" href="$EXCECOESDOLOGIN_8hpp.html" title=" " alt="" coords="250,229,430,256"/>
+<area shape="rect" id="node10" href="$EXCECOESDOESTOQUE_8hpp.html" title=" " alt="" coords="25,229,226,256"/>
 </map>
