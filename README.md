@@ -18,6 +18,10 @@ e registrar compras.
 ## Diagrama de classes:
 <img src = "../database/imgReadme/diagramaClasses.png">
 
+
+![alt text](https://github.com/feliphf/finaltp/blob/main/database/imgReadme/diagramaClasses.png)
+![Alt text](../database/imgReadme/diagramaClasses.png?raw=true "Title")
+
 ## User Stories:
 
 

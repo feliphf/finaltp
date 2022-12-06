@@ -7,5 +7,5 @@
 4823 Pedro_Araujo_Cruz Gerente 154.695.584-85 pedrinho@gmail.com 05/12/2022 486215
 5623 Alexandre_Caleb Funcionario 695.856.265-54 alexandreca@hotmail.com 01/12/2022 587469
 7516 Luciana_Conceicao Funcionario 365.965.458-48 luciana@ufmg.br 04/12/2022 147895
-7852 Luis_Diogo Funcionario 362.652.486-55 ludiogo@gmail.com 30/11/2022 215485
+7852 Luis_Diogo Funcionario 362.652.486-55 ludiogo@gmail.com 06/12/2022 215485
 9564 Felipe_Ferraz Gerente 756.485.125-78 felipe@ufmg.br 04/12/2022 654321

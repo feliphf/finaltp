@@ -1,7 +1,7 @@
-Malbec Boticario Amadeirado 0001 169.9 154
+Egeu Boticario Amadeirado 0001 169.9 151
 Uomini Boticario Amadeirado 0010 149.9 68
 Uomini_Black Boticario Oriental 0011 149.9 84
-Egeo_Dolce Boticario Adocicado 0100 129.9 37
+Egeo_Dolce Boticario Adocicado 0100 129.9 5
 Egeo_Bomb_Black Boticario Intenso 0101 129.9 100
 Egeo_Spicy_Vibe Boticario Picante 0102 119.9 98
 212_VIP CarolinaHerrera Suave 1000 469 20

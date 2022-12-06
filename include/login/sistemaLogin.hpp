@@ -39,7 +39,8 @@ class sistemaLogin{
         map<string,Usuario*> _usuarios;
   
     public:
-  
+        ///@brief Construtor sistema login
+        sistemaLogin() = default;
         ///@brief Esta função lê o arquivo que contém todas as informações salvas, da última vez que foi acessado   
         void lerArquivo();
   
