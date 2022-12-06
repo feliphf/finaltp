@@ -3,7 +3,7 @@
  * @author Felipe Henrique Ferraz e Yan Figueiras
  * @brief Classe responsavel por armazenar produtos
  * @version 1.0
- * @date 2022-11-14
+ * @date 2022-12-05
  * @details A classe estoque armazena um mapa de objetos do tipo produtos,
  * manipula-os e exibe-os, e salva tudo no arquivo "Estoque.txt".
  * @copyright GNU General Public License v2.0
@@ -24,7 +24,7 @@ using namespace std;
  /**
    * @brief
    *
-   * @details A classe Estoque é responsável por  
+   * @details A classe estoque é responsável por  
    * 
    *  
    * 
