@@ -31,10 +31,21 @@ using namespace std;
 class Funcionario: public Usuario {
     private:
     public:
+  
+        ///@brief
         Funcionario(string id, string t, string n, string c, string e, string u, string s);
+  
+        ///@brief
         void menuInicial() override;
+  
+        ///@brief
         void menuAdministrativo() override;
+  
+        ///@brief
+        ///@return Retorna se
         bool temPermissao() override;
+  
+        ///@brief
         void alterarUsuarioLogado() override;
 };
 
