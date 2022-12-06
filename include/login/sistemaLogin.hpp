@@ -1,3 +1,15 @@
+  /**
+   * @file sistemaLogin.hpp
+   * @author Ana Carolina, Felipe Ferraz, Guilherme Pascoal, Pedro Araújo, Yan Figueiras 
+   * @brief Classe para
+   * @version 1.1
+   * @date 2022-12-05
+   * @details 
+   *
+   * 
+   * @copyright GNU General Public License v2.0
+   */
+
 #ifndef SISTEMALOGIN_H
 #define SISTEMALOGIN_N
 
