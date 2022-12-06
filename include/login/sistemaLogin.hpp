@@ -39,8 +39,9 @@ class sistemaLogin{
         map<string,Usuario*> _usuarios;
   
     public:
-        ///@brief Construtor sistema login
+        ///@brief Esta é uma função de construtor, ao qual inicaliza com nenhuma informação
         sistemaLogin() = default;
+  
         ///@brief Esta função lê o arquivo que contém todas as informações salvas, da última vez que foi acessado   
         void lerArquivo();
   
@@ -63,9 +64,11 @@ class sistemaLogin{
         void limparMemoria();
   
         ///@brief Esta função limpa a tela, para poder ter uma melhor visualização na compilação
+        ///@param Modo sendo uma conferência se deve ou não perguntar se pode limpar a tela
         void limparTela(string modo);
   
         ///@brief Esta função faz logout do usuário que está logado no momento da execução
+        ///@param U sendo um ponteiro armazenando qual usuário quer fazer logout
         void fazerLogout(Usuario *u);
   
         ///@brief Esta função gera um Id único para cada usuário
@@ -82,6 +85,7 @@ class sistemaLogin{
   
         ///@brief Esta função dá a possibilidade de pesquisar um determinado usuário e seus atributos
         ///@return um ponteiro de usuário
+        ///@param Pesquisa sendo o id do usuário ou o seu nome 
         Usuario* pesquisarUsuario(string pesquisa);
 };
 
