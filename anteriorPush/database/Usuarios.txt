@@ -1,5 +1,0 @@
-1542 Yan_Figueiras_Alves Funcionario 448.860.168-55 yanfigueiras@gmail.com 29/11/2022 159753
-3675 Robertin_Shapira Gerente 144.695.458-88 robertin@yahho.com 27/11/2022 145236
-4823 Pedro_Araujo_Cruz Gerente 154.695.584-85 pedrinho@gmail.com 27/11/2022 486215
-4856 Felipe_dos_crias Gerente 756.485.125-78 felipe@ufmg.br 04/12/2022 654321
-7584 Ana_Julia_Alves Funcionario 125.452.485-44 julia.alves@ufmg.br 11/10/2022 145236

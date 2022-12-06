@@ -1,4 +1,11 @@
-aa aaaaaaaaaaaaaaaa aa 12 20 132
-fenomeno natura molhado 1396547 300 100
-aaaa avon amadeirado 7854267 40 1213
-panteao 212 amadeirado 9545124 120 123
+Malbec Boticario Amadeirado 0001 169.9 154
+Uomini Boticario Amadeirado 0010 149.9 68
+Uomini_Black Boticario Oriental 0011 149.9 84
+Egeo_Dolce Boticario Adocicado 0100 129.9 37
+Egeo_Bomb_Black Boticario Intenso 0101 129.9 100
+Egeo_Spicy_Vibe Boticario Picante 0102 119.9 98
+212_VIP CarolinaHerrera Suave 1000 469 20
+212_Heroes CarolinaHerrera Frutado 1001 789 11
+Kaiak Natura Aromatico 1100 139.9 76
+Ilia Natura Floral 1101 147.5 87
+Essencial Natura Amadeirado 1102 213 90

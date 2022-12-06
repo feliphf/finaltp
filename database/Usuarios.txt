@@ -1,6 +1,11 @@
 0000 adm Gerente 111.111.111-11 adm@gmail.com 05/12/2022 1
-1542 y Gerente 448.860.168-55 yanfigueiras@gmail.com 06/12/2022 1
-3675 Robertin_Shapira Gerente 144.695.458-88 robertin@yahho.com 27/11/2022 145236
-4823 Pedro_Araujo_Cruz Gerente 154.695.584-85 pedrinho@gmail.com 27/11/2022 486215
-4856 Felipe_dos_crias Gerente 756.485.125-78 felipe@ufmg.br 04/12/2022 654321
-7584 Ana_Julia_Alves Funcionario 125.452.485-44 julia.alves@ufmg.br 06/12/2022 1
+1542 Yan_Figueiras_Alves Gerente 448.860.168-55 yanfigueiras@gmail.com 06/12/2022 123456
+1547 Gabrielly_Marli_da_Paz Funcionario 145.625.698-95 gabmarli@gmail.com 03/11/2022 456852
+1584 Ana_Julia_Alves Funcionario 125.452.485-44 julia.alves@ufmg.br 06/12/2022 195478
+3256 Manoel_Nicolas Funcionario 789.656.489-65 manoelnica@ufmg.br 28/11/2022 963254
+3675 Evelyn_Carolina Funcionario 144.695.458-88 carolina@yahho.com 27/11/2022 145236
+4823 Pedro_Araujo_Cruz Gerente 154.695.584-85 pedrinho@gmail.com 05/12/2022 486215
+5623 Alexandre_Caleb Funcionario 695.856.265-54 alexandreca@hotmail.com 01/12/2022 587469
+7516 Luciana_Conceicao Funcionario 365.965.458-48 luciana@ufmg.br 04/12/2022 147895
+7852 Luis_Diogo Funcionario 362.652.486-55 ludiogo@gmail.com 30/11/2022 215485
+9564 Felipe_Ferraz Gerente 756.485.125-78 felipe@ufmg.br 04/12/2022 654321
