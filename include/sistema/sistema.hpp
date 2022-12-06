@@ -1,12 +1,12 @@
   /**
    * @file sistema.hpp
    * @author Ana Carolina, Felipe Ferraz, Guilherme Pascoal, Pedro Araújo, Yan Figueiras 
-   * @brief Classe para
+   * @brief Classe responsável pela inicialização do sistema
    * @version 1.1
    * @date 2022-12-05
-   * @details 
-   *
-   * 
+   * @details A classe sistema armazena um ponteiro de um usúario ao qual esta classe irá mostrar
+   * os menus compatíveis para cada tipo de usuário, esta classe será a principal do sistema, ela inicializará
+   * todos as possíveis modificações, movimentações, e funcionamento do sistema 
    * @copyright GNU General Public License v2.0
    */
 
@@ -19,55 +19,54 @@
 #include "estoque.hpp"
 
 /**
-   * @brief 
+   * @brief Aramzena um ponteiro de usúario, e mostra os menus de opções possíveis
    *
-   * @details A classe sistema é responsável por
-   * 
-   *  
-   * 
-   * 
+   * @details A classe sistema é responsável por inicializar o sistema, sendo assim 
+   * ela armazena todas as funções, e chama-as de acordo com os menus de opções correspondentes,
+   * ela cria um objeto da classe estoque, para poder fazer as movimentações do funcionário ou gerente
+   * além de criar um objeto da classe sistemaLogin, para poder abrir os seus menus
    */
 
 
 class Sistema{
     private:
   
-        ///@brief 
+        ///@brief ponteiro de usuário que está armazendo o usuário logado atualmente no sistema
         Usuario *_usuarioLogado;
   
-        ///@brief 
+        ///@brief um objeto da classe sistemaLogin que contem as informações e menus dos logins
         sistemaLogin _sistemaLogin;
   
-        ///@brief 
+        ///@brief um obejto da classe estoque que contem as possibilidades de modificações de um determinado produto
         Estoque _estoque;
   
     public:
   
-        ///@brief 
+        ///@brief Esta é uma função que destroi todos os atributos da classe sistema para não ocupar lugar na memória
         Sistema() = default; 
   
-        ///@brief 
+        ///@brief Esta função inicaliza os parametros do sistema, como ler, e abrir de arquivos txt, chamando as funções correspondentes
         void inicializarParametrosSistema();
   
-        ///@brief 
+        ///@brief Esta função salva todos os parametros do sistema, para vários arquivos txt, chamando as funções correspondentes
         void salvarParametrosSistema();
   
-        ///@brief 
+        ///@brief Esta função abre o menu de opções possíveis para o gerente
         void opcoesMenuGerente();
   
-        ///@brief 
+        ///@brief Esta função abre o menu de opções possíveis da parte administrativas  
         void opcoesMenuAdministrativo();
   
-        ///@brief 
+        ///@brief Esta função abre o menu de opções possíveis para o funcionário
         void opcoesMenuFuncionario();
   
-        ///@brief 
+        ///@brief Esta função efetua o login no sistema, de acordo com seu usuário e senha
         void efetuarLogin();
   
-        ///@brief 
+        ///@brief Esta função inicializa todo o sistema
         void inicializarSistema();
   
-        ///@brief 
+        ///@brief Esta função limpa a tela, para poder ter uma melhor visualização na compilação
         void limparTela(string modo);
 };
 
