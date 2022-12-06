@@ -1,6 +1,6 @@
 /**
  * @file estoque.hpp
- * @author Felipe Henrique Ferraz e Yan Figueiras
+ * @author Ana Carolina, Felipe Ferraz, Guilherme Pascoal, Pedro Araújo, Yan Figueiras 
  * @brief Classe responsavel por armazenar produtos
  * @version 1.0
  * @date 2022-12-05
