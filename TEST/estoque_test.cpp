@@ -4,306 +4,104 @@
 
 TEST_CASE("Testando a função salvar arquivo")
 {
-    //EXEMPLOS DE 3 CHECAGENS
-    Triangle t1(3,2,2);
-    CHECK(t1.getPerimeter()==7);
-
-    Usuario usuario = Usuario();
-	usuario.setCpf("12341234123");
-	usuario.setSenha("senha");
-	CHECK(usuario.login());
-    
-    Usuario usuario = Usuario();
-	usuario.setCpf("32132132132");
-	usuario.setSenha("senha");
-	CHECK_THROWS_AS(usuario.login(), UsuarioNaoEncontradoException);
+    	Estoque estoque;
+	CHECK(estoque.salvarArquivo());
 }
 
 TEST_CASE("Testando a função ler arquivo ") 
 {
-    //EXEMPLOS DE 3 CHECAGENS
-    Triangle t1(3,2,2);
-    CHECK(t1.getPerimeter()==7);
-
-    Usuario usuario = Usuario();
-	usuario.setCpf("12341234123");
-	usuario.setSenha("senha");
-	CHECK(usuario.login());
-    
-    Usuario usuario = Usuario();
-	usuario.setCpf("32132132132");
-	usuario.setSenha("senha");
-	CHECK_THROWS_AS(usuario.login(), UsuarioNaoEncontradoException);
+    	Estoque estoque;
+	CHECK(estoque.lerArquivo());
 }
 
 TEST_CASE("Testando a função listar produtos") 
 {
-    //EXEMPLOS DE 3 CHECAGENS
-    Triangle t1(3,2,2);
-    CHECK(t1.getPerimeter()==7);
-
-    Usuario usuario = Usuario();
-	usuario.setCpf("12341234123");
-	usuario.setSenha("senha");
-	CHECK(usuario.login());
-    
-    Usuario usuario = Usuario();
-	usuario.setCpf("32132132132");
-	usuario.setSenha("senha");
-	CHECK_THROWS_AS(usuario.login(), UsuarioNaoEncontradoException);
+    	Estoque estoque;
+	CHECK(estoque.listarArquivo());
 }
 
 TEST_CASE("Testando a função pesquisar produtos") 
 {
-    //EXEMPLOS DE 3 CHECAGENS
-    Triangle t1(3,2,2);
-    CHECK(t1.getPerimeter()==7);
-
-    Usuario usuario = Usuario();
-	usuario.setCpf("12341234123");
-	usuario.setSenha("senha");
-	CHECK(usuario.login());
-    
-    Usuario usuario = Usuario();
-	usuario.setCpf("32132132132");
-	usuario.setSenha("senha");
-	CHECK_THROWS_AS(usuario.login(), UsuarioNaoEncontradoException);
+        Estoque estoque;
+	CHECK_THROWS_AS(estoque.pesquisarProduto("1234567"), ProdutoNaoCadastrado);
 }
 
-TEST_CASE("Testando a função alterar nome do produto") 
+TEST_CASE("Testando a função alterar o nome do produto") 
 {
-    //EXEMPLOS DE 3 CHECAGENS
-    Triangle t1(3,2,2);
-    CHECK(t1.getPerimeter()==7);
+        Estoque estoque1;
+	CHECK_THROWS_AS(estoque1.alterarNomeProduto("1234567","212"), ProdutoNaoCadastrado);
 
-    Usuario usuario = Usuario();
-	usuario.setCpf("12341234123");
-	usuario.setSenha("senha");
-	CHECK(usuario.login());
-    
-    Usuario usuario = Usuario();
-	usuario.setCpf("32132132132");
-	usuario.setSenha("senha");
-	CHECK_THROWS_AS(usuario.login(), UsuarioNaoEncontradoException);
+        Estoque estoque2;
+	CHECK_THROWS_AS(estoque2.alterarNomeProduto("1234567","O nome do produto esta acima do limite"), ExcecaoTamanhoNomeAlt);
 }
 
-TEST_CASE("Testando a função alterar fabricante do produto") 
+TEST_CASE("Testando a função alterar o fabricante do produto") 
 {
-    //EXEMPLOS DE 3 CHECAGENS
-    Triangle t1(3,2,2);
-    CHECK(t1.getPerimeter()==7);
-
-    Usuario usuario = Usuario();
-	usuario.setCpf("12341234123");
-	usuario.setSenha("senha");
-	CHECK(usuario.login());
-    
-    Usuario usuario = Usuario();
-	usuario.setCpf("32132132132");
-	usuario.setSenha("senha");
-	CHECK_THROWS_AS(usuario.login(), UsuarioNaoEncontradoException);
+        Estoque estoque;
+	CHECK_THROWS_AS(estoque.alterarFabricanteProduto("456789","Channel"), ProdutoNaoCadastrado);
+	
+        Estoque estoque2;
+	CHECK_THROWS_AS(estoque2.alterarFabricanteProduto("456789","O fabricante do produto esta acima do limite"), ExcecaoTamanhoFabricAlt);
 }
 
-TEST_CASE("Testando a função categoria do produto") 
-{
-    //EXEMPLOS DE 3 CHECAGENS
-    Triangle t1(3,2,2);
-    CHECK(t1.getPerimeter()==7);
 
-    Usuario usuario = Usuario();
-	usuario.setCpf("12341234123");
-	usuario.setSenha("senha");
-	CHECK(usuario.login());
-    
-    Usuario usuario = Usuario();
-	usuario.setCpf("32132132132");
-	usuario.setSenha("senha");
-	CHECK_THROWS_AS(usuario.login(), UsuarioNaoEncontradoException);
+
+TEST_CASE("Testando a função alterar a categoria do produto") 
+{
+        Estoque estoque1;
+	CHECK_THROWS_AS(estoque1.alterarCategoriaProduto("546123","amaderado"), ProdutoNaoCadastrado);
+
+        Estoque estoque2;
+	CHECK_THROWS_AS(estoque2.alterarCategoriaProduto("546123","A categoria do produto esta acima do limite"), ExcecaoTamanhoCategAlt);
 }
 
-TEST_CASE("Testando a função preço do produto") 
+TEST_CASE("Testando a função alterar o preço do produto") 
 {
-    //EXEMPLOS DE 3 CHECAGENS
-    Triangle t1(3,2,2);
-    CHECK(t1.getPerimeter()==7);
+        Estoque estoque1;
+	CHECK_THROWS_AS(estoque1.alterarPrecoProduto("789456",100), ProdutoNaoCadastrado);
 
-    Usuario usuario = Usuario();
-	usuario.setCpf("12341234123");
-	usuario.setSenha("senha");
-	CHECK(usuario.login());
-    
-    Usuario usuario = Usuario();
-	usuario.setCpf("32132132132");
-	usuario.setSenha("senha");
-	CHECK_THROWS_AS(usuario.login(), UsuarioNaoEncontradoException);
+        Estoque estoque2;
+	CHECK_THROWS_AS(estoque2.alterarPrecoProduto("789456",-1), ExcecaoPrecoNegativoAlt;
 }
 
 TEST_CASE("Testando a função alterar produto") 
 {
-    //EXEMPLOS DE 3 CHECAGENS
-    Triangle t1(3,2,2);
-    CHECK(t1.getPerimeter()==7);
-
-    Usuario usuario = Usuario();
-	usuario.setCpf("12341234123");
-	usuario.setSenha("senha");
-	CHECK(usuario.login());
-    
-    Usuario usuario = Usuario();
-	usuario.setCpf("32132132132");
-	usuario.setSenha("senha");
-	CHECK_THROWS_AS(usuario.login(), UsuarioNaoEncontradoException);
+    	Estoque estoque;
+	CHECK(estoque.alterarProduto());
 }
 
 TEST_CASE("Testando a função cadastro de produtos") 
 {
-    //EXEMPLOS DE 3 CHECAGENS
-    Triangle t1(3,2,2);
-    CHECK(t1.getPerimeter()==7);
-
-    Usuario usuario = Usuario();
-	usuario.setCpf("12341234123");
-	usuario.setSenha("senha");
-	CHECK(usuario.login());
-    
-    Usuario usuario = Usuario();
-	usuario.setCpf("32132132132");
-	usuario.setSenha("senha");
-	CHECK_THROWS_AS(usuario.login(), UsuarioNaoEncontradoException);
-}
-
-TEST_CASE("Testando a função entradas de produtos") 
-{
-    //EXEMPLOS DE 3 CHECAGENS
-    Triangle t1(3,2,2);
-    CHECK(t1.getPerimeter()==7);
-
-    Usuario usuario = Usuario();
-	usuario.setCpf("12341234123");
-	usuario.setSenha("senha");
-	CHECK(usuario.login());
-    
-    Usuario usuario = Usuario();
-	usuario.setCpf("32132132132");
-	usuario.setSenha("senha");
-	CHECK_THROWS_AS(usuario.login(), UsuarioNaoEncontradoException);
-}
-
-TEST_CASE("Testando a função saídas de produtos") 
-{
-    //EXEMPLOS DE 3 CHECAGENS
-    Triangle t1(3,2,2);
-    CHECK(t1.getPerimeter()==7);
-
-    Usuario usuario = Usuario();
-	usuario.setCpf("12341234123");
-	usuario.setSenha("senha");
-	CHECK(usuario.login());
-    
-    Usuario usuario = Usuario();
-	usuario.setCpf("32132132132");
-	usuario.setSenha("senha");
-	CHECK_THROWS_AS(usuario.login(), UsuarioNaoEncontradoException);
+    	Estoque estoque;
+	CHECK(estoque.cadastroDeProdutos());
 }
 
 TEST_CASE("Testando a função gerar histórico de movimentação") 
 {
-    //EXEMPLOS DE 3 CHECAGENS
-    Triangle t1(3,2,2);
-    CHECK(t1.getPerimeter()==7);
-
-    Usuario usuario = Usuario();
-	usuario.setCpf("12341234123");
-	usuario.setSenha("senha");
-	CHECK(usuario.login());
-    
-    Usuario usuario = Usuario();
-	usuario.setCpf("32132132132");
-	usuario.setSenha("senha");
-	CHECK_THROWS_AS(usuario.login(), UsuarioNaoEncontradoException);
+    	Estoque estoque;
+	CHECK(estoque.gerarLog("alterado por","Ana Carolina","no dia 05 de novembro"));
 }
 
 TEST_CASE("Testando a função imprimir histórico de movimentação") 
 {
-    //EXEMPLOS DE 3 CHECAGENS
-    Triangle t1(3,2,2);
-    CHECK(t1.getPerimeter()==7);
-
-    Usuario usuario = Usuario();
-	usuario.setCpf("12341234123");
-	usuario.setSenha("senha");
-	CHECK(usuario.login());
-    
-    Usuario usuario = Usuario();
-	usuario.setCpf("32132132132");
-	usuario.setSenha("senha");
-	CHECK_THROWS_AS(usuario.login(), UsuarioNaoEncontradoException);
-}
-
-TEST_CASE("Testando a função menu de entradas e saídas de produtos") 
-{
-    //EXEMPLOS DE 3 CHECAGENS
-    Triangle t1(3,2,2);
-    CHECK(t1.getPerimeter()==7);
-
-    Usuario usuario = Usuario();
-	usuario.setCpf("12341234123");
-	usuario.setSenha("senha");
-	CHECK(usuario.login());
-    
-    Usuario usuario = Usuario();
-	usuario.setCpf("32132132132");
-	usuario.setSenha("senha");
-	CHECK_THROWS_AS(usuario.login(), UsuarioNaoEncontradoException);
-}
-
-TEST_CASE("Testando a função listar produtos") 
-{
-    //EXEMPLOS DE 3 CHECAGENS
-    Triangle t1(3,2,2);
-    CHECK(t1.getPerimeter()==7);
-
-    Usuario usuario = Usuario();
-	usuario.setCpf("12341234123");
-	usuario.setSenha("senha");
-	CHECK(usuario.login());
-    
-    Usuario usuario = Usuario();
-	usuario.setCpf("32132132132");
-	usuario.setSenha("senha");
-	CHECK_THROWS_AS(usuario.login(), UsuarioNaoEncontradoException);
-}
-
-TEST_CASE("Testando a função excluir cadastro de produto") 
-{
-    //EXEMPLOS DE 3 CHECAGENS
-    Triangle t1(3,2,2);
-    CHECK(t1.getPerimeter()==7);
-
-    Usuario usuario = Usuario();
-	usuario.setCpf("12341234123");
-	usuario.setSenha("senha");
-	CHECK(usuario.login());
-    
-    Usuario usuario = Usuario();
-	usuario.setCpf("32132132132");
-	usuario.setSenha("senha");
-	CHECK_THROWS_AS(usuario.login(), UsuarioNaoEncontradoException);
+    	Estoque estoque;
+	CHECK(estoque.imprimirLog());
 }
 
 TEST_CASE("Testando a função limpar a tela") 
 {
-    //EXEMPLOS DE 3 CHECAGENS
-    Triangle t1(3,2,2);
-    CHECK(t1.getPerimeter()==7);
+    	Estoque estoque;
+	CHECK(estoque.limparTela("clear"));
+	
+	Estoque estoque;
+	CHECK(estoque.limparTela("perguntar"));
+	
+	Estoque estoque;
+	CHECK(estoque.limparTela("cls"));
+}
 
-    Usuario usuario = Usuario();
-	usuario.setCpf("12341234123");
-	usuario.setSenha("senha");
-	CHECK(usuario.login());
-    
-    Usuario usuario = Usuario();
-	usuario.setCpf("32132132132");
-	usuario.setSenha("senha");
-	CHECK_THROWS_AS(usuario.login(), UsuarioNaoEncontradoException);
+TEST_CASE("Testando a função excluir cadastro de produto") 
+{
+    	Estoque estoque;
+	CHECK(estoque.excluirProduto("123456"));
 }
