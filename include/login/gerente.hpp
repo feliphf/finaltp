@@ -17,6 +17,16 @@
 
 using namespace std;
 
+/**
+   * @brief 
+   *
+   * @details A classe gerente é responsável por
+   * 
+   *  
+   * 
+   * 
+   */
+
 class Gerente: public Usuario {
     private:
 
