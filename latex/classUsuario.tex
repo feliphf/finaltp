@@ -1,0 +1,849 @@
+\hypertarget{classUsuario}{}\doxysection{Usuario Class Reference}
+\label{classUsuario}\index{Usuario@{Usuario}}
+
+
+{\ttfamily \#include $<$usuario.\+hpp$>$}
+
+
+
+Inheritance diagram for Usuario\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{classUsuario__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Usuario\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=204pt]{classUsuario__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classUsuario_aceb0e105938da68e83cfa8f45ec41487}{get\+Id}} ()
+\item 
+string \mbox{\hyperlink{classUsuario_a6281341916bf46c0df195639a9c36ac8}{get\+Tipo}} ()
+\item 
+string \mbox{\hyperlink{classUsuario_aca725547a496bfe313faac8e90bf37a7}{get\+Nome}} ()
+\item 
+string \mbox{\hyperlink{classUsuario_aa1eeb8fb2d0d8ac7f2b48d6f79555915}{get\+Cpf}} ()
+\item 
+string \mbox{\hyperlink{classUsuario_a3acda6589935fbba258896baddd98fb8}{get\+Email}} ()
+\item 
+string \mbox{\hyperlink{classUsuario_a4ed8710780cc5219f5b2ef6ba0aff386}{get\+Ultimo\+Acesso}} ()
+\item 
+string \mbox{\hyperlink{classUsuario_ac7beed1209b2e8aa72a5ae0567f65f07}{get\+Senha}} ()
+\item 
+bool \mbox{\hyperlink{classUsuario_af7a088b130ebd032224b70e91583bb31}{get\+Esta\+Autenticado}} ()
+\item 
+void \mbox{\hyperlink{classUsuario_add2f4930aed1487c5c13bbe94be9c55d}{set\+Id}} (string s)
+\item 
+void \mbox{\hyperlink{classUsuario_accda4b68b44e78f159884e91c8831488}{set\+Tipo}} (string s)
+\item 
+void \mbox{\hyperlink{classUsuario_a8249a0efd677e4b7b1df09d4a82bfafb}{set\+Nome}} (string s)
+\item 
+void \mbox{\hyperlink{classUsuario_a0252b0b9cbcca210dc0ee1f8b0f2e275}{set\+Cpf}} (string s)
+\item 
+void \mbox{\hyperlink{classUsuario_a2f6d5b71d7d5564bcf828ad7a88f0a09}{set\+Email}} (string s)
+\item 
+void \mbox{\hyperlink{classUsuario_afa7904ee4e34bda8f41cc0829f64a3c1}{set\+Ultimo\+Acesso}} (string s)
+\item 
+void \mbox{\hyperlink{classUsuario_a03f8f35f5a1731403c470f3bb00fb7d4}{set\+Senha}} (string s)
+\item 
+void \mbox{\hyperlink{classUsuario_ae7cf7fb5f5a703a3c48d6f03612551ed}{set\+Esta\+Autenticado}} (bool b)
+\item 
+void \mbox{\hyperlink{classUsuario_afc7bab8d6ad1528fe0394a5ea901d334}{alterar\+Usuario}} ()
+\item 
+virtual void \mbox{\hyperlink{classUsuario_a5e10aeefe82c9fa76ed4457f33d6ba4b}{menu\+Administrativo}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classUsuario_a3d39624354ba93690acbbd9979dd6733}{alterar\+Usuario\+Logado}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classUsuario_acc41ccb4c666766c305b19dd16dde50c}{menu\+Inicial}} ()=0
+\item 
+virtual bool \mbox{\hyperlink{classUsuario_ab311ad6f74a2b3971445127690c3bfcc}{tem\+Permissao}} ()=0
+\item 
+void \mbox{\hyperlink{classUsuario_a4b0fa81b61931b312eec499bd2f35fdd}{limpar\+Tela}} (string modo)
+\item 
+string \mbox{\hyperlink{classUsuario_aceb0e105938da68e83cfa8f45ec41487}{get\+Id}} ()
+\item 
+string \mbox{\hyperlink{classUsuario_a6281341916bf46c0df195639a9c36ac8}{get\+Tipo}} ()
+\item 
+string \mbox{\hyperlink{classUsuario_aca725547a496bfe313faac8e90bf37a7}{get\+Nome}} ()
+\item 
+string \mbox{\hyperlink{classUsuario_aa1eeb8fb2d0d8ac7f2b48d6f79555915}{get\+Cpf}} ()
+\item 
+string \mbox{\hyperlink{classUsuario_a3acda6589935fbba258896baddd98fb8}{get\+Email}} ()
+\item 
+string \mbox{\hyperlink{classUsuario_a4ed8710780cc5219f5b2ef6ba0aff386}{get\+Ultimo\+Acesso}} ()
+\item 
+string \mbox{\hyperlink{classUsuario_ac7beed1209b2e8aa72a5ae0567f65f07}{get\+Senha}} ()
+\item 
+bool \mbox{\hyperlink{classUsuario_af7a088b130ebd032224b70e91583bb31}{get\+Esta\+Autenticado}} ()
+\item 
+void \mbox{\hyperlink{classUsuario_add2f4930aed1487c5c13bbe94be9c55d}{set\+Id}} (string s)
+\item 
+void \mbox{\hyperlink{classUsuario_accda4b68b44e78f159884e91c8831488}{set\+Tipo}} (string s)
+\item 
+void \mbox{\hyperlink{classUsuario_a8249a0efd677e4b7b1df09d4a82bfafb}{set\+Nome}} (string s)
+\item 
+void \mbox{\hyperlink{classUsuario_a0252b0b9cbcca210dc0ee1f8b0f2e275}{set\+Cpf}} (string s)
+\item 
+void \mbox{\hyperlink{classUsuario_a2f6d5b71d7d5564bcf828ad7a88f0a09}{set\+Email}} (string s)
+\item 
+void \mbox{\hyperlink{classUsuario_afa7904ee4e34bda8f41cc0829f64a3c1}{set\+Ultimo\+Acesso}} (string s)
+\item 
+void \mbox{\hyperlink{classUsuario_a03f8f35f5a1731403c470f3bb00fb7d4}{set\+Senha}} (string s)
+\item 
+void \mbox{\hyperlink{classUsuario_ae7cf7fb5f5a703a3c48d6f03612551ed}{set\+Esta\+Autenticado}} (bool b)
+\item 
+void \mbox{\hyperlink{classUsuario_afc7bab8d6ad1528fe0394a5ea901d334}{alterar\+Usuario}} ()
+\item 
+virtual void \mbox{\hyperlink{classUsuario_a5e10aeefe82c9fa76ed4457f33d6ba4b}{menu\+Administrativo}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classUsuario_a3d39624354ba93690acbbd9979dd6733}{alterar\+Usuario\+Logado}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classUsuario_acc41ccb4c666766c305b19dd16dde50c}{menu\+Inicial}} ()=0
+\item 
+virtual bool \mbox{\hyperlink{classUsuario_ab311ad6f74a2b3971445127690c3bfcc}{tem\+Permissao}} ()=0
+\item 
+void \mbox{\hyperlink{classUsuario_a4b0fa81b61931b312eec499bd2f35fdd}{limpar\+Tela}} (string modo)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classUsuario_a1d7c7e97c26e285c3bae9f83b9767d33}{\+\_\+id}}
+\item 
+string \mbox{\hyperlink{classUsuario_a365bd164dec6cf46a349534efbc01ddd}{\+\_\+tipo}}
+\item 
+string \mbox{\hyperlink{classUsuario_af5133cea65319ed1fb63e04f8bd1db41}{\+\_\+nome}}
+\item 
+string \mbox{\hyperlink{classUsuario_a2ff17096757d47503f0a9923bfdd8fbd}{\+\_\+cpf}}
+\item 
+string \mbox{\hyperlink{classUsuario_ac52342ca1b40d1ada8320d605db9ac94}{\+\_\+email}}
+\item 
+string \mbox{\hyperlink{classUsuario_acf4da7ba9f23c097afc11c2cf2c44741}{\+\_\+ultimo\+Acesso}}
+\item 
+string \mbox{\hyperlink{classUsuario_a82df1f9405230e139a877103cf82c8f1}{\+\_\+senha}}
+\item 
+bool \mbox{\hyperlink{classUsuario_a8ec626eedd81a10876994a142f35b3cb}{\+\_\+esta\+Autenticado}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A classe usuario é responsável por 
+
+Definition at line 9 of file usuario.\+hpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classUsuario_afc7bab8d6ad1528fe0394a5ea901d334}\label{classUsuario_afc7bab8d6ad1528fe0394a5ea901d334}} 
+\index{Usuario@{Usuario}!alterarUsuario@{alterarUsuario}}
+\index{alterarUsuario@{alterarUsuario}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{alterarUsuario()}{alterarUsuario()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Usuario\+::alterar\+Usuario (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 73 of file usuario.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{73                             \{}
+\DoxyCodeLine{74     cout << \textcolor{stringliteral}{"+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+"} << endl;}
+\DoxyCodeLine{75     cout << \textcolor{stringliteral}{"| 1 -\/ Nome                         |"} << endl;}
+\DoxyCodeLine{76     cout << \textcolor{stringliteral}{"| 2 -\/ Tipo                         |"} << endl;}
+\DoxyCodeLine{77     cout << \textcolor{stringliteral}{"| 3 -\/ CPF                          |"} << endl;}
+\DoxyCodeLine{78     cout << \textcolor{stringliteral}{"| 4 -\/ Email                        |"} << endl;}
+\DoxyCodeLine{79     cout << \textcolor{stringliteral}{"| 5 -\/ Senha                        |"} << endl;}
+\DoxyCodeLine{80     cout << \textcolor{stringliteral}{"| 6 -\/ Voltar                       |"} << endl;}
+\DoxyCodeLine{81     cout << \textcolor{stringliteral}{"+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+"} << endl;}
+\DoxyCodeLine{82     cout << \textcolor{stringliteral}{"Escolha o que deseja alterar: "};}
+\DoxyCodeLine{83     \textcolor{keywordtype}{int} escolha;}
+\DoxyCodeLine{84     cin >> escolha;}
+\DoxyCodeLine{85     \textcolor{keywordflow}{switch} (escolha)\{}
+\DoxyCodeLine{86         \textcolor{keywordflow}{case} 1:\{}
+\DoxyCodeLine{87             \textcolor{keywordtype}{string} n;}
+\DoxyCodeLine{88             cout << \textcolor{stringliteral}{"Digite o novo nome: "};}
+\DoxyCodeLine{89             cin.ignore(1,\textcolor{charliteral}{'\(\backslash\)n'});}
+\DoxyCodeLine{90             getline(cin, n);}
+\DoxyCodeLine{91             cout << endl << \textcolor{stringliteral}{"O nome foi alterado de "} << \mbox{\hyperlink{classUsuario_aca725547a496bfe313faac8e90bf37a7}{getNome}}() << \textcolor{stringliteral}{" para "} << n << \textcolor{stringliteral}{" com sucesso!"} << endl;}
+\DoxyCodeLine{92             \mbox{\hyperlink{classUsuario_a8249a0efd677e4b7b1df09d4a82bfafb}{setNome}}(n);}
+\DoxyCodeLine{93             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{94         \}}
+\DoxyCodeLine{95         \textcolor{keywordflow}{case} 2:\{}
+\DoxyCodeLine{96             cout << \textcolor{stringliteral}{"+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+"} << endl;}
+\DoxyCodeLine{97         cout << \textcolor{stringliteral}{"| 1 -\/ Gerente                      |"} << endl;}
+\DoxyCodeLine{98         cout << \textcolor{stringliteral}{"| 2 -\/ Funcionário                  |"} << endl;}
+\DoxyCodeLine{99         cout << \textcolor{stringliteral}{"+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+"} << endl;}
+\DoxyCodeLine{100             cout << \textcolor{stringliteral}{"Escolha qual tipo de usuário: "};}
+\DoxyCodeLine{101             \textcolor{keywordtype}{int} escolha;}
+\DoxyCodeLine{102             cin >> escolha;}
+\DoxyCodeLine{103             \textcolor{keywordflow}{switch} (escolha)\{}
+\DoxyCodeLine{104                \textcolor{keywordflow}{case} 1:\{}
+\DoxyCodeLine{105                     cout << \textcolor{stringliteral}{"O tipo foi alterado de "} << \mbox{\hyperlink{classUsuario_a6281341916bf46c0df195639a9c36ac8}{getTipo}}() << \textcolor{stringliteral}{" para Gerente com sucesso!"} << endl;}
+\DoxyCodeLine{106                     \mbox{\hyperlink{classUsuario_accda4b68b44e78f159884e91c8831488}{setTipo}}(\textcolor{stringliteral}{"Gerente"});}
+\DoxyCodeLine{107                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{108                 \}}
+\DoxyCodeLine{109                  \textcolor{keywordflow}{case} 2:\{}
+\DoxyCodeLine{110                     cout << \textcolor{stringliteral}{"O tipo foi alterado de "} << \mbox{\hyperlink{classUsuario_a6281341916bf46c0df195639a9c36ac8}{getTipo}}() << \textcolor{stringliteral}{" para Funcionário com sucesso!"} << endl;}
+\DoxyCodeLine{111                     \mbox{\hyperlink{classUsuario_accda4b68b44e78f159884e91c8831488}{setTipo}}(\textcolor{stringliteral}{"Funcionario"});}
+\DoxyCodeLine{112                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{113                 \}}
+\DoxyCodeLine{114         \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{115                 \textcolor{keywordflow}{throw} \mbox{\hyperlink{classEscolhaInvalida}{EscolhaInvalida}}();}
+\DoxyCodeLine{116                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{117             \}}
+\DoxyCodeLine{118             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{119         \}}
+\DoxyCodeLine{120         \textcolor{keywordflow}{case} 3:\{}
+\DoxyCodeLine{121             \textcolor{keywordtype}{string} c;}
+\DoxyCodeLine{122             cout << \textcolor{stringliteral}{"Digite o novo CPF: "};}
+\DoxyCodeLine{123             cin >> c;}
+\DoxyCodeLine{124             cout << endl << \textcolor{stringliteral}{"O CPF foi alterado de "} << \mbox{\hyperlink{classUsuario_aa1eeb8fb2d0d8ac7f2b48d6f79555915}{getCpf}}() << \textcolor{stringliteral}{" para "} << c << \textcolor{stringliteral}{" com sucesso!"} << endl;}
+\DoxyCodeLine{125             \mbox{\hyperlink{classUsuario_a0252b0b9cbcca210dc0ee1f8b0f2e275}{setCpf}}(c);}
+\DoxyCodeLine{126             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{127         \}}
+\DoxyCodeLine{128         \textcolor{keywordflow}{case} 4:\{}
+\DoxyCodeLine{129             \textcolor{keywordtype}{string} e;}
+\DoxyCodeLine{130             cout << \textcolor{stringliteral}{"Digite o novo Email: "};}
+\DoxyCodeLine{131             cin >> e;}
+\DoxyCodeLine{132             cout << endl << \textcolor{stringliteral}{"O Email foi alterado de "} << \mbox{\hyperlink{classUsuario_a3acda6589935fbba258896baddd98fb8}{getEmail}}() << \textcolor{stringliteral}{" para "} << e << \textcolor{stringliteral}{" com sucesso!"} << endl;}
+\DoxyCodeLine{133             \mbox{\hyperlink{classUsuario_a2f6d5b71d7d5564bcf828ad7a88f0a09}{setEmail}}(e);}
+\DoxyCodeLine{134             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{135         \}}
+\DoxyCodeLine{136         \textcolor{keywordflow}{case} 5:\{}
+\DoxyCodeLine{137             \textcolor{keywordtype}{string} s;}
+\DoxyCodeLine{138             cout << \textcolor{stringliteral}{"Digite a nova senha: "};}
+\DoxyCodeLine{139             cin >> s;}
+\DoxyCodeLine{140             cout << endl << \textcolor{stringliteral}{"A senha foi alterada de "} << \mbox{\hyperlink{classUsuario_ac7beed1209b2e8aa72a5ae0567f65f07}{getSenha}}() << \textcolor{stringliteral}{" para "} << s << \textcolor{stringliteral}{" com sucesso!"} << endl;}
+\DoxyCodeLine{141             \mbox{\hyperlink{classUsuario_a03f8f35f5a1731403c470f3bb00fb7d4}{setSenha}}(s);}
+\DoxyCodeLine{142             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{143         \}}
+\DoxyCodeLine{144         \textcolor{keywordflow}{case} 6:\{}
+\DoxyCodeLine{145             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{146         \}}
+\DoxyCodeLine{147     \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{148             \textcolor{keywordflow}{throw} \mbox{\hyperlink{classEscolhaInvalida}{EscolhaInvalida}}();}
+\DoxyCodeLine{149             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{150     \}}
+\DoxyCodeLine{151 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classUsuario_afc7bab8d6ad1528fe0394a5ea901d334}\label{classUsuario_afc7bab8d6ad1528fe0394a5ea901d334}} 
+\index{Usuario@{Usuario}!alterarUsuario@{alterarUsuario}}
+\index{alterarUsuario@{alterarUsuario}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{alterarUsuario()}{alterarUsuario()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Usuario\+::alterar\+Usuario (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classUsuario_a3d39624354ba93690acbbd9979dd6733}\label{classUsuario_a3d39624354ba93690acbbd9979dd6733}} 
+\index{Usuario@{Usuario}!alterarUsuarioLogado@{alterarUsuarioLogado}}
+\index{alterarUsuarioLogado@{alterarUsuarioLogado}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{alterarUsuarioLogado()}{alterarUsuarioLogado()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual void Usuario\+::alterar\+Usuario\+Logado (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classFuncionario_af331c347d8c5c9b00ae433e427ff6f55}{Funcionario}}, \mbox{\hyperlink{classGerente_abee6710d97a4e7e9bc95642b2cfc21a2}{Gerente}}, \mbox{\hyperlink{classGerente_abee6710d97a4e7e9bc95642b2cfc21a2}{Gerente}}, and \mbox{\hyperlink{classFuncionario_af331c347d8c5c9b00ae433e427ff6f55}{Funcionario}}.
+
+\mbox{\Hypertarget{classUsuario_a3d39624354ba93690acbbd9979dd6733}\label{classUsuario_a3d39624354ba93690acbbd9979dd6733}} 
+\index{Usuario@{Usuario}!alterarUsuarioLogado@{alterarUsuarioLogado}}
+\index{alterarUsuarioLogado@{alterarUsuarioLogado}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{alterarUsuarioLogado()}{alterarUsuarioLogado()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual void Usuario\+::alterar\+Usuario\+Logado (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classFuncionario_af331c347d8c5c9b00ae433e427ff6f55}{Funcionario}}, \mbox{\hyperlink{classGerente_abee6710d97a4e7e9bc95642b2cfc21a2}{Gerente}}, \mbox{\hyperlink{classGerente_abee6710d97a4e7e9bc95642b2cfc21a2}{Gerente}}, and \mbox{\hyperlink{classFuncionario_af331c347d8c5c9b00ae433e427ff6f55}{Funcionario}}.
+
+\mbox{\Hypertarget{classUsuario_aa1eeb8fb2d0d8ac7f2b48d6f79555915}\label{classUsuario_aa1eeb8fb2d0d8ac7f2b48d6f79555915}} 
+\index{Usuario@{Usuario}!getCpf@{getCpf}}
+\index{getCpf@{getCpf}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{getCpf()}{getCpf()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily string Usuario\+::get\+Cpf (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 18 of file usuario.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{18                       \{}
+\DoxyCodeLine{19     \textcolor{keywordflow}{return} \mbox{\hyperlink{classUsuario_a2ff17096757d47503f0a9923bfdd8fbd}{\_cpf}};}
+\DoxyCodeLine{20 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classUsuario_aa1eeb8fb2d0d8ac7f2b48d6f79555915}\label{classUsuario_aa1eeb8fb2d0d8ac7f2b48d6f79555915}} 
+\index{Usuario@{Usuario}!getCpf@{getCpf}}
+\index{getCpf@{getCpf}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{getCpf()}{getCpf()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily string Usuario\+::get\+Cpf (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classUsuario_a3acda6589935fbba258896baddd98fb8}\label{classUsuario_a3acda6589935fbba258896baddd98fb8}} 
+\index{Usuario@{Usuario}!getEmail@{getEmail}}
+\index{getEmail@{getEmail}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{getEmail()}{getEmail()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily string Usuario\+::get\+Email (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 22 of file usuario.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{22                         \{}
+\DoxyCodeLine{23     \textcolor{keywordflow}{return} \mbox{\hyperlink{classUsuario_ac52342ca1b40d1ada8320d605db9ac94}{\_email}};}
+\DoxyCodeLine{24 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classUsuario_a3acda6589935fbba258896baddd98fb8}\label{classUsuario_a3acda6589935fbba258896baddd98fb8}} 
+\index{Usuario@{Usuario}!getEmail@{getEmail}}
+\index{getEmail@{getEmail}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{getEmail()}{getEmail()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily string Usuario\+::get\+Email (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classUsuario_af7a088b130ebd032224b70e91583bb31}\label{classUsuario_af7a088b130ebd032224b70e91583bb31}} 
+\index{Usuario@{Usuario}!getEstaAutenticado@{getEstaAutenticado}}
+\index{getEstaAutenticado@{getEstaAutenticado}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{getEstaAutenticado()}{getEstaAutenticado()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Usuario\+::get\+Esta\+Autenticado (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 34 of file usuario.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{34                                 \{}
+\DoxyCodeLine{35     \textcolor{keywordflow}{return} \mbox{\hyperlink{classUsuario_a8ec626eedd81a10876994a142f35b3cb}{\_estaAutenticado}};}
+\DoxyCodeLine{36 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classUsuario_af7a088b130ebd032224b70e91583bb31}\label{classUsuario_af7a088b130ebd032224b70e91583bb31}} 
+\index{Usuario@{Usuario}!getEstaAutenticado@{getEstaAutenticado}}
+\index{getEstaAutenticado@{getEstaAutenticado}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{getEstaAutenticado()}{getEstaAutenticado()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Usuario\+::get\+Esta\+Autenticado (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classUsuario_aceb0e105938da68e83cfa8f45ec41487}\label{classUsuario_aceb0e105938da68e83cfa8f45ec41487}} 
+\index{Usuario@{Usuario}!getId@{getId}}
+\index{getId@{getId}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{getId()}{getId()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily string Usuario\+::get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 3 of file usuario.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{3                      \{}
+\DoxyCodeLine{4     \textcolor{keywordflow}{return} \mbox{\hyperlink{classUsuario_a1d7c7e97c26e285c3bae9f83b9767d33}{\_id}};}
+\DoxyCodeLine{5 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classUsuario_aceb0e105938da68e83cfa8f45ec41487}\label{classUsuario_aceb0e105938da68e83cfa8f45ec41487}} 
+\index{Usuario@{Usuario}!getId@{getId}}
+\index{getId@{getId}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{getId()}{getId()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily string Usuario\+::get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classUsuario_aca725547a496bfe313faac8e90bf37a7}\label{classUsuario_aca725547a496bfe313faac8e90bf37a7}} 
+\index{Usuario@{Usuario}!getNome@{getNome}}
+\index{getNome@{getNome}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{getNome()}{getNome()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily string Usuario\+::get\+Nome (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 11 of file usuario.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{11                        \{}
+\DoxyCodeLine{12     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} i = 0; i < \mbox{\hyperlink{classUsuario_af5133cea65319ed1fb63e04f8bd1db41}{\_nome}}.size(); i++)}
+\DoxyCodeLine{13         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classUsuario_af5133cea65319ed1fb63e04f8bd1db41}{\_nome}}[i] == \textcolor{charliteral}{'\_'})}
+\DoxyCodeLine{14             \mbox{\hyperlink{classUsuario_af5133cea65319ed1fb63e04f8bd1db41}{\_nome}}[i] = \textcolor{charliteral}{' '};    }
+\DoxyCodeLine{15     \textcolor{keywordflow}{return} \mbox{\hyperlink{classUsuario_af5133cea65319ed1fb63e04f8bd1db41}{\_nome}};}
+\DoxyCodeLine{16 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classUsuario_aca725547a496bfe313faac8e90bf37a7}\label{classUsuario_aca725547a496bfe313faac8e90bf37a7}} 
+\index{Usuario@{Usuario}!getNome@{getNome}}
+\index{getNome@{getNome}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{getNome()}{getNome()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily string Usuario\+::get\+Nome (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classUsuario_ac7beed1209b2e8aa72a5ae0567f65f07}\label{classUsuario_ac7beed1209b2e8aa72a5ae0567f65f07}} 
+\index{Usuario@{Usuario}!getSenha@{getSenha}}
+\index{getSenha@{getSenha}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{getSenha()}{getSenha()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily string Usuario\+::get\+Senha (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 30 of file usuario.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{30                         \{}
+\DoxyCodeLine{31     \textcolor{keywordflow}{return} \mbox{\hyperlink{classUsuario_a82df1f9405230e139a877103cf82c8f1}{\_senha}};}
+\DoxyCodeLine{32 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classUsuario_ac7beed1209b2e8aa72a5ae0567f65f07}\label{classUsuario_ac7beed1209b2e8aa72a5ae0567f65f07}} 
+\index{Usuario@{Usuario}!getSenha@{getSenha}}
+\index{getSenha@{getSenha}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{getSenha()}{getSenha()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily string Usuario\+::get\+Senha (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classUsuario_a6281341916bf46c0df195639a9c36ac8}\label{classUsuario_a6281341916bf46c0df195639a9c36ac8}} 
+\index{Usuario@{Usuario}!getTipo@{getTipo}}
+\index{getTipo@{getTipo}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{getTipo()}{getTipo()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily string Usuario\+::get\+Tipo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 7 of file usuario.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{7                        \{}
+\DoxyCodeLine{8     \textcolor{keywordflow}{return} \mbox{\hyperlink{classUsuario_a365bd164dec6cf46a349534efbc01ddd}{\_tipo}};}
+\DoxyCodeLine{9 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classUsuario_a6281341916bf46c0df195639a9c36ac8}\label{classUsuario_a6281341916bf46c0df195639a9c36ac8}} 
+\index{Usuario@{Usuario}!getTipo@{getTipo}}
+\index{getTipo@{getTipo}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{getTipo()}{getTipo()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily string Usuario\+::get\+Tipo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classUsuario_a4ed8710780cc5219f5b2ef6ba0aff386}\label{classUsuario_a4ed8710780cc5219f5b2ef6ba0aff386}} 
+\index{Usuario@{Usuario}!getUltimoAcesso@{getUltimoAcesso}}
+\index{getUltimoAcesso@{getUltimoAcesso}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{getUltimoAcesso()}{getUltimoAcesso()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily string Usuario\+::get\+Ultimo\+Acesso (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 26 of file usuario.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{26                                \{}
+\DoxyCodeLine{27     \textcolor{keywordflow}{return} \mbox{\hyperlink{classUsuario_acf4da7ba9f23c097afc11c2cf2c44741}{\_ultimoAcesso}};}
+\DoxyCodeLine{28 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classUsuario_a4ed8710780cc5219f5b2ef6ba0aff386}\label{classUsuario_a4ed8710780cc5219f5b2ef6ba0aff386}} 
+\index{Usuario@{Usuario}!getUltimoAcesso@{getUltimoAcesso}}
+\index{getUltimoAcesso@{getUltimoAcesso}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{getUltimoAcesso()}{getUltimoAcesso()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily string Usuario\+::get\+Ultimo\+Acesso (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classUsuario_a4b0fa81b61931b312eec499bd2f35fdd}\label{classUsuario_a4b0fa81b61931b312eec499bd2f35fdd}} 
+\index{Usuario@{Usuario}!limparTela@{limparTela}}
+\index{limparTela@{limparTela}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{limparTela()}{limparTela()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Usuario\+::limpar\+Tela (\begin{DoxyParamCaption}\item[{string}]{modo }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classUsuario_a4b0fa81b61931b312eec499bd2f35fdd}\label{classUsuario_a4b0fa81b61931b312eec499bd2f35fdd}} 
+\index{Usuario@{Usuario}!limparTela@{limparTela}}
+\index{limparTela@{limparTela}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{limparTela()}{limparTela()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Usuario\+::limpar\+Tela (\begin{DoxyParamCaption}\item[{string}]{modo }\end{DoxyParamCaption})}
+
+
+
+Definition at line 159 of file usuario.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{159                                    \{}
+\DoxyCodeLine{160     \textcolor{keywordflow}{if} (modo == \textcolor{stringliteral}{"perguntar"})\{}
+\DoxyCodeLine{161         std::cout << \textcolor{stringliteral}{"Pressione enter para continuar!"};}
+\DoxyCodeLine{162         \textcolor{keywordtype}{char} temp;}
+\DoxyCodeLine{163         std::cin.ignore();}
+\DoxyCodeLine{164         std::cin.get(temp);}
+\DoxyCodeLine{165         \textcolor{keywordtype}{int} aux = system(\textcolor{stringliteral}{"cls||clear"});}
+\DoxyCodeLine{166         \textcolor{keywordflow}{if} (aux == -\/1)\{}
+\DoxyCodeLine{167             std::cout << \textcolor{stringliteral}{"O sistema não conseguiu limpar a tela!"} << std::endl;}
+\DoxyCodeLine{168         \}}
+\DoxyCodeLine{169     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{170         \textcolor{keywordtype}{int} aux = system(\textcolor{stringliteral}{"cls||clear"});}
+\DoxyCodeLine{171         \textcolor{keywordflow}{if} (aux == -\/1)\{}
+\DoxyCodeLine{172             std::cout << \textcolor{stringliteral}{"O sistema não conseguiu limpar a tela!"} << std::endl;}
+\DoxyCodeLine{173         \}}
+\DoxyCodeLine{174     \}}
+\DoxyCodeLine{175 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classUsuario_a5e10aeefe82c9fa76ed4457f33d6ba4b}\label{classUsuario_a5e10aeefe82c9fa76ed4457f33d6ba4b}} 
+\index{Usuario@{Usuario}!menuAdministrativo@{menuAdministrativo}}
+\index{menuAdministrativo@{menuAdministrativo}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{menuAdministrativo()}{menuAdministrativo()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual void Usuario\+::menu\+Administrativo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classFuncionario_a3f55ab1568015614e6e6c85543621f78}{Funcionario}}, \mbox{\hyperlink{classGerente_a0858b78f711e3aee20d348383092b2e5}{Gerente}}, \mbox{\hyperlink{classGerente_a0858b78f711e3aee20d348383092b2e5}{Gerente}}, and \mbox{\hyperlink{classFuncionario_a3f55ab1568015614e6e6c85543621f78}{Funcionario}}.
+
+\mbox{\Hypertarget{classUsuario_a5e10aeefe82c9fa76ed4457f33d6ba4b}\label{classUsuario_a5e10aeefe82c9fa76ed4457f33d6ba4b}} 
+\index{Usuario@{Usuario}!menuAdministrativo@{menuAdministrativo}}
+\index{menuAdministrativo@{menuAdministrativo}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{menuAdministrativo()}{menuAdministrativo()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual void Usuario\+::menu\+Administrativo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classFuncionario_a3f55ab1568015614e6e6c85543621f78}{Funcionario}}, \mbox{\hyperlink{classGerente_a0858b78f711e3aee20d348383092b2e5}{Gerente}}, \mbox{\hyperlink{classGerente_a0858b78f711e3aee20d348383092b2e5}{Gerente}}, and \mbox{\hyperlink{classFuncionario_a3f55ab1568015614e6e6c85543621f78}{Funcionario}}.
+
+\mbox{\Hypertarget{classUsuario_acc41ccb4c666766c305b19dd16dde50c}\label{classUsuario_acc41ccb4c666766c305b19dd16dde50c}} 
+\index{Usuario@{Usuario}!menuInicial@{menuInicial}}
+\index{menuInicial@{menuInicial}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{menuInicial()}{menuInicial()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual void Usuario\+::menu\+Inicial (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classFuncionario_ae0ddb589cedd75ddcd0c222792541ef4}{Funcionario}}, \mbox{\hyperlink{classGerente_a36ff097423739923eca6ca2dcffd0dbb}{Gerente}}, \mbox{\hyperlink{classGerente_a36ff097423739923eca6ca2dcffd0dbb}{Gerente}}, and \mbox{\hyperlink{classFuncionario_ae0ddb589cedd75ddcd0c222792541ef4}{Funcionario}}.
+
+\mbox{\Hypertarget{classUsuario_acc41ccb4c666766c305b19dd16dde50c}\label{classUsuario_acc41ccb4c666766c305b19dd16dde50c}} 
+\index{Usuario@{Usuario}!menuInicial@{menuInicial}}
+\index{menuInicial@{menuInicial}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{menuInicial()}{menuInicial()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual void Usuario\+::menu\+Inicial (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classFuncionario_ae0ddb589cedd75ddcd0c222792541ef4}{Funcionario}}, \mbox{\hyperlink{classGerente_a36ff097423739923eca6ca2dcffd0dbb}{Gerente}}, \mbox{\hyperlink{classGerente_a36ff097423739923eca6ca2dcffd0dbb}{Gerente}}, and \mbox{\hyperlink{classFuncionario_ae0ddb589cedd75ddcd0c222792541ef4}{Funcionario}}.
+
+\mbox{\Hypertarget{classUsuario_a0252b0b9cbcca210dc0ee1f8b0f2e275}\label{classUsuario_a0252b0b9cbcca210dc0ee1f8b0f2e275}} 
+\index{Usuario@{Usuario}!setCpf@{setCpf}}
+\index{setCpf@{setCpf}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{setCpf()}{setCpf()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Usuario\+::set\+Cpf (\begin{DoxyParamCaption}\item[{string}]{s }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classUsuario_a0252b0b9cbcca210dc0ee1f8b0f2e275}\label{classUsuario_a0252b0b9cbcca210dc0ee1f8b0f2e275}} 
+\index{Usuario@{Usuario}!setCpf@{setCpf}}
+\index{setCpf@{setCpf}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{setCpf()}{setCpf()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Usuario\+::set\+Cpf (\begin{DoxyParamCaption}\item[{string}]{s }\end{DoxyParamCaption})}
+
+
+
+Definition at line 53 of file usuario.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{53                             \{}
+\DoxyCodeLine{54     \mbox{\hyperlink{classUsuario_a2ff17096757d47503f0a9923bfdd8fbd}{\_cpf}} = s;}
+\DoxyCodeLine{55 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classUsuario_a2f6d5b71d7d5564bcf828ad7a88f0a09}\label{classUsuario_a2f6d5b71d7d5564bcf828ad7a88f0a09}} 
+\index{Usuario@{Usuario}!setEmail@{setEmail}}
+\index{setEmail@{setEmail}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{setEmail()}{setEmail()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Usuario\+::set\+Email (\begin{DoxyParamCaption}\item[{string}]{s }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classUsuario_a2f6d5b71d7d5564bcf828ad7a88f0a09}\label{classUsuario_a2f6d5b71d7d5564bcf828ad7a88f0a09}} 
+\index{Usuario@{Usuario}!setEmail@{setEmail}}
+\index{setEmail@{setEmail}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{setEmail()}{setEmail()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Usuario\+::set\+Email (\begin{DoxyParamCaption}\item[{string}]{s }\end{DoxyParamCaption})}
+
+
+
+Definition at line 57 of file usuario.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{57                               \{}
+\DoxyCodeLine{58     \mbox{\hyperlink{classUsuario_ac52342ca1b40d1ada8320d605db9ac94}{\_email}} = s;}
+\DoxyCodeLine{59 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classUsuario_ae7cf7fb5f5a703a3c48d6f03612551ed}\label{classUsuario_ae7cf7fb5f5a703a3c48d6f03612551ed}} 
+\index{Usuario@{Usuario}!setEstaAutenticado@{setEstaAutenticado}}
+\index{setEstaAutenticado@{setEstaAutenticado}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{setEstaAutenticado()}{setEstaAutenticado()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Usuario\+::set\+Esta\+Autenticado (\begin{DoxyParamCaption}\item[{bool}]{b }\end{DoxyParamCaption})}
+
+
+
+Definition at line 69 of file usuario.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{69                                       \{}
+\DoxyCodeLine{70     \mbox{\hyperlink{classUsuario_a8ec626eedd81a10876994a142f35b3cb}{\_estaAutenticado}} = b;}
+\DoxyCodeLine{71 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classUsuario_ae7cf7fb5f5a703a3c48d6f03612551ed}\label{classUsuario_ae7cf7fb5f5a703a3c48d6f03612551ed}} 
+\index{Usuario@{Usuario}!setEstaAutenticado@{setEstaAutenticado}}
+\index{setEstaAutenticado@{setEstaAutenticado}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{setEstaAutenticado()}{setEstaAutenticado()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Usuario\+::set\+Esta\+Autenticado (\begin{DoxyParamCaption}\item[{bool}]{b }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classUsuario_add2f4930aed1487c5c13bbe94be9c55d}\label{classUsuario_add2f4930aed1487c5c13bbe94be9c55d}} 
+\index{Usuario@{Usuario}!setId@{setId}}
+\index{setId@{setId}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{setId()}{setId()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Usuario\+::set\+Id (\begin{DoxyParamCaption}\item[{string}]{s }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classUsuario_add2f4930aed1487c5c13bbe94be9c55d}\label{classUsuario_add2f4930aed1487c5c13bbe94be9c55d}} 
+\index{Usuario@{Usuario}!setId@{setId}}
+\index{setId@{setId}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{setId()}{setId()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Usuario\+::set\+Id (\begin{DoxyParamCaption}\item[{string}]{s }\end{DoxyParamCaption})}
+
+
+
+Definition at line 38 of file usuario.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{38                            \{}
+\DoxyCodeLine{39     \mbox{\hyperlink{classUsuario_a1d7c7e97c26e285c3bae9f83b9767d33}{\_id}} = s;}
+\DoxyCodeLine{40 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classUsuario_a8249a0efd677e4b7b1df09d4a82bfafb}\label{classUsuario_a8249a0efd677e4b7b1df09d4a82bfafb}} 
+\index{Usuario@{Usuario}!setNome@{setNome}}
+\index{setNome@{setNome}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{setNome()}{setNome()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Usuario\+::set\+Nome (\begin{DoxyParamCaption}\item[{string}]{s }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classUsuario_a8249a0efd677e4b7b1df09d4a82bfafb}\label{classUsuario_a8249a0efd677e4b7b1df09d4a82bfafb}} 
+\index{Usuario@{Usuario}!setNome@{setNome}}
+\index{setNome@{setNome}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{setNome()}{setNome()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Usuario\+::set\+Nome (\begin{DoxyParamCaption}\item[{string}]{s }\end{DoxyParamCaption})}
+
+
+
+Definition at line 46 of file usuario.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{46                              \{}
+\DoxyCodeLine{47     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} i = 0; i < \mbox{\hyperlink{classUsuario_af5133cea65319ed1fb63e04f8bd1db41}{\_nome}}.size(); i++)}
+\DoxyCodeLine{48         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classUsuario_af5133cea65319ed1fb63e04f8bd1db41}{\_nome}}[i] == \textcolor{charliteral}{' '})}
+\DoxyCodeLine{49             \mbox{\hyperlink{classUsuario_af5133cea65319ed1fb63e04f8bd1db41}{\_nome}}[i] = \textcolor{charliteral}{'\_'};   }
+\DoxyCodeLine{50     \mbox{\hyperlink{classUsuario_af5133cea65319ed1fb63e04f8bd1db41}{\_nome}} = s;}
+\DoxyCodeLine{51 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classUsuario_a03f8f35f5a1731403c470f3bb00fb7d4}\label{classUsuario_a03f8f35f5a1731403c470f3bb00fb7d4}} 
+\index{Usuario@{Usuario}!setSenha@{setSenha}}
+\index{setSenha@{setSenha}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{setSenha()}{setSenha()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Usuario\+::set\+Senha (\begin{DoxyParamCaption}\item[{string}]{s }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classUsuario_a03f8f35f5a1731403c470f3bb00fb7d4}\label{classUsuario_a03f8f35f5a1731403c470f3bb00fb7d4}} 
+\index{Usuario@{Usuario}!setSenha@{setSenha}}
+\index{setSenha@{setSenha}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{setSenha()}{setSenha()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Usuario\+::set\+Senha (\begin{DoxyParamCaption}\item[{string}]{s }\end{DoxyParamCaption})}
+
+
+
+Definition at line 65 of file usuario.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{65                               \{}
+\DoxyCodeLine{66     \mbox{\hyperlink{classUsuario_a82df1f9405230e139a877103cf82c8f1}{\_senha}} = s;}
+\DoxyCodeLine{67 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classUsuario_accda4b68b44e78f159884e91c8831488}\label{classUsuario_accda4b68b44e78f159884e91c8831488}} 
+\index{Usuario@{Usuario}!setTipo@{setTipo}}
+\index{setTipo@{setTipo}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{setTipo()}{setTipo()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Usuario\+::set\+Tipo (\begin{DoxyParamCaption}\item[{string}]{s }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classUsuario_accda4b68b44e78f159884e91c8831488}\label{classUsuario_accda4b68b44e78f159884e91c8831488}} 
+\index{Usuario@{Usuario}!setTipo@{setTipo}}
+\index{setTipo@{setTipo}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{setTipo()}{setTipo()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Usuario\+::set\+Tipo (\begin{DoxyParamCaption}\item[{string}]{s }\end{DoxyParamCaption})}
+
+
+
+Definition at line 42 of file usuario.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{42                              \{}
+\DoxyCodeLine{43     \mbox{\hyperlink{classUsuario_a365bd164dec6cf46a349534efbc01ddd}{\_tipo}} = s;}
+\DoxyCodeLine{44 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classUsuario_afa7904ee4e34bda8f41cc0829f64a3c1}\label{classUsuario_afa7904ee4e34bda8f41cc0829f64a3c1}} 
+\index{Usuario@{Usuario}!setUltimoAcesso@{setUltimoAcesso}}
+\index{setUltimoAcesso@{setUltimoAcesso}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{setUltimoAcesso()}{setUltimoAcesso()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Usuario\+::set\+Ultimo\+Acesso (\begin{DoxyParamCaption}\item[{string}]{s }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classUsuario_afa7904ee4e34bda8f41cc0829f64a3c1}\label{classUsuario_afa7904ee4e34bda8f41cc0829f64a3c1}} 
+\index{Usuario@{Usuario}!setUltimoAcesso@{setUltimoAcesso}}
+\index{setUltimoAcesso@{setUltimoAcesso}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{setUltimoAcesso()}{setUltimoAcesso()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Usuario\+::set\+Ultimo\+Acesso (\begin{DoxyParamCaption}\item[{string}]{s }\end{DoxyParamCaption})}
+
+
+
+Definition at line 61 of file usuario.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{61                                      \{}
+\DoxyCodeLine{62     \mbox{\hyperlink{classUsuario_acf4da7ba9f23c097afc11c2cf2c44741}{\_ultimoAcesso}} = s;}
+\DoxyCodeLine{63 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classUsuario_ab311ad6f74a2b3971445127690c3bfcc}\label{classUsuario_ab311ad6f74a2b3971445127690c3bfcc}} 
+\index{Usuario@{Usuario}!temPermissao@{temPermissao}}
+\index{temPermissao@{temPermissao}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{temPermissao()}{temPermissao()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual bool Usuario\+::tem\+Permissao (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classFuncionario_ab5bbe507782b7b2c5de1cb39e946b0a3}{Funcionario}}, \mbox{\hyperlink{classGerente_a0850bf905ee25f3c53bec691f6201209}{Gerente}}, \mbox{\hyperlink{classGerente_a0850bf905ee25f3c53bec691f6201209}{Gerente}}, and \mbox{\hyperlink{classFuncionario_ab5bbe507782b7b2c5de1cb39e946b0a3}{Funcionario}}.
+
+\mbox{\Hypertarget{classUsuario_ab311ad6f74a2b3971445127690c3bfcc}\label{classUsuario_ab311ad6f74a2b3971445127690c3bfcc}} 
+\index{Usuario@{Usuario}!temPermissao@{temPermissao}}
+\index{temPermissao@{temPermissao}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{temPermissao()}{temPermissao()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual bool Usuario\+::tem\+Permissao (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classFuncionario_ab5bbe507782b7b2c5de1cb39e946b0a3}{Funcionario}}, \mbox{\hyperlink{classGerente_a0850bf905ee25f3c53bec691f6201209}{Gerente}}, \mbox{\hyperlink{classGerente_a0850bf905ee25f3c53bec691f6201209}{Gerente}}, and \mbox{\hyperlink{classFuncionario_ab5bbe507782b7b2c5de1cb39e946b0a3}{Funcionario}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classUsuario_a2ff17096757d47503f0a9923bfdd8fbd}\label{classUsuario_a2ff17096757d47503f0a9923bfdd8fbd}} 
+\index{Usuario@{Usuario}!\_cpf@{\_cpf}}
+\index{\_cpf@{\_cpf}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{\_cpf}{\_cpf}}
+{\footnotesize\ttfamily string Usuario\+::\+\_\+cpf\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 14 of file usuario.\+hpp.
+
+\mbox{\Hypertarget{classUsuario_ac52342ca1b40d1ada8320d605db9ac94}\label{classUsuario_ac52342ca1b40d1ada8320d605db9ac94}} 
+\index{Usuario@{Usuario}!\_email@{\_email}}
+\index{\_email@{\_email}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{\_email}{\_email}}
+{\footnotesize\ttfamily string Usuario\+::\+\_\+email\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 15 of file usuario.\+hpp.
+
+\mbox{\Hypertarget{classUsuario_a8ec626eedd81a10876994a142f35b3cb}\label{classUsuario_a8ec626eedd81a10876994a142f35b3cb}} 
+\index{Usuario@{Usuario}!\_estaAutenticado@{\_estaAutenticado}}
+\index{\_estaAutenticado@{\_estaAutenticado}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{\_estaAutenticado}{\_estaAutenticado}}
+{\footnotesize\ttfamily bool Usuario\+::\+\_\+esta\+Autenticado\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 18 of file usuario.\+hpp.
+
+\mbox{\Hypertarget{classUsuario_a1d7c7e97c26e285c3bae9f83b9767d33}\label{classUsuario_a1d7c7e97c26e285c3bae9f83b9767d33}} 
+\index{Usuario@{Usuario}!\_id@{\_id}}
+\index{\_id@{\_id}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{\_id}{\_id}}
+{\footnotesize\ttfamily string Usuario\+::\+\_\+id\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 11 of file usuario.\+hpp.
+
+\mbox{\Hypertarget{classUsuario_af5133cea65319ed1fb63e04f8bd1db41}\label{classUsuario_af5133cea65319ed1fb63e04f8bd1db41}} 
+\index{Usuario@{Usuario}!\_nome@{\_nome}}
+\index{\_nome@{\_nome}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{\_nome}{\_nome}}
+{\footnotesize\ttfamily string Usuario\+::\+\_\+nome\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 13 of file usuario.\+hpp.
+
+\mbox{\Hypertarget{classUsuario_a82df1f9405230e139a877103cf82c8f1}\label{classUsuario_a82df1f9405230e139a877103cf82c8f1}} 
+\index{Usuario@{Usuario}!\_senha@{\_senha}}
+\index{\_senha@{\_senha}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{\_senha}{\_senha}}
+{\footnotesize\ttfamily string Usuario\+::\+\_\+senha\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 17 of file usuario.\+hpp.
+
+\mbox{\Hypertarget{classUsuario_a365bd164dec6cf46a349534efbc01ddd}\label{classUsuario_a365bd164dec6cf46a349534efbc01ddd}} 
+\index{Usuario@{Usuario}!\_tipo@{\_tipo}}
+\index{\_tipo@{\_tipo}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{\_tipo}{\_tipo}}
+{\footnotesize\ttfamily string Usuario\+::\+\_\+tipo\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 12 of file usuario.\+hpp.
+
+\mbox{\Hypertarget{classUsuario_acf4da7ba9f23c097afc11c2cf2c44741}\label{classUsuario_acf4da7ba9f23c097afc11c2cf2c44741}} 
+\index{Usuario@{Usuario}!\_ultimoAcesso@{\_ultimoAcesso}}
+\index{\_ultimoAcesso@{\_ultimoAcesso}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{\_ultimoAcesso}{\_ultimoAcesso}}
+{\footnotesize\ttfamily string Usuario\+::\+\_\+ultimo\+Acesso\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 16 of file usuario.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+anterior\+Push/include/login/\mbox{\hyperlink{anteriorPush_2include_2login_2usuario_8hpp}{usuario.\+hpp}}\item 
+anterior\+Push/src/login/\mbox{\hyperlink{anteriorPush_2src_2login_2usuario_8cpp}{usuario.\+cpp}}\end{DoxyCompactItemize}

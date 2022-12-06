@@ -1,0 +1,75 @@
+\hypertarget{structdoctest_1_1detail_1_1filldata}{}\doxysection{doctest\+::detail\+::filldata$<$ T $>$ Struct Template Reference}
+\label{structdoctest_1_1detail_1_1filldata}\index{doctest::detail::filldata$<$ T $>$@{doctest::detail::filldata$<$ T $>$}}
+
+
+{\ttfamily \#include $<$doctest.\+h$>$}
+
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{structdoctest_1_1detail_1_1filldata_ac59161273947acc06c938dc7dbe1f7cd}{fill}} (std\+::ostream $\ast$stream, const T \&in)
+\item 
+static void \mbox{\hyperlink{structdoctest_1_1detail_1_1filldata_ac59161273947acc06c938dc7dbe1f7cd}{fill}} (std\+::ostream $\ast$stream, const T \&in)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+struct doctest\+::detail\+::filldata$<$ T $>$}
+
+
+
+Definition at line 1021 of file doctest.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structdoctest_1_1detail_1_1filldata_ac59161273947acc06c938dc7dbe1f7cd}\label{structdoctest_1_1detail_1_1filldata_ac59161273947acc06c938dc7dbe1f7cd}} 
+\index{doctest::detail::filldata$<$ T $>$@{doctest::detail::filldata$<$ T $>$}!fill@{fill}}
+\index{fill@{fill}!doctest::detail::filldata$<$ T $>$@{doctest::detail::filldata$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{fill()}{fill()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static void \mbox{\hyperlink{structdoctest_1_1detail_1_1filldata}{doctest\+::detail\+::filldata}}$<$ T $>$\+::fill (\begin{DoxyParamCaption}\item[{std\+::ostream $\ast$}]{stream,  }\item[{const T \&}]{in }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line 1123 of file doctest.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1123                                                           \{}
+\DoxyCodeLine{1124 \textcolor{preprocessor}{\#if defined(\_MSC\_VER) \&\& \_MSC\_VER <= 1900}}
+\DoxyCodeLine{1125         insert\_hack\_t<T>::insert(*stream, in);}
+\DoxyCodeLine{1126 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{1127         \mbox{\hyperlink{namespacedoctest_1_1Color_a2cc3f4bdda7bfd2e0e3faf7e678d3b98}{operator<<}}(*stream, in);}
+\DoxyCodeLine{1128 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{1129         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{structdoctest_1_1detail_1_1filldata_ac59161273947acc06c938dc7dbe1f7cd}\label{structdoctest_1_1detail_1_1filldata_ac59161273947acc06c938dc7dbe1f7cd}} 
+\index{doctest::detail::filldata$<$ T $>$@{doctest::detail::filldata$<$ T $>$}!fill@{fill}}
+\index{fill@{fill}!doctest::detail::filldata$<$ T $>$@{doctest::detail::filldata$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{fill()}{fill()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static void \mbox{\hyperlink{structdoctest_1_1detail_1_1filldata}{doctest\+::detail\+::filldata}}$<$ T $>$\+::fill (\begin{DoxyParamCaption}\item[{std\+::ostream $\ast$}]{stream,  }\item[{const T \&}]{in }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line 1123 of file doctest.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1123                                                           \{}
+\DoxyCodeLine{1124 \textcolor{preprocessor}{\#if defined(\_MSC\_VER) \&\& \_MSC\_VER <= 1900}}
+\DoxyCodeLine{1125         insert\_hack\_t<T>::insert(*stream, in);}
+\DoxyCodeLine{1126 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{1127         \mbox{\hyperlink{namespacedoctest_1_1Color_a2cc3f4bdda7bfd2e0e3faf7e678d3b98}{operator<<}}(*stream, in);}
+\DoxyCodeLine{1128 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{1129         \}}
+
+\end{DoxyCode}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+anterior\+Push/third\+\_\+party/\mbox{\hyperlink{anteriorPush_2third__party_2doctest_8h}{doctest.\+h}}\end{DoxyCompactItemize}

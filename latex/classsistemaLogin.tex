@@ -1,0 +1,567 @@
+\hypertarget{classsistemaLogin}{}\doxysection{sistema\+Login Class Reference}
+\label{classsistemaLogin}\index{sistemaLogin@{sistemaLogin}}
+
+
+{\ttfamily \#include $<$sistema\+Login.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classsistemaLogin_a8aa587679dfb440a5d6d2d5283d3d3a0}{ler\+Arquivo}} ()
+\item 
+void \mbox{\hyperlink{classsistemaLogin_a943aa456197f3b2439b49f22f7f2054b}{salvar\+Arquivo}} ()
+\item 
+void \mbox{\hyperlink{classsistemaLogin_ac61a70cbcfc108ec1e60f05806f09453}{cadastrar\+Usuario}} ()
+\item 
+void \mbox{\hyperlink{classsistemaLogin_a68347c85814f4231af8e5318acbc5857}{excluir\+Usuario}} ()
+\item 
+void \mbox{\hyperlink{classsistemaLogin_a1859600212180666e0c91cb5863bebae}{listar\+Usuarios}} ()
+\item 
+void \mbox{\hyperlink{classsistemaLogin_af6a3c8790a61e26533ce718d2766b314}{alterar\+Usuario}} ()
+\item 
+void \mbox{\hyperlink{classsistemaLogin_a14da81aceb24011ca883f1fa8c2ae821}{limpar\+Memoria}} ()
+\item 
+void \mbox{\hyperlink{classsistemaLogin_a24e99c1b7aa9de6daeda3dc3ec771a1e}{limpar\+Tela}} (string modo)
+\item 
+void \mbox{\hyperlink{classsistemaLogin_a99279d0a2fd4fd35e86a8b0178569022}{fazer\+Logout}} (\mbox{\hyperlink{classUsuario}{Usuario}} $\ast$u)
+\item 
+string \mbox{\hyperlink{classsistemaLogin_add8fe935973e59863a806edfd985361c}{gerar\+ID}} ()
+\item 
+string \mbox{\hyperlink{classsistemaLogin_ac82f575a6d29ddb787e6fd7b0441df3f}{gerar\+Data\+Atual}} ()
+\item 
+\mbox{\hyperlink{classUsuario}{Usuario}} $\ast$ \mbox{\hyperlink{classsistemaLogin_aa0c4a27c8316368d77ee20c6bd8cfde2}{menu\+Login}} ()
+\item 
+\mbox{\hyperlink{classUsuario}{Usuario}} $\ast$ \mbox{\hyperlink{classsistemaLogin_aefb0c93fcf479523b7d4e01a073a5423}{pesquisar\+Usuario}} (string pesquisa)
+\item 
+void \mbox{\hyperlink{classsistemaLogin_a8aa587679dfb440a5d6d2d5283d3d3a0}{ler\+Arquivo}} ()
+\item 
+void \mbox{\hyperlink{classsistemaLogin_a943aa456197f3b2439b49f22f7f2054b}{salvar\+Arquivo}} ()
+\item 
+void \mbox{\hyperlink{classsistemaLogin_ac61a70cbcfc108ec1e60f05806f09453}{cadastrar\+Usuario}} ()
+\item 
+void \mbox{\hyperlink{classsistemaLogin_a68347c85814f4231af8e5318acbc5857}{excluir\+Usuario}} ()
+\item 
+void \mbox{\hyperlink{classsistemaLogin_a1859600212180666e0c91cb5863bebae}{listar\+Usuarios}} ()
+\item 
+void \mbox{\hyperlink{classsistemaLogin_af6a3c8790a61e26533ce718d2766b314}{alterar\+Usuario}} ()
+\item 
+void \mbox{\hyperlink{classsistemaLogin_a14da81aceb24011ca883f1fa8c2ae821}{limpar\+Memoria}} ()
+\item 
+void \mbox{\hyperlink{classsistemaLogin_a24e99c1b7aa9de6daeda3dc3ec771a1e}{limpar\+Tela}} (string modo)
+\item 
+void \mbox{\hyperlink{classsistemaLogin_a99279d0a2fd4fd35e86a8b0178569022}{fazer\+Logout}} (\mbox{\hyperlink{classUsuario}{Usuario}} $\ast$u)
+\item 
+string \mbox{\hyperlink{classsistemaLogin_add8fe935973e59863a806edfd985361c}{gerar\+ID}} ()
+\item 
+string \mbox{\hyperlink{classsistemaLogin_ac82f575a6d29ddb787e6fd7b0441df3f}{gerar\+Data\+Atual}} ()
+\item 
+\mbox{\hyperlink{classUsuario}{Usuario}} $\ast$ \mbox{\hyperlink{classsistemaLogin_a8f7d4350a53b544f4380ca3d1b9dcc40}{menu\+Login}} ()
+\item 
+\mbox{\hyperlink{classUsuario}{Usuario}} $\ast$ \mbox{\hyperlink{classsistemaLogin_ae4e57f2ce972b90fc6872319ccffe28d}{pesquisar\+Usuario}} (string pesquisa)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A classe \mbox{\hyperlink{classsistemaLogin}{sistema\+Login}} é responsável por 
+
+Definition at line 13 of file sistema\+Login.\+hpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsistemaLogin_af6a3c8790a61e26533ce718d2766b314}\label{classsistemaLogin_af6a3c8790a61e26533ce718d2766b314}} 
+\index{sistemaLogin@{sistemaLogin}!alterarUsuario@{alterarUsuario}}
+\index{alterarUsuario@{alterarUsuario}!sistemaLogin@{sistemaLogin}}
+\doxysubsubsection{\texorpdfstring{alterarUsuario()}{alterarUsuario()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void sistema\+Login\+::alterar\+Usuario (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 206 of file sistema\+Login.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{208            :}
+\DoxyCodeLine{209             \textcolor{keywordflow}{throw} \mbox{\hyperlink{classEscolhaInvalida}{EscolhaInvalida}}();}
+\DoxyCodeLine{210             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{211     \}}
+\DoxyCodeLine{212     \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{213 \}}
+\DoxyCodeLine{214 }
+\DoxyCodeLine{215 \textcolor{keywordtype}{void} \mbox{\hyperlink{classsistemaLogin_af6a3c8790a61e26533ce718d2766b314}{sistemaLogin::alterarUsuario}}()\{  }
+\DoxyCodeLine{216     \textcolor{keywordtype}{string} pesquisa;}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classsistemaLogin_af6a3c8790a61e26533ce718d2766b314}\label{classsistemaLogin_af6a3c8790a61e26533ce718d2766b314}} 
+\index{sistemaLogin@{sistemaLogin}!alterarUsuario@{alterarUsuario}}
+\index{alterarUsuario@{alterarUsuario}!sistemaLogin@{sistemaLogin}}
+\doxysubsubsection{\texorpdfstring{alterarUsuario()}{alterarUsuario()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void sistema\+Login\+::alterar\+Usuario (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classsistemaLogin_ac61a70cbcfc108ec1e60f05806f09453}\label{classsistemaLogin_ac61a70cbcfc108ec1e60f05806f09453}} 
+\index{sistemaLogin@{sistemaLogin}!cadastrarUsuario@{cadastrarUsuario}}
+\index{cadastrarUsuario@{cadastrarUsuario}!sistemaLogin@{sistemaLogin}}
+\doxysubsubsection{\texorpdfstring{cadastrarUsuario()}{cadastrarUsuario()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void sistema\+Login\+::cadastrar\+Usuario (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 116 of file sistema\+Login.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{116                                    \{}
+\DoxyCodeLine{117     cout << \textcolor{stringliteral}{"+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+"} << endl;}
+\DoxyCodeLine{118     cout << \textcolor{stringliteral}{"| 1 -\/ Gerente                      |"} << endl;}
+\DoxyCodeLine{119     cout << \textcolor{stringliteral}{"| 2 -\/ Funcionário                  |"} << endl;}
+\DoxyCodeLine{120     cout << \textcolor{stringliteral}{"| 3 -\/ Voltar                       |"} << endl;}
+\DoxyCodeLine{121     cout << \textcolor{stringliteral}{"+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+"} << endl;}
+\DoxyCodeLine{122     cout << \textcolor{stringliteral}{"Escolha qual tipo de usuário: "};}
+\DoxyCodeLine{123     \textcolor{keywordtype}{int} escolha;}
+\DoxyCodeLine{124     cin >> escolha;}
+\DoxyCodeLine{125     \textcolor{keywordflow}{switch} (escolha)\{}
+\DoxyCodeLine{126         \textcolor{keywordflow}{case} 1:\{}
+\DoxyCodeLine{127             \textcolor{keywordtype}{string} i = \mbox{\hyperlink{classsistemaLogin_add8fe935973e59863a806edfd985361c}{gerarID}}(), t = \textcolor{stringliteral}{"Gerente"}, d = \mbox{\hyperlink{classsistemaLogin_ac82f575a6d29ddb787e6fd7b0441df3f}{gerarDataAtual}}();}
+\DoxyCodeLine{128             \textcolor{keywordtype}{string} n, c, e, s;}
+\DoxyCodeLine{129             cout << \textcolor{stringliteral}{"Digite o Nome completo: "};}
+\DoxyCodeLine{130             cin.ignore(1,\textcolor{charliteral}{'\(\backslash\)n'});}
+\DoxyCodeLine{131             getline(cin, n);}
+\DoxyCodeLine{132             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} i = 0; i < n.size(); i++)}
+\DoxyCodeLine{133                 \textcolor{keywordflow}{if} (n[i] == \textcolor{charliteral}{' '})}
+\DoxyCodeLine{134                     n[i] = \textcolor{charliteral}{'\_'};}
+\DoxyCodeLine{135             cout << \textcolor{stringliteral}{"Digite em sequência o CPF, Email, e Senha (separados por espaço)"} << endl;}
+\DoxyCodeLine{136             cin >> c >> e >> s;}
+\DoxyCodeLine{137             \mbox{\hyperlink{classUsuario}{Usuario}} *u = \textcolor{keyword}{new} \mbox{\hyperlink{classGerente}{Gerente}}(i,t,n,c,e,d,s);}
+\DoxyCodeLine{138             \_usuarios.insert(pair<string,Usuario*>(i,u));}
+\DoxyCodeLine{139             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{140         \}}
+\DoxyCodeLine{141         \textcolor{keywordflow}{case} 2:\{}
+\DoxyCodeLine{142             \textcolor{keywordtype}{string} i = \mbox{\hyperlink{classsistemaLogin_add8fe935973e59863a806edfd985361c}{gerarID}}(), t = \textcolor{stringliteral}{"Funcionario"}, d = \mbox{\hyperlink{classsistemaLogin_ac82f575a6d29ddb787e6fd7b0441df3f}{gerarDataAtual}}();}
+\DoxyCodeLine{143             \textcolor{keywordtype}{string} n, c, e, s;}
+\DoxyCodeLine{144             cout << \textcolor{stringliteral}{"Digite o Nome completo: "};}
+\DoxyCodeLine{145             cin.ignore(1,\textcolor{charliteral}{'\(\backslash\)n'});}
+\DoxyCodeLine{146             getline(cin, n);}
+\DoxyCodeLine{147             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} i = 0; i < n.size(); i++)}
+\DoxyCodeLine{148                 \textcolor{keywordflow}{if} (n[i] == \textcolor{charliteral}{' '})}
+\DoxyCodeLine{149                     n[i] = \textcolor{charliteral}{'\_'};}
+\DoxyCodeLine{150             cout << \textcolor{stringliteral}{"Digite em sequência o CPF, Email, e Senha (separados por espaço)"} << endl;}
+\DoxyCodeLine{151             cin >> c >> e >> s;}
+\DoxyCodeLine{152             \mbox{\hyperlink{classUsuario}{Usuario}} *u = \textcolor{keyword}{new} \mbox{\hyperlink{classFuncionario}{Funcionario}}(i,t,n,c,e,d,s);}
+\DoxyCodeLine{153             \_usuarios.insert(pair<string,Usuario*>(i,u));}
+\DoxyCodeLine{154             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{155         \}}
+\DoxyCodeLine{156         \textcolor{keywordflow}{case} 3:}
+\DoxyCodeLine{157             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{158         \}}
+\DoxyCodeLine{159     \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{160             \textcolor{keywordflow}{throw} \mbox{\hyperlink{classEscolhaInvalida}{EscolhaInvalida}}();}
+\DoxyCodeLine{161             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{162 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classsistemaLogin_ac61a70cbcfc108ec1e60f05806f09453}\label{classsistemaLogin_ac61a70cbcfc108ec1e60f05806f09453}} 
+\index{sistemaLogin@{sistemaLogin}!cadastrarUsuario@{cadastrarUsuario}}
+\index{cadastrarUsuario@{cadastrarUsuario}!sistemaLogin@{sistemaLogin}}
+\doxysubsubsection{\texorpdfstring{cadastrarUsuario()}{cadastrarUsuario()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void sistema\+Login\+::cadastrar\+Usuario (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classsistemaLogin_a68347c85814f4231af8e5318acbc5857}\label{classsistemaLogin_a68347c85814f4231af8e5318acbc5857}} 
+\index{sistemaLogin@{sistemaLogin}!excluirUsuario@{excluirUsuario}}
+\index{excluirUsuario@{excluirUsuario}!sistemaLogin@{sistemaLogin}}
+\doxysubsubsection{\texorpdfstring{excluirUsuario()}{excluirUsuario()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void sistema\+Login\+::excluir\+Usuario (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 103 of file sistema\+Login.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{103                                  \{}
+\DoxyCodeLine{104     \textcolor{keywordtype}{string} pesquisa;}
+\DoxyCodeLine{105     cout << \textcolor{stringliteral}{"Digite o ID ou nome completo do usuário: "} << endl;}
+\DoxyCodeLine{106     cin.ignore(1,\textcolor{charliteral}{'\(\backslash\)n'});}
+\DoxyCodeLine{107     getline(cin, pesquisa);}
+\DoxyCodeLine{108     \mbox{\hyperlink{classUsuario}{Usuario}} *u = \mbox{\hyperlink{classsistemaLogin_aefb0c93fcf479523b7d4e01a073a5423}{pesquisarUsuario}}(pesquisa);}
+\DoxyCodeLine{109     \textcolor{keywordflow}{if} (u != \textcolor{keyword}{nullptr})\{ }
+\DoxyCodeLine{110         cout << \textcolor{stringliteral}{"O usuário "} << u-\/>\mbox{\hyperlink{classUsuario_aca725547a496bfe313faac8e90bf37a7}{getNome}}() << \textcolor{stringliteral}{" foi excluído com sucesso!"} << endl;}
+\DoxyCodeLine{111         \_usuarios.erase(u-\/>\mbox{\hyperlink{classUsuario_aceb0e105938da68e83cfa8f45ec41487}{getId}}());}
+\DoxyCodeLine{112     \} \textcolor{keywordflow}{else}}
+\DoxyCodeLine{113         \textcolor{keywordflow}{throw} \mbox{\hyperlink{classUsuarioNaoCadastrado}{UsuarioNaoCadastrado}}();}
+\DoxyCodeLine{114 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classsistemaLogin_a68347c85814f4231af8e5318acbc5857}\label{classsistemaLogin_a68347c85814f4231af8e5318acbc5857}} 
+\index{sistemaLogin@{sistemaLogin}!excluirUsuario@{excluirUsuario}}
+\index{excluirUsuario@{excluirUsuario}!sistemaLogin@{sistemaLogin}}
+\doxysubsubsection{\texorpdfstring{excluirUsuario()}{excluirUsuario()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void sistema\+Login\+::excluir\+Usuario (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classsistemaLogin_a99279d0a2fd4fd35e86a8b0178569022}\label{classsistemaLogin_a99279d0a2fd4fd35e86a8b0178569022}} 
+\index{sistemaLogin@{sistemaLogin}!fazerLogout@{fazerLogout}}
+\index{fazerLogout@{fazerLogout}!sistemaLogin@{sistemaLogin}}
+\doxysubsubsection{\texorpdfstring{fazerLogout()}{fazerLogout()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void sistema\+Login\+::fazer\+Logout (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classUsuario}{Usuario}} $\ast$}]{u }\end{DoxyParamCaption})}
+
+
+
+Definition at line 218 of file sistema\+Login.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{221                      \{     }
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classsistemaLogin_a99279d0a2fd4fd35e86a8b0178569022}\label{classsistemaLogin_a99279d0a2fd4fd35e86a8b0178569022}} 
+\index{sistemaLogin@{sistemaLogin}!fazerLogout@{fazerLogout}}
+\index{fazerLogout@{fazerLogout}!sistemaLogin@{sistemaLogin}}
+\doxysubsubsection{\texorpdfstring{fazerLogout()}{fazerLogout()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void sistema\+Login\+::fazer\+Logout (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classUsuario}{Usuario}} $\ast$}]{u }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classsistemaLogin_ac82f575a6d29ddb787e6fd7b0441df3f}\label{classsistemaLogin_ac82f575a6d29ddb787e6fd7b0441df3f}} 
+\index{sistemaLogin@{sistemaLogin}!gerarDataAtual@{gerarDataAtual}}
+\index{gerarDataAtual@{gerarDataAtual}!sistemaLogin@{sistemaLogin}}
+\doxysubsubsection{\texorpdfstring{gerarDataAtual()}{gerarDataAtual()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily string sistema\+Login\+::gerar\+Data\+Atual (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 80 of file sistema\+Login.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{80                                    \{}
+\DoxyCodeLine{81     time\_t t = time(0);}
+\DoxyCodeLine{82     \textcolor{keyword}{struct }tm * now = localtime(\&t);}
+\DoxyCodeLine{83     \textcolor{keywordtype}{char} buffer[80];}
+\DoxyCodeLine{84     strftime(buffer, 80, \textcolor{stringliteral}{"\%d/\%m/\%Y"}, now);}
+\DoxyCodeLine{85     \textcolor{keywordflow}{return} std::string(buffer);}
+\DoxyCodeLine{86 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classsistemaLogin_ac82f575a6d29ddb787e6fd7b0441df3f}\label{classsistemaLogin_ac82f575a6d29ddb787e6fd7b0441df3f}} 
+\index{sistemaLogin@{sistemaLogin}!gerarDataAtual@{gerarDataAtual}}
+\index{gerarDataAtual@{gerarDataAtual}!sistemaLogin@{sistemaLogin}}
+\doxysubsubsection{\texorpdfstring{gerarDataAtual()}{gerarDataAtual()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily string sistema\+Login\+::gerar\+Data\+Atual (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsistemaLogin_add8fe935973e59863a806edfd985361c}\label{classsistemaLogin_add8fe935973e59863a806edfd985361c}} 
+\index{sistemaLogin@{sistemaLogin}!gerarID@{gerarID}}
+\index{gerarID@{gerarID}!sistemaLogin@{sistemaLogin}}
+\doxysubsubsection{\texorpdfstring{gerarID()}{gerarID()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily string sistema\+Login\+::gerar\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 65 of file sistema\+Login.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{65                             \{}
+\DoxyCodeLine{66     \textcolor{keyword}{static} \textcolor{keyword}{const} \textcolor{keywordtype}{int} tamanhoDigitos = 4; }
+\DoxyCodeLine{67     \textcolor{keywordtype}{string} IDgerado;}
+\DoxyCodeLine{68     \textcolor{keywordtype}{int} numeroMaximoTentativas = 10; }
+\DoxyCodeLine{69     \textcolor{keywordflow}{do} \{}
+\DoxyCodeLine{70         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < tamanhoDigitos; ++i) \{}
+\DoxyCodeLine{71             IDgerado += (\textcolor{charliteral}{'0'} + (rand() \% 10));}
+\DoxyCodeLine{72         \}}
+\DoxyCodeLine{73         \textcolor{keywordflow}{if} (\_usuarios.count(IDgerado) == 0)}
+\DoxyCodeLine{74             \textcolor{keywordflow}{return} IDgerado;}
+\DoxyCodeLine{75         IDgerado = \textcolor{stringliteral}{""};}
+\DoxyCodeLine{76     \} \textcolor{keywordflow}{while} (-\/-\/numeroMaximoTentativas > 0);}
+\DoxyCodeLine{77     \textcolor{keywordflow}{throw} std::runtime\_error(\textcolor{stringliteral}{"Não foi possível gerar um ID único"});}
+\DoxyCodeLine{78 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classsistemaLogin_add8fe935973e59863a806edfd985361c}\label{classsistemaLogin_add8fe935973e59863a806edfd985361c}} 
+\index{sistemaLogin@{sistemaLogin}!gerarID@{gerarID}}
+\index{gerarID@{gerarID}!sistemaLogin@{sistemaLogin}}
+\doxysubsubsection{\texorpdfstring{gerarID()}{gerarID()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily string sistema\+Login\+::gerar\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsistemaLogin_a8aa587679dfb440a5d6d2d5283d3d3a0}\label{classsistemaLogin_a8aa587679dfb440a5d6d2d5283d3d3a0}} 
+\index{sistemaLogin@{sistemaLogin}!lerArquivo@{lerArquivo}}
+\index{lerArquivo@{lerArquivo}!sistemaLogin@{sistemaLogin}}
+\doxysubsubsection{\texorpdfstring{lerArquivo()}{lerArquivo()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void sistema\+Login\+::ler\+Arquivo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 3 of file sistema\+Login.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{3                              \{}
+\DoxyCodeLine{4     fstream arquivo;}
+\DoxyCodeLine{5     \textcolor{keywordtype}{string} id,tipo,nome,cpf,email,ultimoAcesso,senha;}
+\DoxyCodeLine{6     arquivo.open(\textcolor{stringliteral}{"database/Usuarios.txt"},ios::in);}
+\DoxyCodeLine{7     \textcolor{keywordflow}{if} (arquivo.is\_open())}
+\DoxyCodeLine{8     \{   }
+\DoxyCodeLine{9         \textcolor{keywordflow}{while} (arquivo >> \textcolor{keywordtype}{id} >> nome >> tipo >> cpf >> email >> ultimoAcesso >> senha)\{}
+\DoxyCodeLine{10             \textcolor{keywordflow}{if} (tipo == \textcolor{stringliteral}{"Gerente"})\{}
+\DoxyCodeLine{11                 \mbox{\hyperlink{classUsuario}{Usuario}} *g = \textcolor{keyword}{new} \mbox{\hyperlink{classGerente}{Gerente}}(\textcolor{keywordtype}{id}, tipo, nome, cpf, email, ultimoAcesso, senha);}
+\DoxyCodeLine{12                 \_usuarios.insert(\{id,g\}); }
+\DoxyCodeLine{13             \}\textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{14                 \mbox{\hyperlink{classUsuario}{Usuario}} *f = \textcolor{keyword}{new} \mbox{\hyperlink{classFuncionario}{Funcionario}}(\textcolor{keywordtype}{id}, tipo, nome, cpf, email, ultimoAcesso, senha);}
+\DoxyCodeLine{15                 \_usuarios.insert(pair<string,Usuario*>(\textcolor{keywordtype}{id},f)); }
+\DoxyCodeLine{16             \}}
+\DoxyCodeLine{17         \}}
+\DoxyCodeLine{18     \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{19         arquivo.open(\textcolor{stringliteral}{"database/Usuarios.txt"},ios::out);}
+\DoxyCodeLine{20         cout<<\textcolor{stringliteral}{"Arquivo não havia sido encontrado, agora foi criado com sucesso"}<<endl; \textcolor{comment}{// throw ExcecaoArquivoNaoEncontrado}}
+\DoxyCodeLine{21     \}}
+\DoxyCodeLine{22     arquivo.close(); }
+\DoxyCodeLine{23 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classsistemaLogin_a8aa587679dfb440a5d6d2d5283d3d3a0}\label{classsistemaLogin_a8aa587679dfb440a5d6d2d5283d3d3a0}} 
+\index{sistemaLogin@{sistemaLogin}!lerArquivo@{lerArquivo}}
+\index{lerArquivo@{lerArquivo}!sistemaLogin@{sistemaLogin}}
+\doxysubsubsection{\texorpdfstring{lerArquivo()}{lerArquivo()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void sistema\+Login\+::ler\+Arquivo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classsistemaLogin_a14da81aceb24011ca883f1fa8c2ae821}\label{classsistemaLogin_a14da81aceb24011ca883f1fa8c2ae821}} 
+\index{sistemaLogin@{sistemaLogin}!limparMemoria@{limparMemoria}}
+\index{limparMemoria@{limparMemoria}!sistemaLogin@{sistemaLogin}}
+\doxysubsubsection{\texorpdfstring{limparMemoria()}{limparMemoria()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void sistema\+Login\+::limpar\+Memoria (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 60 of file sistema\+Login.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{60                                 \{}
+\DoxyCodeLine{61     \_usuarios.clear();}
+\DoxyCodeLine{62     \textcolor{comment}{// excluir ponteiros}}
+\DoxyCodeLine{63 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classsistemaLogin_a14da81aceb24011ca883f1fa8c2ae821}\label{classsistemaLogin_a14da81aceb24011ca883f1fa8c2ae821}} 
+\index{sistemaLogin@{sistemaLogin}!limparMemoria@{limparMemoria}}
+\index{limparMemoria@{limparMemoria}!sistemaLogin@{sistemaLogin}}
+\doxysubsubsection{\texorpdfstring{limparMemoria()}{limparMemoria()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void sistema\+Login\+::limpar\+Memoria (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classsistemaLogin_a24e99c1b7aa9de6daeda3dc3ec771a1e}\label{classsistemaLogin_a24e99c1b7aa9de6daeda3dc3ec771a1e}} 
+\index{sistemaLogin@{sistemaLogin}!limparTela@{limparTela}}
+\index{limparTela@{limparTela}!sistemaLogin@{sistemaLogin}}
+\doxysubsubsection{\texorpdfstring{limparTela()}{limparTela()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void sistema\+Login\+::limpar\+Tela (\begin{DoxyParamCaption}\item[{string}]{modo }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classsistemaLogin_a24e99c1b7aa9de6daeda3dc3ec771a1e}\label{classsistemaLogin_a24e99c1b7aa9de6daeda3dc3ec771a1e}} 
+\index{sistemaLogin@{sistemaLogin}!limparTela@{limparTela}}
+\index{limparTela@{limparTela}!sistemaLogin@{sistemaLogin}}
+\doxysubsubsection{\texorpdfstring{limparTela()}{limparTela()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void sistema\+Login\+::limpar\+Tela (\begin{DoxyParamCaption}\item[{string}]{modo }\end{DoxyParamCaption})}
+
+
+
+Definition at line 237 of file sistema\+Login.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{239                                  \{ }
+\DoxyCodeLine{240         cout << R\textcolor{stringliteral}{"(}}
+\DoxyCodeLine{241 \textcolor{stringliteral}{    \_\_\_    \_\_\_\_                          \_\_  \_\_             \_\_       \_     }}
+\DoxyCodeLine{242 \textcolor{stringliteral}{   /   |  / / /\_\_\_\_  \_\_\_\_\_\_\_\_\_ \_\_\_\_\_\_   / / / /\_\_\_\_\_\_  \_\_\_\_/\_/\_\_\_\_\_\_(\_)\_\_\_ }}
+\DoxyCodeLine{243 \textcolor{stringliteral}{  / /| | / / \_\_/ \_ \(\backslash\)/ \_\_\_/ \_\_ `/ \_\_\_/  / / / / \_\_\_/ / / / \_\_ `/ \_\_\_/ / \_\_ \(\backslash\)}}
+\DoxyCodeLine{244 \textcolor{stringliteral}{ / \_\_\_ |/ / /\_/  \_\_/ /  / /\_/ / /     / /\_/ (\_\_  ) /\_/ / /\_/ / /  / / /\_/ /}}
+\DoxyCodeLine{245 \textcolor{stringliteral}{/\_/  |\_/\_/\(\backslash\)\_\_/\(\backslash\)\_\_\_/\_/   \(\backslash\)\_\_,\_/\_/      \(\backslash\)\_\_\_\_/\_\_\_\_/\(\backslash\)\_\_,\_/\(\backslash\)\_\_,\_/\_/  /\_/\(\backslash\)\_\_\_\_/ )" << endl; }}
+\DoxyCodeLine{246 \textcolor{stringliteral}{    }\textcolor{keywordtype}{string} pesquisa;}
+\DoxyCodeLine{247     cout << \textcolor{stringliteral}{"Digite o ID ou nome completo do usuário: "};}
+\DoxyCodeLine{248     cin.ignore(1,\textcolor{charliteral}{'\(\backslash\)n'});}
+\DoxyCodeLine{249     getline(cin, pesquisa);}
+\DoxyCodeLine{250     \mbox{\hyperlink{classUsuario}{Usuario}} *u = \mbox{\hyperlink{classsistemaLogin_aefb0c93fcf479523b7d4e01a073a5423}{pesquisarUsuario}}(pesquisa);}
+\DoxyCodeLine{251     \textcolor{keywordflow}{if} (u != \textcolor{keyword}{nullptr})\{     }
+\DoxyCodeLine{252         u-\/>\mbox{\hyperlink{classUsuario_afc7bab8d6ad1528fe0394a5ea901d334}{alterarUsuario}}();}
+\DoxyCodeLine{253     \} \textcolor{keywordflow}{else}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classsistemaLogin_a1859600212180666e0c91cb5863bebae}\label{classsistemaLogin_a1859600212180666e0c91cb5863bebae}} 
+\index{sistemaLogin@{sistemaLogin}!listarUsuarios@{listarUsuarios}}
+\index{listarUsuarios@{listarUsuarios}!sistemaLogin@{sistemaLogin}}
+\doxysubsubsection{\texorpdfstring{listarUsuarios()}{listarUsuarios()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void sistema\+Login\+::listar\+Usuarios (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 42 of file sistema\+Login.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{42                                  \{}
+\DoxyCodeLine{43     \textcolor{keywordflow}{if}(\_usuarios.empty())\{}
+\DoxyCodeLine{44         cout << \textcolor{stringliteral}{"Nenhum usuário cadastrado!!"} << endl;}
+\DoxyCodeLine{45     \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{46     map<string, Usuario*>::iterator it;}
+\DoxyCodeLine{47         cout << \textcolor{stringliteral}{"+-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/-\/-\/+"}<< endl;}
+\DoxyCodeLine{48         cout << \textcolor{stringliteral}{"| ID  |           NOME            |    TIPO    |      CPF      |            EMAIL           | ÚLTIMO ACESSO | SENHA |"}<< endl;}
+\DoxyCodeLine{49     cout << \textcolor{stringliteral}{"+-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/-\/-\/+"}<< endl;}
+\DoxyCodeLine{50     \textcolor{keywordflow}{for}(it=\_usuarios.begin(); it!=\_usuarios.end(); it++)\{}
+\DoxyCodeLine{51         cout << left << \textcolor{charliteral}{'|'} << setw(5) << (it-\/>second)-\/>getId() <<  \textcolor{charliteral}{'|'} << setw(27) << (it-\/>second)-\/>getNome() <<  \textcolor{charliteral}{'|'} << setw(12) <<}
+\DoxyCodeLine{52         (it-\/>second)-\/>getTipo() <<  \textcolor{charliteral}{'|'} << setw(15) << (it-\/>second)-\/>getCpf() <<  \textcolor{charliteral}{'|'} << setw(28) << (it-\/>second)-\/>getEmail()}
+\DoxyCodeLine{53          <<  \textcolor{charliteral}{'|'} << setw(15) << (it-\/>second)-\/>getUltimoAcesso() <<  \textcolor{charliteral}{'|'} << setw(7) << (it-\/>second)-\/>getSenha();}
+\DoxyCodeLine{54          cout << \textcolor{charliteral}{'|'} << endl;}
+\DoxyCodeLine{55         cout << \textcolor{stringliteral}{"+-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/-\/-\/+"}<< endl;}
+\DoxyCodeLine{56         \}}
+\DoxyCodeLine{57     \}}
+\DoxyCodeLine{58 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classsistemaLogin_a1859600212180666e0c91cb5863bebae}\label{classsistemaLogin_a1859600212180666e0c91cb5863bebae}} 
+\index{sistemaLogin@{sistemaLogin}!listarUsuarios@{listarUsuarios}}
+\index{listarUsuarios@{listarUsuarios}!sistemaLogin@{sistemaLogin}}
+\doxysubsubsection{\texorpdfstring{listarUsuarios()}{listarUsuarios()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void sistema\+Login\+::listar\+Usuarios (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classsistemaLogin_aa0c4a27c8316368d77ee20c6bd8cfde2}\label{classsistemaLogin_aa0c4a27c8316368d77ee20c6bd8cfde2}} 
+\index{sistemaLogin@{sistemaLogin}!menuLogin@{menuLogin}}
+\index{menuLogin@{menuLogin}!sistemaLogin@{sistemaLogin}}
+\doxysubsubsection{\texorpdfstring{menuLogin()}{menuLogin()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classUsuario}{Usuario}} $\ast$ sistema\+Login\+::menu\+Login (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 164 of file sistema\+Login.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{164                                 \{}
+\DoxyCodeLine{165     \mbox{\hyperlink{classsistemaLogin_a24e99c1b7aa9de6daeda3dc3ec771a1e}{limparTela}}(\textcolor{stringliteral}{"continuar"});}
+\DoxyCodeLine{166     cout << R\textcolor{stringliteral}{"(}}
+\DoxyCodeLine{167 \textcolor{stringliteral}{  \_\_\_\_                  \_\_      \_\_\_           \_       }}
+\DoxyCodeLine{168 \textcolor{stringliteral}{ |  \_ \(\backslash\)                 \(\backslash\) \(\backslash\)    / (\_)         | |      }}
+\DoxyCodeLine{169 \textcolor{stringliteral}{ | |\_) | \_\_\_ \_ \_\_ \_\_\_    \(\backslash\) \(\backslash\)  / / \_ \_ \_\_   \_\_| | \_\_\_  }}
+\DoxyCodeLine{170 \textcolor{stringliteral}{ |  \_ < / \_ \(\backslash\) '\_ ` \_ \(\backslash\)    \(\backslash\) \(\backslash\)/ / | | '\_ \(\backslash\) / \_` |/ \_ \(\backslash\) }}
+\DoxyCodeLine{171 \textcolor{stringliteral}{ | |\_) |  \_\_/ | | | | |    \(\backslash\)  /  | | | | | (\_| | (\_) |}}
+\DoxyCodeLine{172 \textcolor{stringliteral}{ |\_\_\_\_/ \(\backslash\)\_\_\_|\_| |\_| |\_|     \(\backslash\)/   |\_|\_| |\_|\(\backslash\)\_\_,\_|\(\backslash\)\_\_\_/ }}
+\DoxyCodeLine{173 \textcolor{stringliteral}{                                                      }}
+\DoxyCodeLine{174 \textcolor{stringliteral}{                                                      }}
+\DoxyCodeLine{175 \textcolor{stringliteral}{)" << endl;}}
+\DoxyCodeLine{176 \textcolor{stringliteral}{    cout << }\textcolor{stringliteral}{"+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+"} << endl;}
+\DoxyCodeLine{177     cout << \textcolor{stringliteral}{"| 1 -\/ Fazer Login                  |"} << endl;}
+\DoxyCodeLine{178     cout << \textcolor{stringliteral}{"| 2 -\/ Encerrar Programa            |"} << endl;}
+\DoxyCodeLine{179     cout << \textcolor{stringliteral}{"+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+"} << endl;}
+\DoxyCodeLine{180     cout << \textcolor{stringliteral}{"Escolha uma opcao: "};}
+\DoxyCodeLine{181     \textcolor{keywordtype}{int} escolha;}
+\DoxyCodeLine{182     cin >> escolha;}
+\DoxyCodeLine{183     \textcolor{keywordflow}{switch} (escolha)\{}
+\DoxyCodeLine{184         \textcolor{keywordflow}{case} 1:\{}
+\DoxyCodeLine{185             \textcolor{keywordtype}{string} usuario, senha;}
+\DoxyCodeLine{186             cout << \textcolor{stringliteral}{"Digite o nome ou ID: "};}
+\DoxyCodeLine{187             cin.ignore(1,\textcolor{charliteral}{'\(\backslash\)n'});}
+\DoxyCodeLine{188             getline(cin, usuario);}
+\DoxyCodeLine{189             \mbox{\hyperlink{classUsuario}{Usuario}} *u = \mbox{\hyperlink{classsistemaLogin_aefb0c93fcf479523b7d4e01a073a5423}{pesquisarUsuario}}(usuario);}
+\DoxyCodeLine{190             \textcolor{keywordflow}{if} (u != \textcolor{keyword}{nullptr})\{}
+\DoxyCodeLine{191                 cout << \textcolor{stringliteral}{"Digite a senha: "};}
+\DoxyCodeLine{192                 cin >> senha;}
+\DoxyCodeLine{193                 \textcolor{keywordflow}{if} (senha == u-\/>\mbox{\hyperlink{classUsuario_ac7beed1209b2e8aa72a5ae0567f65f07}{getSenha}}())\{}
+\DoxyCodeLine{194                     u-\/>\mbox{\hyperlink{classUsuario_afa7904ee4e34bda8f41cc0829f64a3c1}{setUltimoAcesso}}(\mbox{\hyperlink{classsistemaLogin_ac82f575a6d29ddb787e6fd7b0441df3f}{gerarDataAtual}}());}
+\DoxyCodeLine{195                     u-\/>\mbox{\hyperlink{classUsuario_ae7cf7fb5f5a703a3c48d6f03612551ed}{setEstaAutenticado}}(\textcolor{keyword}{true});}
+\DoxyCodeLine{196                     \mbox{\hyperlink{classsistemaLogin_a24e99c1b7aa9de6daeda3dc3ec771a1e}{limparTela}}(\textcolor{stringliteral}{"continuar"});}
+\DoxyCodeLine{197                     cout << \textcolor{stringliteral}{"Logado com sucesso :)"} << endl;}
+\DoxyCodeLine{198                     \textcolor{keywordflow}{return} u;}
+\DoxyCodeLine{199                 \}\textcolor{keywordflow}{else}}
+\DoxyCodeLine{200                     \textcolor{keywordflow}{throw} \mbox{\hyperlink{classSenhaIncorreta}{SenhaIncorreta}}();}
+\DoxyCodeLine{201             \}\textcolor{keywordflow}{else}}
+\DoxyCodeLine{202                 \textcolor{keywordflow}{throw} \mbox{\hyperlink{classUsuarioNaoCadastrado}{UsuarioNaoCadastrado}}();     }
+\DoxyCodeLine{203             \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{204         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classsistemaLogin_a8f7d4350a53b544f4380ca3d1b9dcc40}\label{classsistemaLogin_a8f7d4350a53b544f4380ca3d1b9dcc40}} 
+\index{sistemaLogin@{sistemaLogin}!menuLogin@{menuLogin}}
+\index{menuLogin@{menuLogin}!sistemaLogin@{sistemaLogin}}
+\doxysubsubsection{\texorpdfstring{menuLogin()}{menuLogin()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classUsuario}{Usuario}}$\ast$ sistema\+Login\+::menu\+Login (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsistemaLogin_aefb0c93fcf479523b7d4e01a073a5423}\label{classsistemaLogin_aefb0c93fcf479523b7d4e01a073a5423}} 
+\index{sistemaLogin@{sistemaLogin}!pesquisarUsuario@{pesquisarUsuario}}
+\index{pesquisarUsuario@{pesquisarUsuario}!sistemaLogin@{sistemaLogin}}
+\doxysubsubsection{\texorpdfstring{pesquisarUsuario()}{pesquisarUsuario()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classUsuario}{Usuario}}$\ast$ sistema\+Login\+::pesquisar\+Usuario (\begin{DoxyParamCaption}\item[{string}]{pesquisa }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classsistemaLogin_ae4e57f2ce972b90fc6872319ccffe28d}\label{classsistemaLogin_ae4e57f2ce972b90fc6872319ccffe28d}} 
+\index{sistemaLogin@{sistemaLogin}!pesquisarUsuario@{pesquisarUsuario}}
+\index{pesquisarUsuario@{pesquisarUsuario}!sistemaLogin@{sistemaLogin}}
+\doxysubsubsection{\texorpdfstring{pesquisarUsuario()}{pesquisarUsuario()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classUsuario}{Usuario}} $\ast$ sistema\+Login\+::pesquisar\+Usuario (\begin{DoxyParamCaption}\item[{string}]{pesquisa }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 88 of file sistema\+Login.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{88                                                       \{}
+\DoxyCodeLine{89     \textcolor{keywordflow}{if} (\_usuarios.count(pesquisa) == 1)   }
+\DoxyCodeLine{90         \textcolor{keywordflow}{return} \_usuarios[pesquisa];}
+\DoxyCodeLine{91     \textcolor{keywordtype}{int} contador = 0;}
+\DoxyCodeLine{92     map<string, Usuario*>::iterator it;}
+\DoxyCodeLine{93     \textcolor{keywordflow}{for}(it=\_usuarios.begin(); it!=\_usuarios.end(); it++)}
+\DoxyCodeLine{94         \textcolor{keywordflow}{if} (it-\/>second-\/>getNome() == pesquisa)\{}
+\DoxyCodeLine{95             contador++;}
+\DoxyCodeLine{96             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{97         \}}
+\DoxyCodeLine{98     \textcolor{keywordflow}{if} (contador != 0)}
+\DoxyCodeLine{99         \textcolor{keywordflow}{return} it-\/>second;}
+\DoxyCodeLine{100         \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{101 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classsistemaLogin_a943aa456197f3b2439b49f22f7f2054b}\label{classsistemaLogin_a943aa456197f3b2439b49f22f7f2054b}} 
+\index{sistemaLogin@{sistemaLogin}!salvarArquivo@{salvarArquivo}}
+\index{salvarArquivo@{salvarArquivo}!sistemaLogin@{sistemaLogin}}
+\doxysubsubsection{\texorpdfstring{salvarArquivo()}{salvarArquivo()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void sistema\+Login\+::salvar\+Arquivo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 25 of file sistema\+Login.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{25                                 \{}
+\DoxyCodeLine{26     fstream arquivo;}
+\DoxyCodeLine{27     \textcolor{keywordtype}{string} nomeFormatado;}
+\DoxyCodeLine{28     map<string, Usuario*>::iterator it;}
+\DoxyCodeLine{29     arquivo.open(\textcolor{stringliteral}{"database/Usuarios.txt"}, ios::out);}
+\DoxyCodeLine{30     \textcolor{keywordflow}{for}(it=\_usuarios.begin(); it!=\_usuarios.end(); it++)\{}
+\DoxyCodeLine{31         nomeFormatado = (it-\/>second)-\/>getNome();}
+\DoxyCodeLine{32         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} i = 0; i < nomeFormatado.size(); i++)}
+\DoxyCodeLine{33              \textcolor{keywordflow}{if} (nomeFormatado[i] == \textcolor{charliteral}{' '})}
+\DoxyCodeLine{34                 nomeFormatado[i] = \textcolor{charliteral}{'\_'};    }
+\DoxyCodeLine{35          arquivo<< (it-\/>second)-\/>getId()<<\textcolor{charliteral}{' '}<< nomeFormatado <<\textcolor{charliteral}{' '} <<}
+\DoxyCodeLine{36         (it-\/>second)-\/>getTipo()<<\textcolor{charliteral}{' '} << (it-\/>second)-\/>getCpf()<<\textcolor{charliteral}{' '} << (it-\/>second)-\/>getEmail()<<\textcolor{charliteral}{' '} << }
+\DoxyCodeLine{37         (it-\/>second)-\/>getUltimoAcesso() << \textcolor{charliteral}{' '} << (it-\/>second)-\/>getSenha() << endl;}
+\DoxyCodeLine{38     \}}
+\DoxyCodeLine{39     arquivo.close();}
+\DoxyCodeLine{40 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classsistemaLogin_a943aa456197f3b2439b49f22f7f2054b}\label{classsistemaLogin_a943aa456197f3b2439b49f22f7f2054b}} 
+\index{sistemaLogin@{sistemaLogin}!salvarArquivo@{salvarArquivo}}
+\index{salvarArquivo@{salvarArquivo}!sistemaLogin@{sistemaLogin}}
+\doxysubsubsection{\texorpdfstring{salvarArquivo()}{salvarArquivo()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void sistema\+Login\+::salvar\+Arquivo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+anterior\+Push/include/login/\mbox{\hyperlink{anteriorPush_2include_2login_2sistemaLogin_8hpp}{sistema\+Login.\+hpp}}\item 
+anterior\+Push/src/login/\mbox{\hyperlink{anteriorPush_2src_2login_2sistemaLogin_8cpp}{sistema\+Login.\+cpp}}\end{DoxyCompactItemize}
