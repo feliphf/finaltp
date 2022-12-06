@@ -79,15 +79,13 @@ void Estoque::pesquisarProduto(string pesquisa){
 void Estoque::alterarNomeProduto(string pesquisa, string nome){ 
       if (_estoque.count(pesquisa) == 1)
       {
-        if (nome.size() > 20)
-	{
+        if (nome.size() > 26){
             throw ExcecaoTamanhoNomeAlt();
-        }else
-        {
+        }else{
 	   map<string, Produto>::iterator it = _estoque.find(pesquisa);
            cout<<"O nome do produto foi alterado de "<<(it->second).getNome()<<" para "<<nome<<endl;
 	   (it->second).setNome(nome);
-	}
+	    }
       }else
         throw ProdutoNaoCadastrado();
 }
@@ -96,7 +94,7 @@ void Estoque::alterarNomeProduto(string pesquisa, string nome){
 void Estoque::alterarFabricanteProduto(string pesquisa, string fabric){
       if (_estoque.count(pesquisa) == 1)
       {
-        if (fabric.size() > 20)
+        if (fabric.size() > 23)
 	{
             throw ExcecaoTamanhoFabricAlt();
         }else
@@ -113,7 +111,7 @@ void Estoque::alterarFabricanteProduto(string pesquisa, string fabric){
 void Estoque::alterarCategoriaProduto(string pesquisa, string categ){
       if (_estoque.count(pesquisa) == 1)
       {
-       	if (categ.size() > 20)
+       	if (categ.size() > 23)
         {
            throw ExcecaoTamanhoCategAlt();
         }else
@@ -257,17 +255,17 @@ void Estoque::cadastroDeProdutos(){
     cout << "Digite o Nome: ";
     cin.ignore(1,'\n');
     getline(cin, n);
-    if (n.size() > 20){
+    if (n.size() > 26){
         throw ExcecaoTamanhoNomeAlt();
     }
     cout << "Digite em sequência o Código, Fabricante, Categoria e Preço (separados por espaço)" << endl;
     cin >> co >> f >> ca >> p;
     if (_estoque.count(co) == 0){
-        if (f.size() > 20) {
+        if (f.size() > 23) {
             std::cin.clear();
             std::cin.ignore();
             throw ExcecaoTamanhoFabricAlt();
-        }else if (ca.size() > 20) {
+        }else if (ca.size() > 23) {
             std::cin.clear();
             std::cin.ignore();
             throw ExcecaoTamanhoCategAlt();

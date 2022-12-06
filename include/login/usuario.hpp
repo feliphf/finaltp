@@ -17,6 +17,7 @@
 #include <string>
 #include <iomanip>
 #include "EXCECOESDOLOGIN.hpp"
+#include "EXCECOESDOESTOQUE.hpp"
 using namespace std;
 
 /**

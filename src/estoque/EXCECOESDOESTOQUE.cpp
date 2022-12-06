@@ -27,7 +27,7 @@ const char* EntradaInvalida::what() const throw(){
 }
 
 ExcecaoTamanhoNomeAlt::ExcecaoTamanhoNomeAlt(){
-	mensagem = "Nome desejado maior que o esperado, o nome deve conter até 20 caracteres";
+	mensagem = "Nome desejado maior que o esperado, o nome deve conter até 26 caracteres";
 }
 
 const char* ExcecaoTamanhoNomeAlt::what() const throw(){
@@ -35,7 +35,7 @@ const char* ExcecaoTamanhoNomeAlt::what() const throw(){
 }
 
 ExcecaoTamanhoFabricAlt::ExcecaoTamanhoFabricAlt(){
-	mensagem = "Fabricante desejado maior que o esperado, o fabricante deve conter até 20 caracteres";
+	mensagem = "Fabricante desejado maior que o esperado, o fabricante deve conter até 23 caracteres";
 }
 
 const char* ExcecaoTamanhoFabricAlt::what() const throw(){
@@ -43,7 +43,7 @@ const char* ExcecaoTamanhoFabricAlt::what() const throw(){
 }
 
 ExcecaoTamanhoCategAlt::ExcecaoTamanhoCategAlt(){
-	mensagem = "Categoria desejada maior que o esperado, a categoria deve conter até 20 caracteres";
+	mensagem = "Categoria desejada maior que o esperado, a categoria deve conter até 23 caracteres";
 }
 
 const char* ExcecaoTamanhoCategAlt::what() const throw(){

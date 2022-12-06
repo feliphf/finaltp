@@ -225,6 +225,26 @@ void Sistema::opcoesMenuAdministrativo(){
                 cout<<e.what()<<endl;
                 limparTela("perguntar");
                 break;
+            }catch(EscolhaInvalida& e){
+                cout<<e.what()<<endl;
+                limparTela("perguntar");
+                break;
+            }catch(ExcecaoTamanhoNomeAlt& e){
+                cout<<e.what()<<endl;
+                limparTela("perguntar");
+                break;
+            }catch(ExcecaoTamanhoCPF& e){
+                cout<<e.what()<<endl;
+                limparTela("perguntar");
+                break;
+            }catch(ExcecaoTamanhoEmail& e){
+                cout<<e.what()<<endl;
+                limparTela("perguntar");
+                break;
+            }catch(ExcecaoTamanhoSenha& e){
+                cout<<e.what()<<endl;
+                limparTela("perguntar");
+                break;
             }
             limparTela("perguntar");
             break;

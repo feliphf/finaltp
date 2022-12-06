@@ -91,9 +91,14 @@ void Usuario::alterarUsuario(){
             cout << "Digite o novo nome: ";
             cin.ignore(1,'\n');
             getline(cin, n);
-            cout << endl << "O nome foi alterado de " << getNome() << " para " << n << " com sucesso!" << endl;
-            setNome(n);
-            break;
+            if (n.size() > 26){
+                throw ExcecaoTamanhoNomeAlt();
+                break;
+            }else{
+                cout << endl << "O nome foi alterado de " << getNome() << " para " << n << " com sucesso!" << endl;
+                setNome(n);
+                break;
+            }
         }
         case '2':{
             cout << "+----------------------------------+" << endl;
@@ -117,7 +122,7 @@ void Usuario::alterarUsuario(){
                     setTipo("Funcionario");
                     break;
                 }
-		default:
+		    default:
         	    throw EscolhaInvalida();
                     break;
             }
@@ -125,27 +130,42 @@ void Usuario::alterarUsuario(){
         }
         case '3':{
             string c;
-            cout << "Digite o novo CPF: ";
+            cout << "Digite o novo CPF no modelo XXX.XXX.XXX-XX : ";
             cin >> c;
+            if (c.size() > 14){
+                throw ExcecaoTamanhoCPF();
+                break;
+            }else{
             cout << endl << "O CPF foi alterado de " << getCpf() << " para " << c << " com sucesso!" << endl;
             setCpf(c);
             break;
+            }
         }
         case '4':{
             string e;
             cout << "Digite o novo Email: ";
             cin >> e;
+            if (e.size() > 28){
+                throw ExcecaoTamanhoEmail();
+                break;
+            }else{
             cout << endl << "O Email foi alterado de " << getEmail() << " para " << e << " com sucesso!" << endl;
             setEmail(e);
             break;
+            }
         }
         case '5':{
             string s;
             cout << "Digite a nova senha: ";
             cin >> s;
+            if (s.size() > 6){
+                throw ExcecaoTamanhoSenha();
+                break;
+            }else{
             cout << endl << "A senha foi alterada de " << getSenha() << " para " << s << " com sucesso!" << endl;
             setSenha(s);
             break;
+            }
         }
         case '6':{
             break;

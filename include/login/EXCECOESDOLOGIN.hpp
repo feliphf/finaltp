@@ -26,5 +26,26 @@ class EscolhaInvalida : public std::exception{
 		EscolhaInvalida();
 		virtual const char* what() const throw() override;
 };
+class ExcecaoTamanhoCPF : public std::exception{
+	private:
+		std::string mensagem;
+    public:
+		ExcecaoTamanhoCPF();
+		virtual const char* what() const throw() override;
+};
+class ExcecaoTamanhoEmail : public std::exception{
+	private:
+		std::string mensagem;
+    public:
+		ExcecaoTamanhoEmail();
+		virtual const char* what() const throw() override;
+};
+class ExcecaoTamanhoSenha : public std::exception{
+	private:
+		std::string mensagem;
+    public:
+		ExcecaoTamanhoSenha();
+		virtual const char* what() const throw() override;
+};
 
 #endif
