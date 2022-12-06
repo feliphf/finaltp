@@ -56,12 +56,6 @@ TEST_CASE("Testando a função que limpa a tela")
     CHECK(s1.limparTela("cls"));
 }
 
-TEST_CASE("Testando a função que gera e retorna o id do usuário") 
-{
-    sistemaLogin s1;
-    CHECK (s1.gerarID());
-}
-
 TEST_CASE("Testando a função do menu login") 
 {
     sistemaLogin s1;
