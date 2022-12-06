@@ -22,7 +22,6 @@ void Funcionario::menuInicial(){
                                                     /_/)" << endl;
     cout << "+------------------------------------------------+" << endl;
 	cout << "| Olá " << left << setw(27) << getNome() << " | " << setw(12) << getTipo() << " |" << endl;
-	cout << "+------------------------------------------------+" << endl;
     cout << "+------------------------------------------------+" << endl;
 	cout << "| " << "1 - Registrar venda                            |" << endl;
 	cout << "| " << "2 - Consultar produto                          |" << endl;
@@ -59,6 +58,10 @@ void Funcionario::alterarUsuarioLogado(){
             string s;
             cout << "Digite a nova senha: ";
             cin >> s;
+            if (s.size() > 6) {
+                throw ExcecaoTamanhoSenha();
+                break;
+            }
             cout << endl << "A senha foi alterada de " << getSenha() << " para " << s << " com sucesso!" << endl;
             setSenha(s);
             break;

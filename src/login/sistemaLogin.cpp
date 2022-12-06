@@ -153,14 +153,25 @@ void sistemaLogin::cadastrarUsuario(){
             cout << "Digite o Nome completo: ";
             cin.ignore(1,'\n');
             getline(cin, n);
+            if (n.size() > 26){
+            throw ExcecaoTamanhoNomeAlt();
+            }
             for (unsigned i = 0; i < n.size(); i++)
                 if (n[i] == ' ')
                     n[i] = '_';
             cout << "Digite em sequência o CPF, Email, e Senha (separados por espaço)" << endl;
             cin >> c >> e >> s;
-            Usuario *u = new Gerente(i,t,n,c,e,d,s);
-            _usuarios.insert(pair<string,Usuario*>(i,u));
-            break;
+            if (c.size() > 23){
+            throw ExcecaoTamanhoCPF();
+            }else if (e.size() > 23) {
+                throw ExcecaoTamanhoEmail();
+            }if (s.size() > 23) {
+                throw ExcecaoTamanhoSenha();
+            }else{
+                Usuario *u = new Gerente(i,t,n,c,e,d,s);
+                _usuarios.insert(pair<string,Usuario*>(i,u));
+                break;
+            }
         }
         case '2':{
             string i = gerarID(), t = "Funcionario", d = gerarDataAtual();
@@ -168,14 +179,25 @@ void sistemaLogin::cadastrarUsuario(){
             cout << "Digite o Nome completo: ";
             cin.ignore(1,'\n');
             getline(cin, n);
+            if (n.size() > 26){
+            throw ExcecaoTamanhoNomeAlt();
+            }
             for (unsigned i = 0; i < n.size(); i++)
                 if (n[i] == ' ')
                     n[i] = '_';
             cout << "Digite em sequência o CPF, Email, e Senha (separados por espaço)" << endl;
             cin >> c >> e >> s;
+               if (c.size() > 23){
+            throw ExcecaoTamanhoCPF();
+            }else if (e.size() > 23) {
+                throw ExcecaoTamanhoEmail();
+            }if (s.size() > 23) {
+                throw ExcecaoTamanhoSenha();
+            }else{
             Usuario *u = new Funcionario(i,t,n,c,e,d,s);
             _usuarios.insert(pair<string,Usuario*>(i,u));
             break;
+            }
         }
         case '3':
             break;
