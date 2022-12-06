@@ -208,6 +208,7 @@ void Sistema::opcoesMenuAdministrativo(){
             }
             limparTela("continuar");
             break;
+
         }
         case '3':{
             cout << R"(
@@ -225,6 +226,17 @@ void Sistema::opcoesMenuAdministrativo(){
                 cout<<e.what()<<endl;
                 limparTela("perguntar");
                 break;
+            }
+            limparTela("perguntar");
+            break;
+        }
+        case '4':
+            try{
+                _sistemaLogin.alterarUsuario();
+            }catch(UsuarioNaoCadastrado& erro){
+                  cout<<erro.what()<<endl;
+                  limparTela("perguntar");
+                  break;
             }catch(EscolhaInvalida& e){
                 cout<<e.what()<<endl;
                 limparTela("perguntar");
@@ -245,17 +257,6 @@ void Sistema::opcoesMenuAdministrativo(){
                 cout<<e.what()<<endl;
                 limparTela("perguntar");
                 break;
-            }
-            limparTela("perguntar");
-            break;
-            }        
-        case '4':
-            try{
-                _sistemaLogin.alterarUsuario();
-            }catch(UsuarioNaoCadastrado& erro){
-                  cout<<erro.what()<<endl;
-                  limparTela("perguntar");
-                  break;
             }
             limparTela("perguntar");
             break;
