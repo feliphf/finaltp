@@ -17,7 +17,7 @@
 using namespace std;
 
   /**
-   * @brief Armazena produto em uma lista de entradas.
+   * @brief Armazena todos os atributos de um determiando produto
    *
    * @details A classe produto é responsável por armazenar os atributos 
    * necessários para os produtos, servindo como uma espécie de catálogo  
