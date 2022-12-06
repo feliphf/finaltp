@@ -1,9 +1,9 @@
   /**
    * @file produto.hpp
-   * @author Ana Carolina e Guilherme Pascoal
+   * @author Ana Carolina, Felipe Ferraz, Guilherme Pascoal, Pedro Araújo, Yan Figueiras 
    * @brief Classe para armazenamento dos produtos
    * @version 1.1
-   * @date 2022-11-14
+   * @date 2022-12-05
    * @details A classe produto funcionará como um catálogo onde o  
    * gerente e os funcionarios poderão fazer consultas e alterações.
    * @copyright GNU General Public License v2.0

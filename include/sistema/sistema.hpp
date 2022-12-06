@@ -1,3 +1,15 @@
+  /**
+   * @file sistema.hpp
+   * @author Ana Carolina, Felipe Ferraz, Guilherme Pascoal, Pedro Araújo, Yan Figueiras 
+   * @brief Classe para
+   * @version 1.1
+   * @date 2022-12-05
+   * @details 
+   *
+   * 
+   * @copyright GNU General Public License v2.0
+   */
+
 #ifndef SISTEMA_H
 #define SISTEMA_H
 
@@ -5,6 +17,17 @@
 #include "EXCECOESDOSISTEMA.hpp"
 #include "sistemaLogin.hpp"
 #include "estoque.hpp"
+
+/**
+   * @brief 
+   *
+   * @details A classe sistema é responsável por
+   * 
+   *  
+   * 
+   * 
+   */
+
 
 class Sistema{
     private:

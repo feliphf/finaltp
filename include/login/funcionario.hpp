@@ -1,3 +1,15 @@
+  /**
+   * @file funcionario.hpp
+   * @author Ana Carolina, Felipe Ferraz, Guilherme Pascoal, Pedro Araújo, Yan Figueiras 
+   * @brief Classe para
+   * @version 1.1
+   * @date 2022-12-05
+   * @details 
+   *
+   * 
+   * @copyright GNU General Public License v2.0
+   */
+
 #ifndef FUNCIONARIO_H
 #define FUNCIONARIO_H
 
@@ -5,6 +17,16 @@
 #include "EXCECOESDOLOGIN.hpp"
 
 using namespace std;
+
+/**
+   * @brief 
+   *
+   * @details A classe funcionario é responsável por
+   * 
+   *  
+   * 
+   * 
+   */
 
 class Funcionario: public Usuario {
     private:

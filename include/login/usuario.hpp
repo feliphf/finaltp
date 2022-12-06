@@ -1,3 +1,15 @@
+  /**
+   * @file usuario.hpp
+   * @author Ana Carolina, Felipe Ferraz, Guilherme Pascoal, Pedro Araújo, Yan Figueiras 
+   * @brief Classe para
+   * @version 1.1
+   * @date 2022-12-05
+   * @details 
+   *
+   * 
+   * @copyright GNU General Public License v2.0
+   */
+
 #ifndef USUARIO_H
 #define USUARIO_H
 
@@ -6,6 +18,17 @@
 #include <iomanip>
 #include "EXCECOESDOLOGIN.hpp"
 using namespace std;
+
+/**
+   * @brief 
+   *
+   * @details A classe usuario é responsável por
+   * 
+   *  
+   * 
+   * 
+   */
+
 
 class Usuario {
     protected:
