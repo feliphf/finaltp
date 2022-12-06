@@ -51,49 +51,66 @@ class Estoque{
         void lerArquivo();
         
         ///@brief Esta função dá a possibilidade de pesquisar um produto específico de acordo com o código ou nome
+        ///@param Pesquisa, podendo ser um código ou um nome de um produto
         void pesquisarProduto(string pesquisa);
         
         ///@brief Esta função lista todos os produtos que há no estoque no presente momento 
         void listarProdutos();
  
         ///@brief Esta função altera o nome de um determinado produto
+        ///@param Pesquisa sendo o código de um produto e nome sendo o nome do produto ao qual o gerente deseja alterar
         void alterarNomeProduto(string pesquisa,string nome);
  
         ///@brief Esta função altera o fabricante de um determinado produto
+        ///@param Pesquisa sendo o código de um produto e fabric sendo o nome do fabricante do produto ao qual o gerente deseja alterar
         void alterarFabricanteProduto(string pesquisa,string fabric);
  
         ///@brief Esta função altera a categoria de um determinado produto
+        ///@param Pesquisa sendo o código de um produto e categ sendo o nome da categoria do produto ao qual o gerente deseja alterar
         void alterarCategoriaProduto(string pesquisa,string categ);
  
         ///@brief Esta função altera o preço de um determinado produto
+        ///@param Pesquisa sendo o código de um produto e preco sendo o preço do produto ao qual o gerente deseja alterar
         void alterarPrecoProduto(string pesquisa, float preco);
  
         ///@brief Esta função abre um menu de opções, ao qual chama todas as funções de alterar acima
         void alterarProduto();
  
         ///@brief Esta função adiciona produtos com seus atributos específicos
+        ///@param Codig sendo o código de um produto, quant sendo a quantidade que deseja adicionar, nomeUsuario sendo o nome do usuário e dataAtual sendo a data atual no momento da execução do programa
         void entradasDeProdutos(string codig, int quant, string nomeUsuario, string dataAtual);
- 
+
         ///@brief Esta função retira produtos com seus atributos específicos
+        ///@param Codig sendo o código de um produto, quant sendo a quantidade que deseja retirar, nomeUsuario sendo o nome do usuário e dataAtual sendo a data atual no momento da execução do programa
         void saidasDeProdutos(string codig, int quant, string nomeUsuario, string dataAtual);
  
         ///@brief Esta função cadastra produto com seus atributos específicos
         void cadastroDeProdutos();
  
         ///@brief Esta função abre um menu com todas as opções de movimentação
+        /**@param (ListaQuantidades sendo um par entre um numero inteiro não negativo e um par entre um produto e um inteiro,
+        * modo sendo as possibilidades entrada ou saídas, loop sendo uma variável que serve para encerrar o loop na hora correta,
+        * count sendo a contagem de produtos, nomeUsuario sendo o nome do usuário e dataAtual sendo a data atual do momento da excução do programa
+        */
         void menuEntradaESaidaDeProdutos(std::list<pair<unsigned int,pair<Produto,int>>>& listaQuantidades, std::string modo,
         bool& loop,unsigned int& count, string nomeUsuario, string dataAtual);
  
         ///@brief Esta função gera um histórico de movimentações feitas pelo funcionário ou gerente
+        /**@param (ListaQuantidades sendo um par entre um numero inteiro não negativo e um par entre um produto e um inteiro,
+        * modo sendo as possibilidades entrada ou saídas, loop sendo uma variável que serve para encerrar o loop na hora correta,
+        * count sendo a contagem de produtos, nomeUsuario sendo o nome do usuário e dataAtual sendo a data atual do momento da excução do programa
+        */
         void gerarLog(string mensagem, string nomeUsuario, string dataAtual);
  
         ///@brief Esta função imprimi o histórico acima
         void imprimirLog();
  
         ///@brief Esta função exclui um cadastro de um produto com todos os seus atributos
+        ///@param Código sendo um código de um produto ao qual o gerente deseja excluir
         void excluirProduto(string codigo);
  
         ///@brief Esta função limpa a tela, para poder ter uma melhor visualização na compilação
+        ///@param Modo sendo uma conferência se deve ou não perguntar se pode limpar a tela
         void limparTela(string modo);
 };
 
