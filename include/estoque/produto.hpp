@@ -1,6 +1,6 @@
   /**
    * @file produto.hpp
-   * @author Ana Carolina e Guilherme Pascoal
+   * @author Ana Carolina, Felipe Ferraz, Guilherme Pascoal, Pedro Araújo, Yan Figueiras 
    * @brief Classe para armazenamento dos produtos
    * @version 1.1
    * @date 2022-11-14
