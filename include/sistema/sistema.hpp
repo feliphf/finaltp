@@ -18,6 +18,17 @@
 #include "sistemaLogin.hpp"
 #include "estoque.hpp"
 
+/**
+   * @brief 
+   *
+   * @details A classe sistema é responsável por
+   * 
+   *  
+   * 
+   * 
+   */
+
+
 class Sistema{
     private:
         Usuario *_usuarioLogado;
