@@ -1,3 +1,15 @@
+  /**
+   * @file funcionario.hpp
+   * @author Ana Carolina, Felipe Ferraz, Guilherme Pascoal, Pedro Araújo, Yan Figueiras 
+   * @brief Classe para
+   * @version 1.1
+   * @date 2022-11-14
+   * @details 
+   *
+   * 
+   * @copyright GNU General Public License v2.0
+   */
+
 #ifndef FUNCIONARIO_H
 #define FUNCIONARIO_H
 
