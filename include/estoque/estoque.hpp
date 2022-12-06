@@ -33,26 +33,65 @@ using namespace std;
 
 class Estoque{
     private:
+
+        ///@brief 
         map<string,Produto> _estoque;
+
     public:
+        
+        ///@brief 
         Estoque()=default;
+        
+        ///@brief 
         void salvarArquivo();
+        
+        ///@brief        
         void lerArquivo();
+        
+        ///@brief
         void pesquisarProduto(string pesquisa);
+        
+        ///@brief
         void listarProdutos();
+ 
+        ///@brief
         void alterarNomeProduto(string pesquisa,string nome);
+ 
+        ///@brief
         void alterarFabricanteProduto(string pesquisa,string fabric);
+ 
+        ///@brief
         void alterarCategoriaProduto(string pesquisa,string categ);
+ 
+        ///@brief
         void alterarPrecoProduto(string pesquisa, float preco);
+ 
+        ///@brief
         void alterarProduto();
+ 
+        ///@brief
         void entradasDeProdutos(string codig, int quant, string nomeUsuario, string dataAtual);
+ 
+        ///@brief
         void saidasDeProdutos(string codig, int quant, string nomeUsuario, string dataAtual);
+ 
+        ///@brief
         void cadastroDeProdutos();
+ 
+        ///@brief
         void menuEntradaESaidaDeProdutos(std::list<pair<unsigned int,pair<Produto,int>>>& listaQuantidades, std::string modo,
         bool& loop,unsigned int& count, string nomeUsuario, string dataAtual);
+ 
+        ///@brief
         void gerarLog(string mensagem, string nomeUsuario, string dataAtual);
+ 
+        ///@brief
         void imprimirLog();
+ 
+        ///@brief
         void excluirProduto(string codigo);
+ 
+        ///@brief
         void limparTela(string modo);
 };
 
