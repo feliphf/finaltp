@@ -3,7 +3,7 @@
    * @author Ana Carolina, Felipe Ferraz, Guilherme Pascoal, Pedro Araújo, Yan Figueiras 
    * @brief Classe para
    * @version 1.1
-   * @date 2022-11-14
+   * @date 2022-12-05
    * @details 
    *
    * 
