@@ -432,22 +432,23 @@ void Estoque::menuEntradaESaidaDeProdutos(std::list<pair<unsigned int,pair<Produ
                         auxiliar++;
                         listaQuantidades.erase(itItem);
                         std::cout<<"O item "<<posicao<<" foi retirado da lista"<<std::endl;
-                        limparTela("continuar");
+                        limparTela("perguntar");
                         break;
+                    }
                 }
                 if (auxiliar == 0){
                     std::cout << "Item já removido da lista!!" << std::endl;
                     limparTela("perguntar");
+                    break;
                 }
             }
+               break;
           }
-        }
-        break;
+               
     
     case '3':
         if(listaQuantidades.empty()){
             std::cout << "Nenhum item adicionado!!" << std::endl;
-            limparTela("perguntar");
         }else{
             limparTela("continuar");
             cout << R"(
