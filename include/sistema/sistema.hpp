@@ -31,18 +31,43 @@
 
 class Sistema{
     private:
+  
+        ///@brief 
         Usuario *_usuarioLogado;
+  
+        ///@brief 
         sistemaLogin _sistemaLogin;
+  
+        ///@brief 
         Estoque _estoque;
+  
     public:
-        Sistema() = default;    
+  
+        ///@brief 
+        Sistema() = default; 
+  
+        ///@brief 
         void inicializarParametrosSistema();
+  
+        ///@brief 
         void salvarParametrosSistema();
+  
+        ///@brief 
         void opcoesMenuGerente();
+  
+        ///@brief 
         void opcoesMenuAdministrativo();
+  
+        ///@brief 
         void opcoesMenuFuncionario();
+  
+        ///@brief 
         void efetuarLogin();
+  
+        ///@brief 
         void inicializarSistema();
+  
+        ///@brief 
         void limparTela(string modo);
 };
 
