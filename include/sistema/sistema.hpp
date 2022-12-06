@@ -19,7 +19,7 @@
 #include "estoque.hpp"
 
 /**
-   * @brief Aramzena um ponteiro de usúario, e mostra os menus de opções possíveis
+   * @brief Armazena um ponteiro de usúario, e mostra os menus de opções possíveis
    *
    * @details A classe sistema é responsável por inicializar o sistema, sendo assim 
    * ela armazena todas as funções, e chama-as de acordo com os menus de opções correspondentes,
@@ -42,7 +42,7 @@ class Sistema{
   
     public:
   
-        ///@brief Esta é uma função que destroi todos os atributos da classe sistema para não ocupar lugar na memória
+        ///@brief Esta é uma função de construtor, ao qual inicaliza com nenhuma informação
         Sistema() = default; 
   
         ///@brief Esta função inicaliza os parametros do sistema, como ler, e abrir de arquivos txt, chamando as funções correspondentes
@@ -67,6 +67,7 @@ class Sistema{
         void inicializarSistema();
   
         ///@brief Esta função limpa a tela, para poder ter uma melhor visualização na compilação
+        ///@param Modo sendo uma conferência se deve ou não perguntar se pode limpar a tela
         void limparTela(string modo);
 };
 
