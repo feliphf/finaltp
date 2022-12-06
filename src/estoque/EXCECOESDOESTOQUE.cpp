@@ -19,7 +19,7 @@ const char* PrecoNaoENumero::what() const throw(){
 }
 
 EntradaInvalida::EntradaInvalida(){
-	mensagem = "Escolha deseja é inválida";
+	mensagem = "Escolha desejada é inválida";
 }
 
 const char* EntradaInvalida::what() const throw(){
