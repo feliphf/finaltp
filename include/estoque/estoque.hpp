@@ -93,7 +93,7 @@ class Estoque{
         ///@brief Esta função exclui um cadastro de um produto com todos os seus atributos
         void excluirProduto(string codigo);
  
-        ///@brief Esta função limpa a tela, para poder ter uma melhor vialização na compilação
+        ///@brief Esta função limpa a tela, para poder ter uma melhor visualização na compilação
         void limparTela(string modo);
 };
 
