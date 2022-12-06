@@ -4,59 +4,24 @@
 
 TEST_CASE("Testando a função de menu inicial")
 {   
-    shapes::Triangle t1(1,1,1);
-    shapes::Triangle t2(3,2,2);    
-    CHECK(t1.getPerimeter()==3);
-    CHECK(t2.getPerimeter()==7);
+    Gerente g1 ("1029", "Gerente", "Ana Carolina", "82392354322", "anacarol@gmail.com", "dia 04 de dezembro", "239845");
+    CHECK (g1.menuInicial());
 }
 
 TEST_CASE("Testando a função de menu administrativo")
 {
-    //EXEMPLOS DE 3 CHECAGENS
-    Triangle t1(3,2,2);
-    CHECK(t1.getPerimeter()==7);
-
-    Usuario usuario = Usuario();
-	usuario.setCpf("12341234123");
-	usuario.setSenha("senha");
-	CHECK(usuario.login());
-    
-    Usuario usuario = Usuario();
-	usuario.setCpf("32132132132");
-	usuario.setSenha("senha");
-	CHECK_THROWS_AS(usuario.login(), UsuarioNaoEncontradoException);
+    Gerente g1 ("1029", "Gerente", "Ana Carolina", "82392354322", "anacarol@gmail.com", "dia 04 de dezembro", "239845");
+    CHECK (g1.menuAdministrativo());
 }
 
 TEST_CASE("Testando a função se o usuário tem permissão para determinadas funções")
 {
-    //EXEMPLOS DE 3 CHECAGENS
-    Triangle t1(3,2,2);
-    CHECK(t1.getPerimeter()==7);
-
-    Usuario usuario = Usuario();
-	usuario.setCpf("12341234123");
-	usuario.setSenha("senha");
-	CHECK(usuario.login());
-    
-    Usuario usuario = Usuario();
-	usuario.setCpf("32132132132");
-	usuario.setSenha("senha");
-	CHECK_THROWS_AS(usuario.login(), UsuarioNaoEncontradoException);
+    Gerente g1 ("1029", "Gerente", "Ana Carolina", "82392354322", "anacarol@gmail.com", "dia 04 de dezembro", "239845");
+    CHECK (g1.temPermissao() == true);
 }
 
 TEST_CASE("Testando a função que altera o usuário logado")
 {
-    //EXEMPLOS DE 3 CHECAGENS
-    Triangle t1(3,2,2);
-    CHECK(t1.getPerimeter()==7);
-
-    Usuario usuario = Usuario();
-	usuario.setCpf("12341234123");
-	usuario.setSenha("senha");
-	CHECK(usuario.login());
-    
-    Usuario usuario = Usuario();
-	usuario.setCpf("32132132132");
-	usuario.setSenha("senha");
-	CHECK_THROWS_AS(usuario.login(), UsuarioNaoEncontradoException);
+    Gerente g1 ("1029", "Gerente", "Ana Carolina", "82392354322", "anacarol@gmail.com", "dia 04 de dezembro", "239845");
+    CHECK (g1.alterarUsuarioLogado());
 }
