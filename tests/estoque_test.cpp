@@ -37,8 +37,8 @@ TEST_CASE("Testando a função alterar o nome do produto")
 
 TEST_CASE("Testando a função alterar o fabricante do produto") 
 {
-        Estoque estoque;
-	CHECK_THROWS_AS(estoque.alterarFabricanteProduto("456789","Channel"), ProdutoNaoCadastrado);
+        Estoque estoque1;
+	CHECK_THROWS_AS(estoque1.alterarFabricanteProduto("456789","Channel"), ProdutoNaoCadastrado);
 	
         Estoque estoque2;
 	CHECK_THROWS_AS(estoque2.alterarFabricanteProduto("456789","O fabricante do produto esta acima do limite"), ExcecaoTamanhoFabricAlt);
@@ -90,14 +90,14 @@ TEST_CASE("Testando a função imprimir histórico de movimentação")
 
 TEST_CASE("Testando a função limpar a tela") 
 {
-    	Estoque estoque;
-	CHECK(estoque.limparTela("clear"));
+    	Estoque estoque1;
+	CHECK(estoque1.limparTela("clear"));
 	
-	Estoque estoque;
-	CHECK(estoque.limparTela("perguntar"));
+	Estoque estoque2;
+	CHECK(estoque2.limparTela("perguntar"));
 	
-	Estoque estoque;
-	CHECK(estoque.limparTela("cls"));
+	Estoque estoque3;
+	CHECK(estoque3.limparTela("cls"));
 }
 
 TEST_CASE("Testando a função excluir cadastro de produto") 

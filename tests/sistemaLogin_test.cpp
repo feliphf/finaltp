@@ -49,11 +49,11 @@ TEST_CASE("Testando a função que limpa a tela")
     sistemaLogin s1;
     CHECK(s1.limparTela("clear"));
 	
-    sistemaLogin s1;
-    CHECK(s1.limparTela("perguntar"));
+    sistemaLogin s2
+    CHECK(s2.limparTela("perguntar"));
 	
-    sistemaLogin s1;
-    CHECK(s1.limparTela("cls"));
+    sistemaLogin s3;
+    CHECK(s3.limparTela("cls"));
 }
 
 TEST_CASE("Testando a função do menu login") 
