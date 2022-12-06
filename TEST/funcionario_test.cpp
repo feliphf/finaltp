@@ -16,3 +16,9 @@ TEST_CASE("Testando a função se o usuário tem permissão para determinadas fu
     Funcionario f1("1029", "Funcionário", "Ana Carolina", "82392354322", "anacarol@gmail.com", "dia 05 de novembro", "239845");
     CHECK (f1.temPermissao() == false);
 }
+
+TEST_CASE("Testando a função de alterar o usuário logado") 
+{
+    Funcionario f1("1029", "Funcionário", "Ana Carolina", "82392354322", "anacarol@gmail.com", "dia 05 de novembro", "239845");
+    CHECK (f1.alterarUsuarioLogado());
+}
