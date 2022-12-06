@@ -5,7 +5,7 @@
    * @version 1.1
    * @date 2022-12-05
    * @details A classe funcionário armazena todos os atributos de um funcionário criado pelo gerente
-   * sendo d=filha de um usuário, a mesma possui todas as funções que são cabíveis a ela, 
+   * sendo filha de um usuário, a mesma possui todas as funções que são cabíveis a ela, 
    * além da mesma poder fazer alterações no seu cadastro, como sua senha, ela será utilizada
    * na inicalização do sistema
    * @copyright GNU General Public License v2.0
