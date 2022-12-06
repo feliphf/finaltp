@@ -16,15 +16,17 @@ ao depender de qual permissão lhe for dada, de acordo acordo com sua função n
 ![alt text](https://github.com/feliphf/finaltp/blob/main/database/imgReadme/diagramaClasses.png)
 
 ## User Stories:
-### 1º User Storie (classe entrada)
-* Eu como gerente quero poder catalogar um cadastro de um produto, para poder adicionar
-um produto no estoque e mantê-los atualizados, caso ele não exista;
+### Controle de catálogo de produtos
+* Eu como gerente quero poder realizar o cadastro de um produto, caso ele não exista, para poder adicioná-lo no estoque, remover um produto ou alterar seus dados, caso ele já exista, com intuito de manter o estoque atualizado de acordo com a demanda dos consumidores em relação aos produtos com que a empresa deve trabalhar. Também desejo poder pesquisar um produto pelo seu código e listar todos os cadastrados.
 - Critérios:
     1. Adicionar um produto de acordo com as informações necessários do catálogo
-    2. Pesquisar por código e nome e mostrar todas as duas informações.
+    2. Pesquisar por código e mostrar todas as suas informações.
     3. Não duplicar produtos, se o produto já existir, não poderá ser adicionado.
+    4. Listar todos produtos presentes no estoque.
+    5. Alterar os atributos de um produto já cadastrado.
+    6. Remover um produto pelo seu código, caso já exista.
 
-### 2º User Storie (classe estoque)
+### Controle de movimentação
 * Eu como gerente quero poder verificar o estoque, para saber quanto tem de cada item, para
 saber se preciso comprar mais produtos ou não.
 - Critérios:
@@ -34,7 +36,7 @@ saber se preciso comprar mais produtos ou não.
     3. Pesquisar por código e nome e mostrar quantos foram adicionados.
     4. Poder retornar o valor total de cada produto em estoque.
 
-### 3º User Storie (classe funcionario)
+### Registros de movimentação
 * Eu como funcionário quero poder fazer uma consulta no estoque para saber quais produtos
 estão disponíveis a venda
 - Critérios:
@@ -44,7 +46,7 @@ estão disponíveis a venda
     3. Poder gerar um relatório geral, para poder averiguar toda a situação do sistema,
     desde a quantidade de produtos às movimentações de entrada e saída.
 
-### 4º User Storie (classe saídas)
+### Controle de ..
 * Eu como funcionário preciso registrar quantos e quais produtos foram vendidos, para
 manter o estoque atualizado.
 - Critérios:
@@ -53,7 +55,7 @@ manter o estoque atualizado.
     2. Poder excluir uma nota de saída.
     3. Conferir se o produto está em estoque para poder ser retirado.
 
-### 5º User Storie (classe Usuário)
+### Controle de acesso
 * Eu como dono da empresa quero separar as permissões do meu gerente com os
 permissões dos subordinados do meu gerente, para garantia a segurança da minha
 empresa
