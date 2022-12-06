@@ -41,7 +41,7 @@ class Estoque{
 
     public:
         
-        ///@brief Esta é uma função que destroi um mapa para não ocupar lugar na memória
+        ///@brief Esta é uma função de construtor, ao qual inicaliza com nenhuma informação
         Estoque()=default;
         
         ///@brief Esta função salva o arquivo que contém todos os produtos e seus atributos
