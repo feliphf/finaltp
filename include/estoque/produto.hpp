@@ -29,114 +29,70 @@ using namespace std;
 class Produto{
     private:
 
-        /**
-        * @brief Nome do produto.
-        */
+        ///@brief Nome do produto.
         string _nome;
 
-        /**
-        * @brief Fabricante do produto.
-        */
+        ///@brief Fabricante do produto.
         string _fabricante;
 
-        /**
-        * @brief Categoria do produto.
-        */
+        ///@brief Categoria do produto.
         string _categoria;
 
-        /**
-        * @brief Código único do produto.
-        */
+        ///@brief Código único do produto.
         string _codigo;
 
-        /**
-         * @brief Preço unitário do produto.
-        */
+        ///@brief Preço unitário do produto.
         float _preco;
 
-        /**
-        * @brief quantidade de um produto.
-        */
+        ///@brief quantidade de um produto.
         int _quantidade;
 
     public:
 
-        /**
-        * @brief Construtor da classe Produto, 
-        * recebe todos os atributos como parâmetro.
-        */
+        ///@brief Construtor da classe Produto, recebe todos os atributos como parâmetro.
         Produto(string n, string fabricante, string categoria, string codigo, float preco, int quantidade);
 
-        /**
-        * @brief Retorna o nome do produto
-        *
-        * @return Retorna o nome do produto
-        */
+        ///@brief Retorna o nome do produto
+        ///@return Retorna o nome do produto
         string getNome(void);
 
-        /**
-        * @brief Retorna o fabricante do produto.
-        *
-        * @return Retorna o fabricante do produto.
-        */
+        ///@brief Retorna o fabricante do produto.
+        ///@return Retorna o fabricante do produto.
         string getFabricante(void);
 
-        /**
-        * @brief Retorna a categoria do produto
-        *
-        * @return Retorna a categoria do produto
-        */
+        ///@brief Retorna a categoria do produto
+        ///@return Retorna a categoria do produto
         string getCategoria(void);
 
-        /**
-        * @brief Retorna o código do produto
-        *
-        * @return Retorna o código do produto
-        */
+
+        ///@brief Retorna o código do produto
+        ///@return Retorna o código do produto
         string getCodigo(void);
 
-        /**
-        * @brief Retorna a quantidade do produto
-        *
-        * @return Retorna a quantidade do produto
-        */
+        ///@brief Retorna a quantidade do produto
+        ///@return Retorna a quantidade do produto
         int getQuantidade(void);
 
-        /**
-        * @brief Retorna o preço do produto
-        *
-        * @return Retorna o preço do produto
-        */
+        ///@brief Retorna o preço do produto
+        ///@return Retorna o preço do produto
         float getPreco(void);
 
-        /**
-        * @brief Adiciona o nome de um produto
-        */
+        ///@brief Adiciona o nome de um produto
         void setNome(string n);
 
-        /**
-        * @brief Adiciona o fabricante de um produto
-        */
+        ///@brief Adiciona o fabricante de um produto
         void setFabricante(string f);
 
-        /**
-        * @brief Adiciona a categoria de um produto
-        */
+        ///@brief Adiciona a categoria de um produto
         void setCategoria(string c);
 
-        /**
-        * @brief Adiciona o código único de um produto
-        */
+        ///@brief Adiciona o código único de um produto
         void setCodigo(string c);
 
-        /**
-        * @brief Adiciona o código único de um produto
-        */
+        ///@brief Adiciona o código único de um produto
         void setQuantidade(int q);
 
-        /**
-        * @brief Adiciona o preço de um produto
-        */
+        ///@brief Adiciona o preço de um produto
         void setPreco(float p);
 };
 
