@@ -19,6 +19,17 @@
 #include "EXCECOESDOLOGIN.hpp"
 using namespace std;
 
+/**
+   * @brief 
+   *
+   * @details A classe usuario é responsável por
+   * 
+   *  
+   * 
+   * 
+   */
+
+
 class Usuario {
     protected:
         string _id;
