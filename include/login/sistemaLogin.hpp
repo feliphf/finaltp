@@ -22,6 +22,17 @@
 #include "funcionario.hpp"
 using namespace std;
 
+/**
+   * @brief 
+   *
+   * @details A classe sistemaLogin é responsável por
+   * 
+   *  
+   * 
+   * 
+   */
+
+
 class sistemaLogin{
     private:
         map<string,Usuario*> _usuarios;
