@@ -9,7 +9,6 @@ class Gerente: public Usuario {
     private:
 
     public:
-        Gerente()=default;
         Gerente(string id, string t, string n, string c, string e, string u, string s);
         void menuInicial() override;
         void menuAdministrativo() override;

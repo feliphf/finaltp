@@ -33,9 +33,6 @@ class Gerente: public Usuario {
     public:
   
         ///@brief
-        Gerente()=default;
-  
-        ///@brief
         Gerente(string id, string t, string n, string c, string e, string u, string s);
   
         ///@brief
