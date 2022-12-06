@@ -46,17 +46,17 @@ void Estoque::listarProdutos(){
   / /_/ / ___/ __ \/ __  / / / / __/ __ \/ ___/  / __  / __ \   / __/ / ___/ __/ __ \/ __ `/ / / / _ \
  / ____/ /  / /_/ / /_/ / /_/ / /_/ /_/ (__  )  / /_/ / /_/ /  / /___(__  ) /_/ /_/ / /_/ / /_/ /  __/
 /_/   /_/   \____/\__,_/\__,_/\__/\____/____/   \__,_/\____/  /_____/____/\__/\____/\__, /\__,_/\___/ 
-                                                                                      /_/                                                                                           |_|                                                                                                                   
-)" << endl;
+                                                                                      /_/ )" << endl;
     map<string, Produto>::iterator it;
-    cout << left << setw(20) << "Nome" << setw(23) << "Fabricante"<< setw(23) <<
-        "Categoria"<< setw(24) << "Código" << setw(22) << "Preço" << setw(20) <<
-        "Quantidade" << endl << fixed << showpoint;
-    cout << endl;
+    //              14                   26                      23                       23                 12         9
+    cout << "+--------------+--------------------------+-----------------------+-----------------------+------------+---------+"<< endl;
+    cout << "|    CÓDIGO    |           NOME           |       CATEGORIA       |       FABRICANTE      | QUANTIDADE |  PREÇO  |"<< endl;
+	cout << "+--------------+--------------------------+-----------------------+-----------------------+------------+---------+"<< endl;
     for(it=_estoque.begin(); it!=_estoque.end(); it++){
-        cout << setprecision(2) << left << setw(20) << (it->second).getNome() << setw(23) << (it->second).getFabricante() << setw(23) <<
-        (it->second).getCategoria() << setw(23) << (it->second).getCodigo() << setw(17) << (it->second).getPreco() << setw(10) << right <<
-        (it->second).getQuantidade() << endl;
+        cout << setprecision(2) << fixed << left << '|' << setw(14) << (it->second).getCodigo() <<  '|' << setw(26) << (it->second).getNome() <<  '|' << setw(23) <<
+        (it->second).getCategoria() <<  '|' << setw(23) << (it->second).getFabricante() <<  '|' << setw(12) << (it->second).getQuantidade()
+         <<  '|' << setw(9) << (it->second).getPreco() << '|' << endl;
+        cout << "+--------------+--------------------------+-----------------------+-----------------------+------------+---------+"<< endl;
     }
 }
 
@@ -64,13 +64,14 @@ void Estoque::pesquisarProduto(string pesquisa){
       if (_estoque.count(pesquisa) == 1)
       {
         map<string, Produto>::iterator it = _estoque.find(pesquisa);
-        cout << left << setw(20) << "Nome" << setw(23) << "Fabricante"<< setw(23) <<
-        "Categoria"<< setw(24) << "Código" << setw(22) << "Preço" << setw(20) <<
-        "Quantidade" << endl << fixed << showpoint;
-        cout << endl;
-        cout << setprecision(2) << left << setw(20) << (it->second).getNome() << setw(23) << (it->second).getFabricante() << setw(23) <<
-        (it->second).getCategoria() << setw(23) << (it->second).getCodigo() << setw(17) << (it->second).getPreco() << setw(10) << right <<
-        (it->second).getQuantidade() << endl;
+        //              14                   26                      23                       23                 12         9
+        cout << "+--------------+--------------------------+-----------------------+-----------------------+------------+---------+"<< endl;
+        cout << "|    CÓDIGO    |           NOME           |       CATEGORIA       |       FABRICANTE      | QUANTIDADE |  PREÇO  |"<< endl;
+        cout << "+--------------+--------------------------+-----------------------+-----------------------+------------+---------+"<< endl;
+        cout << setprecision(2) << left << fixed << '|' << setw(14) << (it->second).getCodigo() <<  '|' << setw(26) << (it->second).getNome() <<  '|' << setw(23) <<
+        (it->second).getCategoria() <<  '|' << setw(23) << (it->second).getFabricante() <<  '|' << setw(12) << (it->second).getQuantidade()
+        <<  '|' << setw(9) << (it->second).getPreco() << '|' << endl;
+        cout << "+--------------+--------------------------+-----------------------+-----------------------+------------+---------+"<< endl;
       }else
         throw ProdutoNaoCadastrado();
 }
@@ -133,7 +134,7 @@ void Estoque::alterarPrecoProduto(string pesquisa, float preco){
 	    }else
         {
 	    map<string, Produto>::iterator it = _estoque.find(pesquisa);
-            cout<<setprecision(2)<<"O preço do produto foi alterado de "<<(it->second).getPreco()<<" para "<<preco<<endl;
+            cout<< fixed <<setprecision(2)<<"O preço do produto foi alterado de "<<(it->second).getPreco()<<" para "<<preco<<endl;
             (it->second).setPreco(preco);
      	} 
       }else
@@ -147,8 +148,7 @@ void Estoque::alterarProduto(){
   / /| | / / __/ _ \/ ___/ __ `/ ___/  / __ \/ ___/ __ \/ __  / / / / __/ __ \
  / ___ |/ / /_/  __/ /  / /_/ / /     / /_/ / /  / /_/ / /_/ / /_/ / /_/ /_/ /
 /_/  |_/_/\__/\___/_/   \__,_/_/     / .___/_/   \____/\__,_/\__,_/\__/\____/ 
-                                    /_/                                                                                                                                                                                                                                                                                                         
-)" << endl;
+                                    /_/)" << endl;
     std::string codigoProdutoAlterado;
     std::string novaString;
     float novoFloat;
@@ -251,8 +251,7 @@ void Estoque::cadastroDeProdutos(){
  / /   / __ `/ __  / __ `/ ___/ __/ ___/ __ \   / __  / _ \   / __ \/ ___/ __ \/ __  / / / / __/ __ \
 / /___/ /_/ / /_/ / /_/ (__  ) /_/ /  / /_/ /  / /_/ /  __/  / /_/ / /  / /_/ / /_/ / /_/ / /_/ /_/ /
 \____/\__,_/\__,_/\__,_/____/\__/_/   \____/   \__,_/\___/  / .___/_/   \____/\__,_/\__,_/\__/\____/ 
-                                                           /_/                                                                                                                                                                                                                                                                                                                                                      
-)" << endl;
+                                                           /_/)" << endl;
     string n,co,f,ca;
     float p;
     cout << "Digite o Nome: ";
@@ -346,8 +345,7 @@ void Estoque::imprimirLog(){
  | |_| | / __| __/ _ \| '__| |/ __/ _ \   / _` |/ _ \ | '_ ` _ \ / _ \ \ / / | '_ ` _ \ / _ \ '_ \| __/ _` |/ __/ _ \ / _ \/ __|
  |  _  | \__ \ || (_) | |  | | (_| (_) | | (_| |  __/ | | | | | | (_) \ V /| | | | | | |  __/ | | | || (_| | (_| (_) |  __/\__ \
  |_| |_|_|___/\__\___/|_|  |_|\___\___/   \__,_|\___| |_| |_| |_|\___/ \_/ |_|_| |_| |_|\___|_| |_|\__\__,_|\___\___/ \___||___/
-                                                                                                             )_)                                                   
-    )" << endl;
+                                                                                                             )_))" << endl;
       cout<<arquivo.rdbuf()<<endl;
     }else{
         arquivo.open("database/Movimentacoes.txt",ios::out);
@@ -357,7 +355,7 @@ void Estoque::imprimirLog(){
 }
 
 void Estoque::menuEntradaESaidaDeProdutos(std::list<pair<unsigned int,pair<Produto,int>>>& listaQuantidades,
- std::string modo, bool& loop,int& count, string nomeUsuario, string dataAtual){
+ std::string modo, bool& loop,unsigned int& count, string nomeUsuario, string dataAtual){
     int qtd;
     unsigned int posicao;
     std::string codigoProduto;
@@ -370,8 +368,7 @@ void Estoque::menuEntradaESaidaDeProdutos(std::list<pair<unsigned int,pair<Produ
  | _ \___ __ _(_)__| |_ _ _ ___   __| |___   ___ _ _| |_ _ _ __ _ __| |__ _ ___
  |   / -_) _` | (_-<  _| '_/ _ \ / _` / -_) / -_) ' \  _| '_/ _` / _` / _` (_-<
  |_|_\___\__, |_/__/\__|_| \___/ \__,_\___| \___|_||_\__|_| \__,_\__,_\__,_/__/
-         |___/                                                                                                                 
-)" << endl;
+         |___/ )" << endl;
     }else if (modo=="saida")
     {
          cout << R"(
@@ -379,8 +376,7 @@ void Estoque::menuEntradaESaidaDeProdutos(std::list<pair<unsigned int,pair<Produ
  | _ \___ __ _(_)__| |_ _ _ ___   __| |___   ___ __ _/_/__| |__ _ ___
  |   / -_) _` | (_-<  _| '_/ _ \ / _` / -_) (_-</ _` | / _` / _` (_-<
  |_|_\___\__, |_/__/\__|_| \___/ \__,_\___| /__/\__,_|_\__,_\__,_/__/
-         |___/                                                                                                     
-)" << endl;
+         |___/)" << endl;
     }
     
     std::cout << "+-----------------------------------+"<<std::endl;
@@ -426,7 +422,7 @@ void Estoque::menuEntradaESaidaDeProdutos(std::list<pair<unsigned int,pair<Produ
         }else{
             std::cout<<"Digite qual item será removido: ";
             std::cin>>posicao;
-            if (posicao < 1 || posicao > listaQuantidades.size()){
+            if (posicao < 1 || posicao >= count){
                 std::cout << "Posição inválida! Digite um número de 1 até "<< (count - 1) << std::endl;
                 limparTela("perguntar");
             }
@@ -438,6 +434,7 @@ void Estoque::menuEntradaESaidaDeProdutos(std::list<pair<unsigned int,pair<Produ
                         auxiliar++;
                         listaQuantidades.erase(itItem);
                         std::cout<<"O item "<<posicao<<" foi retirado da lista"<<std::endl;
+                        limparTela("continuar");
                         break;
                 }
                 if (auxiliar == 0){
@@ -461,8 +458,7 @@ void Estoque::menuEntradaESaidaDeProdutos(std::list<pair<unsigned int,pair<Produ
   / / / ___/ __/ __ `/  / __  / _ \   / __ \/ ___/ __ \/ __  / / / / __/ __ \/ ___/
  / / (__  ) /_/ /_/ /  / /_/ /  __/  / /_/ / /  / /_/ / /_/ / /_/ / /_/ /_/ (__  ) 
 /_/_/____/\__/\__,_/   \__,_/\___/  / .___/_/   \____/\__,_/\__,_/\__/\____/____/  
-                                   /_/                                                                                                                                                                                                       
-            )" << endl;
+                                   /_/ )" << endl;
             cout << "+----+---------------------+---------------------+------------+"<< endl;
             cout << "| ID |       CÓDIGO        |       PRODUTO       | QUANTIDADE |"<< endl;
             cout << "+----+---------------------+---------------------+------------+"<< endl;
@@ -511,13 +507,6 @@ void Estoque::menuEntradaESaidaDeProdutos(std::list<pair<unsigned int,pair<Produ
 }
 
 void Estoque::excluirProduto(string codigo){
-    cout << R"(
-    ____                                         ____                 __      __      
-   / __ \___  ____ ___  ____ _   _____  _____   / __ \_________  ____/ /_  __/ /_____ 
-  / /_/ / _ \/ __ `__ \/ __ \ | / / _ \/ ___/  / /_/ / ___/ __ \/ __  / / / / __/ __ \
- / _, _/  __/ / / / / / /_/ / |/ /  __/ /     / ____/ /  / /_/ / /_/ / /_/ / /_/ /_/ /
-/_/ |_|\___/_/ /_/ /_/\____/|___/\___/_/     /_/   /_/   \____/\__,_/\__,_/\__/\____/                                                                                                                                                                                                                                                                                                                                                                        
-)" << endl;
     if (_estoque.count(codigo) == 1)
       { 
         cout<<"O produto "<< ((_estoque.find(codigo))->second).getNome()<<" foi removido com sucesso!"<<endl;
@@ -542,8 +531,4 @@ void Estoque::limparTela(string modo){
             std::cout << "O sistema não conseguiu limpar a tela!" << std::endl;
         }
     }
-}
-
-Estoque::~Estoque(){
-    _estoque.~map();
 }

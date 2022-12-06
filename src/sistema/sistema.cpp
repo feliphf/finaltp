@@ -40,7 +40,7 @@ void Sistema::opcoesMenuGerente(){
         case '1':{
             bool loop=true;
             std::list<pair<unsigned int,pair<Produto,int>>> listaQuantidades;
-            int count=1;
+            unsigned int count=1;
             while(loop){
                 try{   
                 _estoque.menuEntradaESaidaDeProdutos(listaQuantidades, "saida", loop, count, _usuarioLogado->getNome(), _usuarioLogado->getUltimoAcesso());
@@ -67,7 +67,7 @@ void Sistema::opcoesMenuGerente(){
         case '2':{
             bool loop=true;
             std::list<pair<unsigned int,pair<Produto,int>>> listaQuantidades;
-            int count=1;
+            unsigned int count=1;
             while(loop){   
                 try{
                 _estoque.menuEntradaESaidaDeProdutos(listaQuantidades, "entrada", loop, count,_usuarioLogado->getNome(), _usuarioLogado->getUltimoAcesso());
@@ -92,6 +92,12 @@ void Sistema::opcoesMenuGerente(){
             break;
         }
         case '3':{
+            cout << R"(
+   ______                       ____                ____                 __      __      
+  / ____/___  ____  _______  __/ / /_____ ______   / __ \_________  ____/ /_  __/ /_____ 
+ / /   / __ \/ __ \/ ___/ / / / / __/ __ `/ ___/  / /_/ / ___/ __ \/ __  / / / / __/ __ \
+/ /___/ /_/ / / / (__  ) /_/ / / /_/ /_/ / /     / ____/ /  / /_/ / /_/ / /_/ / /_/ /_/ /
+\____/\____/_/ /_/____/\__,_/_/\__/\__,_/_/     /_/   /_/   \____/\__,_/\__,_/\__/\____/ )" << endl << endl;
             string s;
             cout << "Digite o código do produto: ";
             cin >> s;
@@ -204,6 +210,12 @@ void Sistema::opcoesMenuAdministrativo(){
             break;
         }
         case '3':{
+            cout << R"(
+    ______          __      _         ____                 __      __      
+   / ____/  _______/ /_  __(_)____   / __ \_________  ____/ /_  __/ /_____ 
+  / __/ | |/_/ ___/ / / / / / ___/  / /_/ / ___/ __ \/ __  / / / / __/ __ \
+ / /____>  </ /__/ / /_/ / / /     / ____/ /  / /_/ / /_/ / /_/ / /_/ /_/ /
+/_____/_/|_|\___/_/\__,_/_/_/     /_/   /_/   \____/\__,_/\__,_/\__/\____/ )" << endl << endl;
             string codigo;
             cout<<"Digite o código do produto que será removido: ";
             cin>>codigo;
@@ -266,11 +278,12 @@ void Sistema::opcoesMenuFuncionario(){
     if (aux.size()>1)
         throw EscolhaSistemaInvalida();
     char escolha = aux[0];
+    limparTela("continuar");
     switch(escolha){
         case '1':{
             bool loop=true;
             std::list<pair<unsigned int,pair<Produto,int>>> listaQuantidades;
-            int count=1;
+            unsigned int count=1;
             while(loop){ 
                 try{
                 _estoque.menuEntradaESaidaDeProdutos(listaQuantidades, "saida", loop, count,_usuarioLogado->getNome(), _usuarioLogado->getUltimoAcesso());
@@ -291,9 +304,16 @@ void Sistema::opcoesMenuFuncionario(){
                     limparTela("perguntar");
                 }
             }
+            limparTela("continuar");
             break;
         }
         case '2':{
+            cout << R"(
+   ______                       ____                ____                 __      __      
+  / ____/___  ____  _______  __/ / /_____ ______   / __ \_________  ____/ /_  __/ /_____ 
+ / /   / __ \/ __ \/ ___/ / / / / __/ __ `/ ___/  / /_/ / ___/ __ \/ __  / / / / __/ __ \
+/ /___/ /_/ / / / (__  ) /_/ / / /_/ /_/ / /     / ____/ /  / /_/ / /_/ / /_/ / /_/ /_/ /
+\____/\____/_/ /_/____/\__,_/_/\__/\__,_/_/     /_/   /_/   \____/\__,_/\__,_/\__/\____/ )" << endl << endl;
             string s;
             cout << "Digite o código do produto: ";
             cin >> s;
@@ -317,6 +337,7 @@ void Sistema::opcoesMenuFuncionario(){
                   cout<<erro.what()<<endl;
                   limparTela("perguntar");
             }
+            limparTela("perguntar");
             break;
         }
         case '5':

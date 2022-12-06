@@ -39,12 +39,11 @@ class Estoque{
         void saidasDeProdutos(string codig, int quant, string nomeUsuario, string dataAtual);
         void cadastroDeProdutos();
         void menuEntradaESaidaDeProdutos(std::list<pair<unsigned int,pair<Produto,int>>>& listaQuantidades, std::string modo,
-         bool& loop,int& count, string nomeUsuario, string dataAtual);
+        bool& loop,unsigned int& count, string nomeUsuario, string dataAtual);
         void gerarLog(string mensagem, string nomeUsuario, string dataAtual);
         void imprimirLog();
         void excluirProduto(string codigo);
         void limparTela(string modo);
-        ~Estoque();
 };
 
 #endif
