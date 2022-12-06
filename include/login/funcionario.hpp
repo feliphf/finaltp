@@ -1,12 +1,13 @@
   /**
    * @file funcionario.hpp
    * @author Ana Carolina, Felipe Ferraz, Guilherme Pascoal, Pedro Araújo, Yan Figueiras 
-   * @brief Classe para
+   * @brief Classe responsável por armazenar todos os atributos de um funcionário
    * @version 1.1
    * @date 2022-12-05
-   * @details 
-   *
-   * 
+   * @details A classe funcionário armazena todos os atributos de um funcionário criado pelo gerente
+   * sendo d=filha de um usuário, a mesma possui todas as funções que são cabíveis a ela, 
+   * além da mesma poder fazer alterações no seu cadastro, como sua senha, ela será utilizada
+   * na inicalização do sistema
    * @copyright GNU General Public License v2.0
    */
 
@@ -19,13 +20,12 @@
 using namespace std;
 
 /**
-   * @brief 
+   * @brief Classe filha de usuário, onde possui todos os seus atributos
    *
-   * @details A classe funcionario é responsável por
-   * 
-   *  
-   * 
-   * 
+   * @details A classe funcionario é responsável por possuir as funções que são possíveis
+   * de funcionário acessar, possui funções que são necessárias pode poder tornar um sistema
+   * seguro, além de possuir um menu com as funções iniciais de um funcionário, que será utilizado  
+   * na inicialização do sistema  
    */
 
 class Funcionario: public Usuario {
@@ -35,17 +35,17 @@ class Funcionario: public Usuario {
         ///@brief Construtor da classe Funcionario, recebe todos os atributos como parâmetro.
         Funcionario(string id, string t, string n, string c, string e, string u, string s);
   
-        ///@brief
+        ///@brief Esta Função abre o menu incial com todas as escolhas possíveis do funcionário
         void menuInicial() override;
   
-        ///@brief
+        ///@brief Esta função abre o menu administrativo com todas as escolhas possíveis do funcionário
         void menuAdministrativo() override;
   
-        ///@brief
-        ///@return Retorna se
+        ///@brief Retorna se o funcionário tem ou não permissão
+        ///@return Retorna true ou false, de acordo com a permissão do funcionário
         bool temPermissao() override;
   
-        ///@brief
+        ///@brief Esta função altera o funcionário que está logado no momento da execução
         void alterarUsuarioLogado() override;
 };
 
