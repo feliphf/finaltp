@@ -32,7 +32,7 @@ class Funcionario: public Usuario {
     private:
     public:
   
-        ///@brief
+        ///@brief Construtor da classe Funcionario, recebe todos os atributos como parâmetro.
         Funcionario(string id, string t, string n, string c, string e, string u, string s);
   
         ///@brief
