@@ -77,19 +77,19 @@ class Produto{
         ///@return Retorna o preço do produto
         float getPreco(void);
 
-        ///@brief Adiciona o nome de um produto
+        ///@brief Altera o nome de um produto
         void setNome(string n);
 
-        ///@brief Adiciona o fabricante de um produto
+        ///@brief Altera o fabricante de um produto
         void setFabricante(string f);
 
-        ///@brief Adiciona a categoria de um produto
+        ///@brief Altera a categoria de um produto
         void setCategoria(string c);
 
-        ///@brief Adiciona o código único de um produto
+        ///@brief Altera o código único de um produto
         void setCodigo(string c);
 
-        ///@brief Adiciona o código único de um produto
+        ///@brief Altera a quantidade de um produto
         void setQuantidade(int q);
 
         ///@brief Adiciona o preço de um produto
