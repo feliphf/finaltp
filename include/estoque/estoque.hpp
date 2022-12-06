@@ -21,6 +21,16 @@
 #include "produto.hpp"
 using namespace std;
 
+ /**
+   * @brief
+   *
+   * @details A classe Estoque é responsável por  
+   * 
+   *  
+   * 
+   * 
+   */
+
 class Estoque{
     private:
         map<string,Produto> _estoque;
