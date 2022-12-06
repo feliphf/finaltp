@@ -18,6 +18,16 @@
 
 using namespace std;
 
+/**
+   * @brief 
+   *
+   * @details A classe funcionario é responsável por
+   * 
+   *  
+   * 
+   * 
+   */
+
 class Funcionario: public Usuario {
     private:
     public:
