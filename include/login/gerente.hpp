@@ -33,6 +33,8 @@ class Gerente: public Usuario {
     public:
   
         ///@brief Construtor da classe Gerente, recebe todos os atributos como parâmetro.
+        ///@param Id sendo o id de um gerente, t sendo o tipo de um gerente, n sendo o nome de um gerente, c sendo o CPF de um gerente, 
+        /// e sendo o email de um gerente, u sendo o ultimo acesso do gerente e s sendo a senha de um gerente
         Gerente(string id, string t, string n, string c, string e, string u, string s);
   
         ///@brief Esta Função abre o menu incial com todas as escolhas possíveis do gerente
