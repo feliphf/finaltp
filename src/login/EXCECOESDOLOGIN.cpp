@@ -36,7 +36,7 @@ const char* ExcecaoTamanhoCPF::what() const throw(){
 ExcecaoTamanhoEmail::ExcecaoTamanhoEmail(){
 	mensagem = "Email maior que o esperado, o email deve conter até 28 caracteres";
 }
-const char* ExcecaoTamanhoCPF::what() const throw(){
+const char* ExcecaoTamanhoEmail::what() const throw(){
 	return mensagem.c_str();
 }
 
