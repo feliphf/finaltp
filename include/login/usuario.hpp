@@ -91,27 +91,35 @@ class Usuario {
         bool getEstaAutenticado();
   
         ///@brief Altera o id de um usuário 
+        ///@param S sendo o id novo que o usuário deseja alterar
         void setId(string s);
   
         ///@brief Altera o tipo de um usuário 
+        ///@param S sendo o tipo novo que o usuário deseja alterar
         void setTipo(string s);
   
         ///@brief Altera o nome de um usuário 
+        ///@param S sendo o nome novo que o usuário deseja alterar
         void setNome(string s);
   
         ///@brief Altera o CPF de um usuário 
+        ///@param S sendo o CPF novo que o usuário deseja alterar
         void setCpf(string s);
   
         ///@brief Altera o email de um usuário 
+        ///@param S sendo o email novo que o usuário deseja alterar
         void setEmail(string s);
   
         ///@brief Altera o ultimo aceso de um usuário 
+        ///@param S sendo o ultimo acesso novo que o usuário deseja alterar
         void setUltimoAcesso(string s);
   
         ///@brief Altera a senha de um usuário 
+        ///@param S sendo a senha nova que o usuário deseja alterar
         void setSenha(string s);
   
-        ///@brief Altera a autenticação de um usuário 
+        ///@brief Altera a autenticação de um usuário
+        ///@param B sendo a autenticação nova que o usuário deseja alterar
         void setEstaAutenticado(bool b);
   
         ///@brief Esta função abre um menu de opções para alterar os atributos acima de um determinado usuário
@@ -131,6 +139,7 @@ class Usuario {
         virtual bool temPermissao() = 0;
   
         ///@brief Esta função limpa a tela, para uma melhor visualização do sistema
+        ///@param Modo sendo uma conferência se deve ou não perguntar se pode limpar a tela
         void limparTela(string modo);
 };
 
