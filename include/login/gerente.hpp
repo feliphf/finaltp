@@ -31,11 +31,23 @@ class Gerente: public Usuario {
     private:
 
     public:
+  
+        ///@brief
         Gerente()=default;
+  
+        ///@brief
         Gerente(string id, string t, string n, string c, string e, string u, string s);
+  
+        ///@brief
         void menuInicial() override;
+  
+        ///@brief
         void menuAdministrativo() override;
+  
+        ///@brief
         bool temPermissao() override;
+  
+        ///@brief
         void alterarUsuarioLogado() override;
 };
 
