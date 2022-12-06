@@ -3,7 +3,6 @@ DIRETORIO_SOURCE := src
 DIRETORIO_OBJETOS := build
 DIRETORIO_TESTES := tests
 MAIN := system/main.cpp
-TESTER := system/tester.cpp
 
 EXTENSAO_SOURCE := cpp
 SOURCES := $(shell find $(DIRETORIO_SOURCE) -type f -name *.$(EXTENSAO_SOURCE))
@@ -22,7 +21,7 @@ $(DIRETORIO_OBJETOS)/%.o: $(DIRETORIO_SOURCE)/%.$(EXTENSAO_SOURCE)
 	$(CC) $(CFLAGS) -c -o $@ $<
 
 tests: $(OBJETOS)
-	$(CC) $(CFLAGS) $(INC2) $(TESTER) $(SOURCES_TESTES) $^ -o tester
+	$(CC) $(CFLAGS) $(INC2) $(SOURCES_TESTES) $^ -o tester
 
 main: $(OBJETOS)
 	$(CC) $(CFLAGS) $(MAIN) $^ -o $(TARGET)
