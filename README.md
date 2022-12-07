@@ -55,7 +55,8 @@ ao depender de qual permissão lhe for dada, de acordo acordo com sua função n
 - Critérios:
     1. Implementar um atributo em usuário para registrar seu tipo, que reflete no nível de permissão.
     2. Disponibilizar menus diferentes para os diferentes tipos de usuários, com limitações para o tipo "funcionário".
-    3. Registro de novos usuários possível somente por uma função do Gerente, sendo necessário inicializar o arquivo que armazena os usuários registrados com um usuário        padrão do tipo "gerente".
+    3. Registro de novos usuários possível somente por uma função do Gerente, sendo necessário inicializar o arquivo que armazena os usuários registrados com um usuário padrão do tipo "gerente".
+    
 ## Como executar e testar o sistema:
 ### Comandos:
 - Clonar o repositório:
