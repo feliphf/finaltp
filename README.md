@@ -26,14 +26,12 @@ ao depender de qual permissão lhe for dada, de acordo acordo com sua função n
     6. Remover um produto pelo seu código, caso já exista.
 
 ### Controle de movimentação
-* Eu como gerente quero poder verificar o estoque, para saber quanto tem de cada item, para
-saber se preciso comprar mais produtos ou não.
+* Eu como gerente quero poder verificar o histórico de movimentações do estoque, que deve conter informações importantes como o tipo da movimentação (entrada ou saída), o produto em questão, a quantidade movimentada, o usuário que a realizou e a data da movimentação. Para que, seja possível fiscalizar e monitorar o estoque, e, em caso de erros humanos, ter as informações necessárias para corrigí-los, garantindo a segurança do estoque da empresa. 
 - Critérios:
-    1. Poder retornar quantos produtos tem de cada produto, pesquisado por nome ou
-    código.
-    2. Pesquisar por código e nome e mostrar quantos foram retirados.
-    3. Pesquisar por código e nome e mostrar quantos foram adicionados.
-    4. Poder retornar o valor total de cada produto em estoque.
+    1. Registrar o histórico em um arquivo inalterável pelos usuários, garantindo a perpetuação da memória. 
+    2. Poder registrar o histórico automaticamente e em tempo real sempre que movimentações forem realizadas no estoque.
+    3. Poder exibir o histórico de movimentações lido do arquivo.
+    4. Pegar automaticamente a data atual do momento da movimentação e o usuário logado para realizar o registro no histórico.
 
 ### Registros de movimentação
 * Eu como usuário pretendo poder realizar movimentações de produtos no estoque que variam entre entradas e saídas de produtos, de acordo com a minha permissão no momento. Gostaria também de realizar essa movimentação de uma forma intuitiva, prática e segura, na qual seria fácil manter o controle do que será modificado no estoque enquanto o pedido estiver sendo feito e também na sua finalização. Para que, o estoque se mantenha atualizado de acordo com as devidas entradas e saídas. 
@@ -45,25 +43,19 @@ saber se preciso comprar mais produtos ou não.
     5. Possibilitar o cancelamento de todos os produtos da lista.
     6. Implementar a finalização dos produtos da lista de uma forma que fique claro, para o usuário, o que foi modificado no sistema.
 
-### Controle de ..
-* Eu como funcionário preciso registrar quantos e quais produtos foram vendidos, para
-manter o estoque atualizado.
+### Perpetuação de memória 
+* Eu como dono da empresa preciso garantir que os dados do estoque, do histórico de movimentações e do subsistema de login sejam registrados de forma segura, de maneira que não haja perda da memória quando o sistema for encerrado. Sendo assim, são necessários arquivos que armazenarão as informações de maneira correta e que serão lidos ao inicializar o sistema de forma à garantir seu correto funcionamento. Para que, dessa forma, haja a perpetuação da memória do sistema.
 - Critérios:
-    1. Adicionar uma nota de saída com um produto já cadastrado, poder remover um
-    produto, para ser removido do estoque
-    2. Poder excluir uma nota de saída.
-    3. Conferir se o produto está em estoque para poder ser retirado.
+    1. Implementar uma base de dados com um arquivo para cada sistema citado.
+    2. Implementar funções que, ao inicializar o sistema, lerão as informações contidas nos arquivos e as utilizarão adequadamente na construção dos devidos objetos,          que permitirão o funcionamento de todos os métodos.
+    3. Implementar funções que escreverão nos arquivos as informações atualizadas, de maneira que na próxima execução do sistema, ele possa lê-las corretamente.
 
 ### Controle de acesso
-* Eu como dono da empresa quero separar as funções as funções do sistema entre funcionários e gerentes, para que
+* Eu como dono da empresa quero poder delegar diferentes funções do sistema entre usuários de diferentes permissões, sendo eles divididos entre funcionários e gerentes. De forma que os funcionários tenham acesso apenas à funções mais básicas como: registrar saídas, consultar ou listar produtos e alterar os próprios dados. Enquanto isso, os gerentes possuem acesso à todas as funções presentes no sistema. Para que, dessa forma, tanto o estoque quanto o sistema de usuários estejam protegidos de usuários de menores níveis de confiança da empresa e experiência na profissão. 
 - Critérios:
-    1. Somente o gerente deverá ter permissão em entradas para poder comprar os
-    produtos, para não ter excesso de produtos parados.
-    2. O funcionário deverá ter acesso às saídas, para poder retirar os produtos, que os
-    vendedores venderam, para poder ser retirado do estoque.
-    3. O funcionário e o gerente deverão ter acesso ao estoque, para poder emitir os
-    relatórios gerais e individuais dos produtos
-
+    1. Implementar um atributo em usuário para registrar seu tipo, que reflete no nível de permissão.
+    2. Disponibilizar menus diferentes para os diferentes tipos de usuários, com limitações para o tipo "funcionário".
+    3. Registro de novos usuários possível somente por uma função do Gerente, sendo necessário inicializar o arquivo que armazena os usuários registrados com um usuário        padrão do tipo "gerente".
 ## Como executar e testar o sistema:
 ### Comandos:
 - Clonar o repositório:
