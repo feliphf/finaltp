@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['functype_1293',['funcType',['../namespacedoctest_1_1detail.html#a25b5e019078af59a5e84982fddfbc9c1',1,'doctest::detail']]]
+  ['functype_1294',['funcType',['../namespacedoctest_1_1detail.html#a25b5e019078af59a5e84982fddfbc9c1',1,'doctest::detail']]]
 ];

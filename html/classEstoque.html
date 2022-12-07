@@ -78,7 +78,7 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a5ef465af5814ce8c048f891e72fbf4a2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEstoque.html#a5ef465af5814ce8c048f891e72fbf4a2">Estoque</a> ()=default</td></tr>
-<tr class="memdesc:a5ef465af5814ce8c048f891e72fbf4a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Esta é uma função que destroi um mapa para não ocupar lugar na memória.  <a href="classEstoque.html#a5ef465af5814ce8c048f891e72fbf4a2">More...</a><br /></td></tr>
+<tr class="memdesc:a5ef465af5814ce8c048f891e72fbf4a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Esta é uma função de construtor, ao qual inicaliza com nenhuma informação.  <a href="classEstoque.html#a5ef465af5814ce8c048f891e72fbf4a2">More...</a><br /></td></tr>
 <tr class="separator:a5ef465af5814ce8c048f891e72fbf4a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a970ca21567e806f1f0e6ca90e55eb189"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEstoque.html#a970ca21567e806f1f0e6ca90e55eb189">salvarArquivo</a> ()</td></tr>
 <tr class="memdesc:a970ca21567e806f1f0e6ca90e55eb189"><td class="mdescLeft">&#160;</td><td class="mdescRight">Esta função salva o arquivo que contém todos os produtos e seus atributos.  <a href="classEstoque.html#a970ca21567e806f1f0e6ca90e55eb189">More...</a><br /></td></tr>
@@ -109,7 +109,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a6d5a491db754f7cd01bfcdaf8b7ee317"><td class="mdescLeft">&#160;</td><td class="mdescRight">Esta função abre um menu de opções, ao qual chama todas as funções de alterar acima.  <a href="classEstoque.html#a6d5a491db754f7cd01bfcdaf8b7ee317">More...</a><br /></td></tr>
 <tr class="separator:a6d5a491db754f7cd01bfcdaf8b7ee317"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0fb96f0e13da7c7be6766f63b2cfd7b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEstoque.html#a0fb96f0e13da7c7be6766f63b2cfd7b9">entradasDeProdutos</a> (string codig, int quant, string nomeUsuario, string dataAtual)</td></tr>
-<tr class="memdesc:a0fb96f0e13da7c7be6766f63b2cfd7b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Esta função adiciona produtos com seus atributos específicos.  <a href="classEstoque.html#a0fb96f0e13da7c7be6766f63b2cfd7b9">More...</a><br /></td></tr>
+<tr class="memdesc:a0fb96f0e13da7c7be6766f63b2cfd7b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Esta função adiciona produtos no estoque.  <a href="classEstoque.html#a0fb96f0e13da7c7be6766f63b2cfd7b9">More...</a><br /></td></tr>
 <tr class="separator:a0fb96f0e13da7c7be6766f63b2cfd7b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a076a768e14db50d3292f1a1032f8d5f0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEstoque.html#a076a768e14db50d3292f1a1032f8d5f0">saidasDeProdutos</a> (string codig, int quant, string nomeUsuario, string dataAtual)</td></tr>
 <tr class="memdesc:a076a768e14db50d3292f1a1032f8d5f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Esta função retira produtos com seus atributos específicos.  <a href="classEstoque.html#a076a768e14db50d3292f1a1032f8d5f0">More...</a><br /></td></tr>
@@ -162,7 +162,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Esta é uma função que destroi um mapa para não ocupar lugar na memória. </p>
+<p>Esta é uma função de construtor, ao qual inicaliza com nenhuma informação. </p>
+<p>inicializa um estoque default, sem nenhum parametro. </p>
 
 </div>
 </div>
@@ -194,6 +195,14 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Esta função altera a categoria de um determinado produto. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Pesquisa</td><td>sendo o código de um produto </td></tr>
+    <tr><td class="paramname">categ</td><td>sendo o nome da categoria do produto ao qual o gerente deseja alterar</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>procura um produto no estoque e altera o sua categoria para a nova categoria desejada, com limite de 23 caracteres </p>
 
 <p class="definition">Definition at line <a class="el" href="estoque_8cpp_source.html#l00105">105</a> of file <a class="el" href="estoque_8cpp_source.html">estoque.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                                                                  {</div>
@@ -235,6 +244,14 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Esta função altera o fabricante de um determinado produto. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Pesquisa</td><td>sendo o código de um produto </td></tr>
+    <tr><td class="paramname">fabric</td><td>sendo o nome do fabricante do produto ao qual o gerente deseja alterar</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>procura um produto no estoque e altera o seu fabricante para o novo fabricante desejado, com limite de 23 caracteres </p>
 
 <p class="definition">Definition at line <a class="el" href="estoque_8cpp_source.html#l00088">88</a> of file <a class="el" href="estoque_8cpp_source.html">estoque.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                                                                    {</div>
@@ -276,6 +293,13 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Esta função altera o nome de um determinado produto. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Pesquisa</td><td>sendo o código de um produto e nome sendo o nome do produto ao qual o gerente deseja alterar</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>procura um produto no estoque e altera o seu nome para o novo nome desejado, com limite de 26 caracteres </p>
 
 <p class="definition">Definition at line <a class="el" href="estoque_8cpp_source.html#l00073">73</a> of file <a class="el" href="estoque_8cpp_source.html">estoque.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                                                            { </div>
@@ -315,6 +339,14 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Esta função altera o preço de um determinado produto. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Pesquisa</td><td>sendo o código de um produto </td></tr>
+    <tr><td class="paramname">preco</td><td>sendo o preço do produto ao qual o gerente deseja alterar</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>procura um produto no estoque e altera o seu preço para o novo preço desejado, com limite de 9 algarismos </p>
 
 <p class="definition">Definition at line <a class="el" href="estoque_8cpp_source.html#l00121">121</a> of file <a class="el" href="estoque_8cpp_source.html">estoque.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;                                                             {</div>
@@ -344,6 +376,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Esta função abre um menu de opções, ao qual chama todas as funções de alterar acima. </p>
+<p>exibe um menu com opçoes de escolha para alterar os atributos do produto desejado, com exceçao da quantidade e do código que não podem ser alterados </p>
 
 <p class="definition">Definition at line <a class="el" href="estoque_8cpp_source.html#l00136">136</a> of file <a class="el" href="estoque_8cpp_source.html">estoque.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;                            {</div>
@@ -455,6 +488,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Esta função cadastra produto com seus atributos específicos. </p>
+<p>exibe um menu que pede os dados do produto que será cadastrado, cria um objeto da classe produto com esses dados e quantidade inicial 0, depois insere no mapa de estoque </p>
 
 <p class="definition">Definition at line <a class="el" href="estoque_8cpp_source.html#l00233">233</a> of file <a class="el" href="estoque_8cpp_source.html">estoque.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;            :</div>
@@ -537,7 +571,17 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Esta função adiciona produtos com seus atributos específicos. </p>
+<p>Esta função adiciona produtos no estoque. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Codig</td><td>sendo o código de um produto </td></tr>
+    <tr><td class="paramname">quant</td><td>sendo a quantidade que deseja adicionar </td></tr>
+    <tr><td class="paramname">nomeUsuario</td><td>sendo o nome do usuário </td></tr>
+    <tr><td class="paramname">dataAtual</td><td>sendo a data atual no momento da execução do programa</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>aumenta a quantidade de um produto no estoque somando com a quantidade atual com a quantidade passada como parâmetro </p>
 
 <p class="definition">Definition at line <a class="el" href="estoque_8cpp_source.html#l00276">276</a> of file <a class="el" href="estoque_8cpp_source.html">estoque.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;                      {</div>
@@ -576,6 +620,13 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Esta função exclui um cadastro de um produto com todos os seus atributos. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Código</td><td>sendo um código de um produto ao qual o gerente deseja excluir</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>verifica se um produto existe no estoque pelo código e apaga seu cadastro </p>
 
 <p class="definition">Definition at line <a class="el" href="estoque_8cpp_source.html#l00468">468</a> of file <a class="el" href="estoque_8cpp_source.html">estoque.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;            :</div>
@@ -616,6 +667,15 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Esta função gera um histórico de movimentações feitas pelo funcionário ou gerente. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">count</td><td>sendo a contagem de produtos </td></tr>
+    <tr><td class="paramname">nomeUsuario</td><td>sendo o nome do usuário </td></tr>
+    <tr><td class="paramname">dataAtual</td><td>sendo a data atual do momento da excução do programa</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>salva as novas movimentações no arquivo <a class="el" href="Movimentacoes_8txt.html">Movimentacoes.txt</a> </p>
 
 <p class="definition">Definition at line <a class="el" href="estoque_8cpp_source.html#l00310">310</a> of file <a class="el" href="estoque_8cpp_source.html">estoque.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;                                                                                           {</div>
@@ -642,6 +702,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Esta função imprimi o histórico acima. </p>
+<p>imprime o histórico de movimentaçoes lido do arquivo <a class="el" href="Movimentacoes_8txt.html">Movimentacoes.txt</a> </p>
 
 <p class="definition">Definition at line <a class="el" href="estoque_8cpp_source.html#l00317">317</a> of file <a class="el" href="estoque_8cpp_source.html">estoque.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;         {</div>
@@ -672,6 +733,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Esta função lê o arquivo que contém todas as informações salvas, da última vez que foi acessado <br  />
  </p>
+<p>lê o arquivo <a class="el" href="Estoque_8txt.html">Estoque.txt</a> , constroi um objeto do tipo estoque e carrega no mapa todas as informações do arquivo </p>
 
 <p class="definition">Definition at line <a class="el" href="estoque_8cpp_source.html#l00023">23</a> of file <a class="el" href="estoque_8cpp_source.html">estoque.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                        {</div>
@@ -712,6 +774,13 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Esta função limpa a tela, para poder ter uma melhor visualização na compilação. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Modo</td><td>sendo uma conferência se deve ou não perguntar se pode limpar a tela</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>recurso visual para melhor vizualização e interação do usuário, possui modo "perguntar" em que pergunta se pode limpar a tela antes de limpar, e modo "continuar" em que limpa direto sem perguntar </p>
 
 <p class="definition">Definition at line <a class="el" href="estoque_8cpp_source.html#l00477">477</a> of file <a class="el" href="estoque_8cpp_source.html">estoque.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;             {</div>
@@ -748,6 +817,8 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Esta função lista todos os produtos que há no estoque no presente momento. </p>
+<p>exibe uma interface visual com todos os produtos no estoque e suas informações <br  />
+ </p>
 
 <p class="definition">Definition at line <a class="el" href="estoque_8cpp_source.html#l00042">42</a> of file <a class="el" href="estoque_8cpp_source.html">estoque.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                            {</div>
@@ -818,6 +889,18 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Esta função abre um menu com todas as opções de movimentação. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ListaQuantidades</td><td>sendo um par entre um numero inteiro não negativo e um par entre um produto e um inteiro, </td></tr>
+    <tr><td class="paramname">modo</td><td>sendo as possibilidades entrada ou saídas </td></tr>
+    <tr><td class="paramname">loop</td><td>sendo uma variável que serve para encerrar o loop na hora correta, </td></tr>
+    <tr><td class="paramname">count</td><td>sendo a contagem de produtos </td></tr>
+    <tr><td class="paramname">nomeUsuario</td><td>sendo o nome do usuário </td></tr>
+    <tr><td class="paramname">dataAtual</td><td>sendo a data atual do momento da excução do programa</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>exibe um menu para manipular uma lista de entradas/saídas (depende do modo escolhido) que altera a quantidade de possiveis diversos produtos do estoque </p>
 
 <p class="definition">Definition at line <a class="el" href="estoque_8cpp_source.html#l00331">331</a> of file <a class="el" href="estoque_8cpp_source.html">estoque.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;                         {</div>
@@ -972,6 +1055,13 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Esta função dá a possibilidade de pesquisar um produto específico de acordo com o código ou nome. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Pesquisa,podendo</td><td>ser um código ou um nome de um produto</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>pesquisa se um produto existe no estoque, se existir, exibe um menu com todas as informações do produto </p>
 
 <p class="definition">Definition at line <a class="el" href="estoque_8cpp_source.html#l00057">57</a> of file <a class="el" href="estoque_8cpp_source.html">estoque.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                                             {</div>
@@ -1025,6 +1115,16 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Esta função retira produtos com seus atributos específicos. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Codig</td><td>sendo o código de um produto </td></tr>
+    <tr><td class="paramname">quant</td><td>sendo a quantidade que deseja retirar </td></tr>
+    <tr><td class="paramname">nomeUsuario</td><td>sendo o nome do usuário </td></tr>
+    <tr><td class="paramname">dataAtual</td><td>sendo a data atual no momento da execução do programa</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>diminui a quantidade de um produto no estoque subtraindo com a quantidade atual pela quantidade passada como parâmetro </p>
 
 <p class="definition">Definition at line <a class="el" href="estoque_8cpp_source.html#l00293">293</a> of file <a class="el" href="estoque_8cpp_source.html">estoque.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;                                                                                             {</div>
@@ -1061,6 +1161,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Esta função salva o arquivo que contém todos os produtos e seus atributos. </p>
+<p>carrega todas as informações do mapa dentro do arquivo <a class="el" href="Estoque_8txt.html">Estoque.txt</a> </p>
 
 <p class="definition">Definition at line <a class="el" href="estoque_8cpp_source.html#l00006">6</a> of file <a class="el" href="estoque_8cpp_source.html">estoque.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;                           {</div>
@@ -1087,7 +1188,7 @@ Public Member Functions</h2></td></tr>
 <li>src/estoque/<a class="el" href="estoque_8cpp_source.html">estoque.cpp</a></li>
 </ul>
 </div><!-- contents -->
-<div class="ttc" id="aclassEstoque_html_a0fb96f0e13da7c7be6766f63b2cfd7b9"><div class="ttname"><a href="classEstoque.html#a0fb96f0e13da7c7be6766f63b2cfd7b9">Estoque::entradasDeProdutos</a></div><div class="ttdeci">void entradasDeProdutos(string codig, int quant, string nomeUsuario, string dataAtual)</div><div class="ttdoc">Esta função adiciona produtos com seus atributos específicos.</div><div class="ttdef"><b>Definition:</b> <a href="estoque_8cpp_source.html#l00276">estoque.cpp:276</a></div></div>
+<div class="ttc" id="aclassEstoque_html_a0fb96f0e13da7c7be6766f63b2cfd7b9"><div class="ttname"><a href="classEstoque.html#a0fb96f0e13da7c7be6766f63b2cfd7b9">Estoque::entradasDeProdutos</a></div><div class="ttdeci">void entradasDeProdutos(string codig, int quant, string nomeUsuario, string dataAtual)</div><div class="ttdoc">Esta função adiciona produtos no estoque.</div><div class="ttdef"><b>Definition:</b> <a href="estoque_8cpp_source.html#l00276">estoque.cpp:276</a></div></div>
 <div class="ttc" id="aclassquantidadeInvalida_html"><div class="ttname"><a href="classquantidadeInvalida.html">quantidadeInvalida</a></div><div class="ttdef"><b>Definition:</b> <a href="EXCECOESDOESTOQUE_8hpp_source.html#l00094">EXCECOESDOESTOQUE.hpp:94</a></div></div>
 <div class="ttc" id="aclassEntradaInvalida_html"><div class="ttname"><a href="classEntradaInvalida.html">EntradaInvalida</a></div><div class="ttdef"><b>Definition:</b> <a href="EXCECOESDOESTOQUE_8hpp_source.html#l00022">EXCECOESDOESTOQUE.hpp:22</a></div></div>
 <div class="ttc" id="aclassExcecaoTamanhoFabricAlt_html"><div class="ttname"><a href="classExcecaoTamanhoFabricAlt.html">ExcecaoTamanhoFabricAlt</a></div><div class="ttdef"><b>Definition:</b> <a href="EXCECOESDOESTOQUE_8hpp_source.html#l00038">EXCECOESDOESTOQUE.hpp:38</a></div></div>

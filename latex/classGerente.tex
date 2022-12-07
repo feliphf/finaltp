@@ -64,6 +64,23 @@ Definition at line 30 of file gerente.\+hpp.
 Construtor da classe \mbox{\hyperlink{classGerente}{Gerente}}, recebe todos os atributos como parâmetro. 
 
 
+\begin{DoxyParams}{Parameters}
+{\em Id} & sendo o id de um gerente \\
+\hline
+{\em t} & sendo o tipo de um gerente \\
+\hline
+{\em n} & sendo o nome de um gerente \\
+\hline
+{\em c} & sendo o C\+PF de um gerente, \\
+\hline
+{\em e} & sendo o email de um gerente \\
+\hline
+{\em u} & sendo o ultimo acesso do gerente \\
+\hline
+{\em s} & sendo a senha de um gerente\\
+\hline
+\end{DoxyParams}
+constroi objeto da classe gerente com os parametros de ID, tipo, nome, C\+PF, email, ultimo acesso e senha 
 
 Definition at line 3 of file gerente.\+cpp.
 
@@ -93,7 +110,8 @@ Definition at line 3 of file gerente.\+cpp.
 
 Esta função altera o usuário que está logado no momento da execução. 
 
-
+abre um menu de alterar usuário, no caso do gerente, o menu leva à todas as opções de alteração, desde todos os produtos até todos os usuários ~\newline
+ 
 
 Implements \mbox{\hyperlink{classUsuario_a3d39624354ba93690acbbd9979dd6733}{Usuario}}.
 
@@ -116,7 +134,7 @@ Definition at line 49 of file gerente.\+cpp.
 
 Esta Função abre o menu administrativo com todas as escolhas possíveis do gerente. 
 
-
+exibe o menu administrativo que apenas o gerente possui acesso, podendo levar à diversas opções de funções administrativas 
 
 Implements \mbox{\hyperlink{classUsuario_a5e10aeefe82c9fa76ed4457f33d6ba4b}{Usuario}}.
 
@@ -150,7 +168,7 @@ Definition at line 30 of file gerente.\+cpp.
 
 Esta Função abre o menu incial com todas as escolhas possíveis do gerente. 
 
-
+exibe o menu inicial da classe de gerente 
 
 Implements \mbox{\hyperlink{classUsuario_acc41ccb4c666766c305b19dd16dde50c}{Usuario}}.
 
@@ -189,9 +207,9 @@ Definition at line 13 of file gerente.\+cpp.
 Retorna se o gerente tem ou não permissão. 
 
 \begin{DoxyReturn}{Returns}
-Retorna true ou false, de acordo com a permissão do gerente 
+Retorna true ou false, de acordo com a permissão do gerente
 \end{DoxyReturn}
-
+função que sobreescreve uma função de usuario que determina a permissão de acesso à funções do usuario, quando este é do tipo gerente sempre retornará true 
 
 Implements \mbox{\hyperlink{classUsuario_ab311ad6f74a2b3971445127690c3bfcc}{Usuario}}.
 

@@ -115,7 +115,7 @@ Definition at line 32 of file usuario.\+hpp.
 
 Esta função abre um menu de opções para alterar os atributos acima de um determinado usuário. 
 
-
+função que exibe um menu com todas as possíveis alterações de um usuário 
 
 Definition at line 73 of file usuario.\+cpp.
 
@@ -238,7 +238,7 @@ Definition at line 73 of file usuario.\+cpp.
 
 Função virtual que altera o usuário logado no momento da execução. 
 
-
+função virtual que será sobrescrita em \mbox{\hyperlink{classGerente}{Gerente}} e \mbox{\hyperlink{classFuncionario}{Funcionario}}, servirá para exibir o menu de alterar usuário referente a cada tipo, se for chamada por um gerente chamará a fuçnão \mbox{\hyperlink{classUsuario_afc7bab8d6ad1528fe0394a5ea901d334}{alterar\+Usuario()}} que da todas as opções, se for chamada por um funcionário, exibirá um menu limitado à alteração da própria senha 
 
 Implemented in \mbox{\hyperlink{classFuncionario_af331c347d8c5c9b00ae433e427ff6f55}{Funcionario}}, and \mbox{\hyperlink{classGerente_abee6710d97a4e7e9bc95642b2cfc21a2}{Gerente}}.
 
@@ -448,6 +448,11 @@ Definition at line 26 of file usuario.\+cpp.
 Esta função limpa a tela, para uma melhor visualização do sistema. 
 
 
+\begin{DoxyParams}{Parameters}
+{\em Modo} & sendo uma conferência se deve ou não perguntar se pode limpar a tela\\
+\hline
+\end{DoxyParams}
+recurso visual para melhor vizualização e interação do usuário, possui modo \char`\"{}perguntar\char`\"{} em que pergunta se pode limpar a tela antes de limpar, e modo \char`\"{}continuar\char`\"{} em que limpa direto sem perguntar 
 
 Definition at line 179 of file usuario.\+cpp.
 
@@ -482,7 +487,7 @@ Definition at line 179 of file usuario.\+cpp.
 
 Função virtual que abre um menu administrativo. 
 
-
+função virtual que será sobrescrita em \mbox{\hyperlink{classGerente}{Gerente}} e \mbox{\hyperlink{classFuncionario}{Funcionario}}, servirá para exibir o menu administrativo apenas nas classe gerente e nunca será executada por um funcionário 
 
 Implemented in \mbox{\hyperlink{classFuncionario_a3f55ab1568015614e6e6c85543621f78}{Funcionario}}, and \mbox{\hyperlink{classGerente_a0858b78f711e3aee20d348383092b2e5}{Gerente}}.
 
@@ -496,7 +501,7 @@ Implemented in \mbox{\hyperlink{classFuncionario_a3f55ab1568015614e6e6c85543621f
 
 Função virtual que abre um menu Inicial de um Usuário determinado. 
 
-
+função virtual que será sobrescrita em \mbox{\hyperlink{classGerente}{Gerente}} e \mbox{\hyperlink{classFuncionario}{Funcionario}}, servirá para exibir o menu inicial referente a cada tipo de usuário 
 
 Implemented in \mbox{\hyperlink{classFuncionario_ae0ddb589cedd75ddcd0c222792541ef4}{Funcionario}}, and \mbox{\hyperlink{classGerente_a36ff097423739923eca6ca2dcffd0dbb}{Gerente}}.
 
@@ -510,6 +515,11 @@ Implemented in \mbox{\hyperlink{classFuncionario_ae0ddb589cedd75ddcd0c222792541e
 
 Altera o C\+PF de um usuário. 
 
+
+\begin{DoxyParams}{Parameters}
+{\em S} & sendo o C\+PF novo que o usuário deseja alterar \\
+\hline
+\end{DoxyParams}
 
 
 Definition at line 53 of file usuario.\+cpp.
@@ -532,6 +542,11 @@ Definition at line 53 of file usuario.\+cpp.
 Altera o email de um usuário. 
 
 
+\begin{DoxyParams}{Parameters}
+{\em S} & sendo o email novo que o usuário deseja alterar \\
+\hline
+\end{DoxyParams}
+
 
 Definition at line 57 of file usuario.\+cpp.
 
@@ -552,6 +567,11 @@ Definition at line 57 of file usuario.\+cpp.
 
 Altera a autenticação de um usuário. 
 
+
+\begin{DoxyParams}{Parameters}
+{\em B} & sendo a autenticação nova que o usuário deseja alterar \\
+\hline
+\end{DoxyParams}
 
 
 Definition at line 69 of file usuario.\+cpp.
@@ -574,6 +594,11 @@ Definition at line 69 of file usuario.\+cpp.
 Altera o id de um usuário. 
 
 
+\begin{DoxyParams}{Parameters}
+{\em S} & sendo o id novo que o usuário deseja alterar \\
+\hline
+\end{DoxyParams}
+
 
 Definition at line 38 of file usuario.\+cpp.
 
@@ -594,6 +619,11 @@ Definition at line 38 of file usuario.\+cpp.
 
 Altera o nome de um usuário. 
 
+
+\begin{DoxyParams}{Parameters}
+{\em S} & sendo o nome novo que o usuário deseja alterar \\
+\hline
+\end{DoxyParams}
 
 
 Definition at line 46 of file usuario.\+cpp.
@@ -619,6 +649,11 @@ Definition at line 46 of file usuario.\+cpp.
 Altera a senha de um usuário. 
 
 
+\begin{DoxyParams}{Parameters}
+{\em S} & sendo a senha nova que o usuário deseja alterar \\
+\hline
+\end{DoxyParams}
+
 
 Definition at line 65 of file usuario.\+cpp.
 
@@ -639,6 +674,11 @@ Definition at line 65 of file usuario.\+cpp.
 
 Altera o tipo de um usuário. 
 
+
+\begin{DoxyParams}{Parameters}
+{\em S} & sendo o tipo novo que o usuário deseja alterar \\
+\hline
+\end{DoxyParams}
 
 
 Definition at line 42 of file usuario.\+cpp.
@@ -661,6 +701,11 @@ Definition at line 42 of file usuario.\+cpp.
 Altera o ultimo aceso de um usuário. 
 
 
+\begin{DoxyParams}{Parameters}
+{\em S} & sendo o ultimo acesso novo que o usuário deseja alterar \\
+\hline
+\end{DoxyParams}
+
 
 Definition at line 61 of file usuario.\+cpp.
 
@@ -682,9 +727,9 @@ Definition at line 61 of file usuario.\+cpp.
 Função virtual que retorna se tem permissão ou não. 
 
 \begin{DoxyReturn}{Returns}
-Retorna true ou false, de acordo com a permissão do usuário logado 
+Retorna true ou false, de acordo com a permissão do usuário logado
 \end{DoxyReturn}
-
+função virtual que será sobrescrita em \mbox{\hyperlink{classGerente}{Gerente}} e \mbox{\hyperlink{classFuncionario}{Funcionario}}, retorna a permissão referente ao tipo do usuário, se for um gerente retorna true, se for um funcionário retorna false 
 
 Implemented in \mbox{\hyperlink{classFuncionario_ab5bbe507782b7b2c5de1cb39e946b0a3}{Funcionario}}, and \mbox{\hyperlink{classGerente_a0850bf905ee25f3c53bec691f6201209}{Gerente}}.
 

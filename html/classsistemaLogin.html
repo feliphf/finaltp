@@ -77,6 +77,9 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a9a8e9c2531e27f0586c0c43cbb27c160"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsistemaLogin.html#a9a8e9c2531e27f0586c0c43cbb27c160">sistemaLogin</a> ()=default</td></tr>
+<tr class="memdesc:a9a8e9c2531e27f0586c0c43cbb27c160"><td class="mdescLeft">&#160;</td><td class="mdescRight">Esta é uma função de construtor, ao qual inicaliza com nenhuma informação.  <a href="classsistemaLogin.html#a9a8e9c2531e27f0586c0c43cbb27c160">More...</a><br /></td></tr>
+<tr class="separator:a9a8e9c2531e27f0586c0c43cbb27c160"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8aa587679dfb440a5d6d2d5283d3d3a0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsistemaLogin.html#a8aa587679dfb440a5d6d2d5283d3d3a0">lerArquivo</a> ()</td></tr>
 <tr class="memdesc:a8aa587679dfb440a5d6d2d5283d3d3a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Esta função lê o arquivo que contém todas as informações salvas, da última vez que foi acessado <br  />
   <a href="classsistemaLogin.html#a8aa587679dfb440a5d6d2d5283d3d3a0">More...</a><br /></td></tr>
@@ -123,7 +126,36 @@ Public Member Functions</h2></td></tr>
 <p>A classe <a class="el" href="classsistemaLogin.html" title="Armazena um map de vários usuários.">sistemaLogin</a> é responsável por armazenar varios usuários, usando um map, separamos cada usuário de acordo com sua chave, sendo seu Id, e o valor sendo todos os atributos de um usuário, esta classe possui todas as funções que o gerente pode fazer de um usuário </p>
 
 <p class="definition">Definition at line <a class="el" href="sistemaLogin_8hpp_source.html#l00035">35</a> of file <a class="el" href="sistemaLogin_8hpp_source.html">sistemaLogin.hpp</a>.</p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a9a8e9c2531e27f0586c0c43cbb27c160"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a8e9c2531e27f0586c0c43cbb27c160">&#9670;&nbsp;</a></span>sistemaLogin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sistemaLogin::sistemaLogin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Esta é uma função de construtor, ao qual inicaliza com nenhuma informação. </p>
+<p>inicializa um estoque default, sem nenhum parametro. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a id="af6a3c8790a61e26533ce718d2766b314"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af6a3c8790a61e26533ce718d2766b314">&#9670;&nbsp;</a></span>alterarUsuario()</h2>
 
@@ -140,6 +172,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Esta função mostra o menu de alterações de um usuário. </p>
+<p>Função responsável por um menu que possibilita alterar todos os atributos de qualquer usuário através de uma pesquisa( chama a função pesquisarUsuário),sendo que apenas o gerente possuí esse acesso </p>
 
 <p class="definition">Definition at line <a class="el" href="sistemaLogin_8cpp_source.html#l00241">241</a> of file <a class="el" href="sistemaLogin_8cpp_source.html">sistemaLogin.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;                                                :)<span class="stringliteral">&quot; &lt;&lt; endl;</span></div>
@@ -172,6 +205,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Esta função cadastra um funcionário novo, podendo ser funcionário ou gerente. </p>
+<p>Função responsável por cadastrar o usuário de forma semi-automática, sendo que o usuarioLogado no momento irá declarar o nome, senha, email e CPF e o subsistema de Login irá gerar automaticamente um ID único e a data de criação da conta no campo de Último acesso </p>
 
 <p class="definition">Definition at line <a class="el" href="sistemaLogin_8cpp_source.html#l00121">121</a> of file <a class="el" href="sistemaLogin_8cpp_source.html">sistemaLogin.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;                     { </div>
@@ -263,6 +297,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Esta função exclui um funcionário existente, podendo ser funcionário ou gerente. </p>
+<p>Função responsável por excluir usuários através de uma pesquisa pelo seu ID único ou Nome completo (chama a função pesquisarUsuário()), a função é de acesso restrito para o gerente </p>
 
 <p class="definition">Definition at line <a class="el" href="sistemaLogin_8cpp_source.html#l00107">107</a> of file <a class="el" href="sistemaLogin_8cpp_source.html">sistemaLogin.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                                 {</div>
@@ -293,6 +328,12 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Esta função faz logout do usuário que está logado no momento da execução. </p>
+<p>Função responsável por salvar os dados do _usuárioLogado do sistema de volta do mapa de usuários, e também por fazer seu logout mudando o atributo bool estaLogado para false </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">U</td><td>sendo um ponteiro armazenando qual usuário quer fazer logout </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="definition">Definition at line <a class="el" href="sistemaLogin_8cpp_source.html#l00254">254</a> of file <a class="el" href="sistemaLogin_8cpp_source.html">sistemaLogin.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;           :</div>
@@ -318,7 +359,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Esta função gera a data atual da movimentação do sistema por um usuário específico. </p>
-<dl class="section return"><dt>Returns</dt><dd>Retorna esta data atual do presente momento da execução </dd></dl>
+<p>Função responsável por gerar a data atual no formato DD/MM/AA e retornar em forma de string que posteriormente será usada para atualizar a última data de acesso do _usuarioLogado no sistema através da função <a class="el" href="classsistemaLogin.html#aa0c4a27c8316368d77ee20c6bd8cfde2" title="Esta função abre um menu de login, com todas as suas opções correspondente de cada usuário.">menuLogin()</a> desta classe. </p><dl class="section return"><dt>Returns</dt><dd>Retorna esta data atual do presente momento da execução </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="sistemaLogin_8cpp_source.html#l00084">84</a> of file <a class="el" href="sistemaLogin_8cpp_source.html">sistemaLogin.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                                   {</div>
@@ -342,7 +383,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Esta função gera um Id único para cada usuário. </p>
-<dl class="section return"><dt>Returns</dt><dd>Retorna este Id gerado <br  />
+<p>Função responsável por gerar um ID único para cada usuário, o número gerado tem sempre 4 dígitos que variam de 0 a 9. A função também analisa se o número gerado existe no mapa de usuários, e caso exista é gerado um novo ID e conferido novamente, sendo retornado apenas um ID que a função tenha certeza que é único. </p><dl class="section return"><dt>Returns</dt><dd>Retorna este Id gerado <br  />
  </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="sistemaLogin_8cpp_source.html#l00069">69</a> of file <a class="el" href="sistemaLogin_8cpp_source.html">sistemaLogin.cpp</a>.</p>
@@ -380,6 +421,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Esta função lê o arquivo que contém todas as informações salvas, da última vez que foi acessado <br  />
  </p>
+<p>lê o arquivo Usuario.txt , constroi objetos dos tipos gerentes e funcionários a depender do tipo declarado no arquivo e carrega no mapa todas as informações </p>
 
 <p class="definition">Definition at line <a class="el" href="sistemaLogin_8cpp_source.html#l00003">3</a> of file <a class="el" href="sistemaLogin_8cpp_source.html">sistemaLogin.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;                             {</div>
@@ -423,6 +465,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Esta função limpa a memoria de usuários do sistema. </p>
+<p>Função responsável por apagar o mapa de usuários, é usada sempre que é preciso ler novamente dos arquivos sendo chamada antes para que evite que ocorra um overwrite, deixando todo o mapa limpo para a nova leitura do arquivo </p>
 
 <p class="definition">Definition at line <a class="el" href="sistemaLogin_8cpp_source.html#l00064">64</a> of file <a class="el" href="sistemaLogin_8cpp_source.html">sistemaLogin.cpp</a>.</p>
 
@@ -445,6 +488,12 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Esta função limpa a tela, para poder ter uma melhor visualização na compilação. </p>
+<p>recurso visual para melhor vizualização e interação do usuário, possui modo "perguntar" em que pergunta se pode limpar a tela antes de limpar, e modo "continuar" em que limpa direto sem perguntar </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Modo</td><td>sendo uma conferência se deve ou não perguntar se pode limpar a tela </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="definition">Definition at line <a class="el" href="sistemaLogin_8cpp_source.html#l00259">259</a> of file <a class="el" href="sistemaLogin_8cpp_source.html">sistemaLogin.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;                                 { </div>
@@ -481,6 +530,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Esta função lista todos os usuários do sistema. </p>
+<p>Função responsável por listar todos os usuários do sistema de forma dinâmica, por mostrar dados sensíveis de todos os usuários, a função fica de acesso restrito para gerente </p>
 
 <p class="definition">Definition at line <a class="el" href="sistemaLogin_8cpp_source.html#l00043">43</a> of file <a class="el" href="sistemaLogin_8cpp_source.html">sistemaLogin.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                                 {</div>
@@ -522,7 +572,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Esta função abre um menu de login, com todas as suas opções correspondente de cada usuário. </p>
-<dl class="section return"><dt>Returns</dt><dd>um ponteiro de usuário </dd></dl>
+<p>Função responsável por exibir o menu de login com duas opções, também é responsável por retornar um ponteiro para usuário que pode assumir tanto gerente ou funcionário e que será utilizado no sistema para o atributo _usuarioLogado </p><dl class="section return"><dt>Returns</dt><dd>um ponteiro de usuário </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="sistemaLogin_8cpp_source.html#l00195">195</a> of file <a class="el" href="sistemaLogin_8cpp_source.html">sistemaLogin.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;                 {</div>
@@ -589,7 +639,14 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Esta função dá a possibilidade de pesquisar um determinado usuário e seus atributos. </p>
-<dl class="section return"><dt>Returns</dt><dd>um ponteiro de usuário </dd></dl>
+<p>Função responsáve por pesquisar um usuário através de seu ID único ou através de seu nome completo, caso ache o usuário, irá retornar um ponteiro de usuário para o encontrado, caso o usuário não seja encontrado a função retorna um nullptr. </p><dl class="section return"><dt>Returns</dt><dd>um ponteiro de usuário </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Pesquisa</td><td>sendo o id do usuário ou o seu nome <br  />
+ </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="definition">Definition at line <a class="el" href="sistemaLogin_8cpp_source.html#l00092">92</a> of file <a class="el" href="sistemaLogin_8cpp_source.html">sistemaLogin.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                                                      {</div>
@@ -620,6 +677,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Esta função salva o arquivo que contém todos os usuários e seus atributos. </p>
+<p>carrega todas as informações do mapa dentro do arquivo <a class="el" href="Usuarios_8txt.html">Usuarios.txt</a> </p>
 
 <p class="definition">Definition at line <a class="el" href="sistemaLogin_8cpp_source.html#l00026">26</a> of file <a class="el" href="sistemaLogin_8cpp_source.html">sistemaLogin.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                                {</div>

@@ -2,7 +2,7 @@
 \label{classSistema}\index{Sistema@{Sistema}}
 
 
-Aramzena um ponteiro de usúario, e mostra os menus de opções possíveis.  
+Armazena um ponteiro de usúario, e mostra os menus de opções possíveis.  
 
 
 
@@ -13,7 +13,7 @@ Aramzena um ponteiro de usúario, e mostra os menus de opções possíveis.
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classSistema_a08346c127b05cc90e47c2210c20dd4cd}{Sistema}} ()=default
-\begin{DoxyCompactList}\small\item\em Esta é uma função que destroi todos os atributos da classe sistema para não ocupar lugar na memória. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Esta é uma função de construtor, ao qual inicaliza com nenhuma informação. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classSistema_af937e9da8f1b9e35daeb31f6b894d507}{inicializar\+Parametros\+Sistema}} ()
 \begin{DoxyCompactList}\small\item\em Esta função inicaliza os parametros do sistema, como ler, e abrir de arquivos txt, chamando as funções correspondentes. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classSistema_a13d1f7199037c4e87fcfda089646198a}{salvar\+Parametros\+Sistema}} ()
@@ -21,8 +21,7 @@ void \mbox{\hyperlink{classSistema_a13d1f7199037c4e87fcfda089646198a}{salvar\+Pa
 void \mbox{\hyperlink{classSistema_aa4f3aeab22b1eef80bc7b1832e1785df}{opcoes\+Menu\+Gerente}} ()
 \begin{DoxyCompactList}\small\item\em Esta função abre o menu de opções possíveis para o gerente. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classSistema_aeae83705670f1eb7b92a3f7386d9a629}{opcoes\+Menu\+Administrativo}} ()
-\begin{DoxyCompactList}\small\item\em Esta função abre o menu de opções possíveis da parte administrativas ~\newline
- \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Esta função abre o menu de opções possíveis da parte administrativas. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classSistema_ad6bd99c7e3864edaae9e40fdd9cb1698}{opcoes\+Menu\+Funcionario}} ()
 \begin{DoxyCompactList}\small\item\em Esta função abre o menu de opções possíveis para o funcionário. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classSistema_afe795879c39c1f2879bd540094b56b87}{efetuar\+Login}} ()
@@ -34,7 +33,7 @@ void \mbox{\hyperlink{classSistema_ad7765bc090849c2f34f3a50ea031c1d8}{limpar\+Te
 
 
 \doxysubsection{Detailed Description}
-Aramzena um ponteiro de usúario, e mostra os menus de opções possíveis. 
+Armazena um ponteiro de usúario, e mostra os menus de opções possíveis. 
 
 A classe sistema é responsável por inicializar o sistema, sendo assim ela armazena todas as funções, e chama-\/as de acordo com os menus de opções correspondentes, ela cria um objeto da classe estoque, para poder fazer as movimentações do funcionário ou gerente além de criar um objeto da classe \mbox{\hyperlink{classsistemaLogin}{sistema\+Login}}, para poder abrir os seus menus 
 
@@ -51,9 +50,9 @@ Definition at line 31 of file sistema.\+hpp.
 
 
 
-Esta é uma função que destroi todos os atributos da classe sistema para não ocupar lugar na memória. 
+Esta é uma função de construtor, ao qual inicaliza com nenhuma informação. 
 
-
+inicializa um estoque default, sem nenhum parametro. 
 
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{classSistema_afe795879c39c1f2879bd540094b56b87}\label{classSistema_afe795879c39c1f2879bd540094b56b87}} 
@@ -66,7 +65,7 @@ Esta é uma função que destroi todos os atributos da classe sistema para não 
 
 Esta função efetua o login no sistema, de acordo com seu usuário e senha. 
 
-
+Efetua o login para o atributo \+\_\+usuario\+Logado chamando a função menu\+Login do subsistema de login. Uma vez chamada essa função, o sistema entra em um loop infinito até o usuário ser logado, ou seja \+\_\+usuario\+Logado != nullptr, ou até o usuário encerrar a execução do programa selecinando a opção 2. 
 
 Definition at line 14 of file sistema.\+cpp.
 
@@ -100,7 +99,7 @@ Definition at line 14 of file sistema.\+cpp.
 
 Esta função inicaliza os parametros do sistema, como ler, e abrir de arquivos txt, chamando as funções correspondentes. 
 
-
+chama a função de ler arquivos do subsistema de login e do estoque, para garantir que toda vez que o sistema é inicializado os mapas de usuarios (presente no login) e mapa de produtos (presente no estoque) estejam já com os devidos objetos instanciados 
 
 Definition at line 3 of file sistema.\+cpp.
 
@@ -123,7 +122,7 @@ Definition at line 3 of file sistema.\+cpp.
 
 Esta função inicializa todo o sistema. 
 
-
+Esta função é a principal, em que a main irá instânciar um objeto do sistema e chamar apenas uma vez. Ela entra em um loop infinito enquanto o usuário deseje que o programa continue o funcionando, também é responsável por chamar funções de menu principal, gerir permissões, inicializar arquivos dos subsistemas e salvá-\/los também 
 
 Definition at line 381 of file sistema.\+cpp.
 
@@ -168,6 +167,11 @@ Definition at line 381 of file sistema.\+cpp.
 
 Esta função limpa a tela, para poder ter uma melhor visualização na compilação. 
 
+recurso visual para melhor vizualização e interação do usuário, possui modo \char`\"{}perguntar\char`\"{} em que pergunta se pode limpar a tela antes de limpar, e modo \char`\"{}continuar\char`\"{} em que limpa direto sem perguntar 
+\begin{DoxyParams}{Parameters}
+{\em Modo} & sendo uma conferência se deve ou não perguntar se pode limpar a tela \\
+\hline
+\end{DoxyParams}
 
 
 Definition at line 416 of file sistema.\+cpp.
@@ -199,10 +203,9 @@ Definition at line 416 of file sistema.\+cpp.
 
 
 
-Esta função abre o menu de opções possíveis da parte administrativas ~\newline
- 
+Esta função abre o menu de opções possíveis da parte administrativas. 
 
-
+Através do \+\_\+usuario\+Logado e utilizando o polimorfismo da classe usuário, a função chama o menu administrativo através do usuário logado no sistema e depois lança um switch case para captar todas as possíveis funções para esse menu 
 
 Definition at line 139 of file sistema.\+cpp.
 
@@ -376,7 +379,7 @@ Definition at line 139 of file sistema.\+cpp.
 
 Esta função abre o menu de opções possíveis para o funcionário. 
 
-
+Através do \+\_\+usuario\+Logado e utilizando o polimorfismo da classe usuário, a função chama o menu principal através do usuário logado no sistema e depois lança um switch case para captar todas as possíveis funções para esse menu 
 
 Definition at line 301 of file sistema.\+cpp.
 
@@ -472,7 +475,7 @@ Definition at line 301 of file sistema.\+cpp.
 
 Esta função abre o menu de opções possíveis para o gerente. 
 
-
+Através do \+\_\+usuario\+Logado e utilizando o polimorfismo da classe usuário, a função chama o menu principal através do usuário logado no sistema e depois lança um switch case para captar todas as possíveis funções para esse menu 
 
 Definition at line 31 of file sistema.\+cpp.
 
@@ -597,7 +600,7 @@ Definition at line 31 of file sistema.\+cpp.
 
 Esta função salva todos os parametros do sistema, para vários arquivos txt, chamando as funções correspondentes. 
 
-
+chama a função de salvar arquivos do subsistema de login e do estoque, para garantir que toda vez que o sistema quiser salvar os mapas de usuários (presente no login) e mapa de produtos (presente no estoque) nos arquivos novamente (geralmente quando volta ao menu principal) os objetos instânciados nos mapas sejam os mesmos dos gravados no arquivo 
 
 Definition at line 9 of file sistema.\+cpp.
 

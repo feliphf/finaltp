@@ -13,7 +13,7 @@ Armazena um map de vários produtos.
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classEstoque_a5ef465af5814ce8c048f891e72fbf4a2}{Estoque}} ()=default
-\begin{DoxyCompactList}\small\item\em Esta é uma função que destroi um mapa para não ocupar lugar na memória. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Esta é uma função de construtor, ao qual inicaliza com nenhuma informação. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classEstoque_a970ca21567e806f1f0e6ca90e55eb189}{salvar\+Arquivo}} ()
 \begin{DoxyCompactList}\small\item\em Esta função salva o arquivo que contém todos os produtos e seus atributos. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classEstoque_ad074ec3a2f8c5ead78734a72e225d6c4}{ler\+Arquivo}} ()
@@ -34,7 +34,7 @@ void \mbox{\hyperlink{classEstoque_a51e59287ccef6c53147d3301739ab1f3}{alterar\+P
 void \mbox{\hyperlink{classEstoque_a6d5a491db754f7cd01bfcdaf8b7ee317}{alterar\+Produto}} ()
 \begin{DoxyCompactList}\small\item\em Esta função abre um menu de opções, ao qual chama todas as funções de alterar acima. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classEstoque_a0fb96f0e13da7c7be6766f63b2cfd7b9}{entradas\+De\+Produtos}} (string codig, int quant, string nome\+Usuario, string data\+Atual)
-\begin{DoxyCompactList}\small\item\em Esta função adiciona produtos com seus atributos específicos. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Esta função adiciona produtos no estoque. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classEstoque_a076a768e14db50d3292f1a1032f8d5f0}{saidas\+De\+Produtos}} (string codig, int quant, string nome\+Usuario, string data\+Atual)
 \begin{DoxyCompactList}\small\item\em Esta função retira produtos com seus atributos específicos. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classEstoque_ad424b0fd59b47b4c61d3bbc09238e2df}{cadastro\+De\+Produtos}} ()
@@ -69,9 +69,9 @@ Definition at line 36 of file estoque.\+hpp.
 
 
 
-Esta é uma função que destroi um mapa para não ocupar lugar na memória. 
+Esta é uma função de construtor, ao qual inicaliza com nenhuma informação. 
 
-
+inicializa um estoque default, sem nenhum parametro. 
 
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{classEstoque_a59159caf12395903903632fa2fc00a96}\label{classEstoque_a59159caf12395903903632fa2fc00a96}} 
@@ -85,6 +85,13 @@ Esta é uma função que destroi um mapa para não ocupar lugar na memória.
 Esta função altera a categoria de um determinado produto. 
 
 
+\begin{DoxyParams}{Parameters}
+{\em Pesquisa} & sendo o código de um produto \\
+\hline
+{\em categ} & sendo o nome da categoria do produto ao qual o gerente deseja alterar\\
+\hline
+\end{DoxyParams}
+procura um produto no estoque e altera o sua categoria para a nova categoria desejada, com limite de 23 caracteres 
 
 Definition at line 105 of file estoque.\+cpp.
 
@@ -112,6 +119,13 @@ Definition at line 105 of file estoque.\+cpp.
 Esta função altera o fabricante de um determinado produto. 
 
 
+\begin{DoxyParams}{Parameters}
+{\em Pesquisa} & sendo o código de um produto \\
+\hline
+{\em fabric} & sendo o nome do fabricante do produto ao qual o gerente deseja alterar\\
+\hline
+\end{DoxyParams}
+procura um produto no estoque e altera o seu fabricante para o novo fabricante desejado, com limite de 23 caracteres 
 
 Definition at line 88 of file estoque.\+cpp.
 
@@ -139,6 +153,11 @@ Definition at line 88 of file estoque.\+cpp.
 Esta função altera o nome de um determinado produto. 
 
 
+\begin{DoxyParams}{Parameters}
+{\em Pesquisa} & sendo o código de um produto e nome sendo o nome do produto ao qual o gerente deseja alterar\\
+\hline
+\end{DoxyParams}
+procura um produto no estoque e altera o seu nome para o novo nome desejado, com limite de 26 caracteres 
 
 Definition at line 73 of file estoque.\+cpp.
 
@@ -164,6 +183,13 @@ Definition at line 73 of file estoque.\+cpp.
 Esta função altera o preço de um determinado produto. 
 
 
+\begin{DoxyParams}{Parameters}
+{\em Pesquisa} & sendo o código de um produto \\
+\hline
+{\em preco} & sendo o preço do produto ao qual o gerente deseja alterar\\
+\hline
+\end{DoxyParams}
+procura um produto no estoque e altera o seu preço para o novo preço desejado, com limite de 9 algarismos 
 
 Definition at line 121 of file estoque.\+cpp.
 
@@ -189,7 +215,7 @@ Definition at line 121 of file estoque.\+cpp.
 
 Esta função abre um menu de opções, ao qual chama todas as funções de alterar acima. 
 
-
+exibe um menu com opçoes de escolha para alterar os atributos do produto desejado, com exceçao da quantidade e do código que não podem ser alterados 
 
 Definition at line 136 of file estoque.\+cpp.
 
@@ -297,7 +323,7 @@ Definition at line 136 of file estoque.\+cpp.
 
 Esta função cadastra produto com seus atributos específicos. 
 
-
+exibe um menu que pede os dados do produto que será cadastrado, cria um objeto da classe produto com esses dados e quantidade inicial 0, depois insere no mapa de estoque 
 
 Definition at line 233 of file estoque.\+cpp.
 
@@ -352,9 +378,20 @@ Definition at line 233 of file estoque.\+cpp.
 
 
 
-Esta função adiciona produtos com seus atributos específicos. 
+Esta função adiciona produtos no estoque. 
 
 
+\begin{DoxyParams}{Parameters}
+{\em Codig} & sendo o código de um produto \\
+\hline
+{\em quant} & sendo a quantidade que deseja adicionar \\
+\hline
+{\em nome\+Usuario} & sendo o nome do usuário \\
+\hline
+{\em data\+Atual} & sendo a data atual no momento da execução do programa\\
+\hline
+\end{DoxyParams}
+aumenta a quantidade de um produto no estoque somando com a quantidade atual com a quantidade passada como parâmetro 
 
 Definition at line 276 of file estoque.\+cpp.
 
@@ -389,6 +426,11 @@ Definition at line 276 of file estoque.\+cpp.
 Esta função exclui um cadastro de um produto com todos os seus atributos. 
 
 
+\begin{DoxyParams}{Parameters}
+{\em Código} & sendo um código de um produto ao qual o gerente deseja excluir\\
+\hline
+\end{DoxyParams}
+verifica se um produto existe no estoque pelo código e apaga seu cadastro 
 
 Definition at line 468 of file estoque.\+cpp.
 
@@ -409,6 +451,15 @@ Definition at line 468 of file estoque.\+cpp.
 Esta função gera um histórico de movimentações feitas pelo funcionário ou gerente. 
 
 
+\begin{DoxyParams}{Parameters}
+{\em count} & sendo a contagem de produtos \\
+\hline
+{\em nome\+Usuario} & sendo o nome do usuário \\
+\hline
+{\em data\+Atual} & sendo a data atual do momento da excução do programa\\
+\hline
+\end{DoxyParams}
+salva as novas movimentações no arquivo \mbox{\hyperlink{Movimentacoes_8txt}{Movimentacoes.\+txt}} 
 
 Definition at line 310 of file estoque.\+cpp.
 
@@ -431,7 +482,7 @@ Definition at line 310 of file estoque.\+cpp.
 
 Esta função imprimi o histórico acima. 
 
-
+imprime o histórico de movimentaçoes lido do arquivo \mbox{\hyperlink{Movimentacoes_8txt}{Movimentacoes.\+txt}} 
 
 Definition at line 317 of file estoque.\+cpp.
 
@@ -458,7 +509,7 @@ Definition at line 317 of file estoque.\+cpp.
 Esta função lê o arquivo que contém todas as informações salvas, da última vez que foi acessado ~\newline
  
 
-
+lê o arquivo \mbox{\hyperlink{Estoque_8txt}{Estoque.\+txt}} , constroi um objeto do tipo estoque e carrega no mapa todas as informações do arquivo 
 
 Definition at line 23 of file estoque.\+cpp.
 
@@ -495,6 +546,11 @@ Definition at line 23 of file estoque.\+cpp.
 Esta função limpa a tela, para poder ter uma melhor visualização na compilação. 
 
 
+\begin{DoxyParams}{Parameters}
+{\em Modo} & sendo uma conferência se deve ou não perguntar se pode limpar a tela\\
+\hline
+\end{DoxyParams}
+recurso visual para melhor vizualização e interação do usuário, possui modo \char`\"{}perguntar\char`\"{} em que pergunta se pode limpar a tela antes de limpar, e modo \char`\"{}continuar\char`\"{} em que limpa direto sem perguntar 
 
 Definition at line 477 of file estoque.\+cpp.
 
@@ -527,7 +583,8 @@ Definition at line 477 of file estoque.\+cpp.
 
 Esta função lista todos os produtos que há no estoque no presente momento. 
 
-
+exibe uma interface visual com todos os produtos no estoque e suas informações ~\newline
+ 
 
 Definition at line 42 of file estoque.\+cpp.
 
@@ -560,6 +617,21 @@ Definition at line 42 of file estoque.\+cpp.
 Esta função abre um menu com todas as opções de movimentação. 
 
 
+\begin{DoxyParams}{Parameters}
+{\em Lista\+Quantidades} & sendo um par entre um numero inteiro não negativo e um par entre um produto e um inteiro, \\
+\hline
+{\em modo} & sendo as possibilidades entrada ou saídas \\
+\hline
+{\em loop} & sendo uma variável que serve para encerrar o loop na hora correta, \\
+\hline
+{\em count} & sendo a contagem de produtos \\
+\hline
+{\em nome\+Usuario} & sendo o nome do usuário \\
+\hline
+{\em data\+Atual} & sendo a data atual do momento da excução do programa\\
+\hline
+\end{DoxyParams}
+exibe um menu para manipular uma lista de entradas/saídas (depende do modo escolhido) que altera a quantidade de possiveis diversos produtos do estoque 
 
 Definition at line 331 of file estoque.\+cpp.
 
@@ -710,6 +782,11 @@ Definition at line 331 of file estoque.\+cpp.
 Esta função dá a possibilidade de pesquisar um produto específico de acordo com o código ou nome. 
 
 
+\begin{DoxyParams}{Parameters}
+{\em Pesquisa,podendo} & ser um código ou um nome de um produto\\
+\hline
+\end{DoxyParams}
+pesquisa se um produto existe no estoque, se existir, exibe um menu com todas as informações do produto 
 
 Definition at line 57 of file estoque.\+cpp.
 
@@ -737,6 +814,17 @@ Definition at line 57 of file estoque.\+cpp.
 Esta função retira produtos com seus atributos específicos. 
 
 
+\begin{DoxyParams}{Parameters}
+{\em Codig} & sendo o código de um produto \\
+\hline
+{\em quant} & sendo a quantidade que deseja retirar \\
+\hline
+{\em nome\+Usuario} & sendo o nome do usuário \\
+\hline
+{\em data\+Atual} & sendo a data atual no momento da execução do programa\\
+\hline
+\end{DoxyParams}
+diminui a quantidade de um produto no estoque subtraindo com a quantidade atual pela quantidade passada como parâmetro 
 
 Definition at line 293 of file estoque.\+cpp.
 
@@ -769,7 +857,7 @@ Definition at line 293 of file estoque.\+cpp.
 
 Esta função salva o arquivo que contém todos os produtos e seus atributos. 
 
-
+carrega todas as informações do mapa dentro do arquivo \mbox{\hyperlink{Estoque_8txt}{Estoque.\+txt}} 
 
 Definition at line 6 of file estoque.\+cpp.
 

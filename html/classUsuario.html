@@ -214,6 +214,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Esta função abre um menu de opções para alterar os atributos acima de um determinado usuário. </p>
+<p>função que exibe um menu com todas as possíveis alterações de um usuário </p>
 
 <p class="definition">Definition at line <a class="el" href="usuario_8cpp_source.html#l00073">73</a> of file <a class="el" href="usuario_8cpp_source.html">usuario.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                            {</div>
@@ -348,6 +349,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Função virtual que altera o usuário logado no momento da execução. </p>
+<p>função virtual que será sobrescrita em <a class="el" href="classGerente.html" title="Classe filha de usuário, onde possui todos os seus atributos.">Gerente</a> e <a class="el" href="classFuncionario.html" title="Classe filha de usuário, onde possui todos os seus atributos.">Funcionario</a>, servirá para exibir o menu de alterar usuário referente a cada tipo, se for chamada por um gerente chamará a fuçnão <a class="el" href="classUsuario.html#afc7bab8d6ad1528fe0394a5ea901d334" title="Esta função abre um menu de opções para alterar os atributos acima de um determinado usuário.">alterarUsuario()</a> que da todas as opções, se for chamada por um funcionário, exibirá um menu limitado à alteração da própria senha </p>
 
 <p>Implemented in <a class="el" href="classFuncionario.html#af331c347d8c5c9b00ae433e427ff6f55">Funcionario</a>, and <a class="el" href="classGerente.html#abee6710d97a4e7e9bc95642b2cfc21a2">Gerente</a>.</p>
 
@@ -573,6 +575,13 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Esta função limpa a tela, para uma melhor visualização do sistema. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Modo</td><td>sendo uma conferência se deve ou não perguntar se pode limpar a tela</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>recurso visual para melhor vizualização e interação do usuário, possui modo "perguntar" em que pergunta se pode limpar a tela antes de limpar, e modo "continuar" em que limpa direto sem perguntar </p>
 
 <p class="definition">Definition at line <a class="el" href="usuario_8cpp_source.html#l00179">179</a> of file <a class="el" href="usuario_8cpp_source.html">usuario.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;                                   {</div>
@@ -619,6 +628,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Função virtual que abre um menu administrativo. </p>
+<p>função virtual que será sobrescrita em <a class="el" href="classGerente.html" title="Classe filha de usuário, onde possui todos os seus atributos.">Gerente</a> e <a class="el" href="classFuncionario.html" title="Classe filha de usuário, onde possui todos os seus atributos.">Funcionario</a>, servirá para exibir o menu administrativo apenas nas classe gerente e nunca será executada por um funcionário </p>
 
 <p>Implemented in <a class="el" href="classFuncionario.html#a3f55ab1568015614e6e6c85543621f78">Funcionario</a>, and <a class="el" href="classGerente.html#a0858b78f711e3aee20d348383092b2e5">Gerente</a>.</p>
 
@@ -648,6 +658,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Função virtual que abre um menu Inicial de um Usuário determinado. </p>
+<p>função virtual que será sobrescrita em <a class="el" href="classGerente.html" title="Classe filha de usuário, onde possui todos os seus atributos.">Gerente</a> e <a class="el" href="classFuncionario.html" title="Classe filha de usuário, onde possui todos os seus atributos.">Funcionario</a>, servirá para exibir o menu inicial referente a cada tipo de usuário </p>
 
 <p>Implemented in <a class="el" href="classFuncionario.html#ae0ddb589cedd75ddcd0c222792541ef4">Funcionario</a>, and <a class="el" href="classGerente.html#a36ff097423739923eca6ca2dcffd0dbb">Gerente</a>.</p>
 
@@ -670,6 +681,12 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Altera o CPF de um usuário. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">S</td><td>sendo o CPF novo que o usuário deseja alterar </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="definition">Definition at line <a class="el" href="usuario_8cpp_source.html#l00053">53</a> of file <a class="el" href="usuario_8cpp_source.html">usuario.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                            {</div>
@@ -695,6 +712,12 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Altera o email de um usuário. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">S</td><td>sendo o email novo que o usuário deseja alterar </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="definition">Definition at line <a class="el" href="usuario_8cpp_source.html#l00057">57</a> of file <a class="el" href="usuario_8cpp_source.html">usuario.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                              {</div>
@@ -720,6 +743,12 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Altera a autenticação de um usuário. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">B</td><td>sendo a autenticação nova que o usuário deseja alterar </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="definition">Definition at line <a class="el" href="usuario_8cpp_source.html#l00069">69</a> of file <a class="el" href="usuario_8cpp_source.html">usuario.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                                      {</div>
@@ -745,6 +774,12 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Altera o id de um usuário. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">S</td><td>sendo o id novo que o usuário deseja alterar </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="definition">Definition at line <a class="el" href="usuario_8cpp_source.html#l00038">38</a> of file <a class="el" href="usuario_8cpp_source.html">usuario.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                           {</div>
@@ -770,6 +805,12 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Altera o nome de um usuário. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">S</td><td>sendo o nome novo que o usuário deseja alterar </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="definition">Definition at line <a class="el" href="usuario_8cpp_source.html#l00046">46</a> of file <a class="el" href="usuario_8cpp_source.html">usuario.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                             {</div>
@@ -798,6 +839,12 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Altera a senha de um usuário. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">S</td><td>sendo a senha nova que o usuário deseja alterar </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="definition">Definition at line <a class="el" href="usuario_8cpp_source.html#l00065">65</a> of file <a class="el" href="usuario_8cpp_source.html">usuario.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                              {</div>
@@ -823,6 +870,12 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Altera o tipo de um usuário. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">S</td><td>sendo o tipo novo que o usuário deseja alterar </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="definition">Definition at line <a class="el" href="usuario_8cpp_source.html#l00042">42</a> of file <a class="el" href="usuario_8cpp_source.html">usuario.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                             {</div>
@@ -848,6 +901,12 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Altera o ultimo aceso de um usuário. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">S</td><td>sendo o ultimo acesso novo que o usuário deseja alterar </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="definition">Definition at line <a class="el" href="usuario_8cpp_source.html#l00061">61</a> of file <a class="el" href="usuario_8cpp_source.html">usuario.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                                     {</div>
@@ -880,7 +939,8 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Função virtual que retorna se tem permissão ou não. </p>
-<dl class="section return"><dt>Returns</dt><dd>Retorna true ou false, de acordo com a permissão do usuário logado </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Retorna true ou false, de acordo com a permissão do usuário logado</dd></dl>
+<p>função virtual que será sobrescrita em <a class="el" href="classGerente.html" title="Classe filha de usuário, onde possui todos os seus atributos.">Gerente</a> e <a class="el" href="classFuncionario.html" title="Classe filha de usuário, onde possui todos os seus atributos.">Funcionario</a>, retorna a permissão referente ao tipo do usuário, se for um gerente retorna true, se for um funcionário retorna false </p>
 
 <p>Implemented in <a class="el" href="classFuncionario.html#ab5bbe507782b7b2c5de1cb39e946b0a3">Funcionario</a>, and <a class="el" href="classGerente.html#a0850bf905ee25f3c53bec691f6201209">Gerente</a>.</p>
 

@@ -1,5 +1,4 @@
-\hypertarget{md_README_autotoc_md1}{}\doxysection{Sistema de Estoque (\+Perfumaria)}\label{md_README_autotoc_md1}
-\hypertarget{md_README_autotoc_md2}{}\doxysubsection{Grupo\+:}\label{md_README_autotoc_md2}
+\hypertarget{md_README_autotoc_md1}{}\doxysection{Grupo\+:}\label{md_README_autotoc_md1}
 
 \begin{DoxyItemize}
 \item Yan Figueiras Alves
@@ -7,14 +6,71 @@
 \item Ana Carolina Lima de Souza
 \item Guilherme Antônio Pascoal
 \item Pedro de Araújo Cruz
-\end{DoxyItemize}\hypertarget{md_README_autotoc_md3}{}\doxysubsection{Descrição do sistema\+:}\label{md_README_autotoc_md3}
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md2}{}\doxysection{Descrição do sistema\+:}\label{md_README_autotoc_md2}
 
 \begin{DoxyItemize}
-\item O sistema desenvolvido tem como objetivo gerir um estoque (nesse exemplo aplicado a uma perfumaria), e para isso conta com gerentes e funcionários, cada um com diferentes níveis de acesso as funções. Quando iniciado, é preciso fazer login com uma conta pré-\/cadastrada que ao depender de qual permissão lhe for dada aparecerá um menu diferente. Resumidamente, os funcionários podem apenas alterar sua própria senha, registrar vendas, consultar produtos e listar todos os produtos do estoque, já os gerentes, além de possuirem essas funções, podem controlar o sistema como um todo cadastrando, listando, alterando, removendo produtos e usuários, podem também ver o histórico de movimentações do estoque e registrar compras.
-\end{DoxyItemize}\hypertarget{md_README_autotoc_md4}{}\doxysubsection{Diagrama de classes\+:}\label{md_README_autotoc_md4}
-\hypertarget{md_README_autotoc_md5}{}\doxysubsection{User Stories\+:}\label{md_README_autotoc_md5}
-\hypertarget{md_README_autotoc_md6}{}\doxysubsection{Como executar e testar o sistema\+:}\label{md_README_autotoc_md6}
-\hypertarget{md_README_autotoc_md7}{}\doxysubsubsection{Comandos\+:}\label{md_README_autotoc_md7}
+\item O sistema desenvolvido tem como objetivo gerir um estoque (nesse exemplo aplicado a uma perfumaria), e para isso conta com gerentes e funcionários, cada um com diferentes níveis de acesso as funções. Quando iniciado, é preciso fazer login com uma conta pré-\/cadastrada que ao depender de qual permissão lhe for dada, de acordo acordo com sua função na empresa aparecerá um menu diferente. Resumidamente, os funcionários podem apenas alterar sua própria senha, registrar vendas, consultar produtos e listar todos os produtos do estoque, já os gerentes, além de possuirem essas funções, podem controlar o sistema como um todo realizando entradas no estoque, cadastrando, listando, alterando, removendo produtos e usuários. Também há para o gerente a possibilidade de imprimir o histórico de movimentações do estoque, em que são mostradas todas as entradas e saídas já feitas. Nesse histórico constam o produto adicionado ou removido, a quantidade alterada, o usuário responsável pela alteração e a data da movimentação.
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md3}{}\doxysection{Diagrama de classes\+:}\label{md_README_autotoc_md3}
+\hypertarget{md_README_autotoc_md4}{}\doxysection{User Stories\+:}\label{md_README_autotoc_md4}
+\hypertarget{md_README_autotoc_md5}{}\doxysubsection{Controle de catálogo de produtos}\label{md_README_autotoc_md5}
+
+\begin{DoxyItemize}
+\item Eu como gerente quero poder realizar o cadastro de um produto, caso ele não exista, para poder adicioná-\/lo no estoque, remover um produto ou alterar seus dados, caso ele já exista, com intuito de manter o estoque atualizado de acordo com a demanda dos consumidores em relação aos produtos com que a empresa deve trabalhar. Também desejo poder pesquisar um produto pelo seu código e listar todos os cadastrados.
+\item Critérios\+:
+\begin{DoxyEnumerate}
+\item Adicionar um produto de acordo com as informações necessários do catálogo
+\item Pesquisar por código e mostrar todas as suas informações.
+\item Não duplicar produtos, se o produto já existir, não poderá ser adicionado.
+\item Listar todos produtos presentes no estoque.
+\item Alterar os atributos de um produto já cadastrado.
+\item Remover um produto pelo seu código, caso já exista.
+\end{DoxyEnumerate}
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md6}{}\doxysubsection{Controle de movimentação}\label{md_README_autotoc_md6}
+
+\begin{DoxyItemize}
+\item Eu como gerente quero poder verificar o histórico de movimentações do estoque, que deve conter informações importantes como o tipo da movimentação (entrada ou saída), o produto em questão, a quantidade movimentada, o usuário que a realizou e a data da movimentação. Para que, seja possível fiscalizar e monitorar o estoque, e, em caso de erros humanos, ter as informações necessárias para corrigí-\/los, garantindo a segurança do estoque da empresa.
+\item Critérios\+:
+\begin{DoxyEnumerate}
+\item Registrar o histórico em um arquivo inalterável pelos usuários, garantindo a perpetuação da memória.
+\item Poder registrar o histórico automaticamente e em tempo real sempre que movimentações forem realizadas no estoque.
+\item Poder exibir o histórico de movimentações lido do arquivo.
+\item Pegar automaticamente a data atual do momento da movimentação e o usuário logado para realizar o registro no histórico.
+\end{DoxyEnumerate}
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md7}{}\doxysubsection{Registros de movimentação}\label{md_README_autotoc_md7}
+
+\begin{DoxyItemize}
+\item Eu como usuário pretendo poder realizar movimentações de produtos no estoque que variam entre entradas e saídas de produtos, de acordo com a minha permissão no momento. Gostaria também de realizar essa movimentação de uma forma intuitiva, prática e segura, na qual seria fácil manter o controle do que será modificado no estoque enquanto o pedido estiver sendo feito e também na sua finalização. Para que, o estoque se mantenha atualizado de acordo com as devidas entradas e saídas.
+\item Critérios\+:
+\begin{DoxyEnumerate}
+\item Implementar entradas e saídas de produtos através de uma lista que é modificada enquanto o pedido está sendo feito.
+\item Não permitir a adição de um produto na lista com uma quantidade que não tenha em estoque.
+\item Possibilitar a remoção de qualquer produto adicionado a lista através de seu ID na lista.
+\item Antes de realizar a entrada de um produto, sempre checar pelo código se o mesmo já consta como cadastrado.
+\item Possibilitar o cancelamento de todos os produtos da lista.
+\item Implementar a finalização dos produtos da lista de uma forma que fique claro, para o usuário, o que foi modificado no sistema.
+\end{DoxyEnumerate}
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md8}{}\doxysubsection{Perpetuação de memória}\label{md_README_autotoc_md8}
+
+\begin{DoxyItemize}
+\item Eu como dono da empresa preciso garantir que os dados do estoque, do histórico de movimentações e do subsistema de login sejam registrados de forma segura, de maneira que não haja perda da memória quando o sistema for encerrado. Sendo assim, são necessários arquivos que armazenarão as informações de maneira correta e que serão lidos ao inicializar o sistema de forma à garantir seu correto funcionamento. Para que, dessa forma, haja a perpetuação da memória do sistema.
+\item Critérios\+:
+\begin{DoxyEnumerate}
+\item Implementar uma base de dados com um arquivo para cada sistema citado.
+\item Implementar funções que, ao inicializar o sistema, lerão as informações contidas nos arquivos e as utilizarão adequadamente na construção dos devidos objetos, que permitirão o funcionamento de todos os métodos.
+\item Implementar funções que escreverão nos arquivos as informações atualizadas, de maneira que na próxima execução do sistema, ele possa lê-\/las corretamente.
+\end{DoxyEnumerate}
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md9}{}\doxysubsection{Controle de acesso}\label{md_README_autotoc_md9}
+
+\begin{DoxyItemize}
+\item Eu como dono da empresa quero poder delegar diferentes funções do sistema entre usuários de diferentes permissões, sendo eles divididos entre funcionários e gerentes. De forma que os funcionários tenham acesso apenas à funções mais básicas como\+: registrar saídas, consultar ou listar produtos e alterar os próprios dados. Enquanto isso, os gerentes possuem acesso à todas as funções presentes no sistema. Para que, dessa forma, tanto o estoque quanto o sistema de usuários estejam protegidos de usuários de menores níveis de confiança da empresa e experiência na profissão.
+\item Critérios\+:
+\begin{DoxyEnumerate}
+\item Implementar um atributo em usuário para registrar seu tipo, que reflete no nível de permissão.
+\item Disponibilizar menus diferentes para os diferentes tipos de usuários, com limitações para o tipo \char`\"{}funcionário\char`\"{}.
+\item Registro de novos usuários possível somente por uma função do \mbox{\hyperlink{classGerente}{Gerente}}, sendo necessário inicializar o arquivo que armazena os usuários registrados com um usuário padrão do tipo \char`\"{}gerente\char`\"{}.
+\end{DoxyEnumerate}
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md10}{}\doxysection{Como executar e testar o sistema\+:}\label{md_README_autotoc_md10}
+\hypertarget{md_README_autotoc_md11}{}\doxysubsection{Comandos\+:}\label{md_README_autotoc_md11}
 
 \begin{DoxyItemize}
 \item Clonar o repositório\+:

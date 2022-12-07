@@ -66,6 +66,23 @@ Definition at line 31 of file funcionario.\+hpp.
 Construtor da classe \mbox{\hyperlink{classFuncionario}{Funcionario}}, recebe todos os atributos como parâmetro. 
 
 
+\begin{DoxyParams}{Parameters}
+{\em Id} & sendo o id de um funcionário \\
+\hline
+{\em t} & sendo o tipo de um funcionário \\
+\hline
+{\em n} & sendo o nome de um funcionário \\
+\hline
+{\em c} & sendo o C\+PF de um funcionário \\
+\hline
+{\em e} & sendo o email de um funcionário \\
+\hline
+{\em u} & sendo o ultimo acesso do funcionário \\
+\hline
+{\em s} & sendo a senha de um funcionário\\
+\hline
+\end{DoxyParams}
+constroi objeto da classe funcionario com os parametros de ID, tipo, nome, C\+PF, email, ultimo acesso e senha 
 
 Definition at line 3 of file funcionario.\+cpp.
 
@@ -95,7 +112,7 @@ Definition at line 3 of file funcionario.\+cpp.
 
 Esta função altera o funcionário que está logado no momento da execução. 
 
-
+abre um menu de alterar usuário, no caso do funcionário, o menu só permite a alteração da própria senha 
 
 Implements \mbox{\hyperlink{classUsuario_a3d39624354ba93690acbbd9979dd6733}{Usuario}}.
 
@@ -148,7 +165,7 @@ Definition at line 33 of file funcionario.\+cpp.
 
 Esta função abre o menu administrativo com todas as escolhas possíveis do funcionário. 
 
-
+função não utilizada, passada apenas para poder utilizar o recurso virtual 
 
 Implements \mbox{\hyperlink{classUsuario_a5e10aeefe82c9fa76ed4457f33d6ba4b}{Usuario}}.
 
@@ -171,7 +188,7 @@ Definition at line 13 of file funcionario.\+cpp.
 
 Esta Função abre o menu incial com todas as escolhas possíveis do funcionário. 
 
-
+exibe o menu inicial da classe de funcionario 
 
 Implements \mbox{\hyperlink{classUsuario_acc41ccb4c666766c305b19dd16dde50c}{Usuario}}.
 
@@ -207,9 +224,9 @@ Definition at line 15 of file funcionario.\+cpp.
 Retorna se o funcionário tem ou não permissão. 
 
 \begin{DoxyReturn}{Returns}
-Retorna true ou false, de acordo com a permissão do funcionário 
+Retorna true ou false, de acordo com a permissão do funcionário
 \end{DoxyReturn}
-
+função que sobreescreve uma função de usuario que determina a permissão de acesso à funçoes do usuario, quando este é do tipo funcionário sempre retornará false 
 
 Implements \mbox{\hyperlink{classUsuario_ab311ad6f74a2b3971445127690c3bfcc}{Usuario}}.
 

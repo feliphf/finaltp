@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Sistema de Estoque: Trabalho Final PDS2</title>
+<title>Sistema de Estoque: Trabalho Final PDS2 - Sistema de Estoque (Perfumaria)</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -63,13 +63,11 @@ $(function() {
 </div><!-- top -->
 <div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">Trabalho Final PDS2 </div>  </div>
+<div class="title">Trabalho Final PDS2 - <a class="el" href="classSistema.html" title="Armazena um ponteiro de usúario, e mostra os menus de opções possíveis.">Sistema</a> de <a class="el" href="classEstoque.html" title="Armazena um map de vários produtos.">Estoque</a> (Perfumaria) </div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><h1><a class="anchor" id="autotoc_md1"></a>
-Sistema de Estoque (Perfumaria)</h1>
-<h2><a class="anchor" id="autotoc_md2"></a>
-Grupo:</h2>
+Grupo:</h1>
 <ul>
 <li>Yan Figueiras Alves</li>
 <li>Felipe Henrique Ferraz</li>
@@ -77,20 +75,82 @@ Grupo:</h2>
 <li>Guilherme Antônio Pascoal</li>
 <li>Pedro de Araújo Cruz</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md3"></a>
-Descrição do sistema:</h2>
+<h1><a class="anchor" id="autotoc_md2"></a>
+Descrição do sistema:</h1>
 <ul>
-<li>O sistema desenvolvido tem como objetivo gerir um estoque (nesse exemplo aplicado a uma perfumaria), e para isso conta com gerentes e funcionários, cada um com diferentes níveis de acesso as funções. Quando iniciado, é preciso fazer login com uma conta pré-cadastrada que ao depender de qual permissão lhe for dada aparecerá um menu diferente. Resumidamente, os funcionários podem apenas alterar sua própria senha, registrar vendas, consultar produtos e listar todos os produtos do estoque, já os gerentes, além de possuirem essas funções, podem controlar o sistema como um todo cadastrando, listando, alterando, removendo produtos e usuários, podem também ver o histórico de movimentações do estoque e registrar compras.</li>
+<li>O sistema desenvolvido tem como objetivo gerir um estoque (nesse exemplo aplicado a uma perfumaria), e para isso conta com gerentes e funcionários, cada um com diferentes níveis de acesso as funções. Quando iniciado, é preciso fazer login com uma conta pré-cadastrada que ao depender de qual permissão lhe for dada, de acordo acordo com sua função na empresa aparecerá um menu diferente. Resumidamente, os funcionários podem apenas alterar sua própria senha, registrar vendas, consultar produtos e listar todos os produtos do estoque, já os gerentes, além de possuirem essas funções, podem controlar o sistema como um todo realizando entradas no estoque, cadastrando, listando, alterando, removendo produtos e usuários. Também há para o gerente a possibilidade de imprimir o histórico de movimentações do estoque, em que são mostradas todas as entradas e saídas já feitas. Nesse histórico constam o produto adicionado ou removido, a quantidade alterada, o usuário responsável pela alteração e a data da movimentação.</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md4"></a>
-Diagrama de classes:</h2>
-<p><img src="../database/imgReadme/diagramaClasses.png" alt="" class="inline"/></p>
+<h1><a class="anchor" id="autotoc_md3"></a>
+Diagrama de classes:</h1>
+<p><img src="https://github.com/feliphf/finaltp/blob/main/database/imgReadme/diagramaClasses.png" alt="alt text" class="inline"/></p>
+<h1><a class="anchor" id="autotoc_md4"></a>
+User Stories:</h1>
 <h2><a class="anchor" id="autotoc_md5"></a>
-User Stories:</h2>
+Controle de catálogo de produtos</h2>
+<ul>
+<li>Eu como gerente quero poder realizar o cadastro de um produto, caso ele não exista, para poder adicioná-lo no estoque, remover um produto ou alterar seus dados, caso ele já exista, com intuito de manter o estoque atualizado de acordo com a demanda dos consumidores em relação aos produtos com que a empresa deve trabalhar. Também desejo poder pesquisar um produto pelo seu código e listar todos os cadastrados.</li>
+<li>Critérios:<ol type="1">
+<li>Adicionar um produto de acordo com as informações necessários do catálogo</li>
+<li>Pesquisar por código e mostrar todas as suas informações.</li>
+<li>Não duplicar produtos, se o produto já existir, não poderá ser adicionado.</li>
+<li>Listar todos produtos presentes no estoque.</li>
+<li>Alterar os atributos de um produto já cadastrado.</li>
+<li>Remover um produto pelo seu código, caso já exista.</li>
+</ol>
+</li>
+</ul>
 <h2><a class="anchor" id="autotoc_md6"></a>
-Como executar e testar o sistema:</h2>
-<h3><a class="anchor" id="autotoc_md7"></a>
-Comandos:</h3>
+Controle de movimentação</h2>
+<ul>
+<li>Eu como gerente quero poder verificar o histórico de movimentações do estoque, que deve conter informações importantes como o tipo da movimentação (entrada ou saída), o produto em questão, a quantidade movimentada, o usuário que a realizou e a data da movimentação. Para que, seja possível fiscalizar e monitorar o estoque, e, em caso de erros humanos, ter as informações necessárias para corrigí-los, garantindo a segurança do estoque da empresa.</li>
+<li>Critérios:<ol type="1">
+<li>Registrar o histórico em um arquivo inalterável pelos usuários, garantindo a perpetuação da memória.</li>
+<li>Poder registrar o histórico automaticamente e em tempo real sempre que movimentações forem realizadas no estoque.</li>
+<li>Poder exibir o histórico de movimentações lido do arquivo.</li>
+<li>Pegar automaticamente a data atual do momento da movimentação e o usuário logado para realizar o registro no histórico.</li>
+</ol>
+</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md7"></a>
+Registros de movimentação</h2>
+<ul>
+<li>Eu como usuário pretendo poder realizar movimentações de produtos no estoque que variam entre entradas e saídas de produtos, de acordo com a minha permissão no momento. Gostaria também de realizar essa movimentação de uma forma intuitiva, prática e segura, na qual seria fácil manter o controle do que será modificado no estoque enquanto o pedido estiver sendo feito e também na sua finalização. Para que, o estoque se mantenha atualizado de acordo com as devidas entradas e saídas.</li>
+<li>Critérios:<ol type="1">
+<li>Implementar entradas e saídas de produtos através de uma lista que é modificada enquanto o pedido está sendo feito.</li>
+<li>Não permitir a adição de um produto na lista com uma quantidade que não tenha em estoque.</li>
+<li>Possibilitar a remoção de qualquer produto adicionado a lista através de seu ID na lista.</li>
+<li>Antes de realizar a entrada de um produto, sempre checar pelo código se o mesmo já consta como cadastrado.</li>
+<li>Possibilitar o cancelamento de todos os produtos da lista.</li>
+<li>Implementar a finalização dos produtos da lista de uma forma que fique claro, para o usuário, o que foi modificado no sistema.</li>
+</ol>
+</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md8"></a>
+Perpetuação de memória</h2>
+<ul>
+<li>Eu como dono da empresa preciso garantir que os dados do estoque, do histórico de movimentações e do subsistema de login sejam registrados de forma segura, de maneira que não haja perda da memória quando o sistema for encerrado. Sendo assim, são necessários arquivos que armazenarão as informações de maneira correta e que serão lidos ao inicializar o sistema de forma à garantir seu correto funcionamento. Para que, dessa forma, haja a perpetuação da memória do sistema.</li>
+<li>Critérios:<ol type="1">
+<li>Implementar uma base de dados com um arquivo para cada sistema citado.</li>
+<li>Implementar funções que, ao inicializar o sistema, lerão as informações contidas nos arquivos e as utilizarão adequadamente na construção dos devidos objetos, que permitirão o funcionamento de todos os métodos.</li>
+<li>Implementar funções que escreverão nos arquivos as informações atualizadas, de maneira que na próxima execução do sistema, ele possa lê-las corretamente.</li>
+</ol>
+</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md9"></a>
+Controle de acesso</h2>
+<ul>
+<li>Eu como dono da empresa quero poder delegar diferentes funções do sistema entre usuários de diferentes permissões, sendo eles divididos entre funcionários e gerentes. De forma que os funcionários tenham acesso apenas à funções mais básicas como: registrar saídas, consultar ou listar produtos e alterar os próprios dados. Enquanto isso, os gerentes possuem acesso à todas as funções presentes no sistema. Para que, dessa forma, tanto o estoque quanto o sistema de usuários estejam protegidos de usuários de menores níveis de confiança da empresa e experiência na profissão.</li>
+<li>Critérios:<ol type="1">
+<li>Implementar um atributo em usuário para registrar seu tipo, que reflete no nível de permissão.</li>
+<li>Disponibilizar menus diferentes para os diferentes tipos de usuários, com limitações para o tipo "funcionário".</li>
+<li>Registro de novos usuários possível somente por uma função do <a class="el" href="classGerente.html" title="Classe filha de usuário, onde possui todos os seus atributos.">Gerente</a>, sendo necessário inicializar o arquivo que armazena os usuários registrados com um usuário padrão do tipo "gerente".</li>
+</ol>
+</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md10"></a>
+Como executar e testar o sistema:</h1>
+<h2><a class="anchor" id="autotoc_md11"></a>
+Comandos:</h2>
 <ul>
 <li>Clonar o repositório:<ul>
 <li>1 - <code>git clone <a href="https://github.com/feliphf/finaltp.git">https://github.com/feliphf/finaltp.git</a></code>: clona o diretório para sua máquina local.</li>

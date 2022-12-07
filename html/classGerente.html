@@ -259,6 +259,19 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Construtor da classe <a class="el" href="classGerente.html" title="Classe filha de usuário, onde possui todos os seus atributos.">Gerente</a>, recebe todos os atributos como parâmetro. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Id</td><td>sendo o id de um gerente </td></tr>
+    <tr><td class="paramname">t</td><td>sendo o tipo de um gerente </td></tr>
+    <tr><td class="paramname">n</td><td>sendo o nome de um gerente </td></tr>
+    <tr><td class="paramname">c</td><td>sendo o CPF de um gerente, </td></tr>
+    <tr><td class="paramname">e</td><td>sendo o email de um gerente </td></tr>
+    <tr><td class="paramname">u</td><td>sendo o ultimo acesso do gerente </td></tr>
+    <tr><td class="paramname">s</td><td>sendo a senha de um gerente</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>constroi objeto da classe gerente com os parametros de ID, tipo, nome, CPF, email, ultimo acesso e senha </p>
 
 <p class="definition">Definition at line <a class="el" href="gerente_8cpp_source.html#l00003">3</a> of file <a class="el" href="gerente_8cpp_source.html">gerente.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;                                                                                     {</div>
@@ -298,6 +311,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Esta função altera o usuário que está logado no momento da execução. </p>
+<p>abre um menu de alterar usuário, no caso do gerente, o menu leva à todas as opções de alteração, desde todos os produtos até todos os usuários <br  />
+ </p>
 
 <p>Implements <a class="el" href="classUsuario.html#a3d39624354ba93690acbbd9979dd6733">Usuario</a>.</p>
 
@@ -330,6 +345,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Esta Função abre o menu administrativo com todas as escolhas possíveis do gerente. </p>
+<p>exibe o menu administrativo que apenas o gerente possui acesso, podendo levar à diversas opções de funções administrativas </p>
 
 <p>Implements <a class="el" href="classUsuario.html#a5e10aeefe82c9fa76ed4457f33d6ba4b">Usuario</a>.</p>
 
@@ -373,6 +389,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Esta Função abre o menu incial com todas as escolhas possíveis do gerente. </p>
+<p>exibe o menu inicial da classe de gerente </p>
 
 <p>Implements <a class="el" href="classUsuario.html#acc41ccb4c666766c305b19dd16dde50c">Usuario</a>.</p>
 
@@ -420,7 +437,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Retorna se o gerente tem ou não permissão. </p>
-<dl class="section return"><dt>Returns</dt><dd>Retorna true ou false, de acordo com a permissão do gerente </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Retorna true ou false, de acordo com a permissão do gerente</dd></dl>
+<p>função que sobreescreve uma função de usuario que determina a permissão de acesso à funções do usuario, quando este é do tipo gerente sempre retornará true </p>
 
 <p>Implements <a class="el" href="classUsuario.html#ab311ad6f74a2b3971445127690c3bfcc">Usuario</a>.</p>
 
