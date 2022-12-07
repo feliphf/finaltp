@@ -40,19 +40,24 @@ class Funcionario: public Usuario {
         ///@param e sendo o email de um funcionário
         ///@param u sendo o ultimo acesso do funcionário 
         ///@param s sendo a senha de um funcionário
+        ///@details constroi objeto da classe funcionario com os parametros de ID, tipo, nome, CPF, email, ultimo acesso e senha
         Funcionario(string id, string t, string n, string c, string e, string u, string s);
   
         ///@brief Esta Função abre o menu incial com todas as escolhas possíveis do funcionário
+        ///@details exibe o menu inicial da classe de funcionario
         void menuInicial() override;
   
         ///@brief Esta função abre o menu administrativo com todas as escolhas possíveis do funcionário
+        ///@details função não utilizada, passada apenas para poder utilizar o recurso virtual
         void menuAdministrativo() override;
   
         ///@brief Retorna se o funcionário tem ou não permissão
         ///@return Retorna true ou false, de acordo com a permissão do funcionário
+        ///@details função que sobreescreve uma função de usuario que determina a permissão de acesso à funçoes do usuario, quando este é do tipo funcionário sempre retornará false
         bool temPermissao() override;
   
         ///@brief Esta função altera o funcionário que está logado no momento da execução
+        ///@details abre um menu de alterar usuário, no caso do funcionário, o menu só permite a alteração da própria senha
         void alterarUsuarioLogado() override;
 };
 

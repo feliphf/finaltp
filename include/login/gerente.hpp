@@ -40,19 +40,24 @@ class Gerente: public Usuario {
         ///@param e sendo o email de um gerente
         ///@param u sendo o ultimo acesso do gerente 
         ///@param s sendo a senha de um gerente
+        ///@details constroi objeto da classe gerente com os parametros de ID, tipo, nome, CPF, email, ultimo acesso e senha
         Gerente(string id, string t, string n, string c, string e, string u, string s);
   
         ///@brief Esta Função abre o menu incial com todas as escolhas possíveis do gerente
+        ///@details exibe o menu inicial da classe de gerente
        void menuInicial() override;
   
         ///@brief Esta Função abre o menu administrativo com todas as escolhas possíveis do gerente
+        ///@details exibe o menu administrativo que apenas o gerente possui acesso, podendo levar à diversas opções de funções administrativas
         void menuAdministrativo() override;
   
         ///@brief Retorna se o gerente tem ou não permissão
         ///@return Retorna true ou false, de acordo com a permissão do gerente
+        ///@details função que sobreescreve uma função de usuario que determina a permissão de acesso à funções do usuario, quando este é do tipo gerente sempre retornará true
         bool temPermissao() override;
   
         ///@brief Esta função altera o usuário que está logado no momento da execução
+        ///@details abre um menu de alterar usuário, no caso do gerente, o menu leva à todas as opções de alteração, desde todos os produtos até todos os usuários 
         void alterarUsuarioLogado() override;
 };
 

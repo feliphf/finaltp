@@ -123,23 +123,30 @@ class Usuario {
         void setEstaAutenticado(bool b);
   
         ///@brief Esta função abre um menu de opções para alterar os atributos acima de um determinado usuário
+        ///@details função que exibe um menu com todas as possíveis alterações de um usuário
         void alterarUsuario();
   
-        ///@brief Função virtual que abre um  menu administrativo
+        ///@brief Função virtual que abre um menu administrativo
+        ///@details função virtual que será sobrescrita em Gerente e Funcionario, servirá para exibir o menu administrativo apenas nas classe gerente e nunca será executada por um funcionário
         virtual void menuAdministrativo() = 0;
   
         ///@brief Função virtual que altera o usuário logado no momento da execução
+        ///@details função virtual que será sobrescrita em Gerente e Funcionario, servirá para exibir o menu de alterar usuário referente a cada tipo, 
+        ///se for chamada por um gerente chamará a fuçnão alterarUsuario() que da todas as opções, se for chamada por um funcionário, exibirá um menu limitado à alteração da própria senha
         virtual void alterarUsuarioLogado() = 0;
   
         ///@brief Função virtual que abre um menu Inicial de um Usuário determinado
+        ///@details função virtual que será sobrescrita em Gerente e Funcionario, servirá para exibir o menu inicial referente a cada tipo de usuário
         virtual void menuInicial() = 0;
   
         ///@brief Função virtual que retorna se tem permissão ou não
         ///@return Retorna true ou false, de acordo com a permissão do usuário logado
+        ///@details função virtual que será sobrescrita em Gerente e Funcionario, retorna a permissão referente ao tipo do usuário, se for um gerente retorna true, se for um funcionário retorna false
         virtual bool temPermissao() = 0;
   
         ///@brief Esta função limpa a tela, para uma melhor visualização do sistema
         ///@param Modo sendo uma conferência se deve ou não perguntar se pode limpar a tela
+        ///@details recurso visual para melhor vizualização e interação do usuário, possui modo "perguntar" em que pergunta se pode limpar a tela antes de limpar, e modo "continuar" em que limpa direto sem perguntar
         void limparTela(string modo);
 };
 

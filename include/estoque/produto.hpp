@@ -55,11 +55,11 @@ class Produto{
         ///@param codigo sendo o código do produto, 
         ///@param preco sendo o preço de um produto  
         ///@param quantidade sendo a quantidade de um produto
+        ///@details constroi um objeto da classe produto com os parametros de nome, fabricante, categoria, codigo, preço e quantidade
         Produto(string n, string fabricante, string categoria, string codigo, float preco, int quantidade);
 
         ///@brief Retorna o nome do produto
         ///@return Retorna o nome do produto
-
         string getNome(void);
 
         ///@brief Retorna o fabricante do produto
