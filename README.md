@@ -1,5 +1,4 @@
-# Trabalho Final PDS2
-# Sistema de Estoque (Perfumaria)
+# Trabalho Final PDS2 - Sistema de Estoque (Perfumaria)
 
 ## Grupo:
 * Yan Figueiras Alves
@@ -37,14 +36,14 @@ saber se preciso comprar mais produtos ou não.
     4. Poder retornar o valor total de cada produto em estoque.
 
 ### Registros de movimentação
-* Eu como funcionário quero poder fazer uma consulta no estoque para saber quais produtos
-estão disponíveis a venda
+* Eu como usuário pretendo poder realizar movimentações de produtos no estoque que variam entre entradas e saídas de produtos, de acordo com a minha permissão no momento. Gostaria também de realizar essa movimentação de uma forma intuitiva, prática e segura, na qual seria fácil manter o controle do que será modificado no estoque enquanto o pedido estiver sendo feito e também na sua finalização. 
 - Critérios:
-    1. Pesquisar por código e nome para mostrar quais produtos estão em estoque.
-    2. Poder gerar um relatório do estoque com o nome e quantidade de produtos que
-    estão disponíveis para venda..
-    3. Poder gerar um relatório geral, para poder averiguar toda a situação do sistema,
-    desde a quantidade de produtos às movimentações de entrada e saída.
+    1. Implementar entradas e saídas de produtos através de uma lista que é modificada enquanto o pedido está sendo feito.
+    2. Não permitir a adição de um produto na lista com uma quantidade que não tenha em estoque.
+    3. Possibilitar a remoção de qualquer produto adicionado a lista através de seu ID na lista.
+    4. Antes de realizar a entrada de um produto, sempre checar pelo código se o mesmo já consta como cadastrado.
+    5. Possibilitar o cancelamento de todos os produtos da lista.
+    6. Implementar a finalização dos produtos da lista de uma forma que fique claro, para o usuário, o que foi modificado no sistema.
 
 ### Controle de ..
 * Eu como funcionário preciso registrar quantos e quais produtos foram vendidos, para
@@ -56,9 +55,7 @@ manter o estoque atualizado.
     3. Conferir se o produto está em estoque para poder ser retirado.
 
 ### Controle de acesso
-* Eu como dono da empresa quero separar as permissões do meu gerente com os
-permissões dos subordinados do meu gerente, para garantia a segurança da minha
-empresa
+* Eu como dono da empresa quero separar as funções as funções do sistema entre funcionários e gerentes, para que
 - Critérios:
     1. Somente o gerente deverá ter permissão em entradas para poder comprar os
     produtos, para não ter excesso de produtos parados.
