@@ -36,7 +36,7 @@ saber se preciso comprar mais produtos ou não.
     4. Poder retornar o valor total de cada produto em estoque.
 
 ### Registros de movimentação
-* Eu como usuário pretendo poder realizar movimentações de produtos no estoque que variam entre entradas e saídas de produtos, de acordo com a minha permissão no momento. Gostaria também de realizar essa movimentação de uma forma intuitiva, prática e segura, na qual seria fácil manter o controle do que será modificado no estoque enquanto o pedido estiver sendo feito e também na sua finalização. 
+* Eu como usuário pretendo poder realizar movimentações de produtos no estoque que variam entre entradas e saídas de produtos, de acordo com a minha permissão no momento. Gostaria também de realizar essa movimentação de uma forma intuitiva, prática e segura, na qual seria fácil manter o controle do que será modificado no estoque enquanto o pedido estiver sendo feito e também na sua finalização. Para que, o estoque se mantenha atualizado de acordo com as devidas entradas e saídas. 
 - Critérios:
     1. Implementar entradas e saídas de produtos através de uma lista que é modificada enquanto o pedido está sendo feito.
     2. Não permitir a adição de um produto na lista com uma quantidade que não tenha em estoque.
