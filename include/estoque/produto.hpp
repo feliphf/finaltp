@@ -50,38 +50,37 @@ class Produto{
     public:
 
         ///@brief Construtor da classe Produto, recebe todos os atributos como parâmetro.
-        ///@param n sendo o nome de um produto, fabricante sendo o fabricante de um produto, codigo sendo o código do produto, preco sendo o preço de um produto e quantidade sendo a quantidade de um produto
+        ///@param n sendo o nome de um produto
+        ///@param fabricante sendo o fabricante de um produto 
+        ///@param codigo sendo o código do produto, 
+        ///@param preco sendo o preço de um produto  
+        ///@param quantidade sendo a quantidade de um produto
         Produto(string n, string fabricante, string categoria, string codigo, float preco, int quantidade);
 
         ///@brief Retorna o nome do produto
         ///@return Retorna o nome do produto
-        ///@param nenhum parâmetro
+
         string getNome(void);
 
         ///@brief Retorna o fabricante do produto
         ///@return Retorna o fabricante do produto
-        ///@param nenhum parâmetro
         string getFabricante(void);
 
         ///@brief Retorna a categoria do produto
         ///@return Retorna a categoria do produto
-        ///@param nenhum parâmetro
         string getCategoria(void);
 
 
         ///@brief Retorna o código do produto
         ///@return Retorna o código do produto
-        ///@param nenhum parâmetro
         string getCodigo(void);
 
         ///@brief Retorna a quantidade do produto
         ///@return Retorna a quantidade do produto
-        ///@param nenhum parâmetro
         int getQuantidade(void);
 
         ///@brief Retorna o preço do produto
         ///@return Retorna o preço do produto
-        ///@param nenhum parâmetro
         float getPreco(void);
 
         ///@brief Altera o nome de um produto

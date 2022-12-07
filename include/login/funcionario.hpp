@@ -33,8 +33,13 @@ class Funcionario: public Usuario {
     public:
   
         ///@brief Construtor da classe Funcionario, recebe todos os atributos como parâmetro.
-        ///@param Id sendo o id de um funcionário, t sendo o tipo de um funcionário, n sendo o nome de um funcionário, c sendo o CPF de um funcionário, 
-        /// e sendo o email de um funcionário, u sendo o ultimo acesso do funcionário e s sendo a senha de um funcionário
+        ///@param Id sendo o id de um funcionário
+        ///@param t sendo o tipo de um funcionário
+        ///@param n sendo o nome de um funcionário
+        ///@param c sendo o CPF de um funcionário 
+        ///@param e sendo o email de um funcionário
+        ///@param u sendo o ultimo acesso do funcionário 
+        ///@param s sendo a senha de um funcionário
         Funcionario(string id, string t, string n, string c, string e, string u, string s);
   
         ///@brief Esta Função abre o menu incial com todas as escolhas possíveis do funcionário
